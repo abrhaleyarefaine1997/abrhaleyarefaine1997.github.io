@@ -15,7 +15,6 @@ import "../styles/global.css";
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
     <meta name="description" content={siteConfig.description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,26 +24,44 @@ import "../styles/global.css";
     />
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
-  <body>
+  <body class="bg-gray-50 text-gray-900 font-sans">
     <Header />
-    <section>
-      <Hero />
 
-      <div class="mt-6 text-center">
+    <!-- Hero Section with Gradient Background -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-32 px-6 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
+          {siteConfig.name}
+        </h1>
+        <p class="text-lg md:text-2xl mb-6 animate-fade-in delay-200">
+          {siteConfig.title} | MSc Student at Warsaw University of Technology
+        </p>
+
+        <!-- Fixed Resume Download Button -->
         <a 
           href="/Abrhaley_Arefaine_Hailenchael_Resume.pdf" 
-          download 
-          class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          download="Abrhaley_Arefaine_Hailenchael_Resume.pdf" 
+          class="inline-block px-8 py-4 bg-white text-blue-700 font-semibold rounded shadow hover:bg-gray-100 transition-transform transform hover:scale-105"
         >
           Download Resume
         </a>
       </div>
+    </section>
 
+    <main class="max-w-5xl mx-auto px-6 py-16 space-y-32">
       <About />
       <Projects />
       <Experience />
       <Education />
-    </section>
+    </main>
+
     <Footer />
+
+    <!-- Optional animations using AOS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
   </body>
 </html>
