@@ -27,37 +27,51 @@ import "../styles/global.css";
   <body class="bg-gray-50 text-gray-900 font-sans">
     <Header />
 
-    <!-- Hero Section with Gradient Background -->
-    <section class="relative bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-32 px-6 text-center">
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-6xl font-bold mb-4 animate-fade-in">
-          {siteConfig.name}
-        </h1>
-        <p class="text-lg md:text-2xl mb-6 animate-fade-in delay-200">
-          {siteConfig.title} | MSc Student at Warsaw University of Technology
-        </p>
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white py-24 px-6">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex-1 animate-fade-left">
+          <h1 class="text-5xl md:text-6xl font-bold mb-4">{siteConfig.name}</h1>
+          <p class="text-xl md:text-2xl mb-6">{siteConfig.title} | MSc Student at Warsaw University of Technology</p>
 
-        <!-- Fixed Resume Download Button -->
-        <a 
-          href="/Abrhaley_Arefaine_Hailenchael_Resume.pdf" 
-          download="Abrhaley_Arefaine_Hailenchael_Resume.pdf" 
-          class="inline-block px-8 py-4 bg-white text-blue-700 font-semibold rounded shadow hover:bg-gray-100 transition-transform transform hover:scale-105"
-        >
-          Download Resume
-        </a>
+          <!-- Resume Button -->
+          <a
+            href="/Abrhaley_Arefaine_Hailenchael_Resume.pdf"
+            download="Abrhaley_Arefaine_Hailenchael_Resume.pdf"
+            class="inline-block px-6 py-3 bg-white text-blue-700 font-semibold rounded shadow hover:bg-gray-100 transition-transform transform hover:scale-105"
+          >
+            Download Resume
+          </a>
+        </div>
+
+        <div class="flex-1 animate-fade-right">
+          <Hero />
+        </div>
       </div>
     </section>
 
-    <main class="max-w-5xl mx-auto px-6 py-16 space-y-32">
-      <About />
-      <Projects />
-      <Experience />
-      <Education />
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-6 py-16 space-y-32">
+      <section data-aos="fade-right">
+        <About />
+      </section>
+
+      <section data-aos="fade-left">
+        <Projects />
+      </section>
+
+      <section data-aos="fade-up">
+        <Experience />
+      </section>
+
+      <section data-aos="fade-up">
+        <Education />
+      </section>
     </main>
 
     <Footer />
 
-    <!-- Optional animations using AOS -->
+    <!-- AOS Animations -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script>
