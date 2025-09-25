@@ -1,92 +1,93 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Abrhaley Arefaine Hailenchael",
+  title: "Data Scientist | Machine Learning & Data Engineering",
+  description: "Portfolio website of Abrhaley Arefaine Hailenchael, MSc student at Warsaw University of Technology",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "abrhaleyarefaine1997@gmail.com",
+    linkedin: "https://www.linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229/",
+    instagram: "https://www.instagram.com/abrhaley_ambassador/",
+    github: "https://github.com/abrhaleyarefaine1997",
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "Hi 👋 I’m Abrhaley Arefaine Hailenchael, MSc student in Data Science at Warsaw University of Technology. I specialize in Machine Learning, Data Science, and Data Engineering. I’m currently working as a freelance Data Scientist and passionate about creating impactful, interpretable AI solutions. Originally from Ethiopia 🇪🇹, I enjoy applying AI to solve real-world problems.",
+  skills: ["Python", "SQL", "Pandas", "NumPy", "scikit-learn", "XGBoost", "LightGBM", "TensorFlow", "PyTorch", "Spark", "Airflow", "Docker", "Explainable AI", "Data Visualization"],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "MSc Thesis – Fraud Detection with Explainable AI",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Developed an end-to-end fraud detection pipeline using XGBoost, LightGBM, Deep Learning, and SHAP explainability. Achieved AUC > 0.95 while ensuring interpretability and trust in high-stakes financial contexts.",
+      link: "#", // Add GitHub or report link if available
+      skills: ["Python", "XGBoost", "LightGBM", "Deep Learning", "SHAP"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "ML-Driven Harmful Content Classifier (Tigrinya)",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Built a supervised ML classifier for harmful content moderation in Tigrinya, achieving 96% accuracy.",
+      link: "#",
+      skills: ["Python", "scikit-learn", "Data Cleaning", "Text Classification"],
     },
     {
-      name: "ExtensionKit",
+      name: "Meta-Inspired Rule-Based Detector",
       description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "Designed a detection engine aligned with Meta’s policy enforcement guidelines.",
+      link: "#",
+      skills: ["Rule-Based Systems", "Python", "Policy Enforcement"],
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Freelance",
+      title: "Data Scientist",
+      dateRange: "2024 - Present",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "Delivering ML and data science solutions for clients",
+        "Building predictive models and data pipelines",
+        "Providing data-driven insights to improve business decisions",
       ],
     },
     {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
+      company: "Warsaw University of Technology",
+      title: "MSc Student / Research Assistant",
+      dateRange: "2023 - Present",
       bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
+        "Conducting research in Machine Learning and Data Engineering",
+        "Collaborating on academic projects and publications",
       ],
     },
+  ],
+  community: [
     {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
-      ],
+      role: "Executive Member – Ethiopian Students Union",
+      dateRange: "2020 - 2023",
+      description:
+        "Organized events and advocacy programs, strengthening Ethiopian student engagement abroad.",
+    },
+    {
+      role: "Regional Director – All-Africa Students Union",
+      dateRange: "2021 - 2023",
+      description:
+        "Represented African students and coordinated community engagement across multiple countries.",
     },
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
-      achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
-      ],
+      school: "Warsaw University of Technology",
+      degree: "MSc in Data Science",
+      dateRange: "2023 - Present",
+      achievements: ["Research focus in Machine Learning and Data Engineering"],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
-      achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
-      ],
+      school: "Mekelle Institute of Technology, Ethiopia",
+      degree: "Bachelor of Science in Computer Science",
+      dateRange: "2015 - 2020",
+      achievements: ["Graduated with Honors", "Dean's List"],
+    },
+    {
+      school: "Kallamino Special High School",
+      degree: "High School Diploma",
+      dateRange: "2010 - 2014",
+      achievements: ["Completed high school education with strong academic performance"],
     },
   ],
 };
