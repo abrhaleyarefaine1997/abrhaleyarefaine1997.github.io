@@ -30,11 +30,12 @@ import { siteConfig } from "../config";
         {["</>", "{}", "=>", "[]", "<>", "()", "::", "==", "++", ";"].map(
           (symbol, i) => (
             <text
+              key={i}
               x={Math.random() * 400}
               y={Math.random() * 400}
               fill={siteConfig.accentColor}
-              font-family="monospace"
-              font-size={16 + Math.floor(Math.random() * 12)}
+              fontFamily="monospace"
+              fontSize={16 + Math.floor(Math.random() * 12)}
               transform={`rotate(${Math.floor(Math.random() * 30) - 15})`}
             >
               {symbol}
@@ -79,7 +80,7 @@ import { siteConfig } from "../config";
           aria-label="Email"
           class="transition-transform transform hover:-translate-y-1 hover:text-[var(--accent-color)]"
         >
-          <!-- Email SVG icon here -->
+          {/* Add your email SVG here */}
         </a>
       )}
       {siteConfig.social?.linkedin && (
@@ -90,7 +91,7 @@ import { siteConfig } from "../config";
           aria-label="LinkedIn"
           class="transition-transform transform hover:-translate-y-1 hover:text-[var(--accent-color)]"
         >
-          <!-- LinkedIn SVG icon here -->
+          {/* Add LinkedIn SVG */}
         </a>
       )}
       {siteConfig.social?.github && (
@@ -101,7 +102,7 @@ import { siteConfig } from "../config";
           aria-label="GitHub"
           class="transition-transform transform hover:-translate-y-1 hover:text-[var(--accent-color)]"
         >
-          <!-- GitHub SVG icon here -->
+          {/* Add GitHub SVG */}
         </a>
       )}
       {siteConfig.social?.twitter && (
@@ -112,7 +113,7 @@ import { siteConfig } from "../config";
           aria-label="Twitter"
           class="transition-transform transform hover:-translate-y-1 hover:text-[var(--accent-color)]"
         >
-          <!-- Twitter SVG icon here -->
+          {/* Add Twitter SVG */}
         </a>
       )}
     </div>
@@ -132,16 +133,16 @@ import { siteConfig } from "../config";
   }
 
   .animate-fade-in {
-    animation: fadeIn 0.8s ease-out forwards;
     opacity: 0;
-  }
-
-  .animate-gradient-slow {
-    animation: gradientMove 20s ease infinite;
+    animation: fadeIn 0.8s ease-out forwards;
   }
 
   @keyframes gradientMove {
     0%, 100% { background-position: 0% 0%; }
     50% { background-position: 100% 100%; }
+  }
+
+  .animate-gradient-slow {
+    animation: gradientMove 20s ease infinite;
   }
 </style>
