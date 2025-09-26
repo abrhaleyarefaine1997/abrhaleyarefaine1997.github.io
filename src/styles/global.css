@@ -1,117 +1,33 @@
-/* ================= Import Dependencies ================= */
+/* Import Tailwind */
 @import "tailwindcss";
-@import "aos/dist/aos.css"; /* Correct package import, do NOT reference node_modules directly */
 
-/* ================= Base Styles ================= */
+/* ===== Base Styles ===== */
 body {
   font-family: 'IBM Plex Mono', monospace;
-  background: #f9fafb; /* Light gray */
-  color: #1f2937; /* Tailwind gray-800 */
+  background: #f9fafb;
+  color: #1f2937;
   scroll-behavior: smooth;
   line-height: 1.6;
 }
 
-/* ================= Dark Mode Support ================= */
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   body {
-    background: #0f172a; /* Tailwind slate-900 */
-    color: #e2e8f0; /* Tailwind slate-200 */
+    background: #0f172a;
+    color: #e2e8f0;
   }
 
   a {
-    color: #60a5fa; /* Tailwind blue-400 */
+    color: #60a5fa;
   }
 
   a:hover {
-    color: #93c5fd; /* Tailwind blue-300 */
+    color: #93c5fd;
   }
 }
 
-/* ================= Section Styling ================= */
+/* Section spacing */
 section {
   padding-top: 5rem;
   padding-bottom: 5rem;
-}
-
-/* Accent Divider Under Headings */
-.section-title {
-  position: relative;
-  display: inline-block;
-  font-weight: 700;
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 80px;
-  height: 4px;
-  margin-top: 8px;
-  border-radius: 2px;
-  background: linear-gradient(90deg, #2563eb, #9333ea); /* blue → purple */
-}
-
-/* ================= Buttons ================= */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 9999px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.btn-primary {
-  background: linear-gradient(90deg, #2563eb, #9333ea);
-  color: white;
-}
-
-.btn-primary:hover {
-  opacity: 0.9;
-  transform: scale(1.05);
-}
-
-/* ================= Cards (Projects, Experience, etc.) ================= */
-.card {
-  background: white;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-}
-
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: #1e293b; /* Tailwind slate-800 */
-  }
-}
-
-/* ================= Animations ================= */
-.fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= Optional: Utility Enhancements ================= */
-/* Smooth hover effect for links */
-a {
-  transition: color 0.3s ease;
-}
-
-/* Rounded sections (if needed) */
-section.rounded {
-  border-radius: 1rem;
 }
