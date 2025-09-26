@@ -34,25 +34,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               data-aos="zoom-in"
               data-aos-delay={index * 100}
             >
-              <!-- You can keep inline SVGs here OR replace with lucide-react icons -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="26"
-                height="26"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="h-7 w-7"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-7 w-7">
                 <path d="M3 7a2 2..." />
               </svg>
             </a>
           ))}
 
-          <!-- Example: GitHub -->
+          <!-- GitHub example -->
           <a
             href={siteConfig.social.github}
             target="_blank"
@@ -78,7 +66,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           {hasExperience && <a href="#experience" class="hover:text-[var(--accent-color)] transition-colors" style={`--accent-color: ${siteConfig.accentColor}`}>Experience</a>}
           {hasEducation && <a href="#education" class="hover:text-[var(--accent-color)] transition-colors" style={`--accent-color: ${siteConfig.accentColor}`}>Education</a>}
         </nav>
-        <p class="text-sm text-gray-500 dark:text-gray-500">
+        <p class="text-sm text-gray-500 dark:text-gray-400">
           © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
         </p>
       </div>
