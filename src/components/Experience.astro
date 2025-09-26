@@ -1,78 +1,78 @@
 ---
 import { siteConfig } from "../config";
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
 ---
 
-{
-  hasEducation && (
-    <section 
-      id="education" 
-      class="relative py-20 px-6 sm:px-12 md:px-16 lg:px-24 bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-slate-800"
-    >
-      <div class="max-w-7xl mx-auto relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-          
-          <!-- Left side: Title -->
-          <div class="lg:col-span-4" data-aos="fade-right">
-            <h2 class="section-title text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white">
-              Education
-            </h2>
-          </div>
+{hasExperience && (
+  <section
+    id="experience"
+    class="relative py-20 px-6 sm:px-12 md:px-16 lg:px-24 bg-gradient-to-br from-gray-50 to-white"
+  >
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        
+        <!-- Left: Section Title -->
+        <div class="lg:col-span-4" data-aos="fade-right">
+          <h2 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900">
+            Experience
+          </h2>
+          <div
+            class="w-20 h-1 mt-4 rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          ></div>
+        </div>
 
-          <!-- Right side: Education Cards -->
-          <div class="lg:col-span-8 space-y-8">
-            {siteConfig.education.map((edu, index) => (
-              <div 
-                class="bg-white dark:bg-slate-800 rounded-xl shadow-md border border-gray-200 dark:border-slate-700 
-                       p-6 transition-all duration-300 hover:shadow-xl hover:-translate-y-1 relative overflow-hidden"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+        <!-- Right: Timeline -->
+        <div class="lg:col-span-8 relative" data-aos="fade-left">
+          {siteConfig.experience.map((exp, index) => (
+            <div class="relative mb-12 last:mb-0 group">
+              
+              {/* Timeline dot */}
+              <div
+                class="absolute left-1/2 -top-2 w-5 h-5 rounded-full border-2 z-20 transition-all duration-300"
+                style={`border-color: ${siteConfig.accentColor}; background-color: ${siteConfig.accentColor}`}
+              ></div>
+
+              {/* Connecting line */}
+              {index < siteConfig.experience.length - 1 && (
+                <div class="absolute left-1/2 -translate-x-1/2 top-4 w-0.5 h-full bg-gray-300 z-10"></div>
+              )}
+
+              {/* Card */}
+              <div
+                class="bg-white rounded-xl shadow-lg border border-gray-200 p-6 sm:p-8 md:p-10 hover:shadow-2xl transition-all duration-300 relative z-10"
               >
-                <!-- Accent bar -->
-                <div 
-                  class="absolute top-0 left-0 h-1 w-full"
-                  style={`background-color: ${siteConfig.accentColor}`}
-                ></div>
-
-                <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
+                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                   <div>
-                    <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      {edu.degree}
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900">
+                      {exp.title}
                     </h3>
-                    <p 
+                    <p
                       class="text-base sm:text-lg font-medium"
                       style={`color: ${siteConfig.accentColor}`}
                     >
-                      {edu.school}
+                      {exp.company}
                     </p>
                   </div>
-                  <span class="text-sm text-gray-500 dark:text-gray-400 mt-2 sm:mt-0">
-                    {edu.dateRange}
+                  <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                    {exp.dateRange}
                   </span>
                 </div>
 
-                <!-- Achievements -->
-                <ul class="space-y-2 mt-2">
-                  {edu.achievements.map((achievement) => (
+                <ul class="space-y-3">
+                  {exp.bullets.map((bullet) => (
                     <li class="flex items-start">
-                      <span class="inline-block w-2 h-2 rounded-full bg-blue-500 dark:bg-blue-400 mt-2 mr-3 flex-shrink-0" />
-                      <span class="text-sm sm:text-base text-gray-700 dark:text-gray-300">
-                        {achievement}
-                      </span>
+                      <span class="inline-block w-2 h-2 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0 animate-pulse"></span>
+                      <span class="text-sm sm:text-base text-gray-600">{bullet}</span>
                     </li>
                   ))}
                 </ul>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </div>
 
-      <!-- Background Decoration -->
-      <div class="absolute inset-0 overflow-hidden opacity-10 pointer-events-none">
-        <div class="absolute top-24 left-20 w-72 h-72 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div class="absolute bottom-24 right-20 w-80 h-80 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-2000"></div>
       </div>
-    </section>
-  )
-}
+    </div>
+  </section>
+)}
