@@ -1,6 +1,6 @@
 /* ================= Import Dependencies ================= */
 @import "tailwindcss";
-@import "aos/dist/aos.css"; /* Correct package import, do NOT reference node_modules directly */
+@import "aos/dist/aos.css"; /* Animate on Scroll */
 
 /* ================= Base Styles ================= */
 body {
@@ -17,13 +17,14 @@ body {
     background: #0f172a; /* Tailwind slate-900 */
     color: #e2e8f0; /* Tailwind slate-200 */
   }
-
   a {
     color: #60a5fa; /* Tailwind blue-400 */
   }
-
   a:hover {
     color: #93c5fd; /* Tailwind blue-300 */
+  }
+  .card {
+    background: #1e293b; /* Tailwind slate-800 */
   }
 }
 
@@ -33,13 +34,12 @@ section {
   padding-bottom: 5rem;
 }
 
-/* Accent Divider Under Headings */
+/* ================= Accent Divider Under Headings ================= */
 .section-title {
   position: relative;
   display: inline-block;
   font-weight: 700;
 }
-
 .section-title::after {
   content: "";
   display: block;
@@ -58,18 +58,16 @@ section {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-
 .btn-primary {
   background: linear-gradient(90deg, #2563eb, #9333ea);
   color: white;
 }
-
 .btn-primary:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
 
-/* ================= Cards (Projects, Experience, etc.) ================= */
+/* ================= Cards ================= */
 .card {
   background: white;
   border-radius: 1rem;
@@ -77,21 +75,15 @@ section {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-color-scheme: dark) {
-  .card {
-    background: #1e293b; /* Tailwind slate-800 */
-  }
-}
-
 /* ================= Animations ================= */
 .fade-in {
   animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
 }
 
 @keyframes fadeIn {
@@ -105,13 +97,40 @@ section {
   }
 }
 
-/* ================= Optional: Utility Enhancements ================= */
-/* Smooth hover effect for links */
+/* ================= Hero Section Floating Symbols & Gradient ================= */
+.animate-gradient-slow {
+  animation: gradientMove 20s ease infinite;
+}
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+}
+
+/* Floating programming symbols opacity */
+#hero svg text {
+  opacity: 0.15;
+  transition: transform 0.3s ease;
+}
+
+/* ================= Projects Hover Cards ================= */
+.group-hover\:scale-\[1\.02\]:hover {
+  transform: scale(1.02);
+}
+.group-hover\:-translate-y-2:hover {
+  transform: translateY(-0.5rem);
+}
+
+/* Project skill badges hover effect */
+.group-hover\:bg-gray-800:hover {
+  background-color: #1f2937;
+}
+
+/* ================= Smooth Link Transitions ================= */
 a {
   transition: color 0.3s ease;
 }
 
-/* Rounded sections (if needed) */
+/* ================= Optional Rounded Sections ================= */
 section.rounded {
   border-radius: 1rem;
 }
