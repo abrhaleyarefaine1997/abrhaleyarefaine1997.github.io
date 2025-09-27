@@ -4,7 +4,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
 {hasEducation && (
-<section id="education" class="relative py-20 px-6 sm:px-12 md:px-16 lg:px-24 ...">
+<section
+  id="education"
+  class="relative py-20 px-6 sm:px-12 md:px-16 lg:px-24 bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-slate-800"
+>
   <div class="max-w-7xl mx-auto relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
 
@@ -27,7 +30,13 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             data-aos="fade-up"
             data-aos-delay={index * 150}
           >
-            {/* **Description** */}
+            {/* Accent bar */}
+            <div
+              class="absolute top-0 left-0 h-1 w-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            ></div>
+
+            <!-- Description -->
             <p class="text-gray-700 dark:text-gray-300 mb-3">
               {edu.description}
             </p>
@@ -49,11 +58,11 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               </span>
             </div>
 
-            {/* Achievements */}
+            <!-- Achievements -->
             <ul class="space-y-3 mt-2">
               {edu.achievements.map((achievement) => (
                 <li class="flex items-start">
-                  <span class="inline-block w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 mr-3 flex-shrink-0 animate-pulse"></span>
+                  <span class="inline-block w-2.5 h-2.5 rounded-full bg-blue-500 mt-2 mr-3 flex-shrink-0"></span>
                   <span class="text-sm sm:text-base text-gray-700 dark:text-gray-300">{achievement}</span>
                 </li>
               ))}
