@@ -31,7 +31,7 @@ publication_types: ["1"]
 publication: "*Proceedings of the 7th International Conference for Conveying and Handling of Particulate Solids, CHoPS 2012*"
 publication_short: "*CHoPS 2012 Proceedings"
 
-abstract: |-
+abstract: ""
 
 
 # Summary. An optional shortened abstract.
