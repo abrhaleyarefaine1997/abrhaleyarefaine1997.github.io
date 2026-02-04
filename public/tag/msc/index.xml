@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MSc | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/msc/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/msc/index.xml" rel="self" type="application/rss+xml" />
+    <description>MSc</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>MSc</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/msc/</link>
+    </image>
+    
+    <item>
+      <title>MSc Graduation &amp; Thesis Defense: Advanced Machine Learning for Financial Fraud Detection</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/colourise/</link>
+      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/colourise/</guid>
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#thesis-highlights&#34;&gt;Thesis Highlights&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#defense--graduation&#34;&gt;Defense &amp;amp; Graduation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#reflections&#34;&gt;Reflections&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;On &lt;strong&gt;December 17, 2025&lt;/strong&gt;, I proudly &lt;strong&gt;defended my MSc thesis&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;ldquo;Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection&amp;rdquo;&lt;/strong&gt;&lt;br&gt;
+at the &lt;strong&gt;Warsaw University of Technology, Poland&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This thesis focused on developing &lt;strong&gt;robust, interpretable, and reproducible ML pipelines&lt;/strong&gt; to detect and prevent financial fraud. It emphasized &lt;strong&gt;Explainable AI (XAI)&lt;/strong&gt; techniques such as &lt;strong&gt;SHAP&lt;/strong&gt; and &lt;strong&gt;LIME&lt;/strong&gt; to provide actionable insights for decision-makers. The work addressed real-world challenges, including &lt;strong&gt;highly imbalanced datasets&lt;/strong&gt;, noisy financial records, and complex sequential patterns.&lt;/p&gt;
+&lt;h2 id=&#34;thesis-highlights&#34;&gt;Thesis Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Designed &lt;strong&gt;end-to-end ML pipelines&lt;/strong&gt; for preprocessing, feature engineering, model training, evaluation, and explainability.&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;SHAP and LIME&lt;/strong&gt; for transparent, interpretable model predictions.&lt;/li&gt;
+&lt;li&gt;Ensured &lt;strong&gt;robustness, reproducibility, and reliability&lt;/strong&gt; for real-world financial applications.&lt;/li&gt;
+&lt;li&gt;Delivered &lt;strong&gt;actionable insights&lt;/strong&gt; to improve auditing, decision-making, and fraud mitigation.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;defense--graduation&#34;&gt;Defense &amp;amp; Graduation&lt;/h2&gt;
+&lt;p&gt;The defense included:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A &lt;strong&gt;comprehensive presentation&lt;/strong&gt; of methodology, results, and insights to faculty and peers.&lt;/li&gt;
+&lt;li&gt;A live &lt;strong&gt;demonstration of ML pipelines and explainable predictions&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;In-depth discussions on &lt;strong&gt;ethical AI, fairness, and practical deployment considerations&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I am honored to have graduated with &lt;strong&gt;Excellent Rank (highest grade)&lt;/strong&gt;, reflecting both my &lt;strong&gt;academic excellence&lt;/strong&gt; and the &lt;strong&gt;impact of my research&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;reflections&#34;&gt;Reflections&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;The MSc journey strengthened my &lt;strong&gt;expertise in Graph Neural Networks, NLP, LLMs, and predictive modeling&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;It reinforced the importance of &lt;strong&gt;robust evaluation, reproducibility, and explainability&lt;/strong&gt; in AI systems.&lt;/li&gt;
+&lt;li&gt;Excited to apply these skills to &lt;strong&gt;AI-driven research, industry projects, and socially impactful solutions&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

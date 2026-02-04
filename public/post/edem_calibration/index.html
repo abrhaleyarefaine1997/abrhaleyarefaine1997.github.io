@@ -1,0 +1,1887 @@
+<!DOCTYPE html><html lang="en-gb" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Abrhaley Arefaine Hailenchael" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Using uniaxial testing is a quick and easy way of calibrating cohesive solids for DEM simulations." />
+
+  
+  <link rel="alternate" hreflang="en-gb" href="https://abrhaleyarefaine1997.github.io/post/edem_calibration/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.2ca6ced9807926ba2b2185205dbe2f1f.css" />
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18805120-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-18805120-1');
+</script>
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://abrhaleyarefaine1997.github.io/post/edem_calibration/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@abrhaley_ambassador" />
+    <meta property="twitter:creator" content="@abrhaley_ambassador" />
+  
+  <meta property="og:site_name" content="Abrhaley Arefaine Hailenchael" />
+  <meta property="og:url" content="https://abrhaleyarefaine1997.github.io/post/edem_calibration/" />
+  <meta property="og:title" content="Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester | Abrhaley Arefaine Hailenchael" />
+  <meta property="og:description" content="Using uniaxial testing is a quick and easy way of calibrating cohesive solids for DEM simulations." /><meta property="og:image" content="https://abrhaleyarefaine1997.github.io/post/edem_calibration/featured.png" />
+    <meta property="twitter:image" content="https://abrhaleyarefaine1997.github.io/post/edem_calibration/featured.png" /><meta property="og:locale" content="en-gb" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2017-10-19T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-12-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://abrhaleyarefaine1997.github.io/post/edem_calibration/"
+  },
+  "headline": "Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester",
+  
+  "image": [
+    "https://abrhaleyarefaine1997.github.io/post/edem_calibration/featured.png"
+  ],
+  
+  "datePublished": "2017-10-19T00:00:00Z",
+  "dateModified": "2021-12-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Abrhaley Arefaine Hailenchael"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Abrhaley Arefaine Hailenchael",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Using uniaxial testing is a quick and easy way of calibrating cohesive solids for DEM simulations."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester | Abrhaley Arefaine Hailenchael</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="43a191d1b397b5551acf5db2d8b07209" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6619cc29fe1a874b6ea1a0359aab5cfb.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Abrhaley Arefaine Hailenchael</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Abrhaley Arefaine Hailenchael</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posters"><span>Posters</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester</h1>
+
+  
+
+  
+
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      Abrhaley Arefaine Hailenchael</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+           Oct 19, 2017 &middot; Last updated on
+
+      
+    
+    Dec 1, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    9 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/post/edem_calibration/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/numerical-methods/">Numerical Methods</a>, <a href="/category/calibration/">Calibration</a></span>
+  
+
+</div>
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary btn-page-header" href="/project/phd/">
+    Project
+  </a>
+  
+
+  
+    
+  
+
+  
+  <a class="btn btn-outline-primary btn-page-header" href="/project/gran_ed/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 601px; max-height: 297px;">
+  <div style="position: relative">
+    <img src="/post/edem_calibration/featured.png" width="601" height="297" alt="" class="featured-image">
+    <span class="article-header-caption">DEM simulation of uniaxial testing in the EPT</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <div class="alert alert-note">
+  <div>
+    This post was originally published on <a href="www.edemsimulation.com">www.edemsimulation.com</a>.
+  </div>
+</div>
+<h2 id="introduction">Introduction</h2>
+<p>Over the years, as the popularity of the Discrete Element Method (DEM) has continued to grow, it has been increasingly used as a design tool. The accuracy of these models largely depends on the chosen DEM model and its parameters, and as pointed out in a post by David Curry (<em>What numbers should I put in? The perennial question for DEM users</em>) the adage of “<em><strong>garbage in – garbage out</strong></em>” holds true when carrying out DEM simulations.
+For cohesionless materials we have a range of parameters to account for - size, shape, stiffness and friction being some of the more commonly considered.
+But how many materials are truly cohesionless? Not many, so we end up having to add some additional parameters to our DEM simulations to account for the additional cohesive forces in the material. The origin of these cohesive forces and their respective mechanics vary from long and short range non-contact interaction forces, mechanical interlock, electrostatic forces, solid bridges and liquid bridges to name but a few.</p>
+<p>So how does one go about capturing all of these phenomena in their DEM simulation?
+The first step is selecting a suitable contact model – a liquid bridge model is not much use for capturing the behaviour of fine particles in an electrostatic field.
+Provided you have negotiated that stage and selected a suitable contact model; you are then faced with the much more difficult proposition of model calibration.</p>
+<h2 id="calibration">Calibration</h2>
+<p>To some, <em>“calibration”</em> is a dirty word that simply means <em>‘cheating until you get the right answer’</em>, but we can define it more concisely as <em>“the process of adjusting physical modelling parameters in the computational model to improve agreement with experimental data”</em> <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. Calibration isn’t a bad thing, it’s a necessary part of scientific life – we need to regularly calibrate our measuring instruments to ensure accuracy. Due to the assumptions we make in DEM; in relation to particle shape and number of particles we use to represent a system amongst other things; we need to calibrate our input parameters such that they provide a realistic result.</p>
+<p>And much like the choice of contact model, the choice of calibration experiment is also important – you would not choose a quasi-static experiment to calibrate for a very dynamic regime as you may fail to capture much of the key behaviour such as impact dynamics. Obtaining suitable calibration data can be a challenge as one would like them to be both easily obtained and be highly repeatable.</p>
+<p>The typical process of calibrating DEM contact model parameters involves tuning the observed response of the simulation to closely reproduce the macroscopic bulk behaviour measured in the calibration experiment.
+The mechanical behaviour of cohesive powders can be carefully measured using element tests such as biaxial test, true triaxial and hollow cylinder tests.
+However, in practice these tests can be expensive and slow to conduct and are rarely performed for industrial applications requiring material characterisation. More typically a test such as direct shear, ring shear, unconfined compression, triaxial compression or cone penetration is carried out.</p>
+<h2 id="the-case-for-uniaxial-testers">The Case for Uniaxial Testers</h2>
+<p>For example, in industry the flow function of a cohesive solid is typically measured using either a ring shear tester or Jenike shear tester but these have some drawbacks.
+The Jenike test, whilst appearing to be quite straight forward is time consuming and can often be highly operator sensitive, both of which are problems when you want to have a high level of confidence in the result to use for calibration.
+Ring shear testers remove the operator sensitivity and repeatability problem by being highly automated, computer controlled devices but these can be very expensive to purchase and maintain.
+They also have particle size restrictions due to their small volume and may be limited to relatively low stress ranges which may not cover the range of interest.</p>
+<p>Uniaxial testers offer an alternative method for characterising the flowability of powders and fine granular materials in industrial situations.
+Uniaxial testers apply a consolidation stress vertically and also apply the failure load vertically. This is appealing for two reasons: firstly it’s a mechanically simple device that’s easy to operate and secondly it’s physical similarity to the stress path associated with arching and the unconfined yield strength <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the depth of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup><sup>,</sup><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup><sup>,</sup><sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.</p>
+<p>The University of Edinburgh had previous experience of developing successful uniaxial testers for large diameter particles <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>. From this experience the <strong>Edinburgh Powder Tester (EPT)</strong> was developed for measuring the flowability of highly compressible, high value powders.
+While many previous efforts have focussed heavily on accurate laboratory measurement of unconfined yield strength, the Edinburgh testers aimed at speed, robustness and high repeatability for industrial use, with a close match to a Jenike cell being a secondary objective <sup id="fnref1:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+The key differences between the Edinburgh Powder Tester and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent <sup id="fnref2:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, which means the EPT offers repeatability results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials <sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><sup>,</sup> <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</p>
+<div class="row">
+  <div class="column_3">
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <figure  id="figure-edinburgh-powder-tester-ept">
+          <div class="d-flex justify-content-center">
+            <div class="w-100" ><img alt="**Edinburgh Powder Tester (EPT)**" srcset="
+                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg 400w,
+                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_f1fcf5f572138fe05746336470da528a.jpg 760w,
+                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_1200x1200_fit_q75_lanczos.jpg 1200w"
+                       src="/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg"
+                       width="422"
+                       height="563"
+                       loading="lazy" data-zoomable /></div>
+          </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+              <strong>Edinburgh Powder Tester (EPT)</strong>
+            </figcaption></figure> 
+  </div>
+  <div class="column_3">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <figure  id="figure-consolidated-sample-exposed-prior-to-failure">
+        <div class="d-flex justify-content-center">
+          <div class="w-100" ><img alt="**Consolidated sample exposed prior to failure**" srcset="
+                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg 400w,
+                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_c7b35901115416bda405c6bbf3342566.jpg 760w,
+                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_1200x1200_fit_q75_lanczos.jpg 1200w"
+                     src="/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg"
+                     width="423"
+                     height="563"
+                     loading="lazy" data-zoomable /></div>
+        </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+            <strong>Consolidated sample exposed prior to failure</strong>
+          </figcaption></figure>
+  </div>
+  <div class="column_3">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <figure  id="figure-failed-sample">
+      <div class="d-flex justify-content-center">
+        <div class="w-100" ><img alt="**Failed sample**" srcset="
+                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg 400w,
+                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_ee205dc68c91d9587e52f606c29e54a7.jpg 760w,
+                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_1200x1200_fit_q75_lanczos.jpg 1200w"
+                   src="/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg"
+                   width="138"
+                   height="184"
+                   loading="lazy" data-zoomable /></div>
+      </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+          <strong>Failed sample</strong>
+        </figcaption></figure>
+  </div>
+</div>
+<p>It is the simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, that make uniaxial testers ideal tools for calibrating DEM simulations of cohesive solids.
+For example, the EPT, which is a semi-automated uniaxial tester, can provide rapid measurements of various bulk mechanical properties of powders, including the stress–strain and the stress–porosity response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the caking strength over time consolidation, all of which can be utilised for calibrating you DEM simulation of a cohesive solid.</p>
+<p>Recently, <a href="https://www.freemantech.co.uk/" target="_blank" rel="noopener">Freeman Technology</a>; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the <em>University of Edinburgh</em>, <em>DuPont</em> and <em>The Chemours Company</em> to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT. The result of this collaboration is <strong>‘The New Uniaxial Powder Tester from Freeman Technology’</strong> which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa. The UPT comes in two versions: a manual version, which is ideally suited for quality control measurement in industrial situations and the advanced version with increased automation and reduction in operator inputs and advanced data logging capabilities which makes it very suitable as a DEM calibration tool for cohesive powders.</p>
+<div class="row">
+  <div class="column_2">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <figure  id="figure-freeman-upt">
+      <div class="d-flex justify-content-center">
+        <div class="w-100" ><img alt="**Freeman UPT**" srcset="
+                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg 400w,
+                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_54559539869d46196d7bf20e09f9dc7c.jpg 760w,
+                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w"
+                   src="/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg"
+                   width="441"
+                   height="760"
+                   loading="lazy" data-zoomable /></div>
+      </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+          <strong>Freeman UPT</strong>
+        </figcaption></figure> 
+  </div>
+  <div class="column_2">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <figure  id="figure-freeman-upt-consolidation-station">
+      <div class="d-flex justify-content-center">
+        <div class="w-100" ><img alt="**Freeman UPT Consolidation Station**" srcset="
+                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg 400w,
+                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_47ed15f34a280be57a7620265eccc2af.jpg 760w,
+                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w"
+                   src="/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg"
+                   width="151"
+                   height="217"
+                   loading="lazy" data-zoomable /></div>
+      </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+          <strong>Freeman UPT Consolidation Station</strong>
+        </figcaption></figure>
+  </div>
+</div>
+<h2 id="a-dem-example-case">A DEM Example Case</h2>
+<p>At the University of Edinburgh, we have used uniaxial testers (EPT/UPT) extensively for calibrating DEM parameters for the Edinburgh Cohesion Model in EDEM <sup id="fnref1:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup><sup>,</sup><sup id="fnref1:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup><sup>,</sup><sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup><sup>,</sup><sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup><sup>,</sup><sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup><sup>,</sup><sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup> (which is currently available on the EDEM User forum and will be part of future versions of EDEM) due to the high level of repeatability and the flexibility to measure key properties quickly and easily in the laboratory.</p>
+<p>As an example, the measured stress-strain curves from the EPT for an iron ore solid at varying moisture contents (levels of cohesion) are shown in <strong>Figure 6</strong> and <strong>Figure 7</strong>. A typical set of unconfined test results that make up a single uniaxial flow function (the peak strength vs. the consolidation stress) are shown for the same iron ore fines in <strong>Figure 8</strong> for a single moisture content.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-confined-stress-strain-measured-in-ept-for-iron-ore-fines">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="**Confined Stress Strain measured in EPT for iron ore fines**" srcset="
+               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png 400w,
+               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_e627bc644f41face389c3c07d09be9c8.png 760w,
+               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png"
+               width="760"
+               height="538"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      <strong>Confined Stress Strain measured in EPT for iron ore fines</strong>
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-unconfined-stress-strain-measured-in-ept-for-iron-ore-fines">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="**Unconfined Stress-Strain measured in EPT for iron ore fines**" srcset="
+               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png 400w,
+               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1e2ed17e52abd5d25878302d54b78117.png 760w,
+               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png"
+               width="760"
+               height="570"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      <strong>Unconfined Stress-Strain measured in EPT for iron ore fines</strong>
+    </figcaption></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-measured-bulk-density-variation-of-iron-ore-fines">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="**Measured bulk density variation of iron ore fines**" srcset="
+               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png 400w,
+               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_ce06449a72e18ce016a3527987079807.png 760w,
+               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png"
+               width="760"
+               height="538"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      <strong>Measured bulk density variation of iron ore fines</strong>
+    </figcaption></figure>
+<p>These measured values provide the range of various properties to be captured within the DEM simulation. A typical DEM simulation of a cohesive solid in the EPT is shown in <strong>Figure 9</strong>. The DEM simulation consists of the filling, confined compression, unloading of the sample and the crushing to failure of the unconfined sample.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-figure-9---dem-simulation-of-cohesive-solid-in-the-ept-a-filling-b-confined-consolidation-c-unloading-and-removal-of-confining-sleeve-d-loading-to-unconfined-failure-uuys">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="**Figure 9 - DEM simulation of cohesive solid in the EPT:** a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)" srcset="
+               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png 400w,
+               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_e9c1942cb0a629fc26d8d8c6ce6205f1.png 760w,
+               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png"
+               width="601"
+               height="297"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      <strong>Figure 9 - DEM simulation of cohesive solid in the EPT:</strong> a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)
+    </figcaption></figure>
+<p>The measured properties provide the necessary information to define the loading stiffness, plasticity ratio and whether the material is exhibiting linear or non-linear stiffness, bulk density and level of cohesion to calibrate the DEM model.
+In order to capture the behaviour at different moisture contents, we need to calibrate the level of cohesion for each moisture content at one point on the flow function, as in <strong>Figure 10</strong>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-experimental-results-and-calibrated-dem-results">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="**Experimental results and calibrated DEM results**" srcset="
+               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png 400w,
+               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_c4118cc8840cfe9172aa1b0f4855dde4.png 760w,
+               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png"
+               width="709"
+               height="530"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      <strong>Experimental results and calibrated DEM results</strong>
+    </figcaption></figure>
+<p>Once calibrated, it is possible capture the entire flow function spectrum for varying moisture contents with a good degree of accuracy, as shown in <strong>Figure 11</strong>, with the effect of moisture influencing only one model parameter i.e. the contact surface energy $\delta \gamma $.<br>
+This process provides a fully calibrated DEM model for cohesive powders for use in DEM simulations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-calibrated-flow-function-vs-experimental-flow-function">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="**Calibrated Flow function vs Experimental flow function**" srcset="
+               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png 400w,
+               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_5c3cad57fdec5aa9683ea84379c98bce.png 760w,
+               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_1200x1200_fit_lanczos_3.png 1200w"
+               src="/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png"
+               width="760"
+               height="554"
+               loading="lazy" data-zoomable /></div>
+  </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+      <strong>Calibrated Flow function vs Experimental flow function</strong>
+    </figcaption></figure>
+<h1 id="references">References</h1>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>American Society of Mechanical Engineers., <em>Guide for verification and validation in computational solid mechanics</em>, American Society of Mechanical Engineers, 2006. <a href="https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation" target="_blank" rel="noopener">https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation</a> (accessed July 13, 2017).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, <em>Evaluation of the Edinburgh powder tester</em>, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. <a href="http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation&#43;of&#43;the&#43;Edinburgh&#43;Powder&#43;Tester#0" target="_blank" rel="noopener">http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0</a> (accessed October 5, 2013).&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>L.P. Maltby, G.G. Enstad, <em>Uniaxial Tester for Quality Control and Flow Property Characterization of Powders</em>, Powder Handl. Process. 13 (1993) 135–139.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>M. Röck, M. Ostendorf, J. Schwedes, <em>Development of an Uniaxial Caking Tester</em>, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>R.E. Freeman, X. Fu, <em>The Development of a Compact Uniaxial Tester</em>, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>Z. Zhong, J.Y. Ooi, J.M. Rotter, <em>Predicting the handlability of a coal blend from measurements on the source coals</em>, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, <em>An experimental and numerical study of packing, compression, and caking behaviour of detergent powders</em>, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8">
+<p>J.P. Morrissey, <em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines</em>, University of Edinburgh, 2013. <a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270</a>.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9">
+<p>S.C. Thakur, J.P. Morrissey, J. Sun, J.F. Chen, J.Y. Ooi, <em>Micromechanical analysis of cohesive granular materials using discrete element method with an adhesive elasto-plastic contact model</em>, Granul. Matter. 16 (2014) 383–400. doi:10.1007/s10035-014-0506-4.&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10">
+<p>S.C. Thakur, J.Y. Ooi, H. Ahmadian, <em>Scaling of discrete element model parameters for cohesionless and cohesive solid</em>, Powder Technol. (2015). doi:10.1016/j.powtec.2015.05.051.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11">
+<p>A. Janda, J.Y. Ooi, <em>DEM modeling of cone penetration and unconfined compression in cohesive solids</em>, Powder Technol. 293 (2016) 60–68. doi:10.1016/j.powtec.2015.05.034.&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12">
+<p>J.P. Morrissey, J.Y. Ooi, J.F. Chen, K.T. Tano, G. Horrigmoe, <em>Measurement and prediction of compression and shear behavior of wet iron ore fines</em>, in: 7th World Congr. Part. Technol., Beijing, China, 2014: p. 8.&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/dem/">DEM</a>
+  
+  <a class="badge badge-light" href="/tag/eepa/">EEPA</a>
+  
+  <a class="badge badge-light" href="/tag/uniaxial/">Uniaxial</a>
+  
+  <a class="badge badge-light" href="/tag/ept/">EPT</a>
+  
+  <a class="badge badge-light" href="/tag/upt/">UPT</a>
+  
+  <a class="badge badge-light" href="/tag/calibration/">Calibration</a>
+  
+  <a class="badge badge-light" href="/tag/freeman-technology/">Freeman Technology</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://abrhaleyarefaine1997.github.io/post/edem_calibration/&amp;text=Calibrating%20DEM%20simulations%20of%20cohesive%20solids%20with%20the%20Uniaxial%20Powder%20Tester" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://abrhaleyarefaine1997.github.io/post/edem_calibration/&amp;t=Calibrating%20DEM%20simulations%20of%20cohesive%20solids%20with%20the%20Uniaxial%20Powder%20Tester" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Calibrating%20DEM%20simulations%20of%20cohesive%20solids%20with%20the%20Uniaxial%20Powder%20Tester&amp;body=https://abrhaleyarefaine1997.github.io/post/edem_calibration/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://abrhaleyarefaine1997.github.io/post/edem_calibration/&amp;title=Calibrating%20DEM%20simulations%20of%20cohesive%20solids%20with%20the%20Uniaxial%20Powder%20Tester" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Calibrating%20DEM%20simulations%20of%20cohesive%20solids%20with%20the%20Uniaxial%20Powder%20Tester%20https://abrhaleyarefaine1997.github.io/post/edem_calibration/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://abrhaleyarefaine1997.github.io/post/edem_calibration/&amp;title=Calibrating%20DEM%20simulations%20of%20cohesive%20solids%20with%20the%20Uniaxial%20Powder%20Tester" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://abrhaleyarefaine1997.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hua69e36645127e15618572bb8b15ef14f_97389_270x270_fill_q75_lanczos_center.jpg" alt="Abrhaley Arefaine Hailenchael"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://abrhaleyarefaine1997.github.io/">Abrhaley Arefaine Hailenchael</a></h5>
+      <h6 class="card-subtitle">MSc Computer Science | AI, XAI, Graph Neural Networks, NLP &amp; LLMs</h6>
+      <p class="card-text">MSc Computer Science graduate with experience in Graph Neural Networks, Explainable AI, NLP, LLMs, and predictive modeling. I build robust, interpretable ML pipelines for complex and imbalanced data, with research in sequential, multimodal, and graph-based data.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/abrhaleyarefaine1997" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/abrhaley_ambassador" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.facebook.com/abrehaley.arefayne" target="_blank" rel="noopener">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "Abrhaley" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/edem_calibration_uniaxial/">A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates</a></li>
+      
+      <li><a href="/post/eepa/">The Edinburgh Elasto-Plastic Adhesion (EEPA) Model... in EDEM 2018!</a></li>
+      
+      <li><a href="/talk/models-for-manufacturing-of-particulate-products-project-dissemination/">Models for Manufacturing of Particulate Products Project Dissemination</a></li>
+      
+      <li><a href="/publication/morrissey_2013/">Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines</a></li>
+      
+      <li><a href="/publication/morrissey_et_al_2014c/">EDEM Contact Model: Adhesive Elasto-Plastic Model</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  
+  <p class="powered-by">
+    © 2026 Abrhaley Arefaine Hailenchael
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.9592335d574f7a97010f99b90ad0f310.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/c.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/c++.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/julia.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/matlab.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+      <script id="dsq-count-scr" src="https://Abrhaley.disqus.com/count.js" async></script>
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.eaa29d20323f1326d362bb44b75f0dbf.js"></script>
+
+    
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+
+</body>
+</html>
