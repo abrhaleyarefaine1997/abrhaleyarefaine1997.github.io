@@ -1,40 +1,26 @@
-# Configuration of Hugo
-# Guide: https://wowchemy.com/docs/getting-started/
-# Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
-
-title: John P. Morrissey # Website name
-baseurl: 'www.johnpmorrissey.com' # Website URL
-copyright: '© 2021 John P. Morrissey' # Footer text, e.g. '© {year} Me'
-
-############################
-## LANGUAGE
-############################
-
+# Configuration of Hugo / Wowchemy v5
+title: "Abrhaley Arefaine Hailenchael"
+baseURL: "https://abrhaleyarefaine1997.github.io/"
+# Google Analytics
+googleAnalytics: "UA-18805120-1"  # <-- top-level, not in params
+copyright: "© 2026 Abrhaley Arefaine Hailenchael"
 defaultContentLanguage: en
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
 removePathAccents: true
-
-############################
-## MODULES
-############################
-
+# Hugo modules
 module:
   imports:
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5
-
-############################
-## ADVANCED
-############################
-
+# Advanced
 enableGitInfo: false
 summaryLength: 30
-paginate: 10
+pagination:
+  pagerSize: 10
 enableEmoji: true
 enableRobotsTXT: true
-footnotereturnlinkcontents: <sup>^</sup>
+footnotereturnlinkcontents: "<sup>^</sup>"
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
 permalinks:
   event: '/talk/:slug/'
@@ -66,3 +52,88 @@ related:
       weight: 100
     - name: categories
       weight: 70
+# Security
+security:
+  enableInlineShortcodes: false
+  exec:
+    allow:
+      - '^(dart-)?sass(-embedded)?$'
+      - '^go$'
+      - '^git$'
+      - '^npx$'
+      - '^postcss$'
+      - '^tailwindcss$'
+    osEnv:
+      - '(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE|PROGRAMDATA)$'
+      - '^WC_POST_CSS$'
+  funcs:
+    getenv:
+      - '^HUGO_'
+      - '^CI$'
+      - '^WC_POST_CSS$'
+  http:
+    methods:
+      - '(?i)GET|POST'
+    urls:
+      - '.*'
+# ------------------------------
+# Site-specific params (Wowchemy)
+# ------------------------------
+params:
+  tagline: |
+    MSc Computer Science | AI, XAI, Graph Neural Networks, NLP & LLMs
+  cv: "files/abrhaley_cv.pdf"
+  showCVButton: true
+  # Author info
+  author:
+    name: "Abrhaley Arefaine Hailenchael"
+    email: "abrhaleyarefaine1997@gmail.com"
+    homepage: "https://linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229"
+  # Research interests
+  interests:
+    - "Predictive modeling and outcome estimation"
+    - "Explainable AI (XAI), Graph Neural Networks, LLMs, NLP"
+    - "Sequential, temporal, and multimodal data analysis"
+    - "Robust evaluation under noise, imbalance, and uncertainty"
+    - "Integration of ML with experimental, imaging, and control systems"
+    - "Interpretable models for safety-critical applications"
+  # Education
+  education:
+    - degree: "MSc Computer Science"
+      institution: "Warsaw University of Technology, Poland"
+      start: "2023-09-01"
+      end: "2025-12-01"
+      grade: "4.71/5.0 (Excellent Rank)"
+      thesis: |
+        Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection
+      description: |
+        Built ML pipelines addressing imbalanced data, applied SHAP for interpretable decision support, emphasized robustness and reproducibility.
+    - degree: "BSc Computer Science and Engineering"
+      institution: "Mekelle University, Ethiopia"
+      start: "2016-09-01"
+      end: "2020-06-01"
+      grade: "3.78/4.0 (Distinction)"
+  # Projects
+  projects:
+    - name: "Graph Neural Networks for Molecular Property Prediction"
+      description: |
+        Implemented GNNs with PyTorch Geometric and GNNExplainer for interpretable insights. Built evaluation pipelines with cross-validation and uncertainty quantification.
+    - name: "GPT-2 Tigrinya LoRA Text Generation"
+      description: |
+        Fine-tuned GPT-2 for low-resource sequential modeling with reproducible outputs.
+    - name: "NLP & OCR Document Classification"
+      description: |
+        Built pipelines for text extraction and classification from scanned documents.
+    - name: "Hate Speech Detection in Tigrigna"
+      description: |
+        Developed ML models addressing bias, scarcity, and robustness for sensitive content detection.
+  # Social links
+  social:
+    - name: "LinkedIn"
+      url: "https://linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229"
+    - name: "GitHub"
+      url: "https://github.com/abrhaleyarefaine1997"
+    - name: "Instagram"
+      url: "https://www.instagram.com/abrhaley_ambassador"
+    - name: "Facebook"
+      url: "https://www.facebook.com/abrehaley.arefayne"
