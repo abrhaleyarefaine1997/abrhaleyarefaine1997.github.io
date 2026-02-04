@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/project/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This MSc thesis project focuses on &lt;strong&gt;detecting financial fraud&lt;/strong&gt; using &lt;strong&gt;advanced machine learning techniques&lt;/strong&gt; combined with &lt;strong&gt;Explainable AI (XAI)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Financial transactions are highly &lt;strong&gt;complex, noisy, and imbalanced&lt;/strong&gt;, making fraud detection challenging. The project emphasizes &lt;strong&gt;robust, interpretable, and reproducible ML pipelines&lt;/strong&gt; suitable for real-world deployment and regulatory compliance.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Fraudulent financial activities pose significant operational and regulatory risks. Traditional detection methods are often limited in &lt;strong&gt;accuracy and interpretability&lt;/strong&gt;. This work addresses these gaps by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developing &lt;strong&gt;robust ML models&lt;/strong&gt; that handle highly imbalanced datasets.&lt;/li&gt;
+&lt;li&gt;Ensuring &lt;strong&gt;explainable predictions&lt;/strong&gt; for auditability and decision support.&lt;/li&gt;
+&lt;li&gt;Delivering &lt;strong&gt;actionable insights&lt;/strong&gt; to financial institutions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Built &lt;strong&gt;end-to-end ML pipelines&lt;/strong&gt; including preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;ensemble models, neural networks, and anomaly detection techniques&lt;/strong&gt; to maximize predictive performance.&lt;/li&gt;
+&lt;li&gt;Leveraged &lt;strong&gt;SHAP and other XAI tools&lt;/strong&gt; for feature-level and instance-level interpretability.&lt;/li&gt;
+&lt;li&gt;Implemented &lt;strong&gt;robust cross-validation&lt;/strong&gt; and uncertainty-aware evaluation to ensure generalization under realistic distribution shifts.&lt;/li&gt;
+&lt;li&gt;Emphasized &lt;strong&gt;reproducibility&lt;/strong&gt;, logging, and version control to ensure consistent results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--contributions&#34;&gt;Results &amp;amp; Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved &lt;strong&gt;high predictive accuracy&lt;/strong&gt; in detecting fraudulent transactions in imbalanced datasets.&lt;/li&gt;
+&lt;li&gt;Provided &lt;strong&gt;interpretable explanations&lt;/strong&gt; for model decisions, improving trust and accountability.&lt;/li&gt;
+&lt;li&gt;Established a &lt;strong&gt;reusable and scalable ML framework&lt;/strong&gt; for financial fraud detection.&lt;/li&gt;
+&lt;li&gt;Developed insights that can &lt;strong&gt;inform policy, auditing, and operational decision-making&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Work is currently &lt;strong&gt;under preparation for publication&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated fraud detection for banks and financial services.&lt;/li&gt;
+&lt;li&gt;Decision support for compliance and audit teams.&lt;/li&gt;
+&lt;li&gt;Scalable and interpretable pipelines for other predictive modeling challenges in finance and beyond.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;key-highlights&#34;&gt;Key Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MSc thesis &lt;strong&gt;graded Excellent (highest rank)&lt;/strong&gt; at Warsaw University of Technology.&lt;/li&gt;
+&lt;li&gt;Emphasis on &lt;strong&gt;robustness, reproducibility, and actionable insights&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Integration of &lt;strong&gt;advanced ML, explainability, and real-world financial context&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Low-Resource Tigrinya Language Modeling with LoRA-Fine-Tuned GPT-2</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project focuses on &lt;strong&gt;low-resource language modeling&lt;/strong&gt; for &lt;strong&gt;Tigrinya&lt;/strong&gt;, using parameter-efficient fine-tuning techniques applied to &lt;strong&gt;GPT-2&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The goal was to build a &lt;strong&gt;reproducible, stable, and efficient&lt;/strong&gt; text generation system suitable for scarce-data settings.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tuned &lt;strong&gt;GPT-2 (124M parameters)&lt;/strong&gt; using &lt;strong&gt;Low-Rank Adaptation (LoRA)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed data preprocessing pipelines for sequential text modeling&lt;/li&gt;
+&lt;li&gt;Controlled training stability and reproducibility through fixed seeds and logging&lt;/li&gt;
+&lt;li&gt;Optimized memory usage and training efficiency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;challenges-addressed&#34;&gt;Challenges Addressed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Extremely limited labeled data&lt;/li&gt;
+&lt;li&gt;High risk of overfitting in low-resource settings&lt;/li&gt;
+&lt;li&gt;Evaluation of generative quality beyond loss metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Generated coherent and grammatically consistent Tigrinya text&lt;/li&gt;
+&lt;li&gt;Demonstrated effectiveness of LoRA for low-resource LLM adaptation&lt;/li&gt;
+&lt;li&gt;Established a reusable pipeline for future low-resource language experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Language preservation and accessibility&lt;/li&gt;
+&lt;li&gt;Educational and linguistic research tools&lt;/li&gt;
+&lt;li&gt;Foundation for downstream NLP tasks in Tigrinya&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>XAI Graph Neural Networks for Molecular Property Prediction</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gran_ed/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gran_ed/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This research project focuses on predicting molecular properties using &lt;strong&gt;Graph Neural Networks (GNNs)&lt;/strong&gt;, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p&gt;
+&lt;p&gt;The goal is to develop &lt;strong&gt;accurate, interpretable, and robust models&lt;/strong&gt; suitable for scientific and industrial applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Implemented GNN architectures using &lt;strong&gt;PyTorch Geometric&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed node- and edge-level representations for molecular graphs&lt;/li&gt;
+&lt;li&gt;Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li&gt;
+&lt;li&gt;Built &lt;strong&gt;reproducible evaluation pipelines&lt;/strong&gt; with cross-validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;explainability&#34;&gt;Explainability&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied &lt;strong&gt;GNNExplainer&lt;/strong&gt; to interpret predictions at:
+&lt;ul&gt;
+&lt;li&gt;node-level (important atoms)&lt;/li&gt;
+&lt;li&gt;edge-level (critical bonds)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conducted feature- and structure-level analyses for explainable predictions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved strong predictive performance across molecular property benchmarks&lt;/li&gt;
+&lt;li&gt;Improved interpretability without sacrificing accuracy&lt;/li&gt;
+&lt;li&gt;Enabled model inspection suitable for research and decision support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;📄 Ongoing research project — publication in preparation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hate Speech Trend Analysis in Low-Resource Tigrinya Social Media (2018–2022)</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project analyzes &lt;strong&gt;hate speech trends&lt;/strong&gt; in Tigrinya social media posts collected between &lt;strong&gt;2018 and 2022&lt;/strong&gt;, during the &lt;strong&gt;Northern Ethiopia Tigray conflict&lt;/strong&gt;. It combines &lt;strong&gt;machine learning, exploratory data analysis, and data-driven approaches&lt;/strong&gt; to identify temporal and spatial patterns of harmful speech.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Tigrinya is a &lt;strong&gt;low-resource language&lt;/strong&gt;, presenting unique challenges for automated content moderation and linguistic analysis. Understanding hate speech trends is crucial during periods of &lt;strong&gt;political instability and armed conflict&lt;/strong&gt; for research, humanitarian, and policy applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Collected and preprocessed Tigrinya social media data&lt;/li&gt;
+&lt;li&gt;Developed ML-based &lt;strong&gt;text classification models&lt;/strong&gt; to detect hate speech&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;temporal analysis&lt;/strong&gt; to study frequency and severity trends&lt;/li&gt;
+&lt;li&gt;Examined &lt;strong&gt;content length characteristics&lt;/strong&gt; and moderation actions&lt;/li&gt;
+&lt;li&gt;Mapped &lt;strong&gt;geographic propagation&lt;/strong&gt; of hate-related content&lt;/li&gt;
+&lt;li&gt;Evaluated correlations between &lt;strong&gt;conflict events&lt;/strong&gt; and spikes in hate speech&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--insights&#34;&gt;Results &amp;amp; Insights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Identified &lt;strong&gt;hotspots&lt;/strong&gt; where hate speech was most actively disseminated&lt;/li&gt;
+&lt;li&gt;Found strong &lt;strong&gt;temporal correlations&lt;/strong&gt; with conflict escalation&lt;/li&gt;
+&lt;li&gt;Provided evidence for the need of &lt;strong&gt;tailored ML solutions&lt;/strong&gt; for low-resource languages&lt;/li&gt;
+&lt;li&gt;Developed actionable insights for &lt;strong&gt;conflict-sensitive content moderation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated hate speech detection in low-resource languages&lt;/li&gt;
+&lt;li&gt;Monitoring of social media during conflicts&lt;/li&gt;
+&lt;li&gt;Supporting NGOs, governments, and researchers with targeted interventions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>VELaSSCo: Visualization for Extremely Large-scale Scientific Computing</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/velassco/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/velassco/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the major problems experienced by engineers and scientists running high-end real-scale simulation models is the management and exploitation (in terms of visualization) of the outputs of their models.
+Inspecting large dataset distributed over numerous clusters located remotely, is often a significant difficulty to be overcome to ensure that users (both in academia and industry) are able to take the best advantage of current (and future) HPC infrastructures.&lt;/p&gt;
+&lt;p&gt;The Vision of VELaSSCo is to provide new approaches for visual analysis of large-scale simulations for the Exabyte era. It does this by building on big data tools and architectures for the engineering and scientific community and by adopting new ways of in-situ processing for data analytics and hardware accelerated interactive visualization.&lt;/p&gt;
+&lt;p&gt;To better manipulate the data from simulations with billions of records it is crucial that the engineering and scientific community adopts big data tools. VELaSSCo will provide a simulation data analysis platform consisting of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A database structure, based on widely used technologies such as Hadoop-HBase, that can organise and store a diverse range of large-scale simulation data sets for collaborative use.&lt;/li&gt;
+&lt;li&gt;An innovative approach, adopting big data best practices, to handle large scale simulation data sets that have to be stored on multiple servers.&lt;/li&gt;
+&lt;li&gt;A framework equipped with advanced in-situ processing tools to analyse the output of parallel simulation solvers.&lt;/li&gt;
+&lt;li&gt;An analysis platform to analyse and visualize large-scale data sets interactively. This builds on leading edge graphics hardware.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;project-partners&#34;&gt;Project Partners&lt;/h2&gt;
+&lt;p&gt;The VELaSSCo consortium has a wide variety of expertise aligned with the objectives of the project.
+Expertise of the partners can be classified mainly in two principal categories: &lt;strong&gt;Institutions specialized in the development and implementation of visualization software&lt;/strong&gt;, particularly addressed to facilitate analysis of HPC simulations in engineering and scientific first-class problems (CIMNE, UNEDIN and FRAUNHOFER); and &lt;strong&gt;institutions with experience in Data Analytics&lt;/strong&gt;, Big Data, Big Data Handling and Cloud Computing (SINTEF, INRIA, JOTNE and ATOS).&lt;/p&gt;
+&lt;p&gt;The partnership also counts with a large group of potential end-users of the outcomes of the projects, ranging from large engineering companies, SME&amp;rsquo;s on engineering modelling and software houses, to research organisations doing large scale engineering modelling, linked to the User Panel already described.&lt;/p&gt;
+&lt;p&gt;List of partners:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cimne.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Centre Internacional de Metodes Numerics en Enginyeria (CIMNE)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;www.eng.ed.ac.uk&#34;&gt;The University of Edinburgh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sintef.no/en/digital/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SINTEF Institute of Information and Communications Technology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.inria.fr/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Institut National De Recherche En Informatique Et En Automatique (INRIA)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.igd.fraunhofer.de/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fraunhofer Institute for Computer Graphics Research IGD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atos.net/en/about-us?utm_source=/en-us/home/we-are/insights-innovation/research-and-innovation.html&amp;amp;utm_medium=301&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AtoS Spain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jotneit.no/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jotne&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;project-gallery&#34;&gt;Project Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment_density.png&#34; data-caption=&#34;Coarse-grained bulk density in railway embankment&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment_density_hu104ee107ae4302d04c4e56389c74e082_563737_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Coarse-grained bulk density in railway embankment&#34; width=&#34;215&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment.png&#34; data-caption=&#34;Railway embankment test case&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment_hu61fbcd5d14c1f8f10f0a9e8d9eaf9522_1536398_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Railway embankment test case&#34; width=&#34;575&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentSzz.jpg&#34; data-caption=&#34;Coarse-grained vertical stress in railway embankment&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentSzz_hu6274af65bae1d870fee1384b4a816561_492967_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Coarse-grained vertical stress in railway embankment&#34; width=&#34;631&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentVelocity_Cuts.jpg&#34; data-caption=&#34;Coarse-grained bulk density in railway embankment&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentVelocity_Cuts_huf876020a209bf4333def3551103d4358_735851_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Coarse-grained bulk density in railway embankment&#34; width=&#34;322&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/fluidised_bed_temporal_spatial.png&#34; data-caption=&#34;Temporal and spatial averaging of fluidised bed&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/fluidised_bed_temporal_spatial_hu58af10e4a2eeedd0a44d15dce9e5d07e_1429406_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Temporal and spatial averaging of fluidised bed&#34; width=&#34;427&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/kG3St1mDlLw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/U9LxMexQCBg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/sqvzmdp-k-U&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ZnUl35qK3No&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Transporting, handling and storing behaviour of iron ore fines</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p&gt;
+&lt;p&gt;Fines are produced during transportation, handling and storing of iron pellets.
+The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br&gt;
+Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p&gt;
+&lt;p&gt;The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p&gt;
+&lt;p&gt;DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p&gt;
+&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png&#34; data-caption=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;245&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png&#34; data-caption=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;237&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;temporally_scaled_uniaxial.png&#34; width=&#34;214&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;h1 id=&#34;video-gallery&#34;&gt;Video Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/E9fa6P68QDs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/SvEnSW8LemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Discrete Element Modelling of Iron Ore Pellets to Include the Effects of Moisture and Fines</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/phd/</link>
+      <pubDate>Sun, 27 Sep 2009 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/phd/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;Across industry the majority of raw materials handled are particulate in nature, ranging in size and properties from aggregates to powders.
+The stress regimes experienced by the granular solids vary and the exhibited bulk behaviours can be complex and unexpected.
+The prevalence of granular solids makes them an area of interest for industry and researchers alike as many challenges still remain, such as dealing with complex cohesive behaviour in materials, which often gives rise to handling difficulties.
+The cohesive strength of a bulk material depends on the consolidation stress it has experienced. As a result, the stress history in the material leading up to a handling scenario needs to be considered when evaluating its handling behaviour.&lt;/p&gt;
+&lt;p&gt;Storage and transportation are an important part of the process chain for industries where particulate solids are commonplace.
+Failure to properly account for the cohesive nature of a particulate solid can be costly as it can easily lead to blockages in a silo such as ratholing or arching near the outlet during discharge.&lt;/p&gt;
+&lt;h1 id=&#34;research-goals&#34;&gt;Research Goals&lt;/h1&gt;
+&lt;p&gt;Cohesive granular solids such as powders can have a very loose, highly porous structure under very low stresses.
+While it is possible to generate similar initial packing structures in a DEM simulation, it is not feasible to attempt to match all stress states.
+In this study, stress states larger than 5-10 kPa are of interest and as such all packing structures will aim to match the experimental results from this stress level.&lt;/p&gt;
+&lt;h2 id=&#34;numerical&#34;&gt;Numerical&lt;/h2&gt;
+&lt;p&gt;The main aim of the research is to develop an improved contact model to better capture the behaviour of cohesive granular solids, particularly iron ore fines, which are significantly affected by the presence of moisture. In order for numerical simulations to be successfully used for more efficient design and management of industrial equipment and structures, the transition from qualitative to quantitative prediction needs to be made.&lt;/p&gt;
+&lt;p&gt;In this study a mesoscopic adhesive contact model that accounts for contact plasticity and stress history dependency in the bulk solid, the &lt;strong&gt;Edinburgh Elasto-Plastic Adhesion (EEPA)&lt;/strong&gt; mode, has been presented and mathematically verified. A parametric study of the DEM contact model parameters was conducted to gain a deeper understating of the effect of input parameters on the simulated cohesive bulk behaviour.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-edinburgh-elasto-plastic-adhesion-eepa-model&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Edinburgh Elasto-Plastic Adhesion (EEPA) Model**&#34; srcset=&#34;
+               /media/albums/phd/EEPA_hu0b8998d9f5690385d3aba0ade420b7ad_158212_4b5576855219e4a6dd21e7b8127aceed.png 400w,
+               /media/albums/phd/EEPA_hu0b8998d9f5690385d3aba0ade420b7ad_158212_3d6d92f6bfd60f4da5076270f196c53b.png 760w,
+               /media/albums/phd/EEPA_hu0b8998d9f5690385d3aba0ade420b7ad_158212_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EEPA_hu0b8998d9f5690385d3aba0ade420b7ad_158212_4b5576855219e4a6dd21e7b8127aceed.png&#34;
+               width=&#34;760&#34;
+               height=&#34;409&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Edinburgh Elasto-Plastic Adhesion (EEPA) Model&lt;/strong&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The &lt;strong&gt;EEPA&lt;/strong&gt; contact model has been used to predict an experimental flow function of KPRS iron ore fines.
+The contact model has demonstrated the ability to capture the stress history dependent behaviour that exists in cohesive granular solids.
+The DEM simulations provide a very close match to the experimental flow functions, with the predicted unconfined strengths found to be within the standard deviations of the experimental results.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-comparison-between-experimental-and-dem-flow-functions-for-iron-ore-fines&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Comparison between Experimental and DEM Flow Functions for Iron ore fines**&#34; srcset=&#34;
+               /media/albums/phd/EPT_DEM_comp_huc0929e274a3d9e210b6a9910612711ae_384461_90a2c0163603a276a1230c02bfa84c97.png 400w,
+               /media/albums/phd/EPT_DEM_comp_huc0929e274a3d9e210b6a9910612711ae_384461_74c93ab8a88ccf4d14aaec99d93d2e9c.png 760w,
+               /media/albums/phd/EPT_DEM_comp_huc0929e274a3d9e210b6a9910612711ae_384461_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_DEM_comp_huc0929e274a3d9e210b6a9910612711ae_384461_90a2c0163603a276a1230c02bfa84c97.png&#34;
+               width=&#34;760&#34;
+               height=&#34;549&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Comparison between Experimental and DEM Flow Functions for Iron ore fines&lt;/strong&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;Investigations into the failure mode predicted by the DEM simulations show that the samples are failing from the development of shear planes similar to those observed experimentally.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-shear-failure-mode-in-dem-simulations-a-dem-simulation-b-coarse-grained-angular-velocity-in-sample-c-coarse-grained-solid-fraction-in-sample&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Shear Failure mode in DEM Simulations:** a) DEM Simulation b) Coarse-grained angular velocity in sample c) Coarse-grained solid fraction in sample&#34; srcset=&#34;
+               /media/albums/phd/planar_shearband_hu5d563238a14378b3c721e131819c2d6a_4307227_38887753a8ce5f50b1832e51a317aa96.png 400w,
+               /media/albums/phd/planar_shearband_hu5d563238a14378b3c721e131819c2d6a_4307227_a1c5f8101c0f9112bc195b18edeeab9a.png 760w,
+               /media/albums/phd/planar_shearband_hu5d563238a14378b3c721e131819c2d6a_4307227_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/planar_shearband_hu5d563238a14378b3c721e131819c2d6a_4307227_38887753a8ce5f50b1832e51a317aa96.png&#34;
+               width=&#34;760&#34;
+               height=&#34;333&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Shear Failure mode in DEM Simulations:&lt;/strong&gt; a) DEM Simulation b) Coarse-grained angular velocity in sample c) Coarse-grained solid fraction in sample
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;experimental&#34;&gt;Experimental&lt;/h2&gt;
+&lt;p&gt;To help achieve this a secondary aim is to rigorously characterise the properties of the material that are required for calibration of a numerical model.
+A study of the effect of the parameters of the adhesive contact model is also carried out.
+In this study a particular focus is paid to the two types of iron ore fines: &lt;strong&gt;KPBO&lt;/strong&gt; and &lt;strong&gt;KPRS&lt;/strong&gt;, with the purpose of characterising the different materials types and assessing the distinct behaviour exhibited by the different fines.&lt;/p&gt;
+&lt;p&gt;A comprehensive study on the effect of cohesion arising from the addition of moisture on the behaviour of two types of LKAB iron ore fines (KPBO and KPRS) has been carried out using a uniaxial tester, the &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt;.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-edinburgh-powder-tester-ept&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Edinburgh Powder Tester (EPT)**&#34; srcset=&#34;
+               /media/albums/phd/EPT_hu8edd0498d5074dbc466eebfd41fc3c25_1893967_1575204e1d419de7a2e4a82b6cee9bec.png 400w,
+               /media/albums/phd/EPT_hu8edd0498d5074dbc466eebfd41fc3c25_1893967_2dd4d2447a227bfaeeec51692176050d.png 760w,
+               /media/albums/phd/EPT_hu8edd0498d5074dbc466eebfd41fc3c25_1893967_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_hu8edd0498d5074dbc466eebfd41fc3c25_1893967_1575204e1d419de7a2e4a82b6cee9bec.png&#34;
+               width=&#34;562&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;The addition of moisture to the sample has been found to have a significant effect on both kinds of fines.
+KPRS fines were found to have a much higher unconfined strength and flow function at higher moisture contents, and also show a greater
+increase in cohesion with the addition of moisture, while at moisture contents of less than 2% the KPBO fines demonstrate higher unconfined yield strength.
+The KPBO fines were also found to achieve a significantly looser initial packing at much lower moisture content when compared to the KPRS fines.
+The lateral pressure ratio has also been evaluated.&lt;/p&gt;
+&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/bulkdensity_vs_moisture.PNG&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/bulkdensity_vs_moisture_hu034a8b83865fb4c2d44c35bba9fae105_496760_0x150_resize_lanczos_3.PNG&#34; loading=&#34;lazy&#34; alt=&#34;bulkdensity_vs_moisture.PNG&#34; width=&#34;210&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EEPA.png&#34; data-caption=&#34;Edinburgh Elasto-Plastic Adhesion contact model force-overlap relationship&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EEPA_hu0b8998d9f5690385d3aba0ade420b7ad_158212_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Edinburgh Elasto-Plastic Adhesion contact model force-overlap relationship&#34; width=&#34;279&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_DEM_comp.png&#34; data-caption=&#34;Comparison of DEM flow function with experimentally measured flow function at various moisture contents&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_DEM_comp_huc0929e274a3d9e210b6a9910612711ae_384461_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison of DEM flow function with experimentally measured flow function at various moisture contents&#34; width=&#34;208&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_sim.png&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_sim_huf5c15a8dce4b8b6601b7050544e285bc_1051002_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;EPT_sim.png&#34; width=&#34;309&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT.png&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/EPT_hu8edd0498d5074dbc466eebfd41fc3c25_1893967_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;EPT.png&#34; width=&#34;111&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/exp_ff_kprs.PNG&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/exp_ff_kprs_hu99f32f7e2ff2a1823015bd2f101b7531_682406_0x150_resize_lanczos_3.PNG&#34; loading=&#34;lazy&#34; alt=&#34;exp_ff_kprs.PNG&#34; width=&#34;208&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/exp_uc_stress_strain.PNG&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/exp_uc_stress_strain_hue11f8cfcf9e2fa9d8d7630a97ea10c3f_334304_0x150_resize_lanczos_3.PNG&#34; loading=&#34;lazy&#34; alt=&#34;exp_uc_stress_strain.PNG&#34; width=&#34;186&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/ff_comp.PNG&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/ff_comp_hu7c741ffc5839490ff0e384d45e091761_554451_0x150_resize_lanczos_3.PNG&#34; loading=&#34;lazy&#34; alt=&#34;ff_comp.PNG&#34; width=&#34;204&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/planar_shearband.png&#34; data-caption=&#34;Shear band development in unconfined compression of numerical sample&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/planar_shearband_hu5d563238a14378b3c721e131819c2d6a_4307227_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Shear band development in unconfined compression of numerical sample&#34; width=&#34;342&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-phd&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/uuys_vs_moisture.PNG&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/phd/uuys_vs_moisture_hu743e0ba69e3ec56012056fe724f35034_566701_0x150_resize_lanczos_3.PNG&#34; loading=&#34;lazy&#34; alt=&#34;uuys_vs_moisture.PNG&#34; width=&#34;209&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;h1 id=&#34;video-gallery&#34;&gt;Video Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/1ImEki7yguQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Big3upY2fJw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/dRgQn6ZiQK0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/-q4zcXTXgM4&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/YArm17GYORE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/flw11XeAU5M&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

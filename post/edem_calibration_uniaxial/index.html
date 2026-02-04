@@ -1,0 +1,1591 @@
+<!DOCTYPE html><html lang="en-gb" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Abrhaley Arefaine Hailenchael" />
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining. Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task." />
+
+  
+  <link rel="alternate" hreflang="en-gb" href="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/" />
+
+  
+  
+  
+    <meta name="theme-color" content="#1565c0" />
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.f1ecf783c14edc00c9320c205831ad8e.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha512-W0xM4mr6dEP9nREo7Z9z+9X70wytKvMGeDsj7ps2+xg5QPrEBXC8tAW1IFnzjR6eoJ90JmCnFzerQJTLzIEHjA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/github.min.css" crossorigin="anonymous" title="hl-light" media="print" onload="this.media='all'">
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" media="print" onload="this.media='all'" disabled>
+        
+      
+    
+
+    
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.css" integrity="" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.2ca6ced9807926ba2b2185205dbe2f1f.css" />
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-18805120-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-18805120-1');
+</script>
+
+  
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+
+  
+    <link rel="manifest" href="/manifest.webmanifest" />
+  
+
+  <link rel="icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_180x180_fill_lanczos_center_3.png" />
+
+  <link rel="canonical" href="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary_large_image" />
+  
+    <meta property="twitter:site" content="@abrhaley_ambassador" />
+    <meta property="twitter:creator" content="@abrhaley_ambassador" />
+  
+  <meta property="og:site_name" content="Abrhaley Arefaine Hailenchael" />
+  <meta property="og:url" content="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/" />
+  <meta property="og:title" content="A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates | Abrhaley Arefaine Hailenchael" />
+  <meta property="og:description" content="Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining. Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task." /><meta property="og:image" content="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/featured.png" />
+    <meta property="twitter:image" content="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/featured.png" /><meta property="og:locale" content="en-gb" />
+  
+    
+      <meta
+        property="article:published_time"
+        content="2019-02-05T00:00:00&#43;00:00"
+      />
+    
+    <meta property="article:modified_time" content="2021-12-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/"
+  },
+  "headline": "A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates",
+  
+  "image": [
+    "https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/featured.png"
+  ],
+  
+  "datePublished": "2019-02-05T00:00:00Z",
+  "dateModified": "2021-12-01T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Abrhaley Arefaine Hailenchael"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Abrhaley Arefaine Hailenchael",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining. Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task."
+}
+</script>
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+  <title>A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates | Abrhaley Arefaine Hailenchael</title>
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="e03c4f9e2a0db36d3bdf204c614f615c" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.6619cc29fe1a874b6ea1a0359aab5cfb.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container-xl">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Abrhaley Arefaine Hailenchael</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Abrhaley Arefaine Hailenchael</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-end" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posters"><span>Posters</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+      
+      
+        
+      
+
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  </div>
+
+  <div class="page-body">
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<div class="article-container pt-3">
+  <h1>A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates</h1>
+
+  
+
+  
+
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  <span class="author-highlighted">
+      Abrhaley Arefaine Hailenchael</span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+           Feb 5, 2019 &middot; Last updated on
+
+      
+    
+    Dec 1, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+  
+  
+    <span class="middot-divider"></span>
+    <a href="/post/edem_calibration_uniaxial/#disqus_thread"></a>
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/numerical-methods/">Numerical Methods</a>, <a href="/category/calibration/">Calibration</a></span>
+  
+
+</div>
+  
+
+
+
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  <a class="btn btn-outline-primary btn-page-header" href="/project/gran_ed/">
+    Project
+  </a>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<div class="article-header container featured-image-wrapper mt-4 mb-4" style="max-width: 1000px; max-height: 974px;">
+  <div style="position: relative">
+    <img src="/post/edem_calibration_uniaxial/featured.png" width="1000" height="974" alt="" class="featured-image">
+    <span class="article-header-caption">Image credit: University of Edinburgh / Freeman Technology</span>
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <div class="alert alert-note">
+  <div>
+    This post was originally published on <a href="www.edemsimulation.com">www.edemsimulation.com</a>.
+  </div>
+</div>
+<h2 id="overview">Overview</h2>
+<p>Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining.
+However, all share a very similar challenge of keeping their processes flowing reliably, since cohesive particulates (either naturally cohesive or those affected by external factors such as moisture) can trigger difficult material handling situations.
+Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task.</p>
+<p>The flow function of a cohesive particulates is a material property that is typically measured to indicate the flowability and handleability of a material.
+In industry this is typically measured with some direct shear device such as a <strong>Jenike</strong> tester or a dynamic flow tester such as a <strong>FT4 Powder Rheometer</strong>.
+Ring shear testers and rotational testers are also frequently used.
+While each one has its advantages, many are compromised by the high cost, amount of time required for carrying out testing or lack of relevance to specific industrial situations.</p>
+<p>Uniaxial testers offer an attractive alternative method for characterising the flowability of powders and sticky granular materials in industrial situations. Uniaxial testers apply a consolidation stress followed by a failure load vertically to a sample.
+This is appealing for being a mechanically simple device that’s easy to operate and also its physical similarity to the stress path associated with feeding industrial equipment and the unconfined yield strength <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.
+One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the height of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup><sup>,</sup><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup><sup>,</sup><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>.</p>
+<p>The <em>University of Edinburgh</em> had previous experience of developing successful uniaxial testers for sticky solids with larger particles <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>. From this experience the <strong>Edinburgh Powder Tester (EPT)</strong> was developed for measuring the flowability of compressible cohesive powders with a focus on speed, robustness and high repeatability for industrial use <sup id="fnref1:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.
+The key differences between the <strong>Edinburgh Powder Tester</strong> and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent <sup id="fnref2:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, which means the EPT offers repeatable results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials <sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup><sup>,</sup><sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
+<p>Recently, <a href="https://www.freemantech.co.uk/" target="_blank" rel="noopener">Freeman Technology</a>; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the <em>University of Edinburgh</em>, <em>DuPont</em> and <em>The Chemours Company</em> to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT.
+The result of this collaboration is <strong>‘The Uniaxial Powder Tester from Freeman Technology’</strong> which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa.</p>
+<p>The simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, make uniaxial testers ideal tools for calibrating a DEM model for cohesive solids.
+The <strong>Freeman UPT</strong>, which is a semi-automated uniaxial tester, provides rapid measurements of key bulk mechanical properties of powders, including the stress–strain and the stress–density response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the increased cohesive (caking) strength developed over time in consolidation, all of which can be utilised for calibrating your DEM simulation of a cohesive solid to provide a realistic prediction.</p>
+<div class="row">
+  <div class="column_2">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <figure  id="figure-freeman-upt">
+      <div class="d-flex justify-content-center">
+        <div class="w-100" ><img alt="**Freeman UPT**" srcset="
+                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg 400w,
+                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_894bf19482d2447b3b2c507cde3c1590.jpg 760w,
+                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w"
+                   src="/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg"
+                   width="441"
+                   height="760"
+                   loading="lazy" data-zoomable /></div>
+      </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+          <strong>Freeman UPT</strong>
+        </figcaption></figure> 
+  </div>
+  <div class="column_2">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <figure  id="figure-freeman-upt-consolidation-station">
+      <div class="d-flex justify-content-center">
+        <div class="w-100" ><img alt="**Freeman UPT Consolidation Station**" srcset="
+                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg 400w,
+                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_66483ab748edffa34166eb60380f4292.jpg 760w,
+                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w"
+                   src="/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg"
+                   width="151"
+                   height="217"
+                   loading="lazy" data-zoomable /></div>
+      </div><figcaption data-pre="Figure&nbsp;" data-post=":&nbsp;" class="numbered">
+          <strong>Freeman UPT Consolidation Station</strong>
+        </figcaption></figure>
+  </div>
+</div>
+<h1 id="references">References</h1>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, <em>Evaluation of the Edinburgh powder tester</em>, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. <a href="http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation&#43;of&#43;the&#43;Edinburgh&#43;Powder&#43;Tester#0" target="_blank" rel="noopener">http://scholar.google.com/scholar?hl=en&btnG=Search&q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0</a> (accessed October 5, 2019).&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2">
+<p>L.P. Maltby, G.G. Enstad, <em>Uniaxial Tester for Quality Control and Flow Property Characterization of Powders.</em>, Powder Handl. Process. 13 (1993) 135–139.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3">
+<p>M. Röck, M. Ostendorf, J. Schwedes, <em>Development of an Uniaxial Caking Tester</em>, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4">
+<p>R.E. Freeman, X. Fu, <em>The Development of a Compact Uniaxial Tester</em>, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5">
+<p>Z. Zhong, J.Y. Ooi, J.M. Rotter, <em>Predicting the handlability of a coal blend from measurements on the source coals</em>, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6">
+<p>S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, <em>An experimental and numerical study of packing, compression, and caking behaviour of detergent powders</em>, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7">
+<p>J.P. Morrissey, <em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines</em>, University of Edinburgh, 2013. <a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270</a>.&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/dem/">DEM</a>
+  
+  <a class="badge badge-light" href="/tag/calibration/">Calibration</a>
+  
+  <a class="badge badge-light" href="/tag/uniaxial/">Uniaxial</a>
+  
+  <a class="badge badge-light" href="/tag/ept/">EPT</a>
+  
+  <a class="badge badge-light" href="/tag/freeman-technology/">Freeman Technology</a>
+  
+  <a class="badge badge-light" href="/tag/upt/">UPT</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/&amp;text=A%20new%20uniaxial%20tester%20for%20measuring%20flowability%20and%20calibrating%20DEM%20models%20for%20cohesive%20particulates" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/&amp;t=A%20new%20uniaxial%20tester%20for%20measuring%20flowability%20and%20calibrating%20DEM%20models%20for%20cohesive%20particulates" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=A%20new%20uniaxial%20tester%20for%20measuring%20flowability%20and%20calibrating%20DEM%20models%20for%20cohesive%20particulates&amp;body=https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/&amp;title=A%20new%20uniaxial%20tester%20for%20measuring%20flowability%20and%20calibrating%20DEM%20models%20for%20cohesive%20particulates" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=A%20new%20uniaxial%20tester%20for%20measuring%20flowability%20and%20calibrating%20DEM%20models%20for%20cohesive%20particulates%20https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/&amp;title=A%20new%20uniaxial%20tester%20for%20measuring%20flowability%20and%20calibrating%20DEM%20models%20for%20cohesive%20particulates" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://abrhaleyarefaine1997.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hua69e36645127e15618572bb8b15ef14f_97389_270x270_fill_q75_lanczos_center.jpg" alt="Abrhaley Arefaine Hailenchael"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://abrhaleyarefaine1997.github.io/">Abrhaley Arefaine Hailenchael</a></h5>
+      <h6 class="card-subtitle">MSc Computer Science | AI, XAI, Graph Neural Networks, NLP &amp; LLMs</h6>
+      <p class="card-text">MSc Computer Science graduate with experience in Graph Neural Networks, Explainable AI, NLP, LLMs, and predictive modeling. I build robust, interpretable ML pipelines for complex and imbalanced data, with research in sequential, multimodal, and graph-based data.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/abrhaleyarefaine1997" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/abrhaley_ambassador" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.facebook.com/abrehaley.arefayne" target="_blank" rel="noopener">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  <section id="comments">
+    
+<div id="disqus_thread"></div>
+<script>
+  var disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "Abrhaley" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  </section>
+  
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/edem_calibration/">Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester</a></li>
+      
+      <li><a href="/talk/models-for-manufacturing-of-particulate-products-project-dissemination/">Models for Manufacturing of Particulate Products Project Dissemination</a></li>
+      
+      <li><a href="/project/phd/">Discrete Element Modelling of Iron Ore Pellets to Include the Effects of Moisture and Fines</a></li>
+      
+      <li><a href="/post/eepa/">The Edinburgh Elasto-Plastic Adhesion (EEPA) Model... in EDEM 2018!</a></li>
+      
+      <li><a href="/talk/a-generic-framework-for-digital-model-development/">A Generic Framework for Digital Model Development</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+  
+
+  
+  <p class="powered-by">
+    
+      <a href="/privacy/">Privacy Policy</a>
+    
+    
+       &middot; 
+      <a href="/terms/">Terms</a>
+    
+  </p>
+  
+
+  
+  <p class="powered-by">
+    © 2026 Abrhaley Arefaine Hailenchael
+  </p>
+  
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+
+    
+    <script src="/js/vendor-bundle.min.9592335d574f7a97010f99b90ad0f310.js"></script>
+
+    
+    
+    
+      
+      
+        <script src="https://cdn.jsdelivr.net/gh/desandro/imagesloaded@v4.1.4/imagesloaded.pkgd.min.js" integrity="sha512-S5PZ9GxJZO16tT9r3WJp/Safn31eu8uWrzglMahDT4dsmgqWonRY9grk3j+3tfuPr9WJNsfooOR7Gi7HL5W2jw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/metafizzy/isotope@v3.0.6/dist/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
+
+      
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/highlight.min.js" integrity="sha512-Ypjm0o7jOxAd4hpdoppSEN0TQOC19UtPAqD+4s5AlXmUvbmmS/YMxYqAqarQYyxTnB6/rqip9qcxlNB/3U9Wdg==" crossorigin="anonymous"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/r.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/latex.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/c.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/c++.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/julia.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.2.1/build/languages/matlab.min.js" crossorigin="anonymous"></script>
+        
+      
+
+    
+
+    
+    
+    
+      <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.min.js" integrity="" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+    
+      <script id="dsq-count-scr" src="https://Abrhaley.disqus.com/count.js" async></script>
+    
+
+    
+    
+      
+      
+      
+      
+      
+      
+      
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+      
+      
+    
+    
+    <script src="/en/js/wowchemy.min.eaa29d20323f1326d362bb44b75f0dbf.js"></script>
+
+    
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+
+
+<script type="text/javascript" src="//cdn.plu.mx/widget-popup.js"></script>
+
+
+
+
+</body>
+</html>

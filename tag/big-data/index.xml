@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Data | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/big-data/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <description>Big Data</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Big Data</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/big-data/</link>
+    </image>
+    
+    <item>
+      <title>VELaSSCo: Visualization for Extremely Large-scale Scientific Computing</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/velassco/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/velassco/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;One of the major problems experienced by engineers and scientists running high-end real-scale simulation models is the management and exploitation (in terms of visualization) of the outputs of their models.
+Inspecting large dataset distributed over numerous clusters located remotely, is often a significant difficulty to be overcome to ensure that users (both in academia and industry) are able to take the best advantage of current (and future) HPC infrastructures.&lt;/p&gt;
+&lt;p&gt;The Vision of VELaSSCo is to provide new approaches for visual analysis of large-scale simulations for the Exabyte era. It does this by building on big data tools and architectures for the engineering and scientific community and by adopting new ways of in-situ processing for data analytics and hardware accelerated interactive visualization.&lt;/p&gt;
+&lt;p&gt;To better manipulate the data from simulations with billions of records it is crucial that the engineering and scientific community adopts big data tools. VELaSSCo will provide a simulation data analysis platform consisting of:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A database structure, based on widely used technologies such as Hadoop-HBase, that can organise and store a diverse range of large-scale simulation data sets for collaborative use.&lt;/li&gt;
+&lt;li&gt;An innovative approach, adopting big data best practices, to handle large scale simulation data sets that have to be stored on multiple servers.&lt;/li&gt;
+&lt;li&gt;A framework equipped with advanced in-situ processing tools to analyse the output of parallel simulation solvers.&lt;/li&gt;
+&lt;li&gt;An analysis platform to analyse and visualize large-scale data sets interactively. This builds on leading edge graphics hardware.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;project-partners&#34;&gt;Project Partners&lt;/h2&gt;
+&lt;p&gt;The VELaSSCo consortium has a wide variety of expertise aligned with the objectives of the project.
+Expertise of the partners can be classified mainly in two principal categories: &lt;strong&gt;Institutions specialized in the development and implementation of visualization software&lt;/strong&gt;, particularly addressed to facilitate analysis of HPC simulations in engineering and scientific first-class problems (CIMNE, UNEDIN and FRAUNHOFER); and &lt;strong&gt;institutions with experience in Data Analytics&lt;/strong&gt;, Big Data, Big Data Handling and Cloud Computing (SINTEF, INRIA, JOTNE and ATOS).&lt;/p&gt;
+&lt;p&gt;The partnership also counts with a large group of potential end-users of the outcomes of the projects, ranging from large engineering companies, SME&amp;rsquo;s on engineering modelling and software houses, to research organisations doing large scale engineering modelling, linked to the User Panel already described.&lt;/p&gt;
+&lt;p&gt;List of partners:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.cimne.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Centre Internacional de Metodes Numerics en Enginyeria (CIMNE)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;www.eng.ed.ac.uk&#34;&gt;The University of Edinburgh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.sintef.no/en/digital/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SINTEF Institute of Information and Communications Technology&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.inria.fr/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Institut National De Recherche En Informatique Et En Automatique (INRIA)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.igd.fraunhofer.de/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fraunhofer Institute for Computer Graphics Research IGD&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://atos.net/en/about-us?utm_source=/en-us/home/we-are/insights-innovation/research-and-innovation.html&amp;amp;utm_medium=301&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AtoS Spain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://jotneit.no/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jotne&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;project-gallery&#34;&gt;Project Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment_density.png&#34; data-caption=&#34;Coarse-grained bulk density in railway embankment&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment_density_hu104ee107ae4302d04c4e56389c74e082_563737_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Coarse-grained bulk density in railway embankment&#34; width=&#34;215&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment.png&#34; data-caption=&#34;Railway embankment test case&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/embankment_hu61fbcd5d14c1f8f10f0a9e8d9eaf9522_1536398_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Railway embankment test case&#34; width=&#34;575&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentSzz.jpg&#34; data-caption=&#34;Coarse-grained vertical stress in railway embankment&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentSzz_hu6274af65bae1d870fee1384b4a816561_492967_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Coarse-grained vertical stress in railway embankment&#34; width=&#34;631&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentVelocity_Cuts.jpg&#34; data-caption=&#34;Coarse-grained bulk density in railway embankment&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/EmbankmentVelocity_Cuts_huf876020a209bf4333def3551103d4358_735851_0x190_resize_q75_lanczos.jpg&#34; loading=&#34;lazy&#34; alt=&#34;Coarse-grained bulk density in railway embankment&#34; width=&#34;322&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-velassco&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/fluidised_bed_temporal_spatial.png&#34; data-caption=&#34;Temporal and spatial averaging of fluidised bed&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/velassco/fluidised_bed_temporal_spatial_hu58af10e4a2eeedd0a44d15dce9e5d07e_1429406_0x190_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Temporal and spatial averaging of fluidised bed&#34; width=&#34;427&#34; height=&#34;190&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/kG3St1mDlLw&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/U9LxMexQCBg&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/sqvzmdp-k-U&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/ZnUl35qK3No&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
