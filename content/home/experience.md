@@ -14,59 +14,55 @@ subtitle:
 
 # Date format for experience
 #   Refer to https://wowchemy.com/docs/customization/#date-format
-date_format: Jan 2006
+date_format: Jan 2020
 
 # Experiences.
 #   Add/remove as many `experience` items below as you like.
-#   Required fields are `title`, `company`, and `date_start`.
-#   Leave `date_end` empty if it's your current employer.
-#   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: Research Associate
-    company: University of Edinburgh
-    company_url: 'https://www.ed.ac.uk/'
-    company_logo: University_of_Edinburgh-Logo_2
-    location: Edinburgh, Scotland, UK
-    date_start: '2013-01-07'
+  - title: Google Agent AI Developer
+    company: FOREO
+    company_url: 'https://www.foreo.com/'
+    company_logo: foreo_logo
+    location: Warsaw, Poland
+    date_start: '2025-03-01'
     date_end: ''
     description: |2-
-        Responsibilities include:
-        
-        * Modelling & Simulation
-        * Experimental analysis and Calibration
-        * Data Analysis
-        
-  - title: Consultant
-    company: University of Edinburgh
-    company_url: 'https://www.ed.ac.uk/'
-    company_logo: logo_granular_def
-    location: Edinburgh, Scotland, UK
-    date_start: '2013-07-01'
-    date_end: ''
-    description: Consultant in the field of particulate mechanics
+         * Developed agentic AI solutions using GADK for digital marketing applications.
+         * Built and optimized ML pipelines to train and fine-tune marketing AI agents.
+         * Rapidly prototyped and scaled AI agents based on marketing data insights.
+         * Monitored agent performance and refined models for accuracy and efficiency.
+         * Collaborated with teams to translate marketing requirements into AI-driven solutions.
+          * Documented APIs and deployment-ready ML pipelines.
 
-  - title: Tutor & Demonstrator
-    company: University of Edinburgh
-    company_url: 'https://www.ed.ac.uk/'
-    company_logo: University_of_Edinburgh-Logo_2
-    location: Edinburgh, Scotland, UK
-    date_start: '2009-10-01'
-    date_end: '2014-05-31'
+  - title: Freelance Data Scientist / Analyst
+    company: Self-Employed
+    company_url: ''
+    location: Remote
+    date_start: '2024-01-01'
+    date_end: '2025-03-01'
     description: |2-
-        Tutor & Demonstrator for several undergraduate courses including:
+        * Designed ML models and pipelines for structured and event-driven datasets.
+        * Delivered dashboards and operational insights for decision-making.
 
-        * Soil Mechanics 2
-        * Geotechnical Engineering 3
-        * Computational Geomechanics 5
+  - title: Technical Team Leader & System Engineer
+    company: Senit ElectroMechanical Contractor
+    company_url: ''
+    location: Ethiopia
+    date_start: '2021-11-01'
+    date_end: '2023-01-31'
+    description: |2-
+        * Automated workflows and improved system reliability using Python and SQL.
+        * Implemented version control and documentation practices.
 
-  - title: Engineering Technician
-    company: MHL & Associates Consulting Engineers
-    company_url: https://www.mhl.ie
-    company_logo: mhl_logo
-    location: Cork, Ireland
-    date_start: '2005-09-01'
-    date_end: '2006-08-30'
-    description: Engineering Technician responsible for the prepartion of technical drawings, design calculations and project documents.
+  - title: Data Analyst & Data Engineer
+    company: TIPS
+    company_url: ''
+    location: Ethiopia
+    date_start: '2020-01-01'
+    date_end: '2021-11-30'
+    description: |2-
+        * Built ETL pipelines for analytics and predictive modeling.
+        * Validated large datasets for accuracy and completeness.
 
 design:
   columns: '2'

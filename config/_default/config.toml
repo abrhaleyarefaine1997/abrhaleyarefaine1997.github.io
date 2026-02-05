@@ -1,0 +1,86 @@
+# Site basic info
+baseURL = "https://abrhaleyarefaine1997.github.io/abrhaley-website/"
+title = "Abrhaley Arefaine Hailenchael"
+languageCode = "en-us"
+
+# Tagline / bio
+tagline = """MSc Computer Science | AI, XAI, Graph Neural Networks, NLP & LLMs"""
+
+# Author info
+[author]
+  name = "Abrhaley Arefaine Hailenchael"
+  email = "abrhaleyarefaine1997@gmail.com"
+  homepage = "https://linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229"
+
+# Social links
+[[social]]
+  name = "LinkedIn"
+  url = "https://linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229"
+
+[[social]]
+  name = "GitHub"
+  url = "https://github.com/abrhaleyarefaine1997"
+
+[[social]]
+  name = "Instagram"
+  url = "https://www.instagram.com/abrhaley_ambassador"
+
+[[social]]
+  name = "Facebook"
+  url = "https://www.facebook.com/abrehaley.arefayne"
+
+# Params block (all merged)
+[params]
+  # CV
+  cv = "files/abrhaley_cv.pdf"
+  showCVButton = true
+
+  # Research interests
+  interests = [
+    "Predictive modeling and outcome estimation",
+    "Explainable AI (XAI), Graph Neural Networks, LLMs, NLP",
+    "Sequential, temporal, and multimodal data analysis",
+    "Robust evaluation under noise, imbalance, and uncertainty",
+    "Integration of ML with experimental, imaging, and control systems",
+    "Interpretable models for safety-critical applications"
+  ]
+
+  # Marketing / verification
+  [params.marketing]
+    google_site_verification = ""
+    baidu_site_verification = ""
+    baidu_tongji = ""
+
+  # Education
+  [[params.education]]
+    degree = "MSc Computer Science"
+    institution = "Warsaw University of Technology, Poland"
+    start = "2023-09-01"
+    end = "2025-12-01"
+    grade = "4.71/5.0 (Excellent Rank)"
+    thesis = """Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection"""
+    description = """Built ML pipelines addressing imbalanced data, applied SHAP for interpretable decision support, emphasized robustness and reproducibility."""
+
+  [[params.education]]
+    degree = "BSc Computer Science and Engineering"
+    institution = "Mekelle University, Ethiopia"
+    start = "2016-09-01"
+    end = "2020-06-01"
+    grade = "3.78/4.0 (Distinction)"
+
+  # Projects
+  [[params.projects]]
+    name = "Graph Neural Networks for Molecular Property Prediction"
+    description = """Implemented GNNs with PyTorch Geometric and GNNExplainer for interpretable insights. Built evaluation pipelines with cross-validation and uncertainty quantification."""
+
+  [[params.projects]]
+    name = "GPT-2 Tigrinya LoRA Text Generation"
+    description = """Fine-tuned GPT-2 for low-resource sequential modeling with reproducible outputs."""
+
+  [[params.projects]]
+    name = "NLP & OCR Document Classification"
+    description = """Built pipelines for text extraction and classification from scanned documents."""
+
+  [[params.projects]]
+    name = "Hate Speech Detection in Tigrigna"
+    description = """Developed ML models addressing bias, scarcity, and robustness for sensitive content detection."""

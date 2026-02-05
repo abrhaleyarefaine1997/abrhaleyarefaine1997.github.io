@@ -1,89 +1,72 @@
 ---
 # Display name
-title: John P. Morrissey
+title: Abrhaley Arefaine Hailenchael
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position/tagline
-role: Research Scientist in Granular Mechanics
+role: MSc Computer Science | AI, XAI, Graph Neural Networks, NLP & LLMs
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: University of Edinburgh
-  url: https://www.eng.ed.ac.uk/
+- name: Warsaw University of Technology
+  url: https://www.pw.edu.pl/
 
-# Short bio (displayed in user profile at end of posts)
-bio: My research interests include particulate mechanics, the Discrete Element Method (DEM) and other numerical simulation tools. I'm also interested in all things data and how to extract meaningful information from it.
+# Short bio
+bio: MSc Computer Science graduate with experience in Graph Neural Networks, Explainable AI, NLP, LLMs, and predictive modeling. I build robust, interpretable ML pipelines for complex and imbalanced data, with research in sequential, multimodal, and graph-based data.
 
 # Interests to show in About widget
 interests:
-- Mechanics of Particulate Solids
-- Computational Methods
-- Numerical Simulation
-- Data Analytics
+- Predictive modeling
+- Explainable AI (XAI)
+- Graph Neural Networks
+- NLP & LLMs
+- Sequential & multimodal data
+- Robust ML & reproducible research
 
-# Education to show in About widget
+# Education
 education:
   courses:
-  - course: Ph.D. in Civil Engineering
-    institution: University of Edinburgh
-    year: 2013
-  - course: M.Eng. in Civil Engineering
-    institution: University of Edinburgh
-    year: 2009
-  - course: B.Eng. (Ord.) in Civil Engineering
-    institution: Cork Institute of Technology
-    year: 2006
+  - course: MSc in Computer Science
+    institution: Warsaw University of Technology, Poland
+    year: 2025
+  - course: BSc in Computer Science and Engineering
+    institution: Mekelle University, Ethiopia
+    year: 2020
 
 # Social/Academic Networking
-# For available icons, see: https://wowchemy.com/docs/getting-started/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
 - icon: envelope
   icon_pack: fas
   link: '/#contact'
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/jp_morr
 - icon: github
   icon_pack: fab
-  link: https://github.com/jpmorr
+  link: https://github.com/abrhaleyarefaine1997
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/jpmorr/
-- icon: graduation-cap  # Alternatively, use `google-scholar` icon from `ai` icon pack
-  icon_pack: fas
-  link: https://scholar.google.com/citations?user=8slL76sAAAAJ&hl=en
-- icon: orcid 
+  link: https://www.linkedin.com/in/abrhaley-arefaine-hailenchael-088bbb229/
+- icon: instagram
   icon_pack: fab
-  link: https://orcid.org/0000-0002-2389-8146
-- icon: researchgate 
+  link: https://www.instagram.com/abrhaley_ambassador
+- icon: facebook
   icon_pack: fab
-  link: https://www.researchgate.net/profile/John-Morrissey-2
+  link: https://www.facebook.com/abrehaley.arefayne
 
-# Link to a PDF of your resume/CV.
-# To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
-# and uncomment the lines below.
+# Link to your CV (put your PDF in static/uploads/)
 # - icon: cv
 #   icon_pack: ai
-#   link: uploads/resume.pdf
+#   link: uploads/abrhaley_cv.pdf
 
-# Enter email to display Gravatar (if Gravatar enabled in Config)
+# Email (if using Gravatar)
 email: ""
 
-# Highlight the author in author lists? (true/false)
+# Highlight name in author lists?
 highlight_name: true
 ---
 
-J.P. is an experienced research scientist specialising in **particulate mechanics** and the **Discrete Element Method (DEM)**. J.P. completed his Ph.D. at the University of Edinburgh studying in the field of granular mechanics and has over 10 years research experience covering both the experimental and numerical fields.   
+MSc Computer Science graduate with Excellent Rank, specialized in Graph Neural Networks, Explainable AI (XAI), NLP, LLMs, and predictive modeling. Research experience includes sequential, multimodal, and graph-based data, with end-to-end pipelines for preprocessing, modeling, evaluation, and interpretability.  
 
-J.P. was the developer of a novel DEM contact model that captures the behaviour of complex cohesive granular solids. 
-This contact model has been implemented in the commerical DEM code **EDEM** (now *Altair EDEM*) as the **Edinburgh Elasto-Plastic Adhesion Model (EEPA)**.
-J.P. was also heavily involved in the development of the **Edinburgh Powder Tester (EPT)** whose technology was later licenced to Freeman Technologies for use in the Freeman UPT. 
+Professional experience includes AI internships, freelance data science projects, and data engineering roles.  
 
-Working the the numerical field of *DEM*, *programming*, *data analysis* and *visualisation* are common tasks and *python*, *Julia* and *C++* are often the tools of choice. 
-
-
-{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/Full_CV.pdf" "newtab" >}}resumé{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/abrhaley_cv.pdf" "newtab" >}}CV{{< /staticref >}}.

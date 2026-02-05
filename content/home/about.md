@@ -15,7 +15,13 @@ weight: 20
 title: Biography
 
 # Choose the user profile to display
-# This should be the username (folder name) of a profile in your `content/authors/` folder.
-# See https://wowchemy.com/docs/get-started/#introduce-yourself
+# This should match the folder name of your profile in `content/authors/`
 author: admin
+
+# Optional: override avatar image (relative to the `authors/admin` folder)
+avatar: "profile.jpg"
+
+# Optional: display CV download button (ensure PDF is in `static/uploads/`)
+showCVButton: true
+CV: "uploads/abrhaley_cv.pdf"
 ---
