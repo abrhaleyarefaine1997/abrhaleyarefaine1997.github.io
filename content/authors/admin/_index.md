@@ -67,6 +67,6 @@ highlight_name: true
 
 MSc Computer Science graduate with Excellent Rank, specialized in Graph Neural Networks, Explainable AI (XAI), NLP, LLMs, and predictive modeling. Research experience includes sequential, multimodal, and graph-based data, with end-to-end pipelines for preprocessing, modeling, evaluation, and interpretability.  
 
-Professional experience includes AI internships, freelance data science projects, and data engineering roles.  
+Professional experience includes AI internships, ML, data science projects, and data engineering roles.  
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/abrhaley_cv.pdf" "newtab" >}}CV{{< /staticref >}}.

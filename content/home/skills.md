@@ -3,82 +3,84 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: featurette
 
-# This file represents a page section.
 headless: true
-
-# Order that this section appears on the page.
 weight: 30
 
 title: Skills
 subtitle:
 
-# Showcase personal skills or business features.
-# - Add/remove as many `feature` blocks below as you like.
-# - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
-- description: 90%
+# ===== Core Expertise (show confidence) =====
+- name: Numerical Simulations & Modeling
+  description: 90%
   icon: icons8-solidworks-flow-simulation
-  icon_pack: "custom"
-  name: Numerical Simulations
-  
-- description: 90%
+  icon_pack: custom
+
+- name: Python (ML & Data Pipelines)
+  description: 90%
   icon: python
   icon_pack: fab
-  name: Python
 
-- description: 75%
-  icon: icons8-matlab
-  icon_pack: "custom"
-  name: MATLAB
-
-- description: 80%
+- name: Statistics & Machine Learning
+  description: 90%
   icon: chart-line
   icon_pack: fas
-  name: Statistics
 
-- description: 10%
+- name: Explainable AI (SHAP, LIME, GNNExplainer)
+  description: 90%
+  icon: brain
+  icon_pack: fas
+
+# ===== Programming & Data =====
+- name: SQL & Relational Databases
+  icon: database
+  icon_pack: fas
+
+- name: R (Statistical Analysis)
   icon: r-project
   icon_pack: fab
-  name: R
 
-- description: 25%
-  icon: file-code
-  icon_pack: fas 
-  name: Programming
+- name: MATLAB
+  icon: icons8-matlab
+  icon_pack: custom
 
-- description: 80%
+# ===== ML, NLP & LLMs =====
+- name: Deep Learning & Neural Networks
+  icon: network-wired
+  icon_pack: fas
+
+- name: NLP & LLM Fine-Tuning (GPT-2, LoRA)
+  icon: language
+  icon_pack: fas
+
+# ===== MLOps & Engineering =====
+- name: Git & Version Control
   icon: git-alt
   icon_pack: fab
-  name: Git
 
-- description: 50%
-  icon: gitlab
+- name: Docker & Deployment Basics
+  icon: docker
   icon_pack: fab
-  name: GitLab
 
-- description: 30%
-  icon: github
-  icon_pack: fab
-  name: GitHub
+- name: CI/CD Concepts
+  icon: infinity
+  icon_pack: fas
 
+# ===== Cloud & Infrastructure =====
+- name: Cloud Platforms (Azure, GCP)
+  icon: cloud
+  icon_pack: fas
 
-# - description: 10%
-#   icon: camera-retro
-#   icon_pack: fas
-#   name: Photography
+- name: Infrastructure as Code (Terraform – basic)
+  icon: server
+  icon_pack: fas
 
-# Uncomment to use emoji icons.
-#- icon: ":smile:"
-#  icon_pack: "emoji"
-#  name: "Emojiness"
-#  description: "100%"  
+# ===== Reporting & Visualization =====
+- name: Data Visualization (Matplotlib, Seaborn)
+  icon: chart-bar
+  icon_pack: fas
 
-# Uncomment to use custom SVG icons.
-# Place your custom SVG icon in `assets/media/icons/`.
-# Reference the SVG icon name (without `.svg` extension) in the `icon` field.
-# For example, reference `assets/media/icons/xyz.svg` as `icon: 'xyz'`
-#- icon: "your-custom-icon-name"
-#  icon_pack: "custom"
-#  name: "Surfing"
-#  description: "90%"
+- name: BI & Reporting (Power BI, Tableau)
+  icon: chart-pie
+  icon_pack: fas
 ---
