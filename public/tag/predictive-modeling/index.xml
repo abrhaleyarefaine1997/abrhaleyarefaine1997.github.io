@@ -1,109 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Predictive Modeling | Abrhaley Arefaine Hailenchael</title>
-    <link>https://abrhaleyarefaine1997.github.io/tag/predictive-modeling/</link>
-      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/predictive-modeling/index.xml" rel="self" type="application/rss+xml" />
-    <description>Predictive Modeling</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Predictive Modeling</title>
-      <link>https://abrhaleyarefaine1997.github.io/tag/predictive-modeling/</link>
-    </image>
-    
-    <item>
-      <title>MSc Graduation &amp; Thesis Defense: Advanced Machine Learning for Financial Fraud Detection</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/colourise/</link>
-      <pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/colourise/</guid>
-      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
-  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
-  &lt;nav id=&#34;TableOfContents&#34;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#thesis-highlights&#34;&gt;Thesis Highlights&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#defense--graduation&#34;&gt;Defense &amp;amp; Graduation&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#reflections&#34;&gt;Reflections&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-&lt;/details&gt;
-
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;On &lt;strong&gt;December 17, 2025&lt;/strong&gt;, I proudly &lt;strong&gt;defended my MSc thesis&lt;/strong&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&amp;ldquo;Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection&amp;rdquo;&lt;/strong&gt;&lt;br&gt;
-at the &lt;strong&gt;Warsaw University of Technology, Poland&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;This thesis focused on developing &lt;strong&gt;robust, interpretable, and reproducible ML pipelines&lt;/strong&gt; to detect and prevent financial fraud. It emphasized &lt;strong&gt;Explainable AI (XAI)&lt;/strong&gt; techniques such as &lt;strong&gt;SHAP&lt;/strong&gt; and &lt;strong&gt;LIME&lt;/strong&gt; to provide actionable insights for decision-makers. The work addressed real-world challenges, including &lt;strong&gt;highly imbalanced datasets&lt;/strong&gt;, noisy financial records, and complex sequential patterns.&lt;/p&gt;
-&lt;h2 id=&#34;thesis-highlights&#34;&gt;Thesis Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Designed &lt;strong&gt;end-to-end ML pipelines&lt;/strong&gt; for preprocessing, feature engineering, model training, evaluation, and explainability.&lt;/li&gt;
-&lt;li&gt;Applied &lt;strong&gt;SHAP and LIME&lt;/strong&gt; for transparent, interpretable model predictions.&lt;/li&gt;
-&lt;li&gt;Ensured &lt;strong&gt;robustness, reproducibility, and reliability&lt;/strong&gt; for real-world financial applications.&lt;/li&gt;
-&lt;li&gt;Delivered &lt;strong&gt;actionable insights&lt;/strong&gt; to improve auditing, decision-making, and fraud mitigation.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;defense--graduation&#34;&gt;Defense &amp;amp; Graduation&lt;/h2&gt;
-&lt;p&gt;The defense included:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;A &lt;strong&gt;comprehensive presentation&lt;/strong&gt; of methodology, results, and insights to faculty and peers.&lt;/li&gt;
-&lt;li&gt;A live &lt;strong&gt;demonstration of ML pipelines and explainable predictions&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;In-depth discussions on &lt;strong&gt;ethical AI, fairness, and practical deployment considerations&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;I am honored to have graduated with &lt;strong&gt;Excellent Rank (highest grade)&lt;/strong&gt;, reflecting both my &lt;strong&gt;academic excellence&lt;/strong&gt; and the &lt;strong&gt;impact of my research&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;reflections&#34;&gt;Reflections&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;The MSc journey strengthened my &lt;strong&gt;expertise in Graph Neural Networks, NLP, LLMs, and predictive modeling&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;It reinforced the importance of &lt;strong&gt;robust evaluation, reproducibility, and explainability&lt;/strong&gt; in AI systems.&lt;/li&gt;
-&lt;li&gt;Excited to apply these skills to &lt;strong&gt;AI-driven research, industry projects, and socially impactful solutions&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection</title>
-      <link>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</link>
-      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;This MSc thesis project focuses on &lt;strong&gt;detecting financial fraud&lt;/strong&gt; using &lt;strong&gt;advanced machine learning techniques&lt;/strong&gt; combined with &lt;strong&gt;Explainable AI (XAI)&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Financial transactions are highly &lt;strong&gt;complex, noisy, and imbalanced&lt;/strong&gt;, making fraud detection challenging. The project emphasizes &lt;strong&gt;robust, interpretable, and reproducible ML pipelines&lt;/strong&gt; suitable for real-world deployment and regulatory compliance.&lt;/p&gt;
-&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
-&lt;p&gt;Fraudulent financial activities pose significant operational and regulatory risks. Traditional detection methods are often limited in &lt;strong&gt;accuracy and interpretability&lt;/strong&gt;. This work addresses these gaps by:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Developing &lt;strong&gt;robust ML models&lt;/strong&gt; that handle highly imbalanced datasets.&lt;/li&gt;
-&lt;li&gt;Ensuring &lt;strong&gt;explainable predictions&lt;/strong&gt; for auditability and decision support.&lt;/li&gt;
-&lt;li&gt;Delivering &lt;strong&gt;actionable insights&lt;/strong&gt; to financial institutions.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Built &lt;strong&gt;end-to-end ML pipelines&lt;/strong&gt; including preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.&lt;/li&gt;
-&lt;li&gt;Applied &lt;strong&gt;ensemble models, neural networks, and anomaly detection techniques&lt;/strong&gt; to maximize predictive performance.&lt;/li&gt;
-&lt;li&gt;Leveraged &lt;strong&gt;SHAP and other XAI tools&lt;/strong&gt; for feature-level and instance-level interpretability.&lt;/li&gt;
-&lt;li&gt;Implemented &lt;strong&gt;robust cross-validation&lt;/strong&gt; and uncertainty-aware evaluation to ensure generalization under realistic distribution shifts.&lt;/li&gt;
-&lt;li&gt;Emphasized &lt;strong&gt;reproducibility&lt;/strong&gt;, logging, and version control to ensure consistent results.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;results--contributions&#34;&gt;Results &amp;amp; Contributions&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Achieved &lt;strong&gt;high predictive accuracy&lt;/strong&gt; in detecting fraudulent transactions in imbalanced datasets.&lt;/li&gt;
-&lt;li&gt;Provided &lt;strong&gt;interpretable explanations&lt;/strong&gt; for model decisions, improving trust and accountability.&lt;/li&gt;
-&lt;li&gt;Established a &lt;strong&gt;reusable and scalable ML framework&lt;/strong&gt; for financial fraud detection.&lt;/li&gt;
-&lt;li&gt;Developed insights that can &lt;strong&gt;inform policy, auditing, and operational decision-making&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Work is currently &lt;strong&gt;under preparation for publication&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Automated fraud detection for banks and financial services.&lt;/li&gt;
-&lt;li&gt;Decision support for compliance and audit teams.&lt;/li&gt;
-&lt;li&gt;Scalable and interpretable pipelines for other predictive modeling challenges in finance and beyond.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;key-highlights&#34;&gt;Key Highlights&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;MSc thesis &lt;strong&gt;graded Excellent (highest rank)&lt;/strong&gt; at Warsaw University of Technology.&lt;/li&gt;
-&lt;li&gt;Emphasis on &lt;strong&gt;robustness, reproducibility, and actionable insights&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Integration of &lt;strong&gt;advanced ML, explainability, and real-world financial context&lt;/strong&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Predictive Modeling | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/predictive-modeling/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/predictive-modeling/index.xml" rel="self" type="application/rss+xml"/><description>Predictive Modeling</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Wed, 17 Dec 2025 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Predictive Modeling</title><link>https://abrhaleyarefaine1997.github.io/tag/predictive-modeling/</link></image><item><title>MSc Graduation &amp; Thesis Defense: Advanced Machine Learning for Financial Fraud Detection</title><link>https://abrhaleyarefaine1997.github.io/post/colourise/</link><pubDate>Wed, 17 Dec 2025 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/colourise/</guid><description>&lt;details class="toc-inpage d-print-none " open>
+&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
+&lt;nav id="TableOfContents">
+&lt;ul>
+&lt;li>&lt;a href="#introduction">Introduction&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#thesis-highlights">Thesis Highlights&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#defense--graduation">Defense &amp;amp; Graduation&lt;/a>&lt;/li>
+&lt;li>&lt;a href="#reflections">Reflections&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/nav>
+&lt;/details>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>On &lt;strong>December 17, 2025&lt;/strong>, I proudly &lt;strong>defended my MSc thesis&lt;/strong>:&lt;/p>
+&lt;p>&lt;strong>&amp;ldquo;Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection&amp;rdquo;&lt;/strong>&lt;br>
+at the &lt;strong>Warsaw University of Technology, Poland&lt;/strong>.&lt;/p>
+&lt;p>This thesis focused on developing &lt;strong>robust, interpretable, and reproducible ML pipelines&lt;/strong> to detect and prevent financial fraud. It emphasized &lt;strong>Explainable AI (XAI)&lt;/strong> techniques such as &lt;strong>SHAP&lt;/strong> and &lt;strong>LIME&lt;/strong> to provide actionable insights for decision-makers. The work addressed real-world challenges, including &lt;strong>highly imbalanced datasets&lt;/strong>, noisy financial records, and complex sequential patterns.&lt;/p>
+&lt;h2 id="thesis-highlights">Thesis Highlights&lt;/h2>
+&lt;ul>
+&lt;li>Designed &lt;strong>end-to-end ML pipelines&lt;/strong> for preprocessing, feature engineering, model training, evaluation, and explainability.&lt;/li>
+&lt;li>Applied &lt;strong>SHAP and LIME&lt;/strong> for transparent, interpretable model predictions.&lt;/li>
+&lt;li>Ensured &lt;strong>robustness, reproducibility, and reliability&lt;/strong> for real-world financial applications.&lt;/li>
+&lt;li>Delivered &lt;strong>actionable insights&lt;/strong> to improve auditing, decision-making, and fraud mitigation.&lt;/li>
+&lt;/ul>
+&lt;h2 id="defense--graduation">Defense &amp;amp; Graduation&lt;/h2>
+&lt;p>The defense included:&lt;/p>
+&lt;ol>
+&lt;li>A &lt;strong>comprehensive presentation&lt;/strong> of methodology, results, and insights to faculty and peers.&lt;/li>
+&lt;li>A live &lt;strong>demonstration of ML pipelines and explainable predictions&lt;/strong>.&lt;/li>
+&lt;li>In-depth discussions on &lt;strong>ethical AI, fairness, and practical deployment considerations&lt;/strong>.&lt;/li>
+&lt;/ol>
+&lt;p>I am honored to have graduated with &lt;strong>Excellent Rank (highest grade)&lt;/strong>, reflecting both my &lt;strong>academic excellence&lt;/strong> and the &lt;strong>impact of my research&lt;/strong>.&lt;/p>
+&lt;h2 id="reflections">Reflections&lt;/h2>
+&lt;ul>
+&lt;li>The MSc journey strengthened my &lt;strong>expertise in Graph Neural Networks, NLP, LLMs, and predictive modeling&lt;/strong>.&lt;/li>
+&lt;li>It reinforced the importance of &lt;strong>robust evaluation, reproducibility, and explainability&lt;/strong> in AI systems.&lt;/li>
+&lt;li>Excited to apply these skills to &lt;strong>AI-driven research, industry projects, and socially impactful solutions&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;hr></description></item><item><title>Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection</title><link>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This MSc thesis project focuses on &lt;strong>detecting financial fraud&lt;/strong> using &lt;strong>advanced machine learning techniques&lt;/strong> combined with &lt;strong>Explainable AI (XAI)&lt;/strong>.&lt;/p>
+&lt;p>Financial transactions are highly &lt;strong>complex, noisy, and imbalanced&lt;/strong>, making fraud detection challenging. The project emphasizes &lt;strong>robust, interpretable, and reproducible ML pipelines&lt;/strong> suitable for real-world deployment and regulatory compliance.&lt;/p>
+&lt;h2 id="motivation">Motivation&lt;/h2>
+&lt;p>Fraudulent financial activities pose significant operational and regulatory risks. Traditional detection methods are often limited in &lt;strong>accuracy and interpretability&lt;/strong>. This work addresses these gaps by:&lt;/p>
+&lt;ul>
+&lt;li>Developing &lt;strong>robust ML models&lt;/strong> that handle highly imbalanced datasets.&lt;/li>
+&lt;li>Ensuring &lt;strong>explainable predictions&lt;/strong> for auditability and decision support.&lt;/li>
+&lt;li>Delivering &lt;strong>actionable insights&lt;/strong> to financial institutions.&lt;/li>
+&lt;/ul>
+&lt;h2 id="methods--work">Methods &amp;amp; Work&lt;/h2>
+&lt;ul>
+&lt;li>Built &lt;strong>end-to-end ML pipelines&lt;/strong> including preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.&lt;/li>
+&lt;li>Applied &lt;strong>ensemble models, neural networks, and anomaly detection techniques&lt;/strong> to maximize predictive performance.&lt;/li>
+&lt;li>Leveraged &lt;strong>SHAP and other XAI tools&lt;/strong> for feature-level and instance-level interpretability.&lt;/li>
+&lt;li>Implemented &lt;strong>robust cross-validation&lt;/strong> and uncertainty-aware evaluation to ensure generalization under realistic distribution shifts.&lt;/li>
+&lt;li>Emphasized &lt;strong>reproducibility&lt;/strong>, logging, and version control to ensure consistent results.&lt;/li>
+&lt;/ul>
+&lt;h2 id="results--contributions">Results &amp;amp; Contributions&lt;/h2>
+&lt;ul>
+&lt;li>Achieved &lt;strong>high predictive accuracy&lt;/strong> in detecting fraudulent transactions in imbalanced datasets.&lt;/li>
+&lt;li>Provided &lt;strong>interpretable explanations&lt;/strong> for model decisions, improving trust and accountability.&lt;/li>
+&lt;li>Established a &lt;strong>reusable and scalable ML framework&lt;/strong> for financial fraud detection.&lt;/li>
+&lt;li>Developed insights that can &lt;strong>inform policy, auditing, and operational decision-making&lt;/strong>.&lt;/li>
+&lt;li>Work is currently &lt;strong>under preparation for publication&lt;/strong>.&lt;/li>
+&lt;/ul>
+&lt;h2 id="applications">Applications&lt;/h2>
+&lt;ul>
+&lt;li>Automated fraud detection for banks and financial services.&lt;/li>
+&lt;li>Decision support for compliance and audit teams.&lt;/li>
+&lt;li>Scalable and interpretable pipelines for other predictive modeling challenges in finance and beyond.&lt;/li>
+&lt;/ul>
+&lt;h2 id="key-highlights">Key Highlights&lt;/h2>
+&lt;ul>
+&lt;li>MSc thesis &lt;strong>graded Excellent (highest rank)&lt;/strong> at Warsaw University of Technology.&lt;/li>
+&lt;li>Emphasis on &lt;strong>robustness, reproducibility, and actionable insights&lt;/strong>.&lt;/li>
+&lt;li>Integration of &lt;strong>advanced ML, explainability, and real-world financial context&lt;/strong>.&lt;/li>
+&lt;/ul></description></item></channel></rss>

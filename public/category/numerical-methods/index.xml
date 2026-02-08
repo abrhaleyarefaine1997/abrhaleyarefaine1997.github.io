@@ -1,1191 +1,629 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Numerical Methods | Abrhaley Arefaine Hailenchael</title>
-    <link>https://abrhaleyarefaine1997.github.io/category/numerical-methods/</link>
-      <atom:link href="https://abrhaleyarefaine1997.github.io/category/numerical-methods/index.xml" rel="self" type="application/rss+xml" />
-    <description>Numerical Methods</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 16 May 2021 18:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Numerical Methods</title>
-      <link>https://abrhaleyarefaine1997.github.io/category/numerical-methods/</link>
-    </image>
-    
-    <item>
-      <title>Are you using Data Classes?</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/dataclasses/</link>
-      <pubDate>Sun, 16 May 2021 18:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/dataclasses/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;I don&amp;rsquo;t know about you but I have a tendency to store results in a dictionary and pass that around to functions when I need to.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Numerical Methods | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/category/numerical-methods/</link><atom:link href="https://abrhaleyarefaine1997.github.io/category/numerical-methods/index.xml" rel="self" type="application/rss+xml"/><description>Numerical Methods</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 16 May 2021 18:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Numerical Methods</title><link>https://abrhaleyarefaine1997.github.io/category/numerical-methods/</link></image><item><title>Are you using Data Classes?</title><link>https://abrhaleyarefaine1997.github.io/post/dataclasses/</link><pubDate>Sun, 16 May 2021 18:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/dataclasses/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>I don&amp;rsquo;t know about you but I have a tendency to store results in a dictionary and pass that around to functions when I need to.
 I have typically avoided creating classes for storing data as it always seemed a bit of overkill for the job at hand.
-Lots of repetitive code with little actual reward.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a rather simple example of what I mean, where I&amp;rsquo;m gathering all the results of interest into a single return item for a function.
-I find this easier than having multiple returns from multiple functions.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+Lots of repetitive code with little actual reward.&lt;/p>
+&lt;p>Here&amp;rsquo;s a rather simple example of what I mean, where I&amp;rsquo;m gathering all the results of interest into a single return item for a function.
+I find this easier than having multiple returns from multiple functions.&lt;/p>
+&lt;pre>&lt;code class="language-python">
 import numpy as np
 from dataclasses import dataclass
-
 def some_complex_function(forces, scale):
-
-    mult = np.pi**scale
-    complex_calculated_forces = forces * mult
-    
-    result = dict()
-    result[&amp;quot;val_x&amp;quot;] = complex_calculated_forces[:, 0]
-    result[&amp;quot;val_y&amp;quot;] = complex_calculated_forces[:, 1]
-    result[&amp;quot;val_z&amp;quot;] = complex_calculated_forces[:, 2]
-    result[&amp;quot;mult&amp;quot;] = mult
-    
-    return result
-
-
+mult = np.pi**scale
+complex_calculated_forces = forces * mult
+result = dict()
+result[&amp;quot;val_x&amp;quot;] = complex_calculated_forces[:, 0]
+result[&amp;quot;val_y&amp;quot;] = complex_calculated_forces[:, 1]
+result[&amp;quot;val_z&amp;quot;] = complex_calculated_forces[:, 2]
+result[&amp;quot;mult&amp;quot;] = mult
+return result
 forces = np.random.random([1000,3])
-
 calculated_forces = some_complex_function(forces, 4)
-
 calculated_forces.keys()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This isn&amp;rsquo;t beautiful code, but it returns a single &lt;code&gt;dict&lt;/code&gt; with all the related properties together, keeping the variable workspace a bit clearer in the process.
-Much handier if you need to pass this into several other functions later on in your workflow.&lt;/p&gt;
-&lt;p&gt;However, it&amp;rsquo;s not particularly re-usable and not great for modifying in future. Maybe a class would be a better option? But there&amp;rsquo;s so much effort involved in created a class I hear you say.
-All those &lt;code&gt;__init__&lt;/code&gt; and &lt;code&gt;__repr__&lt;/code&gt; methods that need to be defined, you may end up with a many lines of code for defining a very basic class.&lt;/p&gt;
-&lt;h2 id=&#34;data-classes&#34;&gt;Data Classes&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;And that&amp;rsquo;s why data classes were introduced in &lt;strong&gt;python 3.7&lt;/strong&gt;, to remove all that unnecessary boilerplate code required and just let you use the classes quickly.&lt;/p&gt;
-&lt;p&gt;So here&amp;rsquo;s my rather silly contrived example again, but this time using a fancy new data class.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code>&lt;/pre>
+&lt;p>This isn&amp;rsquo;t beautiful code, but it returns a single &lt;code>dict&lt;/code> with all the related properties together, keeping the variable workspace a bit clearer in the process.
+Much handier if you need to pass this into several other functions later on in your workflow.&lt;/p>
+&lt;p>However, it&amp;rsquo;s not particularly re-usable and not great for modifying in future. Maybe a class would be a better option? But there&amp;rsquo;s so much effort involved in created a class I hear you say.
+All those &lt;code>__init__&lt;/code> and &lt;code>__repr__&lt;/code> methods that need to be defined, you may end up with a many lines of code for defining a very basic class.&lt;/p>
+&lt;h2 id="data-classes">Data Classes&lt;/h2>
+&lt;hr>
+&lt;p>And that&amp;rsquo;s why data classes were introduced in &lt;strong>python 3.7&lt;/strong>, to remove all that unnecessary boilerplate code required and just let you use the classes quickly.&lt;/p>
+&lt;p>So here&amp;rsquo;s my rather silly contrived example again, but this time using a fancy new data class.&lt;/p>
+&lt;pre>&lt;code class="language-python">import numpy as np
 from dataclasses import dataclass
-
 @dataclass
 class resultant_force:
-    x: np.ndarray
-    y: np.ndarray
-    z: np.ndarray
-    multiplier: np.float64
-    
-    
+x: np.ndarray
+y: np.ndarray
+z: np.ndarray
+multiplier: np.float64
 def some_complex_function_using_dataclass(forces, scale):
-    mult = np.pi**scale
-    complex_calculated_forces = forces * mult
-    
-    return resultant_force(*complex_calculated_forces.T, mult)
-    
+mult = np.pi**scale
+complex_calculated_forces = forces * mult
+return resultant_force(*complex_calculated_forces.T, mult)
 forces = np.random.random([1000,3])
-
 force_dataclass = some_complex_function_using_dataclass(forces, 4)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I can now run &lt;code&gt;dir(force_dataclass)&lt;/code&gt; on my result and see that it&amp;rsquo;s a fully fledged class :&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[&#39;__annotations__&#39;,
- &#39;__class__&#39;,
- &#39;__dataclass_fields__&#39;,
- &#39;__dataclass_params__&#39;,
- &#39;__delattr__&#39;,
- &#39;__dict__&#39;,
- &#39;__dir__&#39;,
- &#39;__doc__&#39;,
- &#39;__eq__&#39;,
- &#39;__format__&#39;,
- &#39;__ge__&#39;,
- &#39;__getattribute__&#39;,
- &#39;__gt__&#39;,
- &#39;__hash__&#39;,
- &#39;__init__&#39;,
- &#39;__init_subclass__&#39;,
- &#39;__le__&#39;,
- &#39;__lt__&#39;,
- &#39;__module__&#39;,
- &#39;__ne__&#39;,
- &#39;__new__&#39;,
- &#39;__reduce__&#39;,
- &#39;__reduce_ex__&#39;,
- &#39;__repr__&#39;,
- &#39;__setattr__&#39;,
- &#39;__sizeof__&#39;,
- &#39;__slotnames__&#39;,
- &#39;__str__&#39;,
- &#39;__subclasshook__&#39;,
- &#39;__weakref__&#39;,
- &#39;multiplier&#39;,
- &#39;x&#39;,
- &#39;y&#39;,
- &#39;z&#39;]
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There&amp;rsquo;s even a &lt;code&gt;repe&lt;/code&gt; created for free! So I can quite easily query &lt;code&gt;force_dataclass.multiplier&lt;/code&gt; and get &lt;code&gt;Out[4]: 97.40909103400242&lt;/code&gt;. What&amp;rsquo;s nice about this is now tht it&amp;rsquo;s a data class instead of a dictionary most IDE&amp;rsquo;s will autocomplete the &lt;code&gt;dataclass&lt;/code&gt; fields for you, which is another bonus.&lt;/p&gt;
-&lt;p&gt;The other major benefit is now I have a nice reusable data container which I could make a little more generic and use in many places.
-I can do this because dataclasses also accept default values for fields. So I can change my previous class to something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@dataclass
+&lt;/code>&lt;/pre>
+&lt;p>I can now run &lt;code>dir(force_dataclass)&lt;/code> on my result and see that it&amp;rsquo;s a fully fledged class :&lt;/p>
+&lt;pre>&lt;code class="language-python">['__annotations__',
+'__class__',
+'__dataclass_fields__',
+'__dataclass_params__',
+'__delattr__',
+'__dict__',
+'__dir__',
+'__doc__',
+'__eq__',
+'__format__',
+'__ge__',
+'__getattribute__',
+'__gt__',
+'__hash__',
+'__init__',
+'__init_subclass__',
+'__le__',
+'__lt__',
+'__module__',
+'__ne__',
+'__new__',
+'__reduce__',
+'__reduce_ex__',
+'__repr__',
+'__setattr__',
+'__sizeof__',
+'__slotnames__',
+'__str__',
+'__subclasshook__',
+'__weakref__',
+'multiplier',
+'x',
+'y',
+'z']
+&lt;/code>&lt;/pre>
+&lt;p>There&amp;rsquo;s even a &lt;code>repe&lt;/code> created for free! So I can quite easily query &lt;code>force_dataclass.multiplier&lt;/code> and get &lt;code>Out[4]: 97.40909103400242&lt;/code>. What&amp;rsquo;s nice about this is now tht it&amp;rsquo;s a data class instead of a dictionary most IDE&amp;rsquo;s will autocomplete the &lt;code>dataclass&lt;/code> fields for you, which is another bonus.&lt;/p>
+&lt;p>The other major benefit is now I have a nice reusable data container which I could make a little more generic and use in many places.
+I can do this because dataclasses also accept default values for fields. So I can change my previous class to something like this:&lt;/p>
+&lt;pre>&lt;code class="language-python">@dataclass
 class resultant_force:
-    x: np.ndarray
-    y: np.ndarray
-    z: np.ndarray
-    multiplier: np.float64 = None
-    
-    
+x: np.ndarray
+y: np.ndarray
+z: np.ndarray
+multiplier: np.float64 = None
 def some_complex_function_using_dataclass(forces, scale):
-    mult = np.pi**scale
-    complex_calculated_forces = forces * mult
-    
-    return resultant_force(*complex_calculated_forces.T, mult)
-
+mult = np.pi**scale
+complex_calculated_forces = forces * mult
+return resultant_force(*complex_calculated_forces.T, mult)
 def some_complex_function_using_generic_dataclass(forces):
-    complex_calculated_forces = forces * 2
-    
-    return resultant_force(*complex_calculated_forces.T,)    
-
+complex_calculated_forces = forces * 2
+return resultant_force(*complex_calculated_forces.T,)
 force_dataclass = some_complex_function_using_dataclass(forces, 4)
-
 generic_force_dataclass = some_complex_function_using_generic_dataclass(forces)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And now from one simple change I have a generic data structure that can be used in multiple places, passing in the additional variables when needed, otherwise they are set to &lt;code&gt;None&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;And data classes have one more nice trick where you can &lt;em&gt;&amp;ldquo;embed&amp;rdquo;&lt;/em&gt; some calculation into the &lt;code&gt;class&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@dataclass
+&lt;/code>&lt;/pre>
+&lt;p>And now from one simple change I have a generic data structure that can be used in multiple places, passing in the additional variables when needed, otherwise they are set to &lt;code>None&lt;/code>.&lt;/p>
+&lt;p>And data classes have one more nice trick where you can &lt;em>&amp;ldquo;embed&amp;rdquo;&lt;/em> some calculation into the &lt;code>class&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-python">@dataclass
 class resultant_force:
-    x: np.ndarray
-    y: np.ndarray
-    z: np.ndarray
-    multiplier: np.float64 = None
-    
-    def __post_init__(self):
-        self.custom_var = np.sum(self.x) / 3
-
+x: np.ndarray
+y: np.ndarray
+z: np.ndarray
+multiplier: np.float64 = None
+def __post_init__(self):
+self.custom_var = np.sum(self.x) / 3
 def some_complex_function_using_generic_dataclass(forces):
-    complex_calculated_forces = forces * 2
-    
-    return resultant_force(*complex_calculated_forces.T,)    
-
+complex_calculated_forces = forces * 2
+return resultant_force(*complex_calculated_forces.T,)
 force_dataclass = some_complex_function_using_dataclass(forces)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This now calculates whatever is in the &lt;code&gt;__post_init__&lt;/code&gt; method when the object is created. This is very handy if you always do some calculation with the data in the &lt;code&gt;class&lt;/code&gt;, just simply embed the calculation within the class and the result will be there for you when you need it!&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;These are just some very simple examples of how useful data classes can be for organising and improving your code.
-I love how the boilerplate of class creation is gone, and how they can make code more readable and easier to maintain.&lt;/p&gt;
-&lt;p&gt;There are many other features you would expect of a class and these are also included such as automatic &lt;code&gt;__repr__&lt;/code&gt; and object comparison. There&amp;rsquo;s also easy conversion to lists and dictionaries.&lt;/p&gt;
-&lt;p&gt;I suggest reading this &lt;a href=&#34;https://realpython.com/python-data-classes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; for a more detailed introduction to dataclasses and to see how they may help you.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Favourite Tool/Package of 2020</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/pyvista/</link>
-      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/pyvista/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;Working with &lt;strong&gt;Discrete Element Method (DEM)&lt;/strong&gt; usually means that you need to visualise your results somehow after the simulation is complete. This is usually the case with some of the open source codes. If you use a commercial code like &lt;a href=&#34;https://www.altair.com/edem/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EDEM&lt;/a&gt; or &lt;a href=&#34;https://rocky.esss.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rocky&lt;/a&gt;, the visualisation aspect is usually taken care for you by the software, but occasionally you may wish to do something that isn&amp;rsquo;t supported. That&amp;rsquo;s life in research&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Anyway, that&amp;rsquo;s where &lt;a href=&#34;https://www.paraview.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ParaView&lt;/a&gt; usually comes in. It&amp;rsquo;s a hugely powerful open-source data analysis and visualization application. However, it&amp;rsquo;s built on top of the &lt;strong&gt;VTK&lt;/strong&gt; library and usually requires writing all your data out in a &lt;em&gt;ascii&lt;/em&gt; VTK format, which is not always practical.&lt;/p&gt;
-&lt;p&gt;And that&amp;rsquo;s where my new favourite Python Library comes in &amp;hellip; Hello &lt;strong&gt;PyVista&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;pyvista&#34;&gt;PyVista&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.pyvista.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyVista&lt;/a&gt; is a powerful and flexible library for plotting 3D figures using python. It&amp;rsquo;s also based on &lt;strong&gt;VTK&lt;/strong&gt;, but implements a higher level API that interfaces through &lt;a href=&#34;https://numpy.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NumPy&lt;/a&gt;. PyVista is:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;3D plotting made simple and built for large/complex data geometries&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I don&amp;rsquo;t want to write a huge tutorial here because there are lots of great examples on the &lt;a href=&#34;https://docs.pyvista.org/examples/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyVista website&lt;/a&gt; which should help you get started. I&amp;rsquo;m just going to include my favourite examples here and then let you go explore as you wish.&lt;/p&gt;
-&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
-&lt;p&gt;This is an interactive example of slicing a 3D dataset (a brain!) using a plane widget, but this is super cool and super easy to use.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# sphinx_gallery_thumbnail_number = 2
+&lt;/code>&lt;/pre>
+&lt;p>This now calculates whatever is in the &lt;code>__post_init__&lt;/code> method when the object is created. This is very handy if you always do some calculation with the data in the &lt;code>class&lt;/code>, just simply embed the calculation within the class and the result will be there for you when you need it!&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;hr>
+&lt;p>These are just some very simple examples of how useful data classes can be for organising and improving your code.
+I love how the boilerplate of class creation is gone, and how they can make code more readable and easier to maintain.&lt;/p>
+&lt;p>There are many other features you would expect of a class and these are also included such as automatic &lt;code>__repr__&lt;/code> and object comparison. There&amp;rsquo;s also easy conversion to lists and dictionaries.&lt;/p>
+&lt;p>I suggest reading this &lt;a href="https://realpython.com/python-data-classes/" target="_blank" rel="noopener">post&lt;/a> for a more detailed introduction to dataclasses and to see how they may help you.&lt;/p></description></item><item><title>Favourite Tool/Package of 2020</title><link>https://abrhaleyarefaine1997.github.io/post/pyvista/</link><pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/pyvista/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>Working with &lt;strong>Discrete Element Method (DEM)&lt;/strong> usually means that you need to visualise your results somehow after the simulation is complete. This is usually the case with some of the open source codes. If you use a commercial code like &lt;a href="https://www.altair.com/edem/" target="_blank" rel="noopener">EDEM&lt;/a> or &lt;a href="https://rocky.esss.co/" target="_blank" rel="noopener">Rocky&lt;/a>, the visualisation aspect is usually taken care for you by the software, but occasionally you may wish to do something that isn&amp;rsquo;t supported. That&amp;rsquo;s life in research&amp;hellip;&lt;/p>
+&lt;p>Anyway, that&amp;rsquo;s where &lt;a href="https://www.paraview.org/" target="_blank" rel="noopener">ParaView&lt;/a> usually comes in. It&amp;rsquo;s a hugely powerful open-source data analysis and visualization application. However, it&amp;rsquo;s built on top of the &lt;strong>VTK&lt;/strong> library and usually requires writing all your data out in a &lt;em>ascii&lt;/em> VTK format, which is not always practical.&lt;/p>
+&lt;p>And that&amp;rsquo;s where my new favourite Python Library comes in &amp;hellip; Hello &lt;strong>PyVista&lt;/strong>.&lt;/p>
+&lt;h2 id="pyvista">PyVista&lt;/h2>
+&lt;hr>
+&lt;p>&lt;a href="https://docs.pyvista.org/" target="_blank" rel="noopener">PyVista&lt;/a> is a powerful and flexible library for plotting 3D figures using python. It&amp;rsquo;s also based on &lt;strong>VTK&lt;/strong>, but implements a higher level API that interfaces through &lt;a href="https://numpy.org/" target="_blank" rel="noopener">NumPy&lt;/a>. PyVista is:&lt;/p>
+&lt;blockquote>
+&lt;p>3D plotting made simple and built for large/complex data geometries&lt;/p>
+&lt;/blockquote>
+&lt;p>I don&amp;rsquo;t want to write a huge tutorial here because there are lots of great examples on the &lt;a href="https://docs.pyvista.org/examples/index.html" target="_blank" rel="noopener">PyVista website&lt;/a> which should help you get started. I&amp;rsquo;m just going to include my favourite examples here and then let you go explore as you wish.&lt;/p>
+&lt;h3 id="examples">Examples&lt;/h3>
+&lt;p>This is an interactive example of slicing a 3D dataset (a brain!) using a plane widget, but this is super cool and super easy to use.&lt;/p>
+&lt;pre>&lt;code class="language-python"># sphinx_gallery_thumbnail_number = 2
 import pyvista as pv
 from pyvista import examples
-
 vol = examples.download_brain()
-
 p = pv.Plotter()
 p.add_mesh_clip_plane(vol)
 p.show()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As a DEM user you might be interested in plotting some spheres (particles) and this is also very easy, see this example for 1M spheres which renders in about 10s on my laptop.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code>&lt;/pre>
+&lt;p>As a DEM user you might be interested in plotting some spheres (particles) and this is also very easy, see this example for 1M spheres which renders in about 10s on my laptop.&lt;/p>
+&lt;pre>&lt;code class="language-python">import numpy as np
 import pyvista as pv
-pv.set_plot_theme(&#39;dark&#39;)
-
+pv.set_plot_theme('dark')
 n = 1_000_000
 mesh = pv.PolyData(np.random.random((n, 3))*1000)
 mesh[&amp;quot;radius&amp;quot;] = np.random.rand(n) * 2
-
 # Low resolution geometry
 geom = pv.Sphere(theta_resolution=8, phi_resolution=8)
-
 # Progress bar is a new feature on master branch
 glyphed = mesh.glyph(scale=&amp;quot;radius&amp;quot;, geom=geom, progress_bar=True)
-
-
 p = pv.Plotter(notebook=False)
-p.add_mesh(glyphed, smooth_shading=True) # if you want everything mono coloured then add the following argument: color=&#39;yellow&#39;
-# if you want it to look really nice, add the smooth shading option smooth_shading=True. 
+p.add_mesh(glyphed, smooth_shading=True) # if you want everything mono coloured then add the following argument: color='yellow'
+# if you want it to look really nice, add the smooth shading option smooth_shading=True.
 # This will be slower rendering!
-
 p.show()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    &lt;p&gt;Rendering 1M spheres is quite a task, you may wish to test with a smaller value of &lt;em&gt;n&lt;/em&gt; initially.&lt;/p&gt;
-&lt;p&gt;Performance will depend on your machine specification.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Favourite Tool/Package of 2019</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/bottleneck/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/bottleneck/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;When you are dealing with relatively large datasets on a regular basis, the computation time required to process your data becomes an issue. We always want more speed. If you can cut run time from 30 minutes to 10 minutes, then that is a huge gain.&lt;/p&gt;
-&lt;p&gt;In python there&amp;rsquo;s the usual performance gain coming from removing native loops and vectorising with &lt;code&gt;NumPy&lt;/code&gt;, using &lt;code&gt;pandas&lt;/code&gt; and then there&amp;rsquo;s even the new kid on the block, &lt;code&gt;Numba&lt;/code&gt; (not actually that new now, but still newer!) which requires a bit more effort rewriting some code into functions that can be Just-In-Time (JIT) compiled. However, not everything can be compiled.&lt;/p&gt;
-&lt;p&gt;But there are also some other very simple performance tweaks that can be made and that can have a significant effect on runtime. That&amp;rsquo;s where &lt;strong&gt;Bottleneck&lt;/strong&gt; comes in.&lt;/p&gt;
-&lt;h2 id=&#34;bottleneck&#34;&gt;Bottleneck&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://bottleneck.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bottleneck&lt;/a&gt; is a:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;collection of fast, NaN-aware NumPy array functions written in C.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Bottleneck is basically a drop-in replacement for some popular NumPy functions such as sum, mean, min, max, etc. Please refer to the &lt;a href=&#34;https://bottleneck.readthedocs.io/en/latest/reference.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for the full list.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a very simple example of bottleneck at work:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>Rendering 1M spheres is quite a task, you may wish to test with a smaller value of &lt;em>n&lt;/em> initially.&lt;/p>
+&lt;p>Performance will depend on your machine specification.&lt;/p>
+&lt;/div>
+&lt;/div></description></item><item><title>Favourite Tool/Package of 2019</title><link>https://abrhaleyarefaine1997.github.io/post/bottleneck/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/bottleneck/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>When you are dealing with relatively large datasets on a regular basis, the computation time required to process your data becomes an issue. We always want more speed. If you can cut run time from 30 minutes to 10 minutes, then that is a huge gain.&lt;/p>
+&lt;p>In python there&amp;rsquo;s the usual performance gain coming from removing native loops and vectorising with &lt;code>NumPy&lt;/code>, using &lt;code>pandas&lt;/code> and then there&amp;rsquo;s even the new kid on the block, &lt;code>Numba&lt;/code> (not actually that new now, but still newer!) which requires a bit more effort rewriting some code into functions that can be Just-In-Time (JIT) compiled. However, not everything can be compiled.&lt;/p>
+&lt;p>But there are also some other very simple performance tweaks that can be made and that can have a significant effect on runtime. That&amp;rsquo;s where &lt;strong>Bottleneck&lt;/strong> comes in.&lt;/p>
+&lt;h2 id="bottleneck">Bottleneck&lt;/h2>
+&lt;hr>
+&lt;p>&lt;a href="https://bottleneck.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Bottleneck&lt;/a> is a:&lt;/p>
+&lt;blockquote>
+&lt;p>collection of fast, NaN-aware NumPy array functions written in C.&lt;/p>
+&lt;/blockquote>
+&lt;p>Bottleneck is basically a drop-in replacement for some popular NumPy functions such as sum, mean, min, max, etc. Please refer to the &lt;a href="https://bottleneck.readthedocs.io/en/latest/reference.html" target="_blank" rel="noopener">documentation&lt;/a> for the full list.&lt;/p>
+&lt;p>Here&amp;rsquo;s a very simple example of bottleneck at work:&lt;/p>
+&lt;pre>&lt;code class="language-python">import numpy as np
 import bottleneck as bn
-
 a = np.array([1, 2, np.nan, 4, 5])
-
 np.nanmean(a)
 bn.nanmean(a)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Bottleneck also provides some really useful rolling window functions that work along a single axis. Super easy and useful for calculating moving averages. The output will be the same shape as the input, but with the first few values smaller than the windo size returned as &lt;code&gt;nan&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b = np.random.random(100)
-
+&lt;/code>&lt;/pre>
+&lt;p>Bottleneck also provides some really useful rolling window functions that work along a single axis. Super easy and useful for calculating moving averages. The output will be the same shape as the input, but with the first few values smaller than the windo size returned as &lt;code>nan&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-python">b = np.random.random(100)
 rolling_avg_3 = bn.move_mean(b, window=3)
 rolling_avg_10 = bn.move_mean(b, window=10)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
-&lt;p&gt;Bottleneck comes with a built in benchmarking suite that you can run on your machine to see what your performance will be like. Simply run &lt;code&gt;bn.bench()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the results output from my machine:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Bottleneck performance benchmark
-    Bottleneck 1.3.2; Numpy 1.20.3
-    Speed is NumPy time divided by Bottleneck time
-    NaN means approx one-fifth NaNs; float64 used
-
-              no NaN     no NaN      NaN       no NaN      NaN    
-               (100,)  (1000,1000)(1000,1000)(1000,1000)(1000,1000)
-               axis=0     axis=0     axis=0     axis=1     axis=1  
-nansum         37.4        1.8        2.3        3.3        3.4
-nanmean        99.5        2.2        3.0        4.3        4.2
-nanstd        167.6        2.3        3.4        5.1        3.4
-nanvar        165.2        2.2        2.5        4.1        2.9
-nanmin         25.5        0.6        1.8        1.0        3.3
-nanmax         24.2        0.8        1.9        0.8        3.1
-median        113.3        1.3        3.8        1.1        3.8
-nanmedian     113.3        6.5        7.1        5.5        5.9
-ss             13.0        1.9        2.2        3.6        3.5
-nanargmin      58.4        3.4        4.6        2.5        5.6
-nanargmax      59.8        3.4        5.3        2.4        5.7
-anynan          7.8        0.5       37.5        0.3       26.0
-allnan         10.2      158.2      118.7       82.9       89.2
-rankdata       23.5        1.3        1.3        2.6        2.6
-nanrankdata    23.6        1.5        1.4        2.8        2.8
-partition       4.6        1.0        1.3        0.9        1.3
-argpartition    9.1        1.2        1.4        1.1        1.5
-replace         7.6        0.9        1.0        0.9        0.9
-push         1091.2        4.5        5.5        9.4        8.9
-move_sum     2973.9       52.0      104.7      201.4      253.1
-move_mean    7566.5       60.3      112.3      286.9      286.2
-move_std     8564.2       73.8      146.0      190.7      302.7
-move_var    11758.3       81.3      172.4      253.6      392.3
-move_min     1361.0       15.6       31.8       22.8       53.8
-move_max     1463.0       15.7       33.1       26.9       52.0
-move_argmin  3319.4       67.4      102.3       77.0      128.4
-move_argmax  3476.7       61.9       75.8       71.2      119.1
-move_median  1704.8      137.2      160.7      171.2      185.9
-move_rank     911.9        1.5        1.9        1.9        2.4
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In the vast majority of cases bottleneck provides close to a 2x increase in performance of some of the most frequently used &lt;code&gt;NumPy&lt;/code&gt; functions which can really help reduce that runtime and increase productivity. It&amp;rsquo;s definitely noticeable for me in my work.&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Only arrays with data type (&lt;code&gt;dtype&lt;/code&gt;) &lt;code&gt;int32&lt;/code&gt;, &lt;code&gt;int64&lt;/code&gt;, &lt;code&gt;float32&lt;/code&gt;, and &lt;code&gt;float64&lt;/code&gt; are accelerated. All other &lt;code&gt;dtypes&lt;/code&gt; result in calls to slower, unaccelerated functions.
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    This post was originally published on &lt;a href=&#34;www.edemsimulation.com&#34;&gt;www.edemsimulation.com&lt;/a&gt;.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining.
+&lt;/code>&lt;/pre>
+&lt;h3 id="performance">Performance&lt;/h3>
+&lt;p>Bottleneck comes with a built in benchmarking suite that you can run on your machine to see what your performance will be like. Simply run &lt;code>bn.bench()&lt;/code>&lt;/p>
+&lt;p>Here&amp;rsquo;s the results output from my machine:&lt;/p>
+&lt;pre>&lt;code class="language-python">Bottleneck performance benchmark
+Bottleneck 1.3.2; Numpy 1.20.3
+Speed is NumPy time divided by Bottleneck time
+NaN means approx one-fifth NaNs; float64 used
+no NaN no NaN NaN no NaN NaN
+(100,) (1000,1000)(1000,1000)(1000,1000)(1000,1000)
+axis=0 axis=0 axis=0 axis=1 axis=1
+nansum 37.4 1.8 2.3 3.3 3.4
+nanmean 99.5 2.2 3.0 4.3 4.2
+nanstd 167.6 2.3 3.4 5.1 3.4
+nanvar 165.2 2.2 2.5 4.1 2.9
+nanmin 25.5 0.6 1.8 1.0 3.3
+nanmax 24.2 0.8 1.9 0.8 3.1
+median 113.3 1.3 3.8 1.1 3.8
+nanmedian 113.3 6.5 7.1 5.5 5.9
+ss 13.0 1.9 2.2 3.6 3.5
+nanargmin 58.4 3.4 4.6 2.5 5.6
+nanargmax 59.8 3.4 5.3 2.4 5.7
+anynan 7.8 0.5 37.5 0.3 26.0
+allnan 10.2 158.2 118.7 82.9 89.2
+rankdata 23.5 1.3 1.3 2.6 2.6
+nanrankdata 23.6 1.5 1.4 2.8 2.8
+partition 4.6 1.0 1.3 0.9 1.3
+argpartition 9.1 1.2 1.4 1.1 1.5
+replace 7.6 0.9 1.0 0.9 0.9
+push 1091.2 4.5 5.5 9.4 8.9
+move_sum 2973.9 52.0 104.7 201.4 253.1
+move_mean 7566.5 60.3 112.3 286.9 286.2
+move_std 8564.2 73.8 146.0 190.7 302.7
+move_var 11758.3 81.3 172.4 253.6 392.3
+move_min 1361.0 15.6 31.8 22.8 53.8
+move_max 1463.0 15.7 33.1 26.9 52.0
+move_argmin 3319.4 67.4 102.3 77.0 128.4
+move_argmax 3476.7 61.9 75.8 71.2 119.1
+move_median 1704.8 137.2 160.7 171.2 185.9
+move_rank 911.9 1.5 1.9 1.9 2.4
+&lt;/code>&lt;/pre>
+&lt;p>In the vast majority of cases bottleneck provides close to a 2x increase in performance of some of the most frequently used &lt;code>NumPy&lt;/code> functions which can really help reduce that runtime and increase productivity. It&amp;rsquo;s definitely noticeable for me in my work.&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+Only arrays with data type (&lt;code>dtype&lt;/code>) &lt;code>int32&lt;/code>, &lt;code>int64&lt;/code>, &lt;code>float32&lt;/code>, and &lt;code>float64&lt;/code> are accelerated. All other &lt;code>dtypes&lt;/code> result in calls to slower, unaccelerated functions.
+&lt;/div>
+&lt;/div></description></item><item><title>A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates</title><link>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</link><pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+This post was originally published on &lt;a href="www.edemsimulation.com">www.edemsimulation.com&lt;/a>.
+&lt;/div>
+&lt;/div>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining.
 However, all share a very similar challenge of keeping their processes flowing reliably, since cohesive particulates (either naturally cohesive or those affected by external factors such as moisture) can trigger difficult material handling situations.
-Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task.&lt;/p&gt;
-&lt;p&gt;The flow function of a cohesive particulates is a material property that is typically measured to indicate the flowability and handleability of a material.
-In industry this is typically measured with some direct shear device such as a &lt;strong&gt;Jenike&lt;/strong&gt; tester or a dynamic flow tester such as a &lt;strong&gt;FT4 Powder Rheometer&lt;/strong&gt;.
+Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task.&lt;/p>
+&lt;p>The flow function of a cohesive particulates is a material property that is typically measured to indicate the flowability and handleability of a material.
+In industry this is typically measured with some direct shear device such as a &lt;strong>Jenike&lt;/strong> tester or a dynamic flow tester such as a &lt;strong>FT4 Powder Rheometer&lt;/strong>.
 Ring shear testers and rotational testers are also frequently used.
-While each one has its advantages, many are compromised by the high cost, amount of time required for carrying out testing or lack of relevance to specific industrial situations.&lt;/p&gt;
-&lt;p&gt;Uniaxial testers offer an attractive alternative method for characterising the flowability of powders and sticky granular materials in industrial situations. Uniaxial testers apply a consolidation stress followed by a failure load vertically to a sample.
-This is appealing for being a mechanically simple device that’s easy to operate and also its physical similarity to the stress path associated with feeding industrial equipment and the unconfined yield strength &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the height of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;University of Edinburgh&lt;/em&gt; had previous experience of developing successful uniaxial testers for sticky solids with larger particles &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;. From this experience the &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt; was developed for measuring the flowability of compressible cohesive powders with a focus on speed, robustness and high repeatability for industrial use &lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-The key differences between the &lt;strong&gt;Edinburgh Powder Tester&lt;/strong&gt; and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id=&#34;fnref2:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, which means the EPT offers repeatable results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;Recently, &lt;a href=&#34;https://www.freemantech.co.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Freeman Technology&lt;/a&gt;; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em&gt;University of Edinburgh&lt;/em&gt;, &lt;em&gt;DuPont&lt;/em&gt; and &lt;em&gt;The Chemours Company&lt;/em&gt; to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT.
-The result of this collaboration is &lt;strong&gt;‘The Uniaxial Powder Tester from Freeman Technology’&lt;/strong&gt; which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa.&lt;/p&gt;
-&lt;p&gt;The simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, make uniaxial testers ideal tools for calibrating a DEM model for cohesive solids.
-The &lt;strong&gt;Freeman UPT&lt;/strong&gt;, which is a semi-automated uniaxial tester, provides rapid measurements of key bulk mechanical properties of powders, including the stress–strain and the stress–density response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the increased cohesive (caking) strength developed over time in consolidation, all of which can be utilised for calibrating your DEM simulation of a cohesive solid to provide a realistic prediction.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT**&#34; srcset=&#34;
-                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg 400w,
-                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_894bf19482d2447b3b2c507cde3c1590.jpg 760w,
-                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg&#34;
-                   width=&#34;441&#34;
-                   height=&#34;760&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt-consolidation-station&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT Consolidation Station**&#34; srcset=&#34;
-                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg 400w,
-                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_66483ab748edffa34166eb60380f4292.jpg 760w,
-                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg&#34;
-                   width=&#34;151&#34;
-                   height=&#34;217&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT Consolidation Station&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Evaluation of the Edinburgh powder tester&lt;/em&gt;, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href=&#34;http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a&gt; (accessed October 5, 2019).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;L.P. Maltby, G.G. Enstad, &lt;em&gt;Uniaxial Tester for Quality Control and Flow Property Characterization of Powders.&lt;/em&gt;, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;M. Röck, M. Ostendorf, J. Schwedes, &lt;em&gt;Development of an Uniaxial Caking Tester&lt;/em&gt;, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;R.E. Freeman, X. Fu, &lt;em&gt;The Development of a Compact Uniaxial Tester&lt;/em&gt;, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:5&#34;&gt;
-&lt;p&gt;Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Predicting the handlability of a coal blend from measurements on the source coals&lt;/em&gt;, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:6&#34;&gt;
-&lt;p&gt;S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em&gt;An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em&gt;, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:7&#34;&gt;
-&lt;p&gt;J.P. Morrissey, &lt;em&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em&gt;, University of Edinburgh, 2013. &lt;a href=&#34;https://www.era.lib.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</link>
-      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    This post was originally published on &lt;a href=&#34;www.edemsimulation.com&#34;&gt;www.edemsimulation.com&lt;/a&gt;.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Over the years, as the popularity of the Discrete Element Method (DEM) has continued to grow, it has been increasingly used as a design tool. The accuracy of these models largely depends on the chosen DEM model and its parameters, and as pointed out in a post by David Curry (&lt;em&gt;What numbers should I put in? The perennial question for DEM users&lt;/em&gt;) the adage of “&lt;em&gt;&lt;strong&gt;garbage in – garbage out&lt;/strong&gt;&lt;/em&gt;” holds true when carrying out DEM simulations.
+While each one has its advantages, many are compromised by the high cost, amount of time required for carrying out testing or lack of relevance to specific industrial situations.&lt;/p>
+&lt;p>Uniaxial testers offer an attractive alternative method for characterising the flowability of powders and sticky granular materials in industrial situations. Uniaxial testers apply a consolidation stress followed by a failure load vertically to a sample.
+This is appealing for being a mechanically simple device that’s easy to operate and also its physical similarity to the stress path associated with feeding industrial equipment and the unconfined yield strength &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.
+One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the height of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>The &lt;em>University of Edinburgh&lt;/em> had previous experience of developing successful uniaxial testers for sticky solids with larger particles &lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>. From this experience the &lt;strong>Edinburgh Powder Tester (EPT)&lt;/strong> was developed for measuring the flowability of compressible cohesive powders with a focus on speed, robustness and high repeatability for industrial use &lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.
+The key differences between the &lt;strong>Edinburgh Powder Tester&lt;/strong> and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id="fnref2:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, which means the EPT offers repeatable results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Recently, &lt;a href="https://www.freemantech.co.uk/" target="_blank" rel="noopener">Freeman Technology&lt;/a>; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em>University of Edinburgh&lt;/em>, &lt;em>DuPont&lt;/em> and &lt;em>The Chemours Company&lt;/em> to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT.
+The result of this collaboration is &lt;strong>‘The Uniaxial Powder Tester from Freeman Technology’&lt;/strong> which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa.&lt;/p>
+&lt;p>The simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, make uniaxial testers ideal tools for calibrating a DEM model for cohesive solids.
+The &lt;strong>Freeman UPT&lt;/strong>, which is a semi-automated uniaxial tester, provides rapid measurements of key bulk mechanical properties of powders, including the stress–strain and the stress–density response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the increased cohesive (caking) strength developed over time in consolidation, all of which can be utilised for calibrating your DEM simulation of a cohesive solid to provide a realistic prediction.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT**" srcset="
+/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg 400w,
+/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_894bf19482d2447b3b2c507cde3c1590.jpg 760w,
+/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg"
+width="441"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt-consolidation-station">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT Consolidation Station**" srcset="
+/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg 400w,
+/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_66483ab748edffa34166eb60380f4292.jpg 760w,
+/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg"
+width="151"
+height="217"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT Consolidation Station&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;h1 id="references">References&lt;/h1>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Evaluation of the Edinburgh powder tester&lt;/em>, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0" target="_blank" rel="noopener">http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a> (accessed October 5, 2019).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>L.P. Maltby, G.G. Enstad, &lt;em>Uniaxial Tester for Quality Control and Flow Property Characterization of Powders.&lt;/em>, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>M. Röck, M. Ostendorf, J. Schwedes, &lt;em>Development of an Uniaxial Caking Tester&lt;/em>, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>R.E. Freeman, X. Fu, &lt;em>The Development of a Compact Uniaxial Tester&lt;/em>, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Predicting the handlability of a coal blend from measurements on the source coals&lt;/em>, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em>An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em>, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>J.P. Morrissey, &lt;em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em>, University of Edinburgh, 2013. &lt;a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a>.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester</title><link>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</link><pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+This post was originally published on &lt;a href="www.edemsimulation.com">www.edemsimulation.com&lt;/a>.
+&lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Over the years, as the popularity of the Discrete Element Method (DEM) has continued to grow, it has been increasingly used as a design tool. The accuracy of these models largely depends on the chosen DEM model and its parameters, and as pointed out in a post by David Curry (&lt;em>What numbers should I put in? The perennial question for DEM users&lt;/em>) the adage of “&lt;em>&lt;strong>garbage in – garbage out&lt;/strong>&lt;/em>” holds true when carrying out DEM simulations.
 For cohesionless materials we have a range of parameters to account for - size, shape, stiffness and friction being some of the more commonly considered.
-But how many materials are truly cohesionless? Not many, so we end up having to add some additional parameters to our DEM simulations to account for the additional cohesive forces in the material. The origin of these cohesive forces and their respective mechanics vary from long and short range non-contact interaction forces, mechanical interlock, electrostatic forces, solid bridges and liquid bridges to name but a few.&lt;/p&gt;
-&lt;p&gt;So how does one go about capturing all of these phenomena in their DEM simulation?
+But how many materials are truly cohesionless? Not many, so we end up having to add some additional parameters to our DEM simulations to account for the additional cohesive forces in the material. The origin of these cohesive forces and their respective mechanics vary from long and short range non-contact interaction forces, mechanical interlock, electrostatic forces, solid bridges and liquid bridges to name but a few.&lt;/p>
+&lt;p>So how does one go about capturing all of these phenomena in their DEM simulation?
 The first step is selecting a suitable contact model – a liquid bridge model is not much use for capturing the behaviour of fine particles in an electrostatic field.
-Provided you have negotiated that stage and selected a suitable contact model; you are then faced with the much more difficult proposition of model calibration.&lt;/p&gt;
-&lt;h2 id=&#34;calibration&#34;&gt;Calibration&lt;/h2&gt;
-&lt;p&gt;To some, &lt;em&gt;“calibration”&lt;/em&gt; is a dirty word that simply means &lt;em&gt;‘cheating until you get the right answer’&lt;/em&gt;, but we can define it more concisely as &lt;em&gt;“the process of adjusting physical modelling parameters in the computational model to improve agreement with experimental data”&lt;/em&gt; &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Calibration isn’t a bad thing, it’s a necessary part of scientific life – we need to regularly calibrate our measuring instruments to ensure accuracy. Due to the assumptions we make in DEM; in relation to particle shape and number of particles we use to represent a system amongst other things; we need to calibrate our input parameters such that they provide a realistic result.&lt;/p&gt;
-&lt;p&gt;And much like the choice of contact model, the choice of calibration experiment is also important – you would not choose a quasi-static experiment to calibrate for a very dynamic regime as you may fail to capture much of the key behaviour such as impact dynamics. Obtaining suitable calibration data can be a challenge as one would like them to be both easily obtained and be highly repeatable.&lt;/p&gt;
-&lt;p&gt;The typical process of calibrating DEM contact model parameters involves tuning the observed response of the simulation to closely reproduce the macroscopic bulk behaviour measured in the calibration experiment.
+Provided you have negotiated that stage and selected a suitable contact model; you are then faced with the much more difficult proposition of model calibration.&lt;/p>
+&lt;h2 id="calibration">Calibration&lt;/h2>
+&lt;p>To some, &lt;em>“calibration”&lt;/em> is a dirty word that simply means &lt;em>‘cheating until you get the right answer’&lt;/em>, but we can define it more concisely as &lt;em>“the process of adjusting physical modelling parameters in the computational model to improve agreement with experimental data”&lt;/em> &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Calibration isn’t a bad thing, it’s a necessary part of scientific life – we need to regularly calibrate our measuring instruments to ensure accuracy. Due to the assumptions we make in DEM; in relation to particle shape and number of particles we use to represent a system amongst other things; we need to calibrate our input parameters such that they provide a realistic result.&lt;/p>
+&lt;p>And much like the choice of contact model, the choice of calibration experiment is also important – you would not choose a quasi-static experiment to calibrate for a very dynamic regime as you may fail to capture much of the key behaviour such as impact dynamics. Obtaining suitable calibration data can be a challenge as one would like them to be both easily obtained and be highly repeatable.&lt;/p>
+&lt;p>The typical process of calibrating DEM contact model parameters involves tuning the observed response of the simulation to closely reproduce the macroscopic bulk behaviour measured in the calibration experiment.
 The mechanical behaviour of cohesive powders can be carefully measured using element tests such as biaxial test, true triaxial and hollow cylinder tests.
-However, in practice these tests can be expensive and slow to conduct and are rarely performed for industrial applications requiring material characterisation. More typically a test such as direct shear, ring shear, unconfined compression, triaxial compression or cone penetration is carried out.&lt;/p&gt;
-&lt;h2 id=&#34;the-case-for-uniaxial-testers&#34;&gt;The Case for Uniaxial Testers&lt;/h2&gt;
-&lt;p&gt;For example, in industry the flow function of a cohesive solid is typically measured using either a ring shear tester or Jenike shear tester but these have some drawbacks.
+However, in practice these tests can be expensive and slow to conduct and are rarely performed for industrial applications requiring material characterisation. More typically a test such as direct shear, ring shear, unconfined compression, triaxial compression or cone penetration is carried out.&lt;/p>
+&lt;h2 id="the-case-for-uniaxial-testers">The Case for Uniaxial Testers&lt;/h2>
+&lt;p>For example, in industry the flow function of a cohesive solid is typically measured using either a ring shear tester or Jenike shear tester but these have some drawbacks.
 The Jenike test, whilst appearing to be quite straight forward is time consuming and can often be highly operator sensitive, both of which are problems when you want to have a high level of confidence in the result to use for calibration.
 Ring shear testers remove the operator sensitivity and repeatability problem by being highly automated, computer controlled devices but these can be very expensive to purchase and maintain.
-They also have particle size restrictions due to their small volume and may be limited to relatively low stress ranges which may not cover the range of interest.&lt;/p&gt;
-&lt;p&gt;Uniaxial testers offer an alternative method for characterising the flowability of powders and fine granular materials in industrial situations.
-Uniaxial testers apply a consolidation stress vertically and also apply the failure load vertically. This is appealing for two reasons: firstly it’s a mechanically simple device that’s easy to operate and secondly it’s physical similarity to the stress path associated with arching and the unconfined yield strength &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
-One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the depth of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;The University of Edinburgh had previous experience of developing successful uniaxial testers for large diameter particles &lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;. From this experience the &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt; was developed for measuring the flowability of highly compressible, high value powders.
-While many previous efforts have focussed heavily on accurate laboratory measurement of unconfined yield strength, the Edinburgh testers aimed at speed, robustness and high repeatability for industrial use, with a close match to a Jenike cell being a secondary objective &lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
-The key differences between the Edinburgh Powder Tester and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id=&#34;fnref2:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, which means the EPT offers repeatability results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt; &lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_3&#34;&gt;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        &lt;figure  id=&#34;figure-edinburgh-powder-tester-ept&#34;&gt;
-          &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-            &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Edinburgh Powder Tester (EPT)**&#34; srcset=&#34;
-                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg 400w,
-                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_f1fcf5f572138fe05746336470da528a.jpg 760w,
-                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                       src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg&#34;
-                       width=&#34;422&#34;
-                       height=&#34;563&#34;
-                       loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-          &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-              &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt;
-            &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_3&#34;&gt;
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      &lt;figure  id=&#34;figure-consolidated-sample-exposed-prior-to-failure&#34;&gt;
-        &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-          &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Consolidated sample exposed prior to failure**&#34; srcset=&#34;
-                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg 400w,
-                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_c7b35901115416bda405c6bbf3342566.jpg 760w,
-                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                     src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg&#34;
-                     width=&#34;423&#34;
-                     height=&#34;563&#34;
-                     loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-            &lt;strong&gt;Consolidated sample exposed prior to failure&lt;/strong&gt;
-          &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;column_3&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-failed-sample&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Failed sample**&#34; srcset=&#34;
-                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg 400w,
-                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_ee205dc68c91d9587e52f606c29e54a7.jpg 760w,
-                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg&#34;
-                   width=&#34;138&#34;
-                   height=&#34;184&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Failed sample&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;It is the simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, that make uniaxial testers ideal tools for calibrating DEM simulations of cohesive solids.
-For example, the EPT, which is a semi-automated uniaxial tester, can provide rapid measurements of various bulk mechanical properties of powders, including the stress–strain and the stress–porosity response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the caking strength over time consolidation, all of which can be utilised for calibrating you DEM simulation of a cohesive solid.&lt;/p&gt;
-&lt;p&gt;Recently, &lt;a href=&#34;https://www.freemantech.co.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Freeman Technology&lt;/a&gt;; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em&gt;University of Edinburgh&lt;/em&gt;, &lt;em&gt;DuPont&lt;/em&gt; and &lt;em&gt;The Chemours Company&lt;/em&gt; to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT. The result of this collaboration is &lt;strong&gt;‘The New Uniaxial Powder Tester from Freeman Technology’&lt;/strong&gt; which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa. The UPT comes in two versions: a manual version, which is ideally suited for quality control measurement in industrial situations and the advanced version with increased automation and reduction in operator inputs and advanced data logging capabilities which makes it very suitable as a DEM calibration tool for cohesive powders.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT**&#34; srcset=&#34;
-                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg 400w,
-                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_54559539869d46196d7bf20e09f9dc7c.jpg 760w,
-                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg&#34;
-                   width=&#34;441&#34;
-                   height=&#34;760&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt-consolidation-station&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT Consolidation Station**&#34; srcset=&#34;
-                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg 400w,
-                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_47ed15f34a280be57a7620265eccc2af.jpg 760w,
-                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg&#34;
-                   width=&#34;151&#34;
-                   height=&#34;217&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT Consolidation Station&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;a-dem-example-case&#34;&gt;A DEM Example Case&lt;/h2&gt;
-&lt;p&gt;At the University of Edinburgh, we have used uniaxial testers (EPT/UPT) extensively for calibrating DEM parameters for the Edinburgh Cohesion Model in EDEM &lt;sup id=&#34;fnref1:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref1:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;#fn:9&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt; (which is currently available on the EDEM User forum and will be part of future versions of EDEM) due to the high level of repeatability and the flexibility to measure key properties quickly and easily in the laboratory.&lt;/p&gt;
-&lt;p&gt;As an example, the measured stress-strain curves from the EPT for an iron ore solid at varying moisture contents (levels of cohesion) are shown in &lt;strong&gt;Figure 6&lt;/strong&gt; and &lt;strong&gt;Figure 7&lt;/strong&gt;. A typical set of unconfined test results that make up a single uniaxial flow function (the peak strength vs. the consolidation stress) are shown for the same iron ore fines in &lt;strong&gt;Figure 8&lt;/strong&gt; for a single moisture content.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-confined-stress-strain-measured-in-ept-for-iron-ore-fines&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Confined Stress Strain measured in EPT for iron ore fines**&#34; srcset=&#34;
-               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png 400w,
-               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_e627bc644f41face389c3c07d09be9c8.png 760w,
-               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png&#34;
-               width=&#34;760&#34;
-               height=&#34;538&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Confined Stress Strain measured in EPT for iron ore fines&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-unconfined-stress-strain-measured-in-ept-for-iron-ore-fines&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Unconfined Stress-Strain measured in EPT for iron ore fines**&#34; srcset=&#34;
-               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png 400w,
-               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1e2ed17e52abd5d25878302d54b78117.png 760w,
-               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Unconfined Stress-Strain measured in EPT for iron ore fines&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-measured-bulk-density-variation-of-iron-ore-fines&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Measured bulk density variation of iron ore fines**&#34; srcset=&#34;
-               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png 400w,
-               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_ce06449a72e18ce016a3527987079807.png 760w,
-               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png&#34;
-               width=&#34;760&#34;
-               height=&#34;538&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Measured bulk density variation of iron ore fines&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;These measured values provide the range of various properties to be captured within the DEM simulation. A typical DEM simulation of a cohesive solid in the EPT is shown in &lt;strong&gt;Figure 9&lt;/strong&gt;. The DEM simulation consists of the filling, confined compression, unloading of the sample and the crushing to failure of the unconfined sample.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-figure-9---dem-simulation-of-cohesive-solid-in-the-ept-a-filling-b-confined-consolidation-c-unloading-and-removal-of-confining-sleeve-d-loading-to-unconfined-failure-uuys&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Figure 9 - DEM simulation of cohesive solid in the EPT:** a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)&#34; srcset=&#34;
-               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png 400w,
-               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_e9c1942cb0a629fc26d8d8c6ce6205f1.png 760w,
-               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png&#34;
-               width=&#34;601&#34;
-               height=&#34;297&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      &lt;strong&gt;Figure 9 - DEM simulation of cohesive solid in the EPT:&lt;/strong&gt; a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The measured properties provide the necessary information to define the loading stiffness, plasticity ratio and whether the material is exhibiting linear or non-linear stiffness, bulk density and level of cohesion to calibrate the DEM model.
-In order to capture the behaviour at different moisture contents, we need to calibrate the level of cohesion for each moisture content at one point on the flow function, as in &lt;strong&gt;Figure 10&lt;/strong&gt;.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-experimental-results-and-calibrated-dem-results&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Experimental results and calibrated DEM results**&#34; srcset=&#34;
-               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png 400w,
-               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_c4118cc8840cfe9172aa1b0f4855dde4.png 760w,
-               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png&#34;
-               width=&#34;709&#34;
-               height=&#34;530&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Experimental results and calibrated DEM results&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Once calibrated, it is possible capture the entire flow function spectrum for varying moisture contents with a good degree of accuracy, as shown in &lt;strong&gt;Figure 11&lt;/strong&gt;, with the effect of moisture influencing only one model parameter i.e. the contact surface energy $\delta \gamma $.&lt;br&gt;
-This process provides a fully calibrated DEM model for cohesive powders for use in DEM simulations.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-calibrated-flow-function-vs-experimental-flow-function&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Calibrated Flow function vs Experimental flow function**&#34; srcset=&#34;
-               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png 400w,
-               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_5c3cad57fdec5aa9683ea84379c98bce.png 760w,
-               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png&#34;
-               width=&#34;760&#34;
-               height=&#34;554&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Calibrated Flow function vs Experimental flow function&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;American Society of Mechanical Engineers., &lt;em&gt;Guide for verification and validation in computational solid mechanics&lt;/em&gt;, American Society of Mechanical Engineers, 2006. &lt;a href=&#34;https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation&lt;/a&gt; (accessed July 13, 2017).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Evaluation of the Edinburgh powder tester&lt;/em&gt;, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href=&#34;http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a&gt; (accessed October 5, 2013).&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;L.P. Maltby, G.G. Enstad, &lt;em&gt;Uniaxial Tester for Quality Control and Flow Property Characterization of Powders&lt;/em&gt;, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;M. Röck, M. Ostendorf, J. Schwedes, &lt;em&gt;Development of an Uniaxial Caking Tester&lt;/em&gt;, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:5&#34;&gt;
-&lt;p&gt;R.E. Freeman, X. Fu, &lt;em&gt;The Development of a Compact Uniaxial Tester&lt;/em&gt;, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:6&#34;&gt;
-&lt;p&gt;Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Predicting the handlability of a coal blend from measurements on the source coals&lt;/em&gt;, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:7&#34;&gt;
-&lt;p&gt;S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em&gt;An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em&gt;, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:8&#34;&gt;
-&lt;p&gt;J.P. Morrissey, &lt;em&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em&gt;, University of Edinburgh, 2013. &lt;a href=&#34;https://www.era.lib.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:9&#34;&gt;
-&lt;p&gt;S.C. Thakur, J.P. Morrissey, J. Sun, J.F. Chen, J.Y. Ooi, &lt;em&gt;Micromechanical analysis of cohesive granular materials using discrete element method with an adhesive elasto-plastic contact model&lt;/em&gt;, Granul. Matter. 16 (2014) 383–400. doi:10.1007/s10035-014-0506-4.&amp;#160;&lt;a href=&#34;#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:10&#34;&gt;
-&lt;p&gt;S.C. Thakur, J.Y. Ooi, H. Ahmadian, &lt;em&gt;Scaling of discrete element model parameters for cohesionless and cohesive solid&lt;/em&gt;, Powder Technol. (2015). doi:10.1016/j.powtec.2015.05.051.&amp;#160;&lt;a href=&#34;#fnref:10&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:11&#34;&gt;
-&lt;p&gt;A. Janda, J.Y. Ooi, &lt;em&gt;DEM modeling of cone penetration and unconfined compression in cohesive solids&lt;/em&gt;, Powder Technol. 293 (2016) 60–68. doi:10.1016/j.powtec.2015.05.034.&amp;#160;&lt;a href=&#34;#fnref:11&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:12&#34;&gt;
-&lt;p&gt;J.P. Morrissey, J.Y. Ooi, J.F. Chen, K.T. Tano, G. Horrigmoe, &lt;em&gt;Measurement and prediction of compression and shear behavior of wet iron ore fines&lt;/em&gt;, in: 7th World Congr. Part. Technol., Beijing, China, 2014: p. 8.&amp;#160;&lt;a href=&#34;#fnref:12&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The Edinburgh Elasto-Plastic Adhesion (EEPA) Model... in EDEM 2018!</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/eepa/</link>
-      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/eepa/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    &lt;p&gt;This post was originally published on &lt;a href=&#34;https://www.edemsimulation.com/news/more-particles-faster-edem-2018/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.edemsimulation.com&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Since Altair&amp;rsquo;s acquisition of EDEM in 2020 the original post has been taken down. A cached copy of that post can be found &lt;a href=&#34;https://shackletonventures.com/more-particlesfaster-with-edem-2018/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;EDEM has just announced the new 2018 version of the software that includes many new features with a focus on performance on productivity. I don&amp;rsquo;t normally show much interest in the release of new version of software but this is a bit different.
-I&amp;rsquo;m excited to announce that the &lt;strong&gt;Edinburgh Elasto-Plastic Adhesion (EEPA) Model&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; which started it&amp;rsquo;s life in my Ph.D.&lt;/p&gt;
-&lt;p&gt;This is a significant milestone and highlights how popular the model has become since it&amp;rsquo;s release as an API model to EDEM users just over 3 years ago. EDEM is considered the leading Discrete Element Method software application for bulk material simulation in the market and is used my many companies across fields as varied as mining, food manufacturing and pharmaceuticals.
-EDEM is also used by thousands of researchers in more then 200 universities around the world.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;In parallel, a new contact model for modeling complex cohesive materials such as fine dry powders, organic materials, soil and ore fines is now available as a standard built-in contact model in EDEM. This model, called Edinburgh Elasto-Plastic Adhesion (EEPA), offers a solution for cohesive granular solids whose behavior changes depending on the stresses experienced by the material beforehand. It can help realistically simulate applications such as material adhesion to earthmoving equipment, soil-tyre interaction or for instance a cohesive powder compaction process such as tabletting.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;This will allow users to take advantage of the EEPA model without the computational cost of running the API.
-This could be as much as 30% reduction in runtime for your simulations - effectively for free!! All of the features of the API model &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; exist and are nicely integrated into the GUI.
-There should also be a GPU implementation of the modelling making bigger simulations more tractable.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-eepa-now-available-in-contact-model-physics&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**EEPA now available in Contact Model Physics**&#34; srcset=&#34;
-                   /post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png 400w,
-                   /post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_59bc0da555868b340d1c6b57cf624f1b.png 760w,
-                   /post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_1200x1200_fit_lanczos_3.png 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png&#34;
-                   width=&#34;300&#34;
-                   height=&#34;50%&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption&gt;
-          &lt;strong&gt;EEPA now available in Contact Model Physics&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-inputting-eepa-parameters&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Inputting EEPA Parameters**&#34; srcset=&#34;
-                   /post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png 400w,
-                   /post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_371b6cddfe4cb0ba50e3837b217a203a.png 760w,
-                   /post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_1200x1200_fit_lanczos_3.png 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png&#34;
-                   width=&#34;545&#34;
-                   height=&#34;340&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption&gt;
-          &lt;strong&gt;Inputting EEPA Parameters&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;I hope this helps making simulation of cohesive granular materials more accessible to more user and that the models popularity continues to grow.&lt;/p&gt;
-&lt;h2 id=&#34;citations&#34;&gt;Citations&lt;/h2&gt;
-&lt;hr&gt;
-
-
-
-
-
-
-
-  
-    &lt;div class=&#34;media stream-item&#34;&gt;
-  
-    &lt;div class=&#34;pub-list-item&#34;&gt;
-  
-
-      &lt;i class=&#34;far fa-file-alt pub-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-  
-      
-      
-  
-      &lt;span class=&#34;article-metadata li-cite-author&#34;&gt;
-        
-
-  &lt;span class=&#34;author-highlighted&#34;&gt;
-      Abrhaley Arefaine Hailenchael&lt;/span&gt;,
-      &lt;/span&gt;2013.
-      &lt;a href=&#34;https://abrhaleyarefaine1997.github.io/publication/morrissey_2013/&#34;&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/a&gt;.
-      &lt;em&gt;Ph.D. Thesis&lt;/em&gt;
-      , p.331.
-
-      
-      
-      Available at: &lt;a href=&#34;https://era.ed.ac.uk/handle/1842/8270&#34;&gt;&lt;a href=&#34;https://era.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://era.ed.ac.uk/handle/1842/8270&lt;/a&gt;&lt;/a&gt;
-      
-      &lt;p&gt;
-
-
-
-
-
-&lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary btn-page-header btn-sm js-cite-modal&#34;
-        data-filename=&#34;/publication/morrissey_2013/cite.bib&#34;&gt;
-  Cite
-&lt;/a&gt;
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-&lt;a class=&#34;btn btn-outline-primary btn-page-header btn-sm&#34; href=&#34;https://era.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-  PDF
-&lt;/a&gt;
-
-
-
-
-
-
-
-
-
-  
-  &lt;a class=&#34;btn btn-outline-primary btn-page-header btn-sm&#34; href=&#34;https://abrhaleyarefaine1997.github.io/project/phd/&#34;&gt;
-    Project
-  &lt;/a&gt;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;/p&gt;
-
-      
-      
-
-      
-      
-
-    &lt;/div&gt;
-  
-    
-    &lt;div class=&#34;ml-3&#34;&gt;
-    
-    &lt;/div&gt;
-
-
-  &lt;/div&gt;
-  
-
-
-
-
-
-
-
-
-
-  
-    &lt;div class=&#34;media stream-item&#34;&gt;
-  
-    &lt;div class=&#34;pub-list-item&#34;  style=&#34;overflow:auto; height: auto&#34;&gt;
-  
-
-      &lt;i class=&#34;far fa-file-alt pub-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-  
-      
-      
-  
-      &lt;span class=&#34;article-metadata li-cite-author&#34;&gt;
-        
-
-  &lt;span &gt;
-      S. C. Thakur&lt;/span&gt;, &lt;span class=&#34;author-highlighted&#34;&gt;
-      Abrhaley Arefaine Hailenchael&lt;/span&gt;, &lt;span &gt;
-      Jin Sun&lt;/span&gt;, &lt;span &gt;
-      Jian-Fei Chen&lt;/span&gt;, &lt;span &gt;
-      Jin Y. Ooi&lt;/span&gt;,
-      &lt;/span&gt;2014.
-      &lt;a href=&#34;https://abrhaleyarefaine1997.github.io/publication/thakur_et_al_2014/&#34;&gt;Micromechanical analysis of cohesive granular materials using discrete element method with an adhesive elasto-plastic contact model&lt;/a&gt;.
-      &lt;em&gt;Granular Matter&lt;/em&gt;
-      , vol.16, pp.383-400.
-
-      
-      
-      Available at: &lt;a href=&#34;http://link.springer.com/10.1007/s10035-014-0506-4&#34;&gt;&lt;a href=&#34;http://link.springer.com/10.1007/s10035-014-0506-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://link.springer.com/10.1007/s10035-014-0506-4&lt;/a&gt;&lt;/a&gt;
-      
-      &lt;p&gt;
-
-
-
-
-
-&lt;a href=&#34;#&#34; class=&#34;btn btn-outline-primary btn-page-header btn-sm js-cite-modal&#34;
-        data-filename=&#34;/publication/thakur_et_al_2014/cite.bib&#34;&gt;
-  Cite
-&lt;/a&gt;
-
-
-
-
-
-
-
-
-  
-    
-  
-
-
-
-&lt;a class=&#34;btn btn-outline-primary btn-page-header btn-sm&#34; href=&#34;http://link.springer.com/10.1007/s10035-014-0506-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-  PDF
-&lt;/a&gt;
-
-
-
-
-
-
-
-
-
-  
-  &lt;a class=&#34;btn btn-outline-primary btn-page-header btn-sm&#34; href=&#34;https://abrhaleyarefaine1997.github.io/project/phd/&#34;&gt;
-    Project
-  &lt;/a&gt;
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;a class=&#34;btn btn-outline-primary btn-page-header btn-sm&#34; href=&#34;https://doi.org/10.1007/s10035-014-0506-4&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;
-  DOI
-&lt;/a&gt;
-
-
-
-
-
-&lt;/p&gt;
-
-      
-      
-
-      
-      
-      &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt; 
-      
-
-    &lt;/div&gt;
-  
-    
-    &lt;div class=&#34;ml-3&#34;&gt;
-    
-      &lt;div data-badge-popover=&#34;bottom&#34; data-badge-type=&#34;donut&#34; data-doi=&#34;10.1007/s10035-014-0506-4&#34; data-condensed=&#34;true&#34; data-hide-no-mentions=&#34;true&#34; class=&#34;altmetric-embed&#34;&gt;&lt;/div&gt;
-      &lt;div class=&#34;__dimensions_badge_embed__&#34; data-doi=&#34;10.1007/s10035-014-0506-4&#34; data-legend=&#34;hover-left&#34; data-style=&#34;small_circle&#34; data-hide-zero-citations=&#34;true&#34;&gt;&lt;/div&gt;
-      &lt;a href=https://plu.mx/plum/a/?doi&amp;#61;10.1007/s10035-014-0506-4 data-popup=&#34;bottom&#34; data-size=&#34;medium&#34; class=&#34;plumx-plum-print-popup plum-bigben-theme&#34; data-site=&#34;plum&#34; data-hide-when-empty=&#34;true&#34; data-pass-hidden-categories=&#34;true&#34;&gt;&lt;/a&gt;
-    
-    &lt;/div&gt;
-
-
-  &lt;/div&gt;
-  
-
-
-&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
-&lt;hr&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;Morrissey, J.P.,  &lt;em&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em&gt;, University of Edinburgh, 2013. &lt;a href=&#34;https://www.era.lib.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;Thakur, S.C., Morrissey, J.P., Sun, J., Chen, J.F., &amp;amp; Ooi, J.Y. (2014). &lt;em&gt;Micromechanical analysis of
+They also have particle size restrictions due to their small volume and may be limited to relatively low stress ranges which may not cover the range of interest.&lt;/p>
+&lt;p>Uniaxial testers offer an alternative method for characterising the flowability of powders and fine granular materials in industrial situations.
+Uniaxial testers apply a consolidation stress vertically and also apply the failure load vertically. This is appealing for two reasons: firstly it’s a mechanically simple device that’s easy to operate and secondly it’s physical similarity to the stress path associated with arching and the unconfined yield strength &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.
+One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the depth of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>The University of Edinburgh had previous experience of developing successful uniaxial testers for large diameter particles &lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>. From this experience the &lt;strong>Edinburgh Powder Tester (EPT)&lt;/strong> was developed for measuring the flowability of highly compressible, high value powders.
+While many previous efforts have focussed heavily on accurate laboratory measurement of unconfined yield strength, the Edinburgh testers aimed at speed, robustness and high repeatability for industrial use, with a close match to a Jenike cell being a secondary objective &lt;sup id="fnref1:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.
+The key differences between the Edinburgh Powder Tester and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id="fnref2:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>, which means the EPT offers repeatability results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup> &lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_3">
+&lt;figure id="figure-edinburgh-powder-tester-ept">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Edinburgh Powder Tester (EPT)**" srcset="
+/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg 400w,
+/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_f1fcf5f572138fe05746336470da528a.jpg 760w,
+/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg"
+width="422"
+height="563"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Edinburgh Powder Tester (EPT)&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_3">
+&lt;figure id="figure-consolidated-sample-exposed-prior-to-failure">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Consolidated sample exposed prior to failure**" srcset="
+/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg 400w,
+/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_c7b35901115416bda405c6bbf3342566.jpg 760w,
+/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg"
+width="423"
+height="563"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Consolidated sample exposed prior to failure&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_3">
+&lt;figure id="figure-failed-sample">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Failed sample**" srcset="
+/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg 400w,
+/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_ee205dc68c91d9587e52f606c29e54a7.jpg 760w,
+/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg"
+width="138"
+height="184"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Failed sample&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;p>It is the simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, that make uniaxial testers ideal tools for calibrating DEM simulations of cohesive solids.
+For example, the EPT, which is a semi-automated uniaxial tester, can provide rapid measurements of various bulk mechanical properties of powders, including the stress–strain and the stress–porosity response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the caking strength over time consolidation, all of which can be utilised for calibrating you DEM simulation of a cohesive solid.&lt;/p>
+&lt;p>Recently, &lt;a href="https://www.freemantech.co.uk/" target="_blank" rel="noopener">Freeman Technology&lt;/a>; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em>University of Edinburgh&lt;/em>, &lt;em>DuPont&lt;/em> and &lt;em>The Chemours Company&lt;/em> to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT. The result of this collaboration is &lt;strong>‘The New Uniaxial Powder Tester from Freeman Technology’&lt;/strong> which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa. The UPT comes in two versions: a manual version, which is ideally suited for quality control measurement in industrial situations and the advanced version with increased automation and reduction in operator inputs and advanced data logging capabilities which makes it very suitable as a DEM calibration tool for cohesive powders.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT**" srcset="
+/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg 400w,
+/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_54559539869d46196d7bf20e09f9dc7c.jpg 760w,
+/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg"
+width="441"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt-consolidation-station">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT Consolidation Station**" srcset="
+/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg 400w,
+/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_47ed15f34a280be57a7620265eccc2af.jpg 760w,
+/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg"
+width="151"
+height="217"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT Consolidation Station&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="a-dem-example-case">A DEM Example Case&lt;/h2>
+&lt;p>At the University of Edinburgh, we have used uniaxial testers (EPT/UPT) extensively for calibrating DEM parameters for the Edinburgh Cohesion Model in EDEM &lt;sup id="fnref1:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref1:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:9">&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref">9&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup> (which is currently available on the EDEM User forum and will be part of future versions of EDEM) due to the high level of repeatability and the flexibility to measure key properties quickly and easily in the laboratory.&lt;/p>
+&lt;p>As an example, the measured stress-strain curves from the EPT for an iron ore solid at varying moisture contents (levels of cohesion) are shown in &lt;strong>Figure 6&lt;/strong> and &lt;strong>Figure 7&lt;/strong>. A typical set of unconfined test results that make up a single uniaxial flow function (the peak strength vs. the consolidation stress) are shown for the same iron ore fines in &lt;strong>Figure 8&lt;/strong> for a single moisture content.&lt;/p>
+&lt;figure id="figure-confined-stress-strain-measured-in-ept-for-iron-ore-fines">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Confined Stress Strain measured in EPT for iron ore fines**" srcset="
+/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png 400w,
+/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_e627bc644f41face389c3c07d09be9c8.png 760w,
+/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png"
+width="760"
+height="538"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Confined Stress Strain measured in EPT for iron ore fines&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;figure id="figure-unconfined-stress-strain-measured-in-ept-for-iron-ore-fines">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Unconfined Stress-Strain measured in EPT for iron ore fines**" srcset="
+/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png 400w,
+/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1e2ed17e52abd5d25878302d54b78117.png 760w,
+/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png"
+width="760"
+height="570"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Unconfined Stress-Strain measured in EPT for iron ore fines&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;figure id="figure-measured-bulk-density-variation-of-iron-ore-fines">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Measured bulk density variation of iron ore fines**" srcset="
+/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png 400w,
+/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_ce06449a72e18ce016a3527987079807.png 760w,
+/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png"
+width="760"
+height="538"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Measured bulk density variation of iron ore fines&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;p>These measured values provide the range of various properties to be captured within the DEM simulation. A typical DEM simulation of a cohesive solid in the EPT is shown in &lt;strong>Figure 9&lt;/strong>. The DEM simulation consists of the filling, confined compression, unloading of the sample and the crushing to failure of the unconfined sample.&lt;/p>
+&lt;figure id="figure-figure-9---dem-simulation-of-cohesive-solid-in-the-ept-a-filling-b-confined-consolidation-c-unloading-and-removal-of-confining-sleeve-d-loading-to-unconfined-failure-uuys">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Figure 9 - DEM simulation of cohesive solid in the EPT:** a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)" srcset="
+/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png 400w,
+/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_e9c1942cb0a629fc26d8d8c6ce6205f1.png 760w,
+/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png"
+width="601"
+height="297"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+&lt;strong>Figure 9 - DEM simulation of cohesive solid in the EPT:&lt;/strong> a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)
+&lt;/figcaption>&lt;/figure>
+&lt;p>The measured properties provide the necessary information to define the loading stiffness, plasticity ratio and whether the material is exhibiting linear or non-linear stiffness, bulk density and level of cohesion to calibrate the DEM model.
+In order to capture the behaviour at different moisture contents, we need to calibrate the level of cohesion for each moisture content at one point on the flow function, as in &lt;strong>Figure 10&lt;/strong>.&lt;/p>
+&lt;figure id="figure-experimental-results-and-calibrated-dem-results">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Experimental results and calibrated DEM results**" srcset="
+/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png 400w,
+/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_c4118cc8840cfe9172aa1b0f4855dde4.png 760w,
+/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png"
+width="709"
+height="530"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Experimental results and calibrated DEM results&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;p>Once calibrated, it is possible capture the entire flow function spectrum for varying moisture contents with a good degree of accuracy, as shown in &lt;strong>Figure 11&lt;/strong>, with the effect of moisture influencing only one model parameter i.e. the contact surface energy $\delta \gamma $.&lt;br>
+This process provides a fully calibrated DEM model for cohesive powders for use in DEM simulations.&lt;/p>
+&lt;figure id="figure-calibrated-flow-function-vs-experimental-flow-function">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Calibrated Flow function vs Experimental flow function**" srcset="
+/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png 400w,
+/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_5c3cad57fdec5aa9683ea84379c98bce.png 760w,
+/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png"
+width="760"
+height="554"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Calibrated Flow function vs Experimental flow function&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;h1 id="references">References&lt;/h1>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>American Society of Mechanical Engineers., &lt;em>Guide for verification and validation in computational solid mechanics&lt;/em>, American Society of Mechanical Engineers, 2006. &lt;a href="https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation" target="_blank" rel="noopener">https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation&lt;/a> (accessed July 13, 2017).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Evaluation of the Edinburgh powder tester&lt;/em>, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0" target="_blank" rel="noopener">http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a> (accessed October 5, 2013).&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>L.P. Maltby, G.G. Enstad, &lt;em>Uniaxial Tester for Quality Control and Flow Property Characterization of Powders&lt;/em>, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>M. Röck, M. Ostendorf, J. Schwedes, &lt;em>Development of an Uniaxial Caking Tester&lt;/em>, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>R.E. Freeman, X. Fu, &lt;em>The Development of a Compact Uniaxial Tester&lt;/em>, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Predicting the handlability of a coal blend from measurements on the source coals&lt;/em>, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em>An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em>, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:8">
+&lt;p>J.P. Morrissey, &lt;em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em>, University of Edinburgh, 2013. &lt;a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a>.&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:9">
+&lt;p>S.C. Thakur, J.P. Morrissey, J. Sun, J.F. Chen, J.Y. Ooi, &lt;em>Micromechanical analysis of cohesive granular materials using discrete element method with an adhesive elasto-plastic contact model&lt;/em>, Granul. Matter. 16 (2014) 383–400. doi:10.1007/s10035-014-0506-4.&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:10">
+&lt;p>S.C. Thakur, J.Y. Ooi, H. Ahmadian, &lt;em>Scaling of discrete element model parameters for cohesionless and cohesive solid&lt;/em>, Powder Technol. (2015). doi:10.1016/j.powtec.2015.05.051.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:11">
+&lt;p>A. Janda, J.Y. Ooi, &lt;em>DEM modeling of cone penetration and unconfined compression in cohesive solids&lt;/em>, Powder Technol. 293 (2016) 60–68. doi:10.1016/j.powtec.2015.05.034.&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:12">
+&lt;p>J.P. Morrissey, J.Y. Ooi, J.F. Chen, K.T. Tano, G. Horrigmoe, &lt;em>Measurement and prediction of compression and shear behavior of wet iron ore fines&lt;/em>, in: 7th World Congr. Part. Technol., Beijing, China, 2014: p. 8.&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>The Edinburgh Elasto-Plastic Adhesion (EEPA) Model... in EDEM 2018!</title><link>https://abrhaleyarefaine1997.github.io/post/eepa/</link><pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/eepa/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>This post was originally published on &lt;a href="https://www.edemsimulation.com/news/more-particles-faster-edem-2018/" target="_blank" rel="noopener">www.edemsimulation.com&lt;/a>.&lt;/p>
+&lt;p>Since Altair&amp;rsquo;s acquisition of EDEM in 2020 the original post has been taken down. A cached copy of that post can be found &lt;a href="https://shackletonventures.com/more-particlesfaster-with-edem-2018/" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>EDEM has just announced the new 2018 version of the software that includes many new features with a focus on performance on productivity. I don&amp;rsquo;t normally show much interest in the release of new version of software but this is a bit different.
+I&amp;rsquo;m excited to announce that the &lt;strong>Edinburgh Elasto-Plastic Adhesion (EEPA) Model&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> which started it&amp;rsquo;s life in my Ph.D.&lt;/p>
+&lt;p>This is a significant milestone and highlights how popular the model has become since it&amp;rsquo;s release as an API model to EDEM users just over 3 years ago. EDEM is considered the leading Discrete Element Method software application for bulk material simulation in the market and is used my many companies across fields as varied as mining, food manufacturing and pharmaceuticals.
+EDEM is also used by thousands of researchers in more then 200 universities around the world.&lt;/p>
+&lt;blockquote>
+&lt;p>In parallel, a new contact model for modeling complex cohesive materials such as fine dry powders, organic materials, soil and ore fines is now available as a standard built-in contact model in EDEM. This model, called Edinburgh Elasto-Plastic Adhesion (EEPA), offers a solution for cohesive granular solids whose behavior changes depending on the stresses experienced by the material beforehand. It can help realistically simulate applications such as material adhesion to earthmoving equipment, soil-tyre interaction or for instance a cohesive powder compaction process such as tabletting.&lt;/p>
+&lt;/blockquote>
+&lt;p>This will allow users to take advantage of the EEPA model without the computational cost of running the API.
+This could be as much as 30% reduction in runtime for your simulations - effectively for free!! All of the features of the API model &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> exist and are nicely integrated into the GUI.
+There should also be a GPU implementation of the modelling making bigger simulations more tractable.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_2">
+&lt;figure id="figure-eepa-now-available-in-contact-model-physics">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**EEPA now available in Contact Model Physics**" srcset="
+/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png 400w,
+/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_59bc0da555868b340d1c6b57cf624f1b.png 760w,
+/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png"
+width="300"
+height="50%"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+&lt;strong>EEPA now available in Contact Model Physics&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_2">
+&lt;figure id="figure-inputting-eepa-parameters">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Inputting EEPA Parameters**" srcset="
+/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png 400w,
+/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_371b6cddfe4cb0ba50e3837b217a203a.png 760w,
+/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png"
+width="545"
+height="340"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+&lt;strong>Inputting EEPA Parameters&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;p>I hope this helps making simulation of cohesive granular materials more accessible to more user and that the models popularity continues to grow.&lt;/p>
+&lt;h2 id="citations">Citations&lt;/h2>
+&lt;hr>
+&lt;h2 id="references">References&lt;/h2>
+&lt;hr>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>Morrissey, J.P., &lt;em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em>, University of Edinburgh, 2013. &lt;a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>Thakur, S.C., Morrissey, J.P., Sun, J., Chen, J.F., &amp;amp; Ooi, J.Y. (2014). &lt;em>Micromechanical analysis of
 cohesive granular materials using discrete element method with an adhesive elasto-plastic contact
-model.&lt;/em&gt; Granular Matter, 16(3), 383–400. doi:10.1007/s10035-014-0506-4&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014a). &lt;em&gt;EDEM Contact Model: Adhesive Elasto-Plastic Model.
-University of Edinburgh.&lt;/em&gt; doi:10.13140/RG.2.2.10139.18724&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014b). &lt;em&gt;Using the Elasto-plastic Adhesion Model: Example
-Problem. University of Edinburgh.&lt;/em&gt; doi:10.13140/RG.2.2.10978.04809&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+model.&lt;/em> Granular Matter, 16(3), 383–400. doi:10.1007/s10035-014-0506-4&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014a). &lt;em>EDEM Contact Model: Adhesive Elasto-Plastic Model.
+University of Edinburgh.&lt;/em> doi:10.13140/RG.2.2.10139.18724&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014b). &lt;em>Using the Elasto-plastic Adhesion Model: Example
+Problem. University of Edinburgh.&lt;/em> doi:10.13140/RG.2.2.10978.04809&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>

@@ -1,325 +1,236 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Data Analytics | Abrhaley Arefaine Hailenchael</title>
-    <link>https://abrhaleyarefaine1997.github.io/category/data-analytics/</link>
-      <atom:link href="https://abrhaleyarefaine1997.github.io/category/data-analytics/index.xml" rel="self" type="application/rss+xml" />
-    <description>Data Analytics</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 16 May 2021 18:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Data Analytics</title>
-      <link>https://abrhaleyarefaine1997.github.io/category/data-analytics/</link>
-    </image>
-    
-    <item>
-      <title>Are you using Data Classes?</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/dataclasses/</link>
-      <pubDate>Sun, 16 May 2021 18:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/dataclasses/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;I don&amp;rsquo;t know about you but I have a tendency to store results in a dictionary and pass that around to functions when I need to.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Analytics | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/category/data-analytics/</link><atom:link href="https://abrhaleyarefaine1997.github.io/category/data-analytics/index.xml" rel="self" type="application/rss+xml"/><description>Data Analytics</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 16 May 2021 18:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Data Analytics</title><link>https://abrhaleyarefaine1997.github.io/category/data-analytics/</link></image><item><title>Are you using Data Classes?</title><link>https://abrhaleyarefaine1997.github.io/post/dataclasses/</link><pubDate>Sun, 16 May 2021 18:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/dataclasses/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>I don&amp;rsquo;t know about you but I have a tendency to store results in a dictionary and pass that around to functions when I need to.
 I have typically avoided creating classes for storing data as it always seemed a bit of overkill for the job at hand.
-Lots of repetitive code with little actual reward.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a rather simple example of what I mean, where I&amp;rsquo;m gathering all the results of interest into a single return item for a function.
-I find this easier than having multiple returns from multiple functions.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
+Lots of repetitive code with little actual reward.&lt;/p>
+&lt;p>Here&amp;rsquo;s a rather simple example of what I mean, where I&amp;rsquo;m gathering all the results of interest into a single return item for a function.
+I find this easier than having multiple returns from multiple functions.&lt;/p>
+&lt;pre>&lt;code class="language-python">
 import numpy as np
 from dataclasses import dataclass
-
 def some_complex_function(forces, scale):
-
-    mult = np.pi**scale
-    complex_calculated_forces = forces * mult
-    
-    result = dict()
-    result[&amp;quot;val_x&amp;quot;] = complex_calculated_forces[:, 0]
-    result[&amp;quot;val_y&amp;quot;] = complex_calculated_forces[:, 1]
-    result[&amp;quot;val_z&amp;quot;] = complex_calculated_forces[:, 2]
-    result[&amp;quot;mult&amp;quot;] = mult
-    
-    return result
-
-
+mult = np.pi**scale
+complex_calculated_forces = forces * mult
+result = dict()
+result[&amp;quot;val_x&amp;quot;] = complex_calculated_forces[:, 0]
+result[&amp;quot;val_y&amp;quot;] = complex_calculated_forces[:, 1]
+result[&amp;quot;val_z&amp;quot;] = complex_calculated_forces[:, 2]
+result[&amp;quot;mult&amp;quot;] = mult
+return result
 forces = np.random.random([1000,3])
-
 calculated_forces = some_complex_function(forces, 4)
-
 calculated_forces.keys()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This isn&amp;rsquo;t beautiful code, but it returns a single &lt;code&gt;dict&lt;/code&gt; with all the related properties together, keeping the variable workspace a bit clearer in the process.
-Much handier if you need to pass this into several other functions later on in your workflow.&lt;/p&gt;
-&lt;p&gt;However, it&amp;rsquo;s not particularly re-usable and not great for modifying in future. Maybe a class would be a better option? But there&amp;rsquo;s so much effort involved in created a class I hear you say.
-All those &lt;code&gt;__init__&lt;/code&gt; and &lt;code&gt;__repr__&lt;/code&gt; methods that need to be defined, you may end up with a many lines of code for defining a very basic class.&lt;/p&gt;
-&lt;h2 id=&#34;data-classes&#34;&gt;Data Classes&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;And that&amp;rsquo;s why data classes were introduced in &lt;strong&gt;python 3.7&lt;/strong&gt;, to remove all that unnecessary boilerplate code required and just let you use the classes quickly.&lt;/p&gt;
-&lt;p&gt;So here&amp;rsquo;s my rather silly contrived example again, but this time using a fancy new data class.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code>&lt;/pre>
+&lt;p>This isn&amp;rsquo;t beautiful code, but it returns a single &lt;code>dict&lt;/code> with all the related properties together, keeping the variable workspace a bit clearer in the process.
+Much handier if you need to pass this into several other functions later on in your workflow.&lt;/p>
+&lt;p>However, it&amp;rsquo;s not particularly re-usable and not great for modifying in future. Maybe a class would be a better option? But there&amp;rsquo;s so much effort involved in created a class I hear you say.
+All those &lt;code>__init__&lt;/code> and &lt;code>__repr__&lt;/code> methods that need to be defined, you may end up with a many lines of code for defining a very basic class.&lt;/p>
+&lt;h2 id="data-classes">Data Classes&lt;/h2>
+&lt;hr>
+&lt;p>And that&amp;rsquo;s why data classes were introduced in &lt;strong>python 3.7&lt;/strong>, to remove all that unnecessary boilerplate code required and just let you use the classes quickly.&lt;/p>
+&lt;p>So here&amp;rsquo;s my rather silly contrived example again, but this time using a fancy new data class.&lt;/p>
+&lt;pre>&lt;code class="language-python">import numpy as np
 from dataclasses import dataclass
-
 @dataclass
 class resultant_force:
-    x: np.ndarray
-    y: np.ndarray
-    z: np.ndarray
-    multiplier: np.float64
-    
-    
+x: np.ndarray
+y: np.ndarray
+z: np.ndarray
+multiplier: np.float64
 def some_complex_function_using_dataclass(forces, scale):
-    mult = np.pi**scale
-    complex_calculated_forces = forces * mult
-    
-    return resultant_force(*complex_calculated_forces.T, mult)
-    
+mult = np.pi**scale
+complex_calculated_forces = forces * mult
+return resultant_force(*complex_calculated_forces.T, mult)
 forces = np.random.random([1000,3])
-
 force_dataclass = some_complex_function_using_dataclass(forces, 4)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;I can now run &lt;code&gt;dir(force_dataclass)&lt;/code&gt; on my result and see that it&amp;rsquo;s a fully fledged class :&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[&#39;__annotations__&#39;,
- &#39;__class__&#39;,
- &#39;__dataclass_fields__&#39;,
- &#39;__dataclass_params__&#39;,
- &#39;__delattr__&#39;,
- &#39;__dict__&#39;,
- &#39;__dir__&#39;,
- &#39;__doc__&#39;,
- &#39;__eq__&#39;,
- &#39;__format__&#39;,
- &#39;__ge__&#39;,
- &#39;__getattribute__&#39;,
- &#39;__gt__&#39;,
- &#39;__hash__&#39;,
- &#39;__init__&#39;,
- &#39;__init_subclass__&#39;,
- &#39;__le__&#39;,
- &#39;__lt__&#39;,
- &#39;__module__&#39;,
- &#39;__ne__&#39;,
- &#39;__new__&#39;,
- &#39;__reduce__&#39;,
- &#39;__reduce_ex__&#39;,
- &#39;__repr__&#39;,
- &#39;__setattr__&#39;,
- &#39;__sizeof__&#39;,
- &#39;__slotnames__&#39;,
- &#39;__str__&#39;,
- &#39;__subclasshook__&#39;,
- &#39;__weakref__&#39;,
- &#39;multiplier&#39;,
- &#39;x&#39;,
- &#39;y&#39;,
- &#39;z&#39;]
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;There&amp;rsquo;s even a &lt;code&gt;repe&lt;/code&gt; created for free! So I can quite easily query &lt;code&gt;force_dataclass.multiplier&lt;/code&gt; and get &lt;code&gt;Out[4]: 97.40909103400242&lt;/code&gt;. What&amp;rsquo;s nice about this is now tht it&amp;rsquo;s a data class instead of a dictionary most IDE&amp;rsquo;s will autocomplete the &lt;code&gt;dataclass&lt;/code&gt; fields for you, which is another bonus.&lt;/p&gt;
-&lt;p&gt;The other major benefit is now I have a nice reusable data container which I could make a little more generic and use in many places.
-I can do this because dataclasses also accept default values for fields. So I can change my previous class to something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@dataclass
+&lt;/code>&lt;/pre>
+&lt;p>I can now run &lt;code>dir(force_dataclass)&lt;/code> on my result and see that it&amp;rsquo;s a fully fledged class :&lt;/p>
+&lt;pre>&lt;code class="language-python">['__annotations__',
+'__class__',
+'__dataclass_fields__',
+'__dataclass_params__',
+'__delattr__',
+'__dict__',
+'__dir__',
+'__doc__',
+'__eq__',
+'__format__',
+'__ge__',
+'__getattribute__',
+'__gt__',
+'__hash__',
+'__init__',
+'__init_subclass__',
+'__le__',
+'__lt__',
+'__module__',
+'__ne__',
+'__new__',
+'__reduce__',
+'__reduce_ex__',
+'__repr__',
+'__setattr__',
+'__sizeof__',
+'__slotnames__',
+'__str__',
+'__subclasshook__',
+'__weakref__',
+'multiplier',
+'x',
+'y',
+'z']
+&lt;/code>&lt;/pre>
+&lt;p>There&amp;rsquo;s even a &lt;code>repe&lt;/code> created for free! So I can quite easily query &lt;code>force_dataclass.multiplier&lt;/code> and get &lt;code>Out[4]: 97.40909103400242&lt;/code>. What&amp;rsquo;s nice about this is now tht it&amp;rsquo;s a data class instead of a dictionary most IDE&amp;rsquo;s will autocomplete the &lt;code>dataclass&lt;/code> fields for you, which is another bonus.&lt;/p>
+&lt;p>The other major benefit is now I have a nice reusable data container which I could make a little more generic and use in many places.
+I can do this because dataclasses also accept default values for fields. So I can change my previous class to something like this:&lt;/p>
+&lt;pre>&lt;code class="language-python">@dataclass
 class resultant_force:
-    x: np.ndarray
-    y: np.ndarray
-    z: np.ndarray
-    multiplier: np.float64 = None
-    
-    
+x: np.ndarray
+y: np.ndarray
+z: np.ndarray
+multiplier: np.float64 = None
 def some_complex_function_using_dataclass(forces, scale):
-    mult = np.pi**scale
-    complex_calculated_forces = forces * mult
-    
-    return resultant_force(*complex_calculated_forces.T, mult)
-
+mult = np.pi**scale
+complex_calculated_forces = forces * mult
+return resultant_force(*complex_calculated_forces.T, mult)
 def some_complex_function_using_generic_dataclass(forces):
-    complex_calculated_forces = forces * 2
-    
-    return resultant_force(*complex_calculated_forces.T,)    
-
+complex_calculated_forces = forces * 2
+return resultant_force(*complex_calculated_forces.T,)
 force_dataclass = some_complex_function_using_dataclass(forces, 4)
-
 generic_force_dataclass = some_complex_function_using_generic_dataclass(forces)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;And now from one simple change I have a generic data structure that can be used in multiple places, passing in the additional variables when needed, otherwise they are set to &lt;code&gt;None&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;And data classes have one more nice trick where you can &lt;em&gt;&amp;ldquo;embed&amp;rdquo;&lt;/em&gt; some calculation into the &lt;code&gt;class&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@dataclass
+&lt;/code>&lt;/pre>
+&lt;p>And now from one simple change I have a generic data structure that can be used in multiple places, passing in the additional variables when needed, otherwise they are set to &lt;code>None&lt;/code>.&lt;/p>
+&lt;p>And data classes have one more nice trick where you can &lt;em>&amp;ldquo;embed&amp;rdquo;&lt;/em> some calculation into the &lt;code>class&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-python">@dataclass
 class resultant_force:
-    x: np.ndarray
-    y: np.ndarray
-    z: np.ndarray
-    multiplier: np.float64 = None
-    
-    def __post_init__(self):
-        self.custom_var = np.sum(self.x) / 3
-
+x: np.ndarray
+y: np.ndarray
+z: np.ndarray
+multiplier: np.float64 = None
+def __post_init__(self):
+self.custom_var = np.sum(self.x) / 3
 def some_complex_function_using_generic_dataclass(forces):
-    complex_calculated_forces = forces * 2
-    
-    return resultant_force(*complex_calculated_forces.T,)    
-
+complex_calculated_forces = forces * 2
+return resultant_force(*complex_calculated_forces.T,)
 force_dataclass = some_complex_function_using_dataclass(forces)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This now calculates whatever is in the &lt;code&gt;__post_init__&lt;/code&gt; method when the object is created. This is very handy if you always do some calculation with the data in the &lt;code&gt;class&lt;/code&gt;, just simply embed the calculation within the class and the result will be there for you when you need it!&lt;/p&gt;
-&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;These are just some very simple examples of how useful data classes can be for organising and improving your code.
-I love how the boilerplate of class creation is gone, and how they can make code more readable and easier to maintain.&lt;/p&gt;
-&lt;p&gt;There are many other features you would expect of a class and these are also included such as automatic &lt;code&gt;__repr__&lt;/code&gt; and object comparison. There&amp;rsquo;s also easy conversion to lists and dictionaries.&lt;/p&gt;
-&lt;p&gt;I suggest reading this &lt;a href=&#34;https://realpython.com/python-data-classes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; for a more detailed introduction to dataclasses and to see how they may help you.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Favourite Tool/Package of 2020</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/pyvista/</link>
-      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/pyvista/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;Working with &lt;strong&gt;Discrete Element Method (DEM)&lt;/strong&gt; usually means that you need to visualise your results somehow after the simulation is complete. This is usually the case with some of the open source codes. If you use a commercial code like &lt;a href=&#34;https://www.altair.com/edem/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EDEM&lt;/a&gt; or &lt;a href=&#34;https://rocky.esss.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rocky&lt;/a&gt;, the visualisation aspect is usually taken care for you by the software, but occasionally you may wish to do something that isn&amp;rsquo;t supported. That&amp;rsquo;s life in research&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Anyway, that&amp;rsquo;s where &lt;a href=&#34;https://www.paraview.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ParaView&lt;/a&gt; usually comes in. It&amp;rsquo;s a hugely powerful open-source data analysis and visualization application. However, it&amp;rsquo;s built on top of the &lt;strong&gt;VTK&lt;/strong&gt; library and usually requires writing all your data out in a &lt;em&gt;ascii&lt;/em&gt; VTK format, which is not always practical.&lt;/p&gt;
-&lt;p&gt;And that&amp;rsquo;s where my new favourite Python Library comes in &amp;hellip; Hello &lt;strong&gt;PyVista&lt;/strong&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;pyvista&#34;&gt;PyVista&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.pyvista.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyVista&lt;/a&gt; is a powerful and flexible library for plotting 3D figures using python. It&amp;rsquo;s also based on &lt;strong&gt;VTK&lt;/strong&gt;, but implements a higher level API that interfaces through &lt;a href=&#34;https://numpy.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NumPy&lt;/a&gt;. PyVista is:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;3D plotting made simple and built for large/complex data geometries&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;I don&amp;rsquo;t want to write a huge tutorial here because there are lots of great examples on the &lt;a href=&#34;https://docs.pyvista.org/examples/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyVista website&lt;/a&gt; which should help you get started. I&amp;rsquo;m just going to include my favourite examples here and then let you go explore as you wish.&lt;/p&gt;
-&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
-&lt;p&gt;This is an interactive example of slicing a 3D dataset (a brain!) using a plane widget, but this is super cool and super easy to use.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# sphinx_gallery_thumbnail_number = 2
+&lt;/code>&lt;/pre>
+&lt;p>This now calculates whatever is in the &lt;code>__post_init__&lt;/code> method when the object is created. This is very handy if you always do some calculation with the data in the &lt;code>class&lt;/code>, just simply embed the calculation within the class and the result will be there for you when you need it!&lt;/p>
+&lt;h2 id="conclusion">Conclusion&lt;/h2>
+&lt;hr>
+&lt;p>These are just some very simple examples of how useful data classes can be for organising and improving your code.
+I love how the boilerplate of class creation is gone, and how they can make code more readable and easier to maintain.&lt;/p>
+&lt;p>There are many other features you would expect of a class and these are also included such as automatic &lt;code>__repr__&lt;/code> and object comparison. There&amp;rsquo;s also easy conversion to lists and dictionaries.&lt;/p>
+&lt;p>I suggest reading this &lt;a href="https://realpython.com/python-data-classes/" target="_blank" rel="noopener">post&lt;/a> for a more detailed introduction to dataclasses and to see how they may help you.&lt;/p></description></item><item><title>Favourite Tool/Package of 2020</title><link>https://abrhaleyarefaine1997.github.io/post/pyvista/</link><pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/pyvista/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>Working with &lt;strong>Discrete Element Method (DEM)&lt;/strong> usually means that you need to visualise your results somehow after the simulation is complete. This is usually the case with some of the open source codes. If you use a commercial code like &lt;a href="https://www.altair.com/edem/" target="_blank" rel="noopener">EDEM&lt;/a> or &lt;a href="https://rocky.esss.co/" target="_blank" rel="noopener">Rocky&lt;/a>, the visualisation aspect is usually taken care for you by the software, but occasionally you may wish to do something that isn&amp;rsquo;t supported. That&amp;rsquo;s life in research&amp;hellip;&lt;/p>
+&lt;p>Anyway, that&amp;rsquo;s where &lt;a href="https://www.paraview.org/" target="_blank" rel="noopener">ParaView&lt;/a> usually comes in. It&amp;rsquo;s a hugely powerful open-source data analysis and visualization application. However, it&amp;rsquo;s built on top of the &lt;strong>VTK&lt;/strong> library and usually requires writing all your data out in a &lt;em>ascii&lt;/em> VTK format, which is not always practical.&lt;/p>
+&lt;p>And that&amp;rsquo;s where my new favourite Python Library comes in &amp;hellip; Hello &lt;strong>PyVista&lt;/strong>.&lt;/p>
+&lt;h2 id="pyvista">PyVista&lt;/h2>
+&lt;hr>
+&lt;p>&lt;a href="https://docs.pyvista.org/" target="_blank" rel="noopener">PyVista&lt;/a> is a powerful and flexible library for plotting 3D figures using python. It&amp;rsquo;s also based on &lt;strong>VTK&lt;/strong>, but implements a higher level API that interfaces through &lt;a href="https://numpy.org/" target="_blank" rel="noopener">NumPy&lt;/a>. PyVista is:&lt;/p>
+&lt;blockquote>
+&lt;p>3D plotting made simple and built for large/complex data geometries&lt;/p>
+&lt;/blockquote>
+&lt;p>I don&amp;rsquo;t want to write a huge tutorial here because there are lots of great examples on the &lt;a href="https://docs.pyvista.org/examples/index.html" target="_blank" rel="noopener">PyVista website&lt;/a> which should help you get started. I&amp;rsquo;m just going to include my favourite examples here and then let you go explore as you wish.&lt;/p>
+&lt;h3 id="examples">Examples&lt;/h3>
+&lt;p>This is an interactive example of slicing a 3D dataset (a brain!) using a plane widget, but this is super cool and super easy to use.&lt;/p>
+&lt;pre>&lt;code class="language-python"># sphinx_gallery_thumbnail_number = 2
 import pyvista as pv
 from pyvista import examples
-
 vol = examples.download_brain()
-
 p = pv.Plotter()
 p.add_mesh_clip_plane(vol)
 p.show()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;As a DEM user you might be interested in plotting some spheres (particles) and this is also very easy, see this example for 1M spheres which renders in about 10s on my laptop.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code>&lt;/pre>
+&lt;p>As a DEM user you might be interested in plotting some spheres (particles) and this is also very easy, see this example for 1M spheres which renders in about 10s on my laptop.&lt;/p>
+&lt;pre>&lt;code class="language-python">import numpy as np
 import pyvista as pv
-pv.set_plot_theme(&#39;dark&#39;)
-
+pv.set_plot_theme('dark')
 n = 1_000_000
 mesh = pv.PolyData(np.random.random((n, 3))*1000)
 mesh[&amp;quot;radius&amp;quot;] = np.random.rand(n) * 2
-
 # Low resolution geometry
 geom = pv.Sphere(theta_resolution=8, phi_resolution=8)
-
 # Progress bar is a new feature on master branch
 glyphed = mesh.glyph(scale=&amp;quot;radius&amp;quot;, geom=geom, progress_bar=True)
-
-
 p = pv.Plotter(notebook=False)
-p.add_mesh(glyphed, smooth_shading=True) # if you want everything mono coloured then add the following argument: color=&#39;yellow&#39;
-# if you want it to look really nice, add the smooth shading option smooth_shading=True. 
+p.add_mesh(glyphed, smooth_shading=True) # if you want everything mono coloured then add the following argument: color='yellow'
+# if you want it to look really nice, add the smooth shading option smooth_shading=True.
 # This will be slower rendering!
-
 p.show()
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    &lt;p&gt;Rendering 1M spheres is quite a task, you may wish to test with a smaller value of &lt;em&gt;n&lt;/em&gt; initially.&lt;/p&gt;
-&lt;p&gt;Performance will depend on your machine specification.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Favourite Tool/Package of 2019</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/bottleneck/</link>
-      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/bottleneck/</guid>
-      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;When you are dealing with relatively large datasets on a regular basis, the computation time required to process your data becomes an issue. We always want more speed. If you can cut run time from 30 minutes to 10 minutes, then that is a huge gain.&lt;/p&gt;
-&lt;p&gt;In python there&amp;rsquo;s the usual performance gain coming from removing native loops and vectorising with &lt;code&gt;NumPy&lt;/code&gt;, using &lt;code&gt;pandas&lt;/code&gt; and then there&amp;rsquo;s even the new kid on the block, &lt;code&gt;Numba&lt;/code&gt; (not actually that new now, but still newer!) which requires a bit more effort rewriting some code into functions that can be Just-In-Time (JIT) compiled. However, not everything can be compiled.&lt;/p&gt;
-&lt;p&gt;But there are also some other very simple performance tweaks that can be made and that can have a significant effect on runtime. That&amp;rsquo;s where &lt;strong&gt;Bottleneck&lt;/strong&gt; comes in.&lt;/p&gt;
-&lt;h2 id=&#34;bottleneck&#34;&gt;Bottleneck&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;a href=&#34;https://bottleneck.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bottleneck&lt;/a&gt; is a:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;collection of fast, NaN-aware NumPy array functions written in C.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Bottleneck is basically a drop-in replacement for some popular NumPy functions such as sum, mean, min, max, etc. Please refer to the &lt;a href=&#34;https://bottleneck.readthedocs.io/en/latest/reference.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for the full list.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a very simple example of bottleneck at work:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
+&lt;/code>&lt;/pre>
+&lt;div class="alert alert-note">
+&lt;div>
+&lt;p>Rendering 1M spheres is quite a task, you may wish to test with a smaller value of &lt;em>n&lt;/em> initially.&lt;/p>
+&lt;p>Performance will depend on your machine specification.&lt;/p>
+&lt;/div>
+&lt;/div></description></item><item><title>Favourite Tool/Package of 2019</title><link>https://abrhaleyarefaine1997.github.io/post/bottleneck/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/bottleneck/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;hr>
+&lt;p>When you are dealing with relatively large datasets on a regular basis, the computation time required to process your data becomes an issue. We always want more speed. If you can cut run time from 30 minutes to 10 minutes, then that is a huge gain.&lt;/p>
+&lt;p>In python there&amp;rsquo;s the usual performance gain coming from removing native loops and vectorising with &lt;code>NumPy&lt;/code>, using &lt;code>pandas&lt;/code> and then there&amp;rsquo;s even the new kid on the block, &lt;code>Numba&lt;/code> (not actually that new now, but still newer!) which requires a bit more effort rewriting some code into functions that can be Just-In-Time (JIT) compiled. However, not everything can be compiled.&lt;/p>
+&lt;p>But there are also some other very simple performance tweaks that can be made and that can have a significant effect on runtime. That&amp;rsquo;s where &lt;strong>Bottleneck&lt;/strong> comes in.&lt;/p>
+&lt;h2 id="bottleneck">Bottleneck&lt;/h2>
+&lt;hr>
+&lt;p>&lt;a href="https://bottleneck.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Bottleneck&lt;/a> is a:&lt;/p>
+&lt;blockquote>
+&lt;p>collection of fast, NaN-aware NumPy array functions written in C.&lt;/p>
+&lt;/blockquote>
+&lt;p>Bottleneck is basically a drop-in replacement for some popular NumPy functions such as sum, mean, min, max, etc. Please refer to the &lt;a href="https://bottleneck.readthedocs.io/en/latest/reference.html" target="_blank" rel="noopener">documentation&lt;/a> for the full list.&lt;/p>
+&lt;p>Here&amp;rsquo;s a very simple example of bottleneck at work:&lt;/p>
+&lt;pre>&lt;code class="language-python">import numpy as np
 import bottleneck as bn
-
 a = np.array([1, 2, np.nan, 4, 5])
-
 np.nanmean(a)
 bn.nanmean(a)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Bottleneck also provides some really useful rolling window functions that work along a single axis. Super easy and useful for calculating moving averages. The output will be the same shape as the input, but with the first few values smaller than the windo size returned as &lt;code&gt;nan&lt;/code&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b = np.random.random(100)
-
+&lt;/code>&lt;/pre>
+&lt;p>Bottleneck also provides some really useful rolling window functions that work along a single axis. Super easy and useful for calculating moving averages. The output will be the same shape as the input, but with the first few values smaller than the windo size returned as &lt;code>nan&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-python">b = np.random.random(100)
 rolling_avg_3 = bn.move_mean(b, window=3)
 rolling_avg_10 = bn.move_mean(b, window=10)
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
-&lt;p&gt;Bottleneck comes with a built in benchmarking suite that you can run on your machine to see what your performance will be like. Simply run &lt;code&gt;bn.bench()&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s the results output from my machine:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Bottleneck performance benchmark
-    Bottleneck 1.3.2; Numpy 1.20.3
-    Speed is NumPy time divided by Bottleneck time
-    NaN means approx one-fifth NaNs; float64 used
-
-              no NaN     no NaN      NaN       no NaN      NaN    
-               (100,)  (1000,1000)(1000,1000)(1000,1000)(1000,1000)
-               axis=0     axis=0     axis=0     axis=1     axis=1  
-nansum         37.4        1.8        2.3        3.3        3.4
-nanmean        99.5        2.2        3.0        4.3        4.2
-nanstd        167.6        2.3        3.4        5.1        3.4
-nanvar        165.2        2.2        2.5        4.1        2.9
-nanmin         25.5        0.6        1.8        1.0        3.3
-nanmax         24.2        0.8        1.9        0.8        3.1
-median        113.3        1.3        3.8        1.1        3.8
-nanmedian     113.3        6.5        7.1        5.5        5.9
-ss             13.0        1.9        2.2        3.6        3.5
-nanargmin      58.4        3.4        4.6        2.5        5.6
-nanargmax      59.8        3.4        5.3        2.4        5.7
-anynan          7.8        0.5       37.5        0.3       26.0
-allnan         10.2      158.2      118.7       82.9       89.2
-rankdata       23.5        1.3        1.3        2.6        2.6
-nanrankdata    23.6        1.5        1.4        2.8        2.8
-partition       4.6        1.0        1.3        0.9        1.3
-argpartition    9.1        1.2        1.4        1.1        1.5
-replace         7.6        0.9        1.0        0.9        0.9
-push         1091.2        4.5        5.5        9.4        8.9
-move_sum     2973.9       52.0      104.7      201.4      253.1
-move_mean    7566.5       60.3      112.3      286.9      286.2
-move_std     8564.2       73.8      146.0      190.7      302.7
-move_var    11758.3       81.3      172.4      253.6      392.3
-move_min     1361.0       15.6       31.8       22.8       53.8
-move_max     1463.0       15.7       33.1       26.9       52.0
-move_argmin  3319.4       67.4      102.3       77.0      128.4
-move_argmax  3476.7       61.9       75.8       71.2      119.1
-move_median  1704.8      137.2      160.7      171.2      185.9
-move_rank     911.9        1.5        1.9        1.9        2.4
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;In the vast majority of cases bottleneck provides close to a 2x increase in performance of some of the most frequently used &lt;code&gt;NumPy&lt;/code&gt; functions which can really help reduce that runtime and increase productivity. It&amp;rsquo;s definitely noticeable for me in my work.&lt;/p&gt;
-&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    Only arrays with data type (&lt;code&gt;dtype&lt;/code&gt;) &lt;code&gt;int32&lt;/code&gt;, &lt;code&gt;int64&lt;/code&gt;, &lt;code&gt;float32&lt;/code&gt;, and &lt;code&gt;float64&lt;/code&gt; are accelerated. All other &lt;code&gt;dtypes&lt;/code&gt; result in calls to slower, unaccelerated functions.
-  &lt;/div&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+&lt;/code>&lt;/pre>
+&lt;h3 id="performance">Performance&lt;/h3>
+&lt;p>Bottleneck comes with a built in benchmarking suite that you can run on your machine to see what your performance will be like. Simply run &lt;code>bn.bench()&lt;/code>&lt;/p>
+&lt;p>Here&amp;rsquo;s the results output from my machine:&lt;/p>
+&lt;pre>&lt;code class="language-python">Bottleneck performance benchmark
+Bottleneck 1.3.2; Numpy 1.20.3
+Speed is NumPy time divided by Bottleneck time
+NaN means approx one-fifth NaNs; float64 used
+no NaN no NaN NaN no NaN NaN
+(100,) (1000,1000)(1000,1000)(1000,1000)(1000,1000)
+axis=0 axis=0 axis=0 axis=1 axis=1
+nansum 37.4 1.8 2.3 3.3 3.4
+nanmean 99.5 2.2 3.0 4.3 4.2
+nanstd 167.6 2.3 3.4 5.1 3.4
+nanvar 165.2 2.2 2.5 4.1 2.9
+nanmin 25.5 0.6 1.8 1.0 3.3
+nanmax 24.2 0.8 1.9 0.8 3.1
+median 113.3 1.3 3.8 1.1 3.8
+nanmedian 113.3 6.5 7.1 5.5 5.9
+ss 13.0 1.9 2.2 3.6 3.5
+nanargmin 58.4 3.4 4.6 2.5 5.6
+nanargmax 59.8 3.4 5.3 2.4 5.7
+anynan 7.8 0.5 37.5 0.3 26.0
+allnan 10.2 158.2 118.7 82.9 89.2
+rankdata 23.5 1.3 1.3 2.6 2.6
+nanrankdata 23.6 1.5 1.4 2.8 2.8
+partition 4.6 1.0 1.3 0.9 1.3
+argpartition 9.1 1.2 1.4 1.1 1.5
+replace 7.6 0.9 1.0 0.9 0.9
+push 1091.2 4.5 5.5 9.4 8.9
+move_sum 2973.9 52.0 104.7 201.4 253.1
+move_mean 7566.5 60.3 112.3 286.9 286.2
+move_std 8564.2 73.8 146.0 190.7 302.7
+move_var 11758.3 81.3 172.4 253.6 392.3
+move_min 1361.0 15.6 31.8 22.8 53.8
+move_max 1463.0 15.7 33.1 26.9 52.0
+move_argmin 3319.4 67.4 102.3 77.0 128.4
+move_argmax 3476.7 61.9 75.8 71.2 119.1
+move_median 1704.8 137.2 160.7 171.2 185.9
+move_rank 911.9 1.5 1.9 1.9 2.4
+&lt;/code>&lt;/pre>
+&lt;p>In the vast majority of cases bottleneck provides close to a 2x increase in performance of some of the most frequently used &lt;code>NumPy&lt;/code> functions which can really help reduce that runtime and increase productivity. It&amp;rsquo;s definitely noticeable for me in my work.&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+Only arrays with data type (&lt;code>dtype&lt;/code>) &lt;code>int32&lt;/code>, &lt;code>int64&lt;/code>, &lt;code>float32&lt;/code>, and &lt;code>float64&lt;/code> are accelerated. All other &lt;code>dtypes&lt;/code> result in calls to slower, unaccelerated functions.
+&lt;/div>
+&lt;/div></description></item></channel></rss>
