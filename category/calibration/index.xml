@@ -1,534 +1,319 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Calibration | Abrhaley Arefaine Hailenchael</title>
-    <link>https://abrhaleyarefaine1997.github.io/category/calibration/</link>
-      <atom:link href="https://abrhaleyarefaine1997.github.io/category/calibration/index.xml" rel="self" type="application/rss+xml" />
-    <description>Calibration</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate>
-    <image>
-      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
-      <title>Calibration</title>
-      <link>https://abrhaleyarefaine1997.github.io/category/calibration/</link>
-    </image>
-    
-    <item>
-      <title>A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    This post was originally published on &lt;a href=&#34;www.edemsimulation.com&#34;&gt;www.edemsimulation.com&lt;/a&gt;.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Calibration | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/category/calibration/</link><atom:link href="https://abrhaleyarefaine1997.github.io/category/calibration/index.xml" rel="self" type="application/rss+xml"/><description>Calibration</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 05 Feb 2019 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Calibration</title><link>https://abrhaleyarefaine1997.github.io/category/calibration/</link></image><item><title>A new uniaxial tester for measuring flowability and calibrating DEM models for cohesive particulates</title><link>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</link><pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+This post was originally published on &lt;a href="www.edemsimulation.com">www.edemsimulation.com&lt;/a>.
+&lt;/div>
+&lt;/div>
+&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Handling of particulate products is a task that is at the core of many industries, from pharmaceuticals to foods to mining.
 However, all share a very similar challenge of keeping their processes flowing reliably, since cohesive particulates (either naturally cohesive or those affected by external factors such as moisture) can trigger difficult material handling situations.
-Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task.&lt;/p&gt;
-&lt;p&gt;The flow function of a cohesive particulates is a material property that is typically measured to indicate the flowability and handleability of a material.
-In industry this is typically measured with some direct shear device such as a &lt;strong&gt;Jenike&lt;/strong&gt; tester or a dynamic flow tester such as a &lt;strong&gt;FT4 Powder Rheometer&lt;/strong&gt;.
+Measuring the flowability of such materials or characterising the properties for a DEM cohesive material model in a simulation is not necessarily a trivial task.&lt;/p>
+&lt;p>The flow function of a cohesive particulates is a material property that is typically measured to indicate the flowability and handleability of a material.
+In industry this is typically measured with some direct shear device such as a &lt;strong>Jenike&lt;/strong> tester or a dynamic flow tester such as a &lt;strong>FT4 Powder Rheometer&lt;/strong>.
 Ring shear testers and rotational testers are also frequently used.
-While each one has its advantages, many are compromised by the high cost, amount of time required for carrying out testing or lack of relevance to specific industrial situations.&lt;/p&gt;
-&lt;p&gt;Uniaxial testers offer an attractive alternative method for characterising the flowability of powders and sticky granular materials in industrial situations. Uniaxial testers apply a consolidation stress followed by a failure load vertically to a sample.
-This is appealing for being a mechanically simple device that’s easy to operate and also its physical similarity to the stress path associated with feeding industrial equipment and the unconfined yield strength &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the height of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;The &lt;em&gt;University of Edinburgh&lt;/em&gt; had previous experience of developing successful uniaxial testers for sticky solids with larger particles &lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;. From this experience the &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt; was developed for measuring the flowability of compressible cohesive powders with a focus on speed, robustness and high repeatability for industrial use &lt;sup id=&#34;fnref1:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
-The key differences between the &lt;strong&gt;Edinburgh Powder Tester&lt;/strong&gt; and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id=&#34;fnref2:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;, which means the EPT offers repeatable results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;Recently, &lt;a href=&#34;https://www.freemantech.co.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Freeman Technology&lt;/a&gt;; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em&gt;University of Edinburgh&lt;/em&gt;, &lt;em&gt;DuPont&lt;/em&gt; and &lt;em&gt;The Chemours Company&lt;/em&gt; to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT.
-The result of this collaboration is &lt;strong&gt;‘The Uniaxial Powder Tester from Freeman Technology’&lt;/strong&gt; which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa.&lt;/p&gt;
-&lt;p&gt;The simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, make uniaxial testers ideal tools for calibrating a DEM model for cohesive solids.
-The &lt;strong&gt;Freeman UPT&lt;/strong&gt;, which is a semi-automated uniaxial tester, provides rapid measurements of key bulk mechanical properties of powders, including the stress–strain and the stress–density response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the increased cohesive (caking) strength developed over time in consolidation, all of which can be utilised for calibrating your DEM simulation of a cohesive solid to provide a realistic prediction.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT**&#34; srcset=&#34;
-                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg 400w,
-                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_894bf19482d2447b3b2c507cde3c1590.jpg 760w,
-                   /post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg&#34;
-                   width=&#34;441&#34;
-                   height=&#34;760&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt-consolidation-station&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT Consolidation Station**&#34; srcset=&#34;
-                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg 400w,
-                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_66483ab748edffa34166eb60380f4292.jpg 760w,
-                   /post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg&#34;
-                   width=&#34;151&#34;
-                   height=&#34;217&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT Consolidation Station&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Evaluation of the Edinburgh powder tester&lt;/em&gt;, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href=&#34;http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a&gt; (accessed October 5, 2019).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;L.P. Maltby, G.G. Enstad, &lt;em&gt;Uniaxial Tester for Quality Control and Flow Property Characterization of Powders.&lt;/em&gt;, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;M. Röck, M. Ostendorf, J. Schwedes, &lt;em&gt;Development of an Uniaxial Caking Tester&lt;/em&gt;, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;R.E. Freeman, X. Fu, &lt;em&gt;The Development of a Compact Uniaxial Tester&lt;/em&gt;, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:5&#34;&gt;
-&lt;p&gt;Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Predicting the handlability of a coal blend from measurements on the source coals&lt;/em&gt;, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:6&#34;&gt;
-&lt;p&gt;S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em&gt;An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em&gt;, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:7&#34;&gt;
-&lt;p&gt;J.P. Morrissey, &lt;em&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em&gt;, University of Edinburgh, 2013. &lt;a href=&#34;https://www.era.lib.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester</title>
-      <link>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</link>
-      <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</guid>
-      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
-  &lt;div&gt;
-    This post was originally published on &lt;a href=&#34;www.edemsimulation.com&#34;&gt;www.edemsimulation.com&lt;/a&gt;.
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
-&lt;p&gt;Over the years, as the popularity of the Discrete Element Method (DEM) has continued to grow, it has been increasingly used as a design tool. The accuracy of these models largely depends on the chosen DEM model and its parameters, and as pointed out in a post by David Curry (&lt;em&gt;What numbers should I put in? The perennial question for DEM users&lt;/em&gt;) the adage of “&lt;em&gt;&lt;strong&gt;garbage in – garbage out&lt;/strong&gt;&lt;/em&gt;” holds true when carrying out DEM simulations.
+While each one has its advantages, many are compromised by the high cost, amount of time required for carrying out testing or lack of relevance to specific industrial situations.&lt;/p>
+&lt;p>Uniaxial testers offer an attractive alternative method for characterising the flowability of powders and sticky granular materials in industrial situations. Uniaxial testers apply a consolidation stress followed by a failure load vertically to a sample.
+This is appealing for being a mechanically simple device that’s easy to operate and also its physical similarity to the stress path associated with feeding industrial equipment and the unconfined yield strength &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.
+One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the height of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>The &lt;em>University of Edinburgh&lt;/em> had previous experience of developing successful uniaxial testers for sticky solids with larger particles &lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>. From this experience the &lt;strong>Edinburgh Powder Tester (EPT)&lt;/strong> was developed for measuring the flowability of compressible cohesive powders with a focus on speed, robustness and high repeatability for industrial use &lt;sup id="fnref1:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.
+The key differences between the &lt;strong>Edinburgh Powder Tester&lt;/strong> and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id="fnref2:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>, which means the EPT offers repeatable results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Recently, &lt;a href="https://www.freemantech.co.uk/" target="_blank" rel="noopener">Freeman Technology&lt;/a>; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em>University of Edinburgh&lt;/em>, &lt;em>DuPont&lt;/em> and &lt;em>The Chemours Company&lt;/em> to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT.
+The result of this collaboration is &lt;strong>‘The Uniaxial Powder Tester from Freeman Technology’&lt;/strong> which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa.&lt;/p>
+&lt;p>The simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, make uniaxial testers ideal tools for calibrating a DEM model for cohesive solids.
+The &lt;strong>Freeman UPT&lt;/strong>, which is a semi-automated uniaxial tester, provides rapid measurements of key bulk mechanical properties of powders, including the stress–strain and the stress–density response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the increased cohesive (caking) strength developed over time in consolidation, all of which can be utilised for calibrating your DEM simulation of a cohesive solid to provide a realistic prediction.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT**" srcset="
+/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg 400w,
+/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_894bf19482d2447b3b2c507cde3c1590.jpg 760w,
+/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_huf9019c63b64cefd6b1d0728022699fe5_49986_198c2fb0276bcee0d4724473796cb664.jpg"
+width="441"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt-consolidation-station">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT Consolidation Station**" srcset="
+/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg 400w,
+/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_66483ab748edffa34166eb60380f4292.jpg 760w,
+/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration_uniaxial/upt_consolidation_station_huaeb2be488eb33bc5768bcde967b557d2_8843_d7ec469f5f1d04473c266064ed5f2587.jpg"
+width="151"
+height="217"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT Consolidation Station&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;h1 id="references">References&lt;/h1>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Evaluation of the Edinburgh powder tester&lt;/em>, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0" target="_blank" rel="noopener">http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a> (accessed October 5, 2019).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>L.P. Maltby, G.G. Enstad, &lt;em>Uniaxial Tester for Quality Control and Flow Property Characterization of Powders.&lt;/em>, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>M. Röck, M. Ostendorf, J. Schwedes, &lt;em>Development of an Uniaxial Caking Tester&lt;/em>, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>R.E. Freeman, X. Fu, &lt;em>The Development of a Compact Uniaxial Tester&lt;/em>, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Predicting the handlability of a coal blend from measurements on the source coals&lt;/em>, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em>An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em>, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>J.P. Morrissey, &lt;em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em>, University of Edinburgh, 2013. &lt;a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a>.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Calibrating DEM simulations of cohesive solids with the Uniaxial Powder Tester</title><link>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</link><pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/edem_calibration/</guid><description>&lt;div class="alert alert-note">
+&lt;div>
+This post was originally published on &lt;a href="www.edemsimulation.com">www.edemsimulation.com&lt;/a>.
+&lt;/div>
+&lt;/div>
+&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>Over the years, as the popularity of the Discrete Element Method (DEM) has continued to grow, it has been increasingly used as a design tool. The accuracy of these models largely depends on the chosen DEM model and its parameters, and as pointed out in a post by David Curry (&lt;em>What numbers should I put in? The perennial question for DEM users&lt;/em>) the adage of “&lt;em>&lt;strong>garbage in – garbage out&lt;/strong>&lt;/em>” holds true when carrying out DEM simulations.
 For cohesionless materials we have a range of parameters to account for - size, shape, stiffness and friction being some of the more commonly considered.
-But how many materials are truly cohesionless? Not many, so we end up having to add some additional parameters to our DEM simulations to account for the additional cohesive forces in the material. The origin of these cohesive forces and their respective mechanics vary from long and short range non-contact interaction forces, mechanical interlock, electrostatic forces, solid bridges and liquid bridges to name but a few.&lt;/p&gt;
-&lt;p&gt;So how does one go about capturing all of these phenomena in their DEM simulation?
+But how many materials are truly cohesionless? Not many, so we end up having to add some additional parameters to our DEM simulations to account for the additional cohesive forces in the material. The origin of these cohesive forces and their respective mechanics vary from long and short range non-contact interaction forces, mechanical interlock, electrostatic forces, solid bridges and liquid bridges to name but a few.&lt;/p>
+&lt;p>So how does one go about capturing all of these phenomena in their DEM simulation?
 The first step is selecting a suitable contact model – a liquid bridge model is not much use for capturing the behaviour of fine particles in an electrostatic field.
-Provided you have negotiated that stage and selected a suitable contact model; you are then faced with the much more difficult proposition of model calibration.&lt;/p&gt;
-&lt;h2 id=&#34;calibration&#34;&gt;Calibration&lt;/h2&gt;
-&lt;p&gt;To some, &lt;em&gt;“calibration”&lt;/em&gt; is a dirty word that simply means &lt;em&gt;‘cheating until you get the right answer’&lt;/em&gt;, but we can define it more concisely as &lt;em&gt;“the process of adjusting physical modelling parameters in the computational model to improve agreement with experimental data”&lt;/em&gt; &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Calibration isn’t a bad thing, it’s a necessary part of scientific life – we need to regularly calibrate our measuring instruments to ensure accuracy. Due to the assumptions we make in DEM; in relation to particle shape and number of particles we use to represent a system amongst other things; we need to calibrate our input parameters such that they provide a realistic result.&lt;/p&gt;
-&lt;p&gt;And much like the choice of contact model, the choice of calibration experiment is also important – you would not choose a quasi-static experiment to calibrate for a very dynamic regime as you may fail to capture much of the key behaviour such as impact dynamics. Obtaining suitable calibration data can be a challenge as one would like them to be both easily obtained and be highly repeatable.&lt;/p&gt;
-&lt;p&gt;The typical process of calibrating DEM contact model parameters involves tuning the observed response of the simulation to closely reproduce the macroscopic bulk behaviour measured in the calibration experiment.
+Provided you have negotiated that stage and selected a suitable contact model; you are then faced with the much more difficult proposition of model calibration.&lt;/p>
+&lt;h2 id="calibration">Calibration&lt;/h2>
+&lt;p>To some, &lt;em>“calibration”&lt;/em> is a dirty word that simply means &lt;em>‘cheating until you get the right answer’&lt;/em>, but we can define it more concisely as &lt;em>“the process of adjusting physical modelling parameters in the computational model to improve agreement with experimental data”&lt;/em> &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>. Calibration isn’t a bad thing, it’s a necessary part of scientific life – we need to regularly calibrate our measuring instruments to ensure accuracy. Due to the assumptions we make in DEM; in relation to particle shape and number of particles we use to represent a system amongst other things; we need to calibrate our input parameters such that they provide a realistic result.&lt;/p>
+&lt;p>And much like the choice of contact model, the choice of calibration experiment is also important – you would not choose a quasi-static experiment to calibrate for a very dynamic regime as you may fail to capture much of the key behaviour such as impact dynamics. Obtaining suitable calibration data can be a challenge as one would like them to be both easily obtained and be highly repeatable.&lt;/p>
+&lt;p>The typical process of calibrating DEM contact model parameters involves tuning the observed response of the simulation to closely reproduce the macroscopic bulk behaviour measured in the calibration experiment.
 The mechanical behaviour of cohesive powders can be carefully measured using element tests such as biaxial test, true triaxial and hollow cylinder tests.
-However, in practice these tests can be expensive and slow to conduct and are rarely performed for industrial applications requiring material characterisation. More typically a test such as direct shear, ring shear, unconfined compression, triaxial compression or cone penetration is carried out.&lt;/p&gt;
-&lt;h2 id=&#34;the-case-for-uniaxial-testers&#34;&gt;The Case for Uniaxial Testers&lt;/h2&gt;
-&lt;p&gt;For example, in industry the flow function of a cohesive solid is typically measured using either a ring shear tester or Jenike shear tester but these have some drawbacks.
+However, in practice these tests can be expensive and slow to conduct and are rarely performed for industrial applications requiring material characterisation. More typically a test such as direct shear, ring shear, unconfined compression, triaxial compression or cone penetration is carried out.&lt;/p>
+&lt;h2 id="the-case-for-uniaxial-testers">The Case for Uniaxial Testers&lt;/h2>
+&lt;p>For example, in industry the flow function of a cohesive solid is typically measured using either a ring shear tester or Jenike shear tester but these have some drawbacks.
 The Jenike test, whilst appearing to be quite straight forward is time consuming and can often be highly operator sensitive, both of which are problems when you want to have a high level of confidence in the result to use for calibration.
 Ring shear testers remove the operator sensitivity and repeatability problem by being highly automated, computer controlled devices but these can be very expensive to purchase and maintain.
-They also have particle size restrictions due to their small volume and may be limited to relatively low stress ranges which may not cover the range of interest.&lt;/p&gt;
-&lt;p&gt;Uniaxial testers offer an alternative method for characterising the flowability of powders and fine granular materials in industrial situations.
-Uniaxial testers apply a consolidation stress vertically and also apply the failure load vertically. This is appealing for two reasons: firstly it’s a mechanically simple device that’s easy to operate and secondly it’s physical similarity to the stress path associated with arching and the unconfined yield strength &lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
-One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the depth of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;p&gt;The University of Edinburgh had previous experience of developing successful uniaxial testers for large diameter particles &lt;sup id=&#34;fnref:6&#34;&gt;&lt;a href=&#34;#fn:6&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;6&lt;/a&gt;&lt;/sup&gt;. From this experience the &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt; was developed for measuring the flowability of highly compressible, high value powders.
-While many previous efforts have focussed heavily on accurate laboratory measurement of unconfined yield strength, the Edinburgh testers aimed at speed, robustness and high repeatability for industrial use, with a close match to a Jenike cell being a secondary objective &lt;sup id=&#34;fnref1:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.
-The key differences between the Edinburgh Powder Tester and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id=&#34;fnref2:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;, which means the EPT offers repeatability results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id=&#34;fnref:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt; &lt;sup id=&#34;fnref:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_3&#34;&gt;
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        &lt;figure  id=&#34;figure-edinburgh-powder-tester-ept&#34;&gt;
-          &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-            &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Edinburgh Powder Tester (EPT)**&#34; srcset=&#34;
-                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg 400w,
-                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_f1fcf5f572138fe05746336470da528a.jpg 760w,
-                       /post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                       src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg&#34;
-                       width=&#34;422&#34;
-                       height=&#34;563&#34;
-                       loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-          &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-              &lt;strong&gt;Edinburgh Powder Tester (EPT)&lt;/strong&gt;
-            &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_3&#34;&gt;
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      &lt;figure  id=&#34;figure-consolidated-sample-exposed-prior-to-failure&#34;&gt;
-        &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-          &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Consolidated sample exposed prior to failure**&#34; srcset=&#34;
-                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg 400w,
-                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_c7b35901115416bda405c6bbf3342566.jpg 760w,
-                     /post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                     src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg&#34;
-                     width=&#34;423&#34;
-                     height=&#34;563&#34;
-                     loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-        &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-            &lt;strong&gt;Consolidated sample exposed prior to failure&lt;/strong&gt;
-          &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-  &lt;div class=&#34;column_3&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-failed-sample&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Failed sample**&#34; srcset=&#34;
-                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg 400w,
-                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_ee205dc68c91d9587e52f606c29e54a7.jpg 760w,
-                   /post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg&#34;
-                   width=&#34;138&#34;
-                   height=&#34;184&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Failed sample&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;p&gt;It is the simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, that make uniaxial testers ideal tools for calibrating DEM simulations of cohesive solids.
-For example, the EPT, which is a semi-automated uniaxial tester, can provide rapid measurements of various bulk mechanical properties of powders, including the stress–strain and the stress–porosity response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the caking strength over time consolidation, all of which can be utilised for calibrating you DEM simulation of a cohesive solid.&lt;/p&gt;
-&lt;p&gt;Recently, &lt;a href=&#34;https://www.freemantech.co.uk/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Freeman Technology&lt;/a&gt;; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em&gt;University of Edinburgh&lt;/em&gt;, &lt;em&gt;DuPont&lt;/em&gt; and &lt;em&gt;The Chemours Company&lt;/em&gt; to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT. The result of this collaboration is &lt;strong&gt;‘The New Uniaxial Powder Tester from Freeman Technology’&lt;/strong&gt; which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa. The UPT comes in two versions: a manual version, which is ideally suited for quality control measurement in industrial situations and the advanced version with increased automation and reduction in operator inputs and advanced data logging capabilities which makes it very suitable as a DEM calibration tool for cohesive powders.&lt;/p&gt;
-&lt;div class=&#34;row&#34;&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT**&#34; srcset=&#34;
-                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg 400w,
-                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_54559539869d46196d7bf20e09f9dc7c.jpg 760w,
-                   /post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg&#34;
-                   width=&#34;441&#34;
-                   height=&#34;760&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt; 
-  &lt;/div&gt;
-  &lt;div class=&#34;column_2&#34;&gt;
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    &lt;figure  id=&#34;figure-freeman-upt-consolidation-station&#34;&gt;
-      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Freeman UPT Consolidation Station**&#34; srcset=&#34;
-                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg 400w,
-                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_47ed15f34a280be57a7620265eccc2af.jpg 760w,
-                   /post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w&#34;
-                   src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg&#34;
-                   width=&#34;151&#34;
-                   height=&#34;217&#34;
-                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-      &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-          &lt;strong&gt;Freeman UPT Consolidation Station&lt;/strong&gt;
-        &lt;/figcaption&gt;&lt;/figure&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-&lt;h2 id=&#34;a-dem-example-case&#34;&gt;A DEM Example Case&lt;/h2&gt;
-&lt;p&gt;At the University of Edinburgh, we have used uniaxial testers (EPT/UPT) extensively for calibrating DEM parameters for the Edinburgh Cohesion Model in EDEM &lt;sup id=&#34;fnref1:7&#34;&gt;&lt;a href=&#34;#fn:7&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;7&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref1:8&#34;&gt;&lt;a href=&#34;#fn:8&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;8&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:9&#34;&gt;&lt;a href=&#34;#fn:9&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;9&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:10&#34;&gt;&lt;a href=&#34;#fn:10&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;10&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:11&#34;&gt;&lt;a href=&#34;#fn:11&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;11&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:12&#34;&gt;&lt;a href=&#34;#fn:12&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;12&lt;/a&gt;&lt;/sup&gt; (which is currently available on the EDEM User forum and will be part of future versions of EDEM) due to the high level of repeatability and the flexibility to measure key properties quickly and easily in the laboratory.&lt;/p&gt;
-&lt;p&gt;As an example, the measured stress-strain curves from the EPT for an iron ore solid at varying moisture contents (levels of cohesion) are shown in &lt;strong&gt;Figure 6&lt;/strong&gt; and &lt;strong&gt;Figure 7&lt;/strong&gt;. A typical set of unconfined test results that make up a single uniaxial flow function (the peak strength vs. the consolidation stress) are shown for the same iron ore fines in &lt;strong&gt;Figure 8&lt;/strong&gt; for a single moisture content.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-confined-stress-strain-measured-in-ept-for-iron-ore-fines&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Confined Stress Strain measured in EPT for iron ore fines**&#34; srcset=&#34;
-               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png 400w,
-               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_e627bc644f41face389c3c07d09be9c8.png 760w,
-               /post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png&#34;
-               width=&#34;760&#34;
-               height=&#34;538&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Confined Stress Strain measured in EPT for iron ore fines&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-unconfined-stress-strain-measured-in-ept-for-iron-ore-fines&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Unconfined Stress-Strain measured in EPT for iron ore fines**&#34; srcset=&#34;
-               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png 400w,
-               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1e2ed17e52abd5d25878302d54b78117.png 760w,
-               /post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png&#34;
-               width=&#34;760&#34;
-               height=&#34;570&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Unconfined Stress-Strain measured in EPT for iron ore fines&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-measured-bulk-density-variation-of-iron-ore-fines&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Measured bulk density variation of iron ore fines**&#34; srcset=&#34;
-               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png 400w,
-               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_ce06449a72e18ce016a3527987079807.png 760w,
-               /post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png&#34;
-               width=&#34;760&#34;
-               height=&#34;538&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Measured bulk density variation of iron ore fines&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;These measured values provide the range of various properties to be captured within the DEM simulation. A typical DEM simulation of a cohesive solid in the EPT is shown in &lt;strong&gt;Figure 9&lt;/strong&gt;. The DEM simulation consists of the filling, confined compression, unloading of the sample and the crushing to failure of the unconfined sample.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-figure-9---dem-simulation-of-cohesive-solid-in-the-ept-a-filling-b-confined-consolidation-c-unloading-and-removal-of-confining-sleeve-d-loading-to-unconfined-failure-uuys&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Figure 9 - DEM simulation of cohesive solid in the EPT:** a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)&#34; srcset=&#34;
-               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png 400w,
-               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_e9c1942cb0a629fc26d8d8c6ce6205f1.png 760w,
-               /post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png&#34;
-               width=&#34;601&#34;
-               height=&#34;297&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption&gt;
-      &lt;strong&gt;Figure 9 - DEM simulation of cohesive solid in the EPT:&lt;/strong&gt; a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;The measured properties provide the necessary information to define the loading stiffness, plasticity ratio and whether the material is exhibiting linear or non-linear stiffness, bulk density and level of cohesion to calibrate the DEM model.
-In order to capture the behaviour at different moisture contents, we need to calibrate the level of cohesion for each moisture content at one point on the flow function, as in &lt;strong&gt;Figure 10&lt;/strong&gt;.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-experimental-results-and-calibrated-dem-results&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Experimental results and calibrated DEM results**&#34; srcset=&#34;
-               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png 400w,
-               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_c4118cc8840cfe9172aa1b0f4855dde4.png 760w,
-               /post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png&#34;
-               width=&#34;709&#34;
-               height=&#34;530&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Experimental results and calibrated DEM results&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;p&gt;Once calibrated, it is possible capture the entire flow function spectrum for varying moisture contents with a good degree of accuracy, as shown in &lt;strong&gt;Figure 11&lt;/strong&gt;, with the effect of moisture influencing only one model parameter i.e. the contact surface energy $\delta \gamma $.&lt;br&gt;
-This process provides a fully calibrated DEM model for cohesive powders for use in DEM simulations.&lt;/p&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-&lt;figure  id=&#34;figure-calibrated-flow-function-vs-experimental-flow-function&#34;&gt;
-  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Calibrated Flow function vs Experimental flow function**&#34; srcset=&#34;
-               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png 400w,
-               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_5c3cad57fdec5aa9683ea84379c98bce.png 760w,
-               /post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_1200x1200_fit_lanczos_3.png 1200w&#34;
-               src=&#34;https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png&#34;
-               width=&#34;760&#34;
-               height=&#34;554&#34;
-               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
-  &lt;/div&gt;&lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
-      &lt;strong&gt;Calibrated Flow function vs Experimental flow function&lt;/strong&gt;
-    &lt;/figcaption&gt;&lt;/figure&gt;
-&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
-&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
-&lt;hr&gt;
-&lt;ol&gt;
-&lt;li id=&#34;fn:1&#34;&gt;
-&lt;p&gt;American Society of Mechanical Engineers., &lt;em&gt;Guide for verification and validation in computational solid mechanics&lt;/em&gt;, American Society of Mechanical Engineers, 2006. &lt;a href=&#34;https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation&lt;/a&gt; (accessed July 13, 2017).&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:2&#34;&gt;
-&lt;p&gt;T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Evaluation of the Edinburgh powder tester&lt;/em&gt;, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href=&#34;http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a&gt; (accessed October 5, 2013).&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref2:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:3&#34;&gt;
-&lt;p&gt;L.P. Maltby, G.G. Enstad, &lt;em&gt;Uniaxial Tester for Quality Control and Flow Property Characterization of Powders&lt;/em&gt;, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:4&#34;&gt;
-&lt;p&gt;M. Röck, M. Ostendorf, J. Schwedes, &lt;em&gt;Development of an Uniaxial Caking Tester&lt;/em&gt;, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:5&#34;&gt;
-&lt;p&gt;R.E. Freeman, X. Fu, &lt;em&gt;The Development of a Compact Uniaxial Tester&lt;/em&gt;, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:6&#34;&gt;
-&lt;p&gt;Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em&gt;Predicting the handlability of a coal blend from measurements on the source coals&lt;/em&gt;, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href=&#34;#fnref:6&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:7&#34;&gt;
-&lt;p&gt;S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em&gt;An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em&gt;, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href=&#34;#fnref:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:7&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:8&#34;&gt;
-&lt;p&gt;J.P. Morrissey, &lt;em&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em&gt;, University of Edinburgh, 2013. &lt;a href=&#34;https://www.era.lib.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&amp;#160;&lt;a href=&#34;#fnref1:8&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:9&#34;&gt;
-&lt;p&gt;S.C. Thakur, J.P. Morrissey, J. Sun, J.F. Chen, J.Y. Ooi, &lt;em&gt;Micromechanical analysis of cohesive granular materials using discrete element method with an adhesive elasto-plastic contact model&lt;/em&gt;, Granul. Matter. 16 (2014) 383–400. doi:10.1007/s10035-014-0506-4.&amp;#160;&lt;a href=&#34;#fnref:9&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:10&#34;&gt;
-&lt;p&gt;S.C. Thakur, J.Y. Ooi, H. Ahmadian, &lt;em&gt;Scaling of discrete element model parameters for cohesionless and cohesive solid&lt;/em&gt;, Powder Technol. (2015). doi:10.1016/j.powtec.2015.05.051.&amp;#160;&lt;a href=&#34;#fnref:10&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:11&#34;&gt;
-&lt;p&gt;A. Janda, J.Y. Ooi, &lt;em&gt;DEM modeling of cone penetration and unconfined compression in cohesive solids&lt;/em&gt;, Powder Technol. 293 (2016) 60–68. doi:10.1016/j.powtec.2015.05.034.&amp;#160;&lt;a href=&#34;#fnref:11&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li id=&#34;fn:12&#34;&gt;
-&lt;p&gt;J.P. Morrissey, J.Y. Ooi, J.F. Chen, K.T. Tano, G. Horrigmoe, &lt;em&gt;Measurement and prediction of compression and shear behavior of wet iron ore fines&lt;/em&gt;, in: 7th World Congr. Part. Technol., Beijing, China, 2014: p. 8.&amp;#160;&lt;a href=&#34;#fnref:12&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-</description>
-    </item>
-    
-  </channel>
-</rss>
+They also have particle size restrictions due to their small volume and may be limited to relatively low stress ranges which may not cover the range of interest.&lt;/p>
+&lt;p>Uniaxial testers offer an alternative method for characterising the flowability of powders and fine granular materials in industrial situations.
+Uniaxial testers apply a consolidation stress vertically and also apply the failure load vertically. This is appealing for two reasons: firstly it’s a mechanically simple device that’s easy to operate and secondly it’s physical similarity to the stress path associated with arching and the unconfined yield strength &lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.
+One of the challenges with uniaxial testers is achieving a uniform level of consolidation throughout the depth of the sample, as wall friction can mean that the vertical stress in the sample at the bottom is significantly lower than the vertical stress applied at the top surface. To combat this there have been many designs considered over the years to deal this, each with their own strengths &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>The University of Edinburgh had previous experience of developing successful uniaxial testers for large diameter particles &lt;sup id="fnref:6">&lt;a href="#fn:6" class="footnote-ref" role="doc-noteref">6&lt;/a>&lt;/sup>. From this experience the &lt;strong>Edinburgh Powder Tester (EPT)&lt;/strong> was developed for measuring the flowability of highly compressible, high value powders.
+While many previous efforts have focussed heavily on accurate laboratory measurement of unconfined yield strength, the Edinburgh testers aimed at speed, robustness and high repeatability for industrial use, with a close match to a Jenike cell being a secondary objective &lt;sup id="fnref1:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.
+The key differences between the Edinburgh Powder Tester and some previous devices lie in the attention to mechanical details for both the consolidation and failure load application and the strategic intent &lt;sup id="fnref2:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>, which means the EPT offers repeatability results in the range of 5-10% relative standard deviation (RSD) for a vast range of materials &lt;sup id="fnref:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup> &lt;sup id="fnref:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_3">
+&lt;figure id="figure-edinburgh-powder-tester-ept">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Edinburgh Powder Tester (EPT)**" srcset="
+/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg 400w,
+/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_f1fcf5f572138fe05746336470da528a.jpg 760w,
+/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_1_hue34cded294966012142e1aeb0937653c_46960_9cbf1425ec44ab2fd6b301822b20b484.jpg"
+width="422"
+height="563"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Edinburgh Powder Tester (EPT)&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_3">
+&lt;figure id="figure-consolidated-sample-exposed-prior-to-failure">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Consolidated sample exposed prior to failure**" srcset="
+/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg 400w,
+/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_c7b35901115416bda405c6bbf3342566.jpg 760w,
+/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_2_hub01a5c6843a08fa5e02848a5d61a2b05_37831_046c6c84e16e8d73ca3a401cbb4c03f9.jpg"
+width="423"
+height="563"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Consolidated sample exposed prior to failure&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_3">
+&lt;figure id="figure-failed-sample">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Failed sample**" srcset="
+/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg 400w,
+/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_ee205dc68c91d9587e52f606c29e54a7.jpg 760w,
+/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_3_hu62621b884d974888a9257a07d1507014_5989_73344771dfb56d898059ec8b4eabd668.jpg"
+width="138"
+height="184"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Failed sample&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;p>It is the simplicity and flexibility of uniaxial testers, coupled with a high level of repeatability, that make uniaxial testers ideal tools for calibrating DEM simulations of cohesive solids.
+For example, the EPT, which is a semi-automated uniaxial tester, can provide rapid measurements of various bulk mechanical properties of powders, including the stress–strain and the stress–porosity response during confined compression, the stress–strain response during unconfined compression including the peak unconfined strength and the caking strength over time consolidation, all of which can be utilised for calibrating you DEM simulation of a cohesive solid.&lt;/p>
+&lt;p>Recently, &lt;a href="https://www.freemantech.co.uk/" target="_blank" rel="noopener">Freeman Technology&lt;/a>; which has many years of experience of both powder testing and development of testing apparatus, including extensive knowledge of shear cells; entered into a highly productive collaboration with the &lt;em>University of Edinburgh&lt;/em>, &lt;em>DuPont&lt;/em> and &lt;em>The Chemours Company&lt;/em> to develop a uniaxial powder tester for the commercial market that incorporates the key design elements of the EPT. The result of this collaboration is &lt;strong>‘The New Uniaxial Powder Tester from Freeman Technology’&lt;/strong> which is a standalone uniaxial shear tester for powders, capable of testing a stress range of up to 100 kPa. The UPT comes in two versions: a manual version, which is ideally suited for quality control measurement in industrial situations and the advanced version with increased automation and reduction in operator inputs and advanced data logging capabilities which makes it very suitable as a DEM calibration tool for cohesive powders.&lt;/p>
+&lt;div class="row">
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT**" srcset="
+/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg 400w,
+/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_54559539869d46196d7bf20e09f9dc7c.jpg 760w,
+/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_4_huf9019c63b64cefd6b1d0728022699fe5_49986_32a5a73a82d3eccd11ee9c9c4c20fb49.jpg"
+width="441"
+height="760"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;div class="column_2">
+&lt;figure id="figure-freeman-upt-consolidation-station">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Freeman UPT Consolidation Station**" srcset="
+/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg 400w,
+/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_47ed15f34a280be57a7620265eccc2af.jpg 760w,
+/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_1200x1200_fit_q75_lanczos.jpg 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_5_huaeb2be488eb33bc5768bcde967b557d2_8843_fb87c81dde50b0cb9e75f2a970aa5b70.jpg"
+width="151"
+height="217"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Freeman UPT Consolidation Station&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;/div>
+&lt;/div>
+&lt;h2 id="a-dem-example-case">A DEM Example Case&lt;/h2>
+&lt;p>At the University of Edinburgh, we have used uniaxial testers (EPT/UPT) extensively for calibrating DEM parameters for the Edinburgh Cohesion Model in EDEM &lt;sup id="fnref1:7">&lt;a href="#fn:7" class="footnote-ref" role="doc-noteref">7&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref1:8">&lt;a href="#fn:8" class="footnote-ref" role="doc-noteref">8&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:9">&lt;a href="#fn:9" class="footnote-ref" role="doc-noteref">9&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:10">&lt;a href="#fn:10" class="footnote-ref" role="doc-noteref">10&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:11">&lt;a href="#fn:11" class="footnote-ref" role="doc-noteref">11&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:12">&lt;a href="#fn:12" class="footnote-ref" role="doc-noteref">12&lt;/a>&lt;/sup> (which is currently available on the EDEM User forum and will be part of future versions of EDEM) due to the high level of repeatability and the flexibility to measure key properties quickly and easily in the laboratory.&lt;/p>
+&lt;p>As an example, the measured stress-strain curves from the EPT for an iron ore solid at varying moisture contents (levels of cohesion) are shown in &lt;strong>Figure 6&lt;/strong> and &lt;strong>Figure 7&lt;/strong>. A typical set of unconfined test results that make up a single uniaxial flow function (the peak strength vs. the consolidation stress) are shown for the same iron ore fines in &lt;strong>Figure 8&lt;/strong> for a single moisture content.&lt;/p>
+&lt;figure id="figure-confined-stress-strain-measured-in-ept-for-iron-ore-fines">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Confined Stress Strain measured in EPT for iron ore fines**" srcset="
+/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png 400w,
+/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_e627bc644f41face389c3c07d09be9c8.png 760w,
+/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_6_hu3ccba6a67d9e7b51b4d2cb8fc6b79773_157475_d002695ab0fa6636211456366a7e207b.png"
+width="760"
+height="538"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Confined Stress Strain measured in EPT for iron ore fines&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;figure id="figure-unconfined-stress-strain-measured-in-ept-for-iron-ore-fines">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Unconfined Stress-Strain measured in EPT for iron ore fines**" srcset="
+/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png 400w,
+/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1e2ed17e52abd5d25878302d54b78117.png 760w,
+/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_7_hu7522ebc0d86e89c8f01d622ee60923a6_186261_903917e154abee21bca54876b7b146db.png"
+width="760"
+height="570"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Unconfined Stress-Strain measured in EPT for iron ore fines&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;figure id="figure-measured-bulk-density-variation-of-iron-ore-fines">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Measured bulk density variation of iron ore fines**" srcset="
+/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png 400w,
+/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_ce06449a72e18ce016a3527987079807.png 760w,
+/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_8_hu62210cdf65b960b403404ed86227307f_126743_3ddfcb6bd3355b1ffdb98b5f771f3fa1.png"
+width="760"
+height="538"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Measured bulk density variation of iron ore fines&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;p>These measured values provide the range of various properties to be captured within the DEM simulation. A typical DEM simulation of a cohesive solid in the EPT is shown in &lt;strong>Figure 9&lt;/strong>. The DEM simulation consists of the filling, confined compression, unloading of the sample and the crushing to failure of the unconfined sample.&lt;/p>
+&lt;figure id="figure-figure-9---dem-simulation-of-cohesive-solid-in-the-ept-a-filling-b-confined-consolidation-c-unloading-and-removal-of-confining-sleeve-d-loading-to-unconfined-failure-uuys">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Figure 9 - DEM simulation of cohesive solid in the EPT:** a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)" srcset="
+/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png 400w,
+/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_e9c1942cb0a629fc26d8d8c6ce6205f1.png 760w,
+/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_9_hud096935adddbb4cecf4cf82fa719ae6b_126037_56fc0666c05bf79dbb7d7c63f7b464bc.png"
+width="601"
+height="297"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption>
+&lt;strong>Figure 9 - DEM simulation of cohesive solid in the EPT:&lt;/strong> a) Filling b) Confined consolidation c) Unloading and removal of confining sleeve d) Loading to Unconfined failure (uUYS)
+&lt;/figcaption>&lt;/figure>
+&lt;p>The measured properties provide the necessary information to define the loading stiffness, plasticity ratio and whether the material is exhibiting linear or non-linear stiffness, bulk density and level of cohesion to calibrate the DEM model.
+In order to capture the behaviour at different moisture contents, we need to calibrate the level of cohesion for each moisture content at one point on the flow function, as in &lt;strong>Figure 10&lt;/strong>.&lt;/p>
+&lt;figure id="figure-experimental-results-and-calibrated-dem-results">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Experimental results and calibrated DEM results**" srcset="
+/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png 400w,
+/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_c4118cc8840cfe9172aa1b0f4855dde4.png 760w,
+/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_10_hu8e092438563610d87b3e69db294ab2a9_35569_e8d45d8c2c64263214856790618a5477.png"
+width="709"
+height="530"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Experimental results and calibrated DEM results&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;p>Once calibrated, it is possible capture the entire flow function spectrum for varying moisture contents with a good degree of accuracy, as shown in &lt;strong>Figure 11&lt;/strong>, with the effect of moisture influencing only one model parameter i.e. the contact surface energy $\delta \gamma $.&lt;br>
+This process provides a fully calibrated DEM model for cohesive powders for use in DEM simulations.&lt;/p>
+&lt;figure id="figure-calibrated-flow-function-vs-experimental-flow-function">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="**Calibrated Flow function vs Experimental flow function**" srcset="
+/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png 400w,
+/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_5c3cad57fdec5aa9683ea84379c98bce.png 760w,
+/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/post/edem_calibration/fig_11_hu0984003892d6acba2016a3bcb391ae8d_171904_bcb9b6c783641d2440715f093cf52bd7.png"
+width="760"
+height="554"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+&lt;strong>Calibrated Flow function vs Experimental flow function&lt;/strong>
+&lt;/figcaption>&lt;/figure>
+&lt;h1 id="references">References&lt;/h1>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>American Society of Mechanical Engineers., &lt;em>Guide for verification and validation in computational solid mechanics&lt;/em>, American Society of Mechanical Engineers, 2006. &lt;a href="https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation" target="_blank" rel="noopener">https://www.asme.org/products/codes-standards/v-v-10-2006-guide-verification-validation&lt;/a> (accessed July 13, 2017).&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>T.A. Bell, E.J. Catalano, Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Evaluation of the Edinburgh powder tester&lt;/em>, in: PARTEC 2007 - Congr. Part. Technol., Nürnberg, 2007: pp. 1–6. &lt;a href="http://scholar.google.com/scholar?hl=en&amp;amp;btnG=Search&amp;amp;q=intitle:Evaluation&amp;#43;of&amp;#43;the&amp;#43;Edinburgh&amp;#43;Powder&amp;#43;Tester#0" target="_blank" rel="noopener">http://scholar.google.com/scholar?hl=en&amp;btnG=Search&amp;q=intitle:Evaluation+of+the+Edinburgh+Powder+Tester#0&lt;/a> (accessed October 5, 2013).&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref2:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>L.P. Maltby, G.G. Enstad, &lt;em>Uniaxial Tester for Quality Control and Flow Property Characterization of Powders&lt;/em>, Powder Handl. Process. 13 (1993) 135–139.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>M. Röck, M. Ostendorf, J. Schwedes, &lt;em>Development of an Uniaxial Caking Tester&lt;/em>, Chem. Eng. Technol. 29 (2006) 679–685. doi:10.1002/ceat.200600068.&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:5">
+&lt;p>R.E. Freeman, X. Fu, &lt;em>The Development of a Compact Uniaxial Tester&lt;/em>, in: Part. Syst. Anal. 2011, Edinburgh, UK, 2011: pp. 1–6.&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:6">
+&lt;p>Z. Zhong, J.Y. Ooi, J.M. Rotter, &lt;em>Predicting the handlability of a coal blend from measurements on the source coals&lt;/em>, Fuel. 84 (2005) 2267–2274. doi:10.1016/j.fuel.2005.05.023.&amp;#160;&lt;a href="#fnref:6" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:7">
+&lt;p>S.C. Thakur, H. Ahmadian, J. Sun, J.Y. Ooi, &lt;em>An experimental and numerical study of packing, compression, and caking behaviour of detergent powders&lt;/em>, Particuology. 12 (2014) 2–12. doi:10.1016/j.partic.2013.06.009.&amp;#160;&lt;a href="#fnref:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:7" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:8">
+&lt;p>J.P. Morrissey, &lt;em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em>, University of Edinburgh, 2013. &lt;a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a>.&amp;#160;&lt;a href="#fnref:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&amp;#160;&lt;a href="#fnref1:8" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:9">
+&lt;p>S.C. Thakur, J.P. Morrissey, J. Sun, J.F. Chen, J.Y. Ooi, &lt;em>Micromechanical analysis of cohesive granular materials using discrete element method with an adhesive elasto-plastic contact model&lt;/em>, Granul. Matter. 16 (2014) 383–400. doi:10.1007/s10035-014-0506-4.&amp;#160;&lt;a href="#fnref:9" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:10">
+&lt;p>S.C. Thakur, J.Y. Ooi, H. Ahmadian, &lt;em>Scaling of discrete element model parameters for cohesionless and cohesive solid&lt;/em>, Powder Technol. (2015). doi:10.1016/j.powtec.2015.05.051.&amp;#160;&lt;a href="#fnref:10" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:11">
+&lt;p>A. Janda, J.Y. Ooi, &lt;em>DEM modeling of cone penetration and unconfined compression in cohesive solids&lt;/em>, Powder Technol. 293 (2016) 60–68. doi:10.1016/j.powtec.2015.05.034.&amp;#160;&lt;a href="#fnref:11" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:12">
+&lt;p>J.P. Morrissey, J.Y. Ooi, J.F. Chen, K.T. Tano, G. Horrigmoe, &lt;em>Measurement and prediction of compression and shear behavior of wet iron ore fines&lt;/em>, in: 7th World Congr. Part. Technol., Beijing, China, 2014: p. 8.&amp;#160;&lt;a href="#fnref:12" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item></channel></rss>
