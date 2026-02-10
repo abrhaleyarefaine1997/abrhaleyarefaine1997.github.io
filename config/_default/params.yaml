@@ -6,24 +6,27 @@ font_size: m
 
 # SEO
 site_type: Person
-description: 'MSc Computer Science | AI, XAI, Graph Neural Networks, NLP & LLMs'
+description: 'Abrhaley Arefaine Hailenchael - MSc Computer Science | AI, XAI, Graph Neural Networks, NLP & LLMs'
 twitter: 'abrhaley_ambassador'
 
 # Contact info
 email: 'abrhaleyarefaine1997@gmail.com'
-phone: ''
+phone: '+48-577-781-475'
 address:
-  street: ''
-  city: ''
-  region: ''
-  postcode: ''
-  country: ''
-  country_code: ''
+  street: 'ul. Akademicka 5'
+  city: 'Warsaw'
+  region: 'Mazowieckie'
+  postcode: '02-038'
+  country: 'Poland'
+  country_code: 'PL'
 coordinates:
-  latitude: ''
-  longitude: ''
-directions: ''
-office_hours: []
+  latitude: '52.2172'
+  longitude: '20.9843'
+directions: 'https://www.google.com/maps/dir/?api=1&destination=ul+Akademicka+5,+02-038+Warsaw,+Poland '
+office_hours:  
+  - "Monday - Friday: 08:00 - 16:00"
+  - "Saturday - Sunday: Closed"
+ 
 
 contact_links:
   - icon: linkedin
@@ -42,6 +45,10 @@ contact_links:
     icon_pack: fab
     name: Facebook
     link: 'https://www.facebook.com/abrehaley.arefayne'
+  - icon: twitter
+    icon_pack: fab
+    name: Twitter
+    link: "https://twitter.com/abrhaley_ambassador"
 
 # Site header
 main_menu:
