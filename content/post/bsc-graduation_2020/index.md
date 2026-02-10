@@ -23,4 +23,7 @@ I proudly graduated with a **BSc in Computer Science and Engineering** from **Me
 
 Here are some memorable moments from the graduation day and celebrations:  
 
-{{< gallery >}}
+![Graduation Ceremony](photo1.png)
+![Graduation Group Photo](photo2.png)
+![Celebration Moments](photo3.png)
+![Celebration Moments2](photo4.png)

@@ -52,4 +52,5 @@ This program emphasizes **hands-on learning, innovation, and international colla
 ---
 ## Bootcamp Moments
 
-{{< gallery >}}
+![Poster Image 1](image1.png)
+![Poster Image 2](image2.png)
