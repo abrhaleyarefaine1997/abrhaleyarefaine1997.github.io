@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Slides | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/slides/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/slides/index.xml" rel="self" type="application/rss+xml" />
+    <description>Slides</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright>
+    <item>
+      <title></title>
+      <link>https://abrhaleyarefaine1997.github.io/slides/moonshot-ethiopia-bootcamp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/slides/moonshot-ethiopia-bootcamp/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

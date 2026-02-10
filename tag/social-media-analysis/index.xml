@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Social Media Analysis | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/social-media-analysis/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/social-media-analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>Social Media Analysis</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sat, 31 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Social Media Analysis</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/social-media-analysis/</link>
+    </image>
+    
+    <item>
+      <title>Hate Speech Trend Analysis in Low-Resource Tigrinya Social Media (2018–2022)</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project analyzes &lt;strong&gt;hate speech trends&lt;/strong&gt; in Tigrinya social media posts collected between &lt;strong&gt;2018 and 2022&lt;/strong&gt;, during the &lt;strong&gt;Northern Ethiopia Tigray conflict&lt;/strong&gt;. It combines &lt;strong&gt;machine learning, exploratory data analysis, and data-driven approaches&lt;/strong&gt; to identify temporal and spatial patterns of harmful speech.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Tigrinya is a &lt;strong&gt;low-resource language&lt;/strong&gt;, presenting unique challenges for automated content moderation and linguistic analysis. Understanding hate speech trends is crucial during periods of &lt;strong&gt;political instability and armed conflict&lt;/strong&gt; for research, humanitarian, and policy applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Collected and preprocessed Tigrinya social media data&lt;/li&gt;
+&lt;li&gt;Developed ML-based &lt;strong&gt;text classification models&lt;/strong&gt; to detect hate speech&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;temporal analysis&lt;/strong&gt; to study frequency and severity trends&lt;/li&gt;
+&lt;li&gt;Examined &lt;strong&gt;content length characteristics&lt;/strong&gt; and moderation actions&lt;/li&gt;
+&lt;li&gt;Mapped &lt;strong&gt;geographic propagation&lt;/strong&gt; of hate-related content&lt;/li&gt;
+&lt;li&gt;Evaluated correlations between &lt;strong&gt;conflict events&lt;/strong&gt; and spikes in hate speech&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--insights&#34;&gt;Results &amp;amp; Insights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Identified &lt;strong&gt;hotspots&lt;/strong&gt; where hate speech was most actively disseminated&lt;/li&gt;
+&lt;li&gt;Found strong &lt;strong&gt;temporal correlations&lt;/strong&gt; with conflict escalation&lt;/li&gt;
+&lt;li&gt;Provided evidence for the need of &lt;strong&gt;tailored ML solutions&lt;/strong&gt; for low-resource languages&lt;/li&gt;
+&lt;li&gt;Developed actionable insights for &lt;strong&gt;conflict-sensitive content moderation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated hate speech detection in low-resource languages&lt;/li&gt;
+&lt;li&gt;Monitoring of social media during conflicts&lt;/li&gt;
+&lt;li&gt;Supporting NGOs, governments, and researchers with targeted interventions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hate Speech Trend Analysis in Low-Resource Tigrinya Social Media (2018–2022)</title>
+      <link>https://abrhaleyarefaine1997.github.io/publication/abrhaley_hailenchael_2025/</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/publication/abrhaley_hailenchael_2025/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

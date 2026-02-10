@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/event/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/event/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent &amp; Upcoming Talks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://abrhaleyarefaine1997.github.io/event/</link>
+    </image>
+    
+    <item>
+      <title>Data &amp; AI Warsaw Tech Summit 2026</title>
+      <link>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Advanced Machine Learning Methods for Fraud Detection</title>
+      <link>https://abrhaleyarefaine1997.github.io/talk/advanced-machine-learning-methods-for-fraud-detection/</link>
+      <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/talk/advanced-machine-learning-methods-for-fraud-detection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/project/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This MSc thesis project focuses on &lt;strong&gt;detecting financial fraud&lt;/strong&gt; using &lt;strong&gt;advanced machine learning techniques&lt;/strong&gt; combined with &lt;strong&gt;Explainable AI (XAI)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Financial transactions are highly &lt;strong&gt;complex, noisy, and imbalanced&lt;/strong&gt;, making fraud detection challenging. The project emphasizes &lt;strong&gt;robust, interpretable, and reproducible ML pipelines&lt;/strong&gt; suitable for real-world deployment and regulatory compliance.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Fraudulent financial activities pose significant operational and regulatory risks. Traditional detection methods are often limited in &lt;strong&gt;accuracy and interpretability&lt;/strong&gt;. This work addresses these gaps by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developing &lt;strong&gt;robust ML models&lt;/strong&gt; that handle highly imbalanced datasets.&lt;/li&gt;
+&lt;li&gt;Ensuring &lt;strong&gt;explainable predictions&lt;/strong&gt; for auditability and decision support.&lt;/li&gt;
+&lt;li&gt;Delivering &lt;strong&gt;actionable insights&lt;/strong&gt; to financial institutions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Built &lt;strong&gt;end-to-end ML pipelines&lt;/strong&gt; including preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;ensemble models, neural networks, and anomaly detection techniques&lt;/strong&gt; to maximize predictive performance.&lt;/li&gt;
+&lt;li&gt;Leveraged &lt;strong&gt;SHAP and other XAI tools&lt;/strong&gt; for feature-level and instance-level interpretability.&lt;/li&gt;
+&lt;li&gt;Implemented &lt;strong&gt;robust cross-validation&lt;/strong&gt; and uncertainty-aware evaluation to ensure generalization under realistic distribution shifts.&lt;/li&gt;
+&lt;li&gt;Emphasized &lt;strong&gt;reproducibility&lt;/strong&gt;, logging, and version control to ensure consistent results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--contributions&#34;&gt;Results &amp;amp; Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved &lt;strong&gt;high predictive accuracy&lt;/strong&gt; in detecting fraudulent transactions in imbalanced datasets.&lt;/li&gt;
+&lt;li&gt;Provided &lt;strong&gt;interpretable explanations&lt;/strong&gt; for model decisions, improving trust and accountability.&lt;/li&gt;
+&lt;li&gt;Established a &lt;strong&gt;reusable and scalable ML framework&lt;/strong&gt; for financial fraud detection.&lt;/li&gt;
+&lt;li&gt;Developed insights that can &lt;strong&gt;inform policy, auditing, and operational decision-making&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Work is currently &lt;strong&gt;under preparation for publication&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated fraud detection for banks and financial services.&lt;/li&gt;
+&lt;li&gt;Decision support for compliance and audit teams.&lt;/li&gt;
+&lt;li&gt;Scalable and interpretable pipelines for other predictive modeling challenges in finance and beyond.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;key-highlights&#34;&gt;Key Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MSc thesis &lt;strong&gt;graded Excellent (highest rank)&lt;/strong&gt; at Warsaw University of Technology.&lt;/li&gt;
+&lt;li&gt;Emphasis on &lt;strong&gt;robustness, reproducibility, and actionable insights&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Integration of &lt;strong&gt;advanced ML, explainability, and real-world financial context&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Low-Resource Tigrinya Language Modeling with LoRA-Fine-Tuned GPT-2</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project focuses on &lt;strong&gt;low-resource language modeling&lt;/strong&gt; for &lt;strong&gt;Tigrinya&lt;/strong&gt;, using parameter-efficient fine-tuning techniques applied to &lt;strong&gt;GPT-2&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The goal was to build a &lt;strong&gt;reproducible, stable, and efficient&lt;/strong&gt; text generation system suitable for scarce-data settings.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tuned &lt;strong&gt;GPT-2 (124M parameters)&lt;/strong&gt; using &lt;strong&gt;Low-Rank Adaptation (LoRA)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed data preprocessing pipelines for sequential text modeling&lt;/li&gt;
+&lt;li&gt;Controlled training stability and reproducibility through fixed seeds and logging&lt;/li&gt;
+&lt;li&gt;Optimized memory usage and training efficiency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;challenges-addressed&#34;&gt;Challenges Addressed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Extremely limited labeled data&lt;/li&gt;
+&lt;li&gt;High risk of overfitting in low-resource settings&lt;/li&gt;
+&lt;li&gt;Evaluation of generative quality beyond loss metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Generated coherent and grammatically consistent Tigrinya text&lt;/li&gt;
+&lt;li&gt;Demonstrated effectiveness of LoRA for low-resource LLM adaptation&lt;/li&gt;
+&lt;li&gt;Established a reusable pipeline for future low-resource language experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Language preservation and accessibility&lt;/li&gt;
+&lt;li&gt;Educational and linguistic research tools&lt;/li&gt;
+&lt;li&gt;Foundation for downstream NLP tasks in Tigrinya&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>XAI Graph Neural Networks for Molecular Property Prediction</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This research project focuses on predicting molecular properties using &lt;strong&gt;Graph Neural Networks (GNNs)&lt;/strong&gt;, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p&gt;
+&lt;p&gt;The goal is to develop &lt;strong&gt;accurate, interpretable, and robust models&lt;/strong&gt; suitable for scientific and industrial applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Implemented GNN architectures using &lt;strong&gt;PyTorch Geometric&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed node- and edge-level representations for molecular graphs&lt;/li&gt;
+&lt;li&gt;Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li&gt;
+&lt;li&gt;Built &lt;strong&gt;reproducible evaluation pipelines&lt;/strong&gt; with cross-validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;explainability&#34;&gt;Explainability&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied &lt;strong&gt;GNNExplainer&lt;/strong&gt; to interpret predictions at:
+&lt;ul&gt;
+&lt;li&gt;node-level (important atoms)&lt;/li&gt;
+&lt;li&gt;edge-level (critical bonds)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conducted feature- and structure-level analyses for explainable predictions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved strong predictive performance across molecular property benchmarks&lt;/li&gt;
+&lt;li&gt;Improved interpretability without sacrificing accuracy&lt;/li&gt;
+&lt;li&gt;Enabled model inspection suitable for research and decision support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;📄 Ongoing research project — publication in preparation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hate Speech Trend Analysis in Low-Resource Tigrinya Social Media (2018–2022)</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project analyzes &lt;strong&gt;hate speech trends&lt;/strong&gt; in Tigrinya social media posts collected between &lt;strong&gt;2018 and 2022&lt;/strong&gt;, during the &lt;strong&gt;Northern Ethiopia Tigray conflict&lt;/strong&gt;. It combines &lt;strong&gt;machine learning, exploratory data analysis, and data-driven approaches&lt;/strong&gt; to identify temporal and spatial patterns of harmful speech.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Tigrinya is a &lt;strong&gt;low-resource language&lt;/strong&gt;, presenting unique challenges for automated content moderation and linguistic analysis. Understanding hate speech trends is crucial during periods of &lt;strong&gt;political instability and armed conflict&lt;/strong&gt; for research, humanitarian, and policy applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Collected and preprocessed Tigrinya social media data&lt;/li&gt;
+&lt;li&gt;Developed ML-based &lt;strong&gt;text classification models&lt;/strong&gt; to detect hate speech&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;temporal analysis&lt;/strong&gt; to study frequency and severity trends&lt;/li&gt;
+&lt;li&gt;Examined &lt;strong&gt;content length characteristics&lt;/strong&gt; and moderation actions&lt;/li&gt;
+&lt;li&gt;Mapped &lt;strong&gt;geographic propagation&lt;/strong&gt; of hate-related content&lt;/li&gt;
+&lt;li&gt;Evaluated correlations between &lt;strong&gt;conflict events&lt;/strong&gt; and spikes in hate speech&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--insights&#34;&gt;Results &amp;amp; Insights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Identified &lt;strong&gt;hotspots&lt;/strong&gt; where hate speech was most actively disseminated&lt;/li&gt;
+&lt;li&gt;Found strong &lt;strong&gt;temporal correlations&lt;/strong&gt; with conflict escalation&lt;/li&gt;
+&lt;li&gt;Provided evidence for the need of &lt;strong&gt;tailored ML solutions&lt;/strong&gt; for low-resource languages&lt;/li&gt;
+&lt;li&gt;Developed actionable insights for &lt;strong&gt;conflict-sensitive content moderation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated hate speech detection in low-resource languages&lt;/li&gt;
+&lt;li&gt;Monitoring of social media during conflicts&lt;/li&gt;
+&lt;li&gt;Supporting NGOs, governments, and researchers with targeted interventions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
