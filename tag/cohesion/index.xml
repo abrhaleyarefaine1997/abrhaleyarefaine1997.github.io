@@ -1,30 +1,102 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cohesion | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/cohesion/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/cohesion/index.xml" rel="self" type="application/rss+xml"/><description>Cohesion</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sat, 27 Jul 2013 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Cohesion</title><link>https://abrhaleyarefaine1997.github.io/tag/cohesion/</link></image><item><title>Transporting, handling and storing behaviour of iron ore fines</title><link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link><pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
-&lt;hr>
-&lt;p>This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p>
-&lt;p>Fines are produced during transportation, handling and storing of iron pellets.
-The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br>
-Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p>
-&lt;p>The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p>
-&lt;p>DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p>
-&lt;h1 id="image-gallery">Image Gallery&lt;/h1>
-&lt;hr>
-&lt;div class="gallery">
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png" data-caption="Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only">
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png" loading="lazy" alt="Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only" width="245" height="150">
-&lt;/a>
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png" data-caption="Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only">
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png" loading="lazy" alt="Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only" width="237" height="150">
-&lt;/a>
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png" >
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png" loading="lazy" alt="temporally_scaled_uniaxial.png" width="214" height="150">
-&lt;/a>
-&lt;/div>
-&lt;h1 id="video-gallery">Video Gallery&lt;/h1>
-&lt;hr>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/E9fa6P68QDs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/SvEnSW8LemE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;hr></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cohesion | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/cohesion/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/cohesion/index.xml" rel="self" type="application/rss+xml" />
+    <description>Cohesion</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sat, 27 Jul 2013 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Cohesion</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/cohesion/</link>
+    </image>
+    
+    <item>
+      <title>Transporting, handling and storing behaviour of iron ore fines</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p&gt;
+&lt;p&gt;Fines are produced during transportation, handling and storing of iron pellets.
+The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br&gt;
+Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p&gt;
+&lt;p&gt;The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p&gt;
+&lt;p&gt;DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p&gt;
+&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png&#34; data-caption=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;245&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png&#34; data-caption=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;237&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;temporally_scaled_uniaxial.png&#34; width=&#34;214&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;h1 id=&#34;video-gallery&#34;&gt;Video Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/E9fa6P68QDs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/SvEnSW8LemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

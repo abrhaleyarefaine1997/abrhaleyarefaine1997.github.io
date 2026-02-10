@@ -1,59 +1,97 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>blog | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/blog/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/blog/index.xml" rel="self" type="application/rss+xml"/><description>blog</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 02 Jan 2022 18:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>blog</title><link>https://abrhaleyarefaine1997.github.io/tag/blog/</link></image><item><title>New Year, New Site</title><link>https://abrhaleyarefaine1997.github.io/post/new_site/</link><pubDate>Sun, 02 Jan 2022 18:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/new_site/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;hr>
-&lt;p>After many years of neglect and sitting on a default &lt;code>404 error&lt;/code> page for several years after transferring domain hosts, I&amp;rsquo;ve finally gotten around to fixing my website.
-When I originally created the site many years ago, the purpose was to learn something about &lt;code>html&lt;/code> and &lt;code>css&lt;/code> by taking on a project.
-It took me a while, and I was quite proud of the final output. It wasn&amp;rsquo;t perfect, but it had a fancy &lt;em>&amp;lsquo;slider carousel&amp;rsquo;&lt;/em> and some nice css filters in the gallery (in my defence, it was 2012&amp;hellip;).&lt;/p>
-&lt;p>However, after creating it, I quickly realised that I didn&amp;rsquo;t have a whole lot to add to it and I found creating new posts for the blog a struggle.
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blog | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/blog/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/blog/index.xml" rel="self" type="application/rss+xml" />
+    <description>blog</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 02 Jan 2022 18:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>blog</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/blog/</link>
+    </image>
+    
+    <item>
+      <title>New Year, New Site</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/new_site/</link>
+      <pubDate>Sun, 02 Jan 2022 18:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/new_site/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;After many years of neglect and sitting on a default &lt;code&gt;404 error&lt;/code&gt; page for several years after transferring domain hosts, I&amp;rsquo;ve finally gotten around to fixing my website.
+When I originally created the site many years ago, the purpose was to learn something about &lt;code&gt;html&lt;/code&gt; and &lt;code&gt;css&lt;/code&gt; by taking on a project.
+It took me a while, and I was quite proud of the final output. It wasn&amp;rsquo;t perfect, but it had a fancy &lt;em&gt;&amp;lsquo;slider carousel&amp;rsquo;&lt;/em&gt; and some nice css filters in the gallery (in my defence, it was 2012&amp;hellip;).&lt;/p&gt;
+&lt;p&gt;However, after creating it, I quickly realised that I didn&amp;rsquo;t have a whole lot to add to it and I found creating new posts for the blog a struggle.
 I wrote a few good posts that got some traction, but much of it was more personal in nature and possibly not of much interest to other people.
-The personal domain for email became the main thing I used and when I swapped providers a few years ago, the website didn&amp;rsquo;t get transferred.&lt;/p>
-&lt;figure id="figure-homepage-of-original-site">
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt="**Homepage of Original Site**" srcset="
-/post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_634e1727506c15965fa2173f6d682a44.png 400w,
-/post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_fae239fc52052f810544fb33b0878de3.png 760w,
-/post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_1200x1200_fit_lanczos_3.png 1200w"
-src="https://abrhaleyarefaine1997.github.io/post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_634e1727506c15965fa2173f6d682a44.png"
-width="760"
-height="593"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;strong>Homepage of Original Site&lt;/strong>
-&lt;/figcaption>&lt;/figure>
-&lt;p>This was probably a mistake - some of the posts were actually of interest and had lots of comments.
+The personal domain for email became the main thing I used and when I swapped providers a few years ago, the website didn&amp;rsquo;t get transferred.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-homepage-of-original-site&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Homepage of Original Site**&#34; srcset=&#34;
+               /post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_634e1727506c15965fa2173f6d682a44.png 400w,
+               /post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_fae239fc52052f810544fb33b0878de3.png 760w,
+               /post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/post/new_site/old_site_hu03253f6d5bbfd6ecd301753d5bb3194f_916419_634e1727506c15965fa2173f6d682a44.png&#34;
+               width=&#34;760&#34;
+               height=&#34;593&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Homepage of Original Site&lt;/strong&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;p&gt;This was probably a mistake - some of the posts were actually of interest and had lots of comments.
 I had been using wordpress to handle the blog but I never transferred out all the comments before just putting things on ice. So to anyone reading who may be about to do something similar - remember to back up or export things like comments as well as the raw data of the site.
-There is one saving grace &lt;a href="https://web.archive.org/" target="_blank" rel="noopener">The Wayback Machine&lt;/a> which does a great job of keeping an archive of the web.
+There is one saving grace &lt;a href=&#34;https://web.archive.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Wayback Machine&lt;/a&gt; which does a great job of keeping an archive of the web.
 Due to this fantastic resource I can still see snapshots of my website and the useful comments that were left.
 Maybe there&amp;rsquo;s a way to recover comments from this archive and re-import them to the current site?
-If you know how to do this, let me know in the comments below!&lt;/p>
-&lt;h2 id="version-20">Version 2.0&lt;/h2>
-&lt;p>So after years of manual &lt;code>html&lt;/code> and &lt;code>css&lt;/code> tinkering, I wanted something that was just as flexible but allowed easy content creation and the option to tinker and customise as required. I didn&amp;rsquo;t want to be tied to some CMS backend that limits what you can do. So I started doing some research!&lt;/p>
-&lt;p>So it turns out what I was looking for is a &lt;strong>Static Site Generator&lt;/strong>, which basically takes some type of template file or files in one format and converts into lots of html and css files that can be deployed on your server. This has an advantage over dynamics sites as they should be faster to load and more secure.&lt;/p>
-&lt;p>And there are lots of these SSG&amp;rsquo;s out there and in various languages. &lt;code>Jekyll&lt;/code>, &lt;code>Gatsby&lt;/code> and &lt;code>Hugo&lt;/code> are just a few of the most common.
-I was drawn to &lt;code>Hugo&lt;/code> by the fact that all the templating is written in markdown format, but also the claims of speed. Apparently, it&amp;rsquo;s very fast!&lt;/p>
-&lt;h2 id="getting-started">Getting Started&lt;/h2>
-&lt;p>Since &lt;code>Hugo&lt;/code> is quite popular, there are plenty of tutorials and guides out there and I started reading reading a few &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> to see where to get started.
-While doing a bit more reading, I came across a website called &lt;a href="https://wowchemy.com/" target="_blank" rel="noopener">Wowchemy&lt;/a> which promises quick and easy publishing for scientific and technical audiences (That&amp;rsquo;s me!).&lt;/p>
-&lt;p>So that is where I decided to start with the &lt;a href="https://wowchemy.com/docs/getting-started/hugo-github-quickstart/" target="_blank" rel="noopener">quickstart&lt;/a> guide.
-This solutions saves the website in a GitHub repository and the website is deployed using &lt;a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify&lt;/a>.
+If you know how to do this, let me know in the comments below!&lt;/p&gt;
+&lt;h2 id=&#34;version-20&#34;&gt;Version 2.0&lt;/h2&gt;
+&lt;p&gt;So after years of manual &lt;code&gt;html&lt;/code&gt; and &lt;code&gt;css&lt;/code&gt; tinkering, I wanted something that was just as flexible but allowed easy content creation and the option to tinker and customise as required. I didn&amp;rsquo;t want to be tied to some CMS backend that limits what you can do. So I started doing some research!&lt;/p&gt;
+&lt;p&gt;So it turns out what I was looking for is a &lt;strong&gt;Static Site Generator&lt;/strong&gt;, which basically takes some type of template file or files in one format and converts into lots of html and css files that can be deployed on your server. This has an advantage over dynamics sites as they should be faster to load and more secure.&lt;/p&gt;
+&lt;p&gt;And there are lots of these SSG&amp;rsquo;s out there and in various languages. &lt;code&gt;Jekyll&lt;/code&gt;, &lt;code&gt;Gatsby&lt;/code&gt; and &lt;code&gt;Hugo&lt;/code&gt; are just a few of the most common.
+I was drawn to &lt;code&gt;Hugo&lt;/code&gt; by the fact that all the templating is written in markdown format, but also the claims of speed. Apparently, it&amp;rsquo;s very fast!&lt;/p&gt;
+&lt;h2 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h2&gt;
+&lt;p&gt;Since &lt;code&gt;Hugo&lt;/code&gt; is quite popular, there are plenty of tutorials and guides out there and I started reading reading a few &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; to see where to get started.
+While doing a bit more reading, I came across a website called &lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; which promises quick and easy publishing for scientific and technical audiences (That&amp;rsquo;s me!).&lt;/p&gt;
+&lt;p&gt;So that is where I decided to start with the &lt;a href=&#34;https://wowchemy.com/docs/getting-started/hugo-github-quickstart/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;quickstart&lt;/a&gt; guide.
+This solutions saves the website in a GitHub repository and the website is deployed using &lt;a href=&#34;https://www.netlify.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Netlify&lt;/a&gt;.
 Netlify is basically the build manager and detects any new pushes to the repository, starts a build process and then deploys your built website.
 By default, you are assigned a custom Netlify domain, but you can quite easily set it up to use your own custom domain as well.
-Obviously Netlify offers a &lt;strong>free package&lt;/strong> for personal sites which has 300 build minutes per month, which should be more than enough for most people.&lt;/p>
-&lt;h3 id="wowchemy">Wowchemy&lt;/h3>
-&lt;p>&lt;strong>Wochemy&lt;/strong> provides a few template pages for specific purposes such as individual pages or those for a research group. I cloned the &lt;a href="https://wowchemy.com/hugo-themes/" target="_blank" rel="noopener">Academic Resume&lt;/a> theme, followed the instructions and had it deployed with Netlify in about 5-10 minutes. Very nice!&lt;/p>
-&lt;p>The wowchemy ecosystem consists of lots of elements, which are a bit like &lt;em>&amp;lsquo;building blocks&amp;rsquo;&lt;/em> which can be used to create a page or site.
+Obviously Netlify offers a &lt;strong&gt;free package&lt;/strong&gt; for personal sites which has 300 build minutes per month, which should be more than enough for most people.&lt;/p&gt;
+&lt;h3 id=&#34;wowchemy&#34;&gt;Wowchemy&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Wochemy&lt;/strong&gt; provides a few template pages for specific purposes such as individual pages or those for a research group. I cloned the &lt;a href=&#34;https://wowchemy.com/hugo-themes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Resume&lt;/a&gt; theme, followed the instructions and had it deployed with Netlify in about 5-10 minutes. Very nice!&lt;/p&gt;
+&lt;p&gt;The wowchemy ecosystem consists of lots of elements, which are a bit like &lt;em&gt;&amp;lsquo;building blocks&amp;rsquo;&lt;/em&gt; which can be used to create a page or site.
 There are lots of options such as posts, publications, sliders, galleries and much more.
-There&amp;rsquo;s code and math support as well as easy setup of some commenting systems. There&amp;rsquo;s even an CMS available if yuo wish to mange things that way.&lt;/p>
-&lt;p>And because it&amp;rsquo;s based on &lt;code>Hugo&lt;/code> and uses &lt;code>markdown&lt;/code>, if there&amp;rsquo;s something you want to do that it doesn&amp;rsquo;t already do, you can quite easily create something bespoke to your needs.&lt;/p>
-&lt;p>So while setting up the site from the template was quick, I think it&amp;rsquo;s going to take me a bit longer to customize it to my liking and restore old content.&lt;/p>
-&lt;h1 id="references">References&lt;/h1>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>&lt;a href="https://kinsta.com/blog/hugo-static-site/" target="_blank" rel="noopener">https://kinsta.com/blog/hugo-static-site/&lt;/a> Accessed on 19/12/2021.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>&lt;a href="https://strapi.io/blog/guide-to-using-hugo-site-generator" target="_blank" rel="noopener">https://strapi.io/blog/guide-to-using-hugo-site-generator&lt;/a> Accessed on 19/12/2021.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item></channel></rss>
+There&amp;rsquo;s code and math support as well as easy setup of some commenting systems. There&amp;rsquo;s even an CMS available if yuo wish to mange things that way.&lt;/p&gt;
+&lt;p&gt;And because it&amp;rsquo;s based on &lt;code&gt;Hugo&lt;/code&gt; and uses &lt;code&gt;markdown&lt;/code&gt;, if there&amp;rsquo;s something you want to do that it doesn&amp;rsquo;t already do, you can quite easily create something bespoke to your needs.&lt;/p&gt;
+&lt;p&gt;So while setting up the site from the template was quick, I think it&amp;rsquo;s going to take me a bit longer to customize it to my liking and restore old content.&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://kinsta.com/blog/hugo-static-site/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://kinsta.com/blog/hugo-static-site/&lt;/a&gt; Accessed on 19/12/2021.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;&lt;a href=&#34;https://strapi.io/blog/guide-to-using-hugo-site-generator&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://strapi.io/blog/guide-to-using-hugo-site-generator&lt;/a&gt; Accessed on 19/12/2021.&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

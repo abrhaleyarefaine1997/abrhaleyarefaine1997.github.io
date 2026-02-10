@@ -1,76 +1,144 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EDEM | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/edem/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/edem/index.xml" rel="self" type="application/rss+xml"/><description>EDEM</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>EDEM</title><link>https://abrhaleyarefaine1997.github.io/tag/edem/</link></image><item><title>The Edinburgh Elasto-Plastic Adhesion (EEPA) Model... in EDEM 2018!</title><link>https://abrhaleyarefaine1997.github.io/post/eepa/</link><pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/eepa/</guid><description>&lt;div class="alert alert-note">
-&lt;div>
-&lt;p>This post was originally published on &lt;a href="https://www.edemsimulation.com/news/more-particles-faster-edem-2018/" target="_blank" rel="noopener">www.edemsimulation.com&lt;/a>.&lt;/p>
-&lt;p>Since Altair&amp;rsquo;s acquisition of EDEM in 2020 the original post has been taken down. A cached copy of that post can be found &lt;a href="https://shackletonventures.com/more-particlesfaster-with-edem-2018/" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
-&lt;/div>
-&lt;/div>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;hr>
-&lt;p>EDEM has just announced the new 2018 version of the software that includes many new features with a focus on performance on productivity. I don&amp;rsquo;t normally show much interest in the release of new version of software but this is a bit different.
-I&amp;rsquo;m excited to announce that the &lt;strong>Edinburgh Elasto-Plastic Adhesion (EEPA) Model&lt;/strong>&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup> which started it&amp;rsquo;s life in my Ph.D.&lt;/p>
-&lt;p>This is a significant milestone and highlights how popular the model has become since it&amp;rsquo;s release as an API model to EDEM users just over 3 years ago. EDEM is considered the leading Discrete Element Method software application for bulk material simulation in the market and is used my many companies across fields as varied as mining, food manufacturing and pharmaceuticals.
-EDEM is also used by thousands of researchers in more then 200 universities around the world.&lt;/p>
-&lt;blockquote>
-&lt;p>In parallel, a new contact model for modeling complex cohesive materials such as fine dry powders, organic materials, soil and ore fines is now available as a standard built-in contact model in EDEM. This model, called Edinburgh Elasto-Plastic Adhesion (EEPA), offers a solution for cohesive granular solids whose behavior changes depending on the stresses experienced by the material beforehand. It can help realistically simulate applications such as material adhesion to earthmoving equipment, soil-tyre interaction or for instance a cohesive powder compaction process such as tabletting.&lt;/p>
-&lt;/blockquote>
-&lt;p>This will allow users to take advantage of the EEPA model without the computational cost of running the API.
-This could be as much as 30% reduction in runtime for your simulations - effectively for free!! All of the features of the API model &lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup>&lt;sup>,&lt;/sup>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> exist and are nicely integrated into the GUI.
-There should also be a GPU implementation of the modelling making bigger simulations more tractable.&lt;/p>
-&lt;div class="row">
-&lt;div class="column_2">
-&lt;figure id="figure-eepa-now-available-in-contact-model-physics">
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt="**EEPA now available in Contact Model Physics**" srcset="
-/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png 400w,
-/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_59bc0da555868b340d1c6b57cf624f1b.png 760w,
-/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_1200x1200_fit_lanczos_3.png 1200w"
-src="https://abrhaleyarefaine1997.github.io/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png"
-width="300"
-height="50%"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;strong>EEPA now available in Contact Model Physics&lt;/strong>
-&lt;/figcaption>&lt;/figure>
-&lt;/div>
-&lt;div class="column_2">
-&lt;figure id="figure-inputting-eepa-parameters">
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt="**Inputting EEPA Parameters**" srcset="
-/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png 400w,
-/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_371b6cddfe4cb0ba50e3837b217a203a.png 760w,
-/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_1200x1200_fit_lanczos_3.png 1200w"
-src="https://abrhaleyarefaine1997.github.io/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png"
-width="545"
-height="340"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;strong>Inputting EEPA Parameters&lt;/strong>
-&lt;/figcaption>&lt;/figure>
-&lt;/div>
-&lt;/div>
-&lt;p>I hope this helps making simulation of cohesive granular materials more accessible to more user and that the models popularity continues to grow.&lt;/p>
-&lt;h2 id="citations">Citations&lt;/h2>
-&lt;hr>
-&lt;h2 id="references">References&lt;/h2>
-&lt;hr>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>Morrissey, J.P., &lt;em>Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em>, University of Edinburgh, 2013. &lt;a href="https://www.era.lib.ed.ac.uk/handle/1842/8270" target="_blank" rel="noopener">https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a>.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>Thakur, S.C., Morrissey, J.P., Sun, J., Chen, J.F., &amp;amp; Ooi, J.Y. (2014). &lt;em>Micromechanical analysis of
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>EDEM | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/edem/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/edem/index.xml" rel="self" type="application/rss+xml" />
+    <description>EDEM</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 10 Oct 2017 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>EDEM</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/edem/</link>
+    </image>
+    
+    <item>
+      <title>The Edinburgh Elasto-Plastic Adhesion (EEPA) Model... in EDEM 2018!</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/eepa/</link>
+      <pubDate>Tue, 10 Oct 2017 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/eepa/</guid>
+      <description>&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;This post was originally published on &lt;a href=&#34;https://www.edemsimulation.com/news/more-particles-faster-edem-2018/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.edemsimulation.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Since Altair&amp;rsquo;s acquisition of EDEM in 2020 the original post has been taken down. A cached copy of that post can be found &lt;a href=&#34;https://shackletonventures.com/more-particlesfaster-with-edem-2018/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;EDEM has just announced the new 2018 version of the software that includes many new features with a focus on performance on productivity. I don&amp;rsquo;t normally show much interest in the release of new version of software but this is a bit different.
+I&amp;rsquo;m excited to announce that the &lt;strong&gt;Edinburgh Elasto-Plastic Adhesion (EEPA) Model&lt;/strong&gt;&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; which started it&amp;rsquo;s life in my Ph.D.&lt;/p&gt;
+&lt;p&gt;This is a significant milestone and highlights how popular the model has become since it&amp;rsquo;s release as an API model to EDEM users just over 3 years ago. EDEM is considered the leading Discrete Element Method software application for bulk material simulation in the market and is used my many companies across fields as varied as mining, food manufacturing and pharmaceuticals.
+EDEM is also used by thousands of researchers in more then 200 universities around the world.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In parallel, a new contact model for modeling complex cohesive materials such as fine dry powders, organic materials, soil and ore fines is now available as a standard built-in contact model in EDEM. This model, called Edinburgh Elasto-Plastic Adhesion (EEPA), offers a solution for cohesive granular solids whose behavior changes depending on the stresses experienced by the material beforehand. It can help realistically simulate applications such as material adhesion to earthmoving equipment, soil-tyre interaction or for instance a cohesive powder compaction process such as tabletting.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This will allow users to take advantage of the EEPA model without the computational cost of running the API.
+This could be as much as 30% reduction in runtime for your simulations - effectively for free!! All of the features of the API model &lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;sup&gt;,&lt;/sup&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; exist and are nicely integrated into the GUI.
+There should also be a GPU implementation of the modelling making bigger simulations more tractable.&lt;/p&gt;
+&lt;div class=&#34;row&#34;&gt;
+  &lt;div class=&#34;column_2&#34;&gt;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    &lt;figure  id=&#34;figure-eepa-now-available-in-contact-model-physics&#34;&gt;
+      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**EEPA now available in Contact Model Physics**&#34; srcset=&#34;
+                   /post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png 400w,
+                   /post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_59bc0da555868b340d1c6b57cf624f1b.png 760w,
+                   /post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_1200x1200_fit_lanczos_3.png 1200w&#34;
+                   src=&#34;https://abrhaleyarefaine1997.github.io/post/eepa/contact_model_physics_hu1c9c4e5dfddbeb9271ecf8b6ef1306b0_21896_a25314b0bc17ec372db5925f9184c9f8.png&#34;
+                   width=&#34;300&#34;
+                   height=&#34;50%&#34;
+                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;figcaption&gt;
+          &lt;strong&gt;EEPA now available in Contact Model Physics&lt;/strong&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt; 
+  &lt;/div&gt;
+  &lt;div class=&#34;column_2&#34;&gt;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    &lt;figure  id=&#34;figure-inputting-eepa-parameters&#34;&gt;
+      &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+        &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Inputting EEPA Parameters**&#34; srcset=&#34;
+                   /post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png 400w,
+                   /post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_371b6cddfe4cb0ba50e3837b217a203a.png 760w,
+                   /post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_1200x1200_fit_lanczos_3.png 1200w&#34;
+                   src=&#34;https://abrhaleyarefaine1997.github.io/post/eepa/eepa_prefs_huccdf89caa7be4b8cd8a96ba74e7ded18_13058_6f98cc6ab556d26d61f3be9665d846f1.png&#34;
+                   width=&#34;545&#34;
+                   height=&#34;340&#34;
+                   loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+      &lt;/div&gt;&lt;figcaption&gt;
+          &lt;strong&gt;Inputting EEPA Parameters&lt;/strong&gt;
+        &lt;/figcaption&gt;&lt;/figure&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;I hope this helps making simulation of cohesive granular materials more accessible to more user and that the models popularity continues to grow.&lt;/p&gt;
+&lt;h2 id=&#34;citations&#34;&gt;Citations&lt;/h2&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;hr&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Morrissey, J.P.,  &lt;em&gt;Discrete Element Modelling of Iron Ore Fines to Include the Effects of Moisture and Fines&lt;/em&gt;, University of Edinburgh, 2013. &lt;a href=&#34;https://www.era.lib.ed.ac.uk/handle/1842/8270&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.era.lib.ed.ac.uk/handle/1842/8270&lt;/a&gt;.&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Thakur, S.C., Morrissey, J.P., Sun, J., Chen, J.F., &amp;amp; Ooi, J.Y. (2014). &lt;em&gt;Micromechanical analysis of
 cohesive granular materials using discrete element method with an adhesive elasto-plastic contact
-model.&lt;/em> Granular Matter, 16(3), 383–400. doi:10.1007/s10035-014-0506-4&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3">
-&lt;p>Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014a). &lt;em>EDEM Contact Model: Adhesive Elasto-Plastic Model.
-University of Edinburgh.&lt;/em> doi:10.13140/RG.2.2.10139.18724&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4">
-&lt;p>Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014b). &lt;em>Using the Elasto-plastic Adhesion Model: Example
-Problem. University of Edinburgh.&lt;/em> doi:10.13140/RG.2.2.10978.04809&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item></channel></rss>
+model.&lt;/em&gt; Granular Matter, 16(3), 383–400. doi:10.1007/s10035-014-0506-4&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014a). &lt;em&gt;EDEM Contact Model: Adhesive Elasto-Plastic Model.
+University of Edinburgh.&lt;/em&gt; doi:10.13140/RG.2.2.10139.18724&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;Morrissey, J.P., Thakur, S., &amp;amp; Ooi, J.Y. (2014b). &lt;em&gt;Using the Elasto-plastic Adhesion Model: Example
+Problem. University of Edinburgh.&lt;/em&gt; doi:10.13140/RG.2.2.10978.04809&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

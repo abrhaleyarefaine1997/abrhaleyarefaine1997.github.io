@@ -1,146 +1,262 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/project/</link><atom:link href="https://abrhaleyarefaine1997.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://abrhaleyarefaine1997.github.io/project/</link></image><item><title>Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection</title><link>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</link><pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This MSc thesis project focuses on &lt;strong>detecting financial fraud&lt;/strong> using &lt;strong>advanced machine learning techniques&lt;/strong> combined with &lt;strong>Explainable AI (XAI)&lt;/strong>.&lt;/p>
-&lt;p>Financial transactions are highly &lt;strong>complex, noisy, and imbalanced&lt;/strong>, making fraud detection challenging. The project emphasizes &lt;strong>robust, interpretable, and reproducible ML pipelines&lt;/strong> suitable for real-world deployment and regulatory compliance.&lt;/p>
-&lt;h2 id="motivation">Motivation&lt;/h2>
-&lt;p>Fraudulent financial activities pose significant operational and regulatory risks. Traditional detection methods are often limited in &lt;strong>accuracy and interpretability&lt;/strong>. This work addresses these gaps by:&lt;/p>
-&lt;ul>
-&lt;li>Developing &lt;strong>robust ML models&lt;/strong> that handle highly imbalanced datasets.&lt;/li>
-&lt;li>Ensuring &lt;strong>explainable predictions&lt;/strong> for auditability and decision support.&lt;/li>
-&lt;li>Delivering &lt;strong>actionable insights&lt;/strong> to financial institutions.&lt;/li>
-&lt;/ul>
-&lt;h2 id="methods--work">Methods &amp;amp; Work&lt;/h2>
-&lt;ul>
-&lt;li>Built &lt;strong>end-to-end ML pipelines&lt;/strong> including preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.&lt;/li>
-&lt;li>Applied &lt;strong>ensemble models, neural networks, and anomaly detection techniques&lt;/strong> to maximize predictive performance.&lt;/li>
-&lt;li>Leveraged &lt;strong>SHAP and other XAI tools&lt;/strong> for feature-level and instance-level interpretability.&lt;/li>
-&lt;li>Implemented &lt;strong>robust cross-validation&lt;/strong> and uncertainty-aware evaluation to ensure generalization under realistic distribution shifts.&lt;/li>
-&lt;li>Emphasized &lt;strong>reproducibility&lt;/strong>, logging, and version control to ensure consistent results.&lt;/li>
-&lt;/ul>
-&lt;h2 id="results--contributions">Results &amp;amp; Contributions&lt;/h2>
-&lt;ul>
-&lt;li>Achieved &lt;strong>high predictive accuracy&lt;/strong> in detecting fraudulent transactions in imbalanced datasets.&lt;/li>
-&lt;li>Provided &lt;strong>interpretable explanations&lt;/strong> for model decisions, improving trust and accountability.&lt;/li>
-&lt;li>Established a &lt;strong>reusable and scalable ML framework&lt;/strong> for financial fraud detection.&lt;/li>
-&lt;li>Developed insights that can &lt;strong>inform policy, auditing, and operational decision-making&lt;/strong>.&lt;/li>
-&lt;li>Work is currently &lt;strong>under preparation for publication&lt;/strong>.&lt;/li>
-&lt;/ul>
-&lt;h2 id="applications">Applications&lt;/h2>
-&lt;ul>
-&lt;li>Automated fraud detection for banks and financial services.&lt;/li>
-&lt;li>Decision support for compliance and audit teams.&lt;/li>
-&lt;li>Scalable and interpretable pipelines for other predictive modeling challenges in finance and beyond.&lt;/li>
-&lt;/ul>
-&lt;h2 id="key-highlights">Key Highlights&lt;/h2>
-&lt;ul>
-&lt;li>MSc thesis &lt;strong>graded Excellent (highest rank)&lt;/strong> at Warsaw University of Technology.&lt;/li>
-&lt;li>Emphasis on &lt;strong>robustness, reproducibility, and actionable insights&lt;/strong>.&lt;/li>
-&lt;li>Integration of &lt;strong>advanced ML, explainability, and real-world financial context&lt;/strong>.&lt;/li>
-&lt;/ul></description></item><item><title>Low-Resource Tigrinya Language Modeling with LoRA-Fine-Tuned GPT-2</title><link>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This project focuses on &lt;strong>low-resource language modeling&lt;/strong> for &lt;strong>Tigrinya&lt;/strong>, using parameter-efficient fine-tuning techniques applied to &lt;strong>GPT-2&lt;/strong>.&lt;/p>
-&lt;p>The goal was to build a &lt;strong>reproducible, stable, and efficient&lt;/strong> text generation system suitable for scarce-data settings.&lt;/p>
-&lt;h2 id="methods">Methods&lt;/h2>
-&lt;ul>
-&lt;li>Fine-tuned &lt;strong>GPT-2 (124M parameters)&lt;/strong> using &lt;strong>Low-Rank Adaptation (LoRA)&lt;/strong>&lt;/li>
-&lt;li>Designed data preprocessing pipelines for sequential text modeling&lt;/li>
-&lt;li>Controlled training stability and reproducibility through fixed seeds and logging&lt;/li>
-&lt;li>Optimized memory usage and training efficiency&lt;/li>
-&lt;/ul>
-&lt;h2 id="challenges-addressed">Challenges Addressed&lt;/h2>
-&lt;ul>
-&lt;li>Extremely limited labeled data&lt;/li>
-&lt;li>High risk of overfitting in low-resource settings&lt;/li>
-&lt;li>Evaluation of generative quality beyond loss metrics&lt;/li>
-&lt;/ul>
-&lt;h2 id="results">Results&lt;/h2>
-&lt;ul>
-&lt;li>Generated coherent and grammatically consistent Tigrinya text&lt;/li>
-&lt;li>Demonstrated effectiveness of LoRA for low-resource LLM adaptation&lt;/li>
-&lt;li>Established a reusable pipeline for future low-resource language experiments&lt;/li>
-&lt;/ul>
-&lt;h2 id="applications">Applications&lt;/h2>
-&lt;ul>
-&lt;li>Language preservation and accessibility&lt;/li>
-&lt;li>Educational and linguistic research tools&lt;/li>
-&lt;li>Foundation for downstream NLP tasks in Tigrinya&lt;/li>
-&lt;/ul></description></item><item><title>XAI Graph Neural Networks for Molecular Property Prediction</title><link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This research project focuses on predicting molecular properties using &lt;strong>Graph Neural Networks (GNNs)&lt;/strong>, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p>
-&lt;p>The goal is to develop &lt;strong>accurate, interpretable, and robust models&lt;/strong> suitable for scientific and industrial applications.&lt;/p>
-&lt;h2 id="methods">Methods&lt;/h2>
-&lt;ul>
-&lt;li>Implemented GNN architectures using &lt;strong>PyTorch Geometric&lt;/strong>&lt;/li>
-&lt;li>Designed node- and edge-level representations for molecular graphs&lt;/li>
-&lt;li>Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li>
-&lt;li>Built &lt;strong>reproducible evaluation pipelines&lt;/strong> with cross-validation&lt;/li>
-&lt;/ul>
-&lt;h2 id="explainability">Explainability&lt;/h2>
-&lt;ul>
-&lt;li>Applied &lt;strong>GNNExplainer&lt;/strong> to interpret predictions at:
-&lt;ul>
-&lt;li>node-level (important atoms)&lt;/li>
-&lt;li>edge-level (critical bonds)&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Conducted feature- and structure-level analyses for explainable predictions&lt;/li>
-&lt;/ul>
-&lt;h2 id="results">Results&lt;/h2>
-&lt;ul>
-&lt;li>Achieved strong predictive performance across molecular property benchmarks&lt;/li>
-&lt;li>Improved interpretability without sacrificing accuracy&lt;/li>
-&lt;li>Enabled model inspection suitable for research and decision support&lt;/li>
-&lt;/ul>
-&lt;h2 id="status">Status&lt;/h2>
-&lt;p>📄 Ongoing research project — publication in preparation.&lt;/p></description></item><item><title>Hate Speech Trend Analysis in Low-Resource Tigrinya Social Media (2018–2022)</title><link>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</link><pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This project analyzes &lt;strong>hate speech trends&lt;/strong> in Tigrinya social media posts collected between &lt;strong>2018 and 2022&lt;/strong>, during the &lt;strong>Northern Ethiopia Tigray conflict&lt;/strong>. It combines &lt;strong>machine learning, exploratory data analysis, and data-driven approaches&lt;/strong> to identify temporal and spatial patterns of harmful speech.&lt;/p>
-&lt;h2 id="motivation">Motivation&lt;/h2>
-&lt;p>Tigrinya is a &lt;strong>low-resource language&lt;/strong>, presenting unique challenges for automated content moderation and linguistic analysis. Understanding hate speech trends is crucial during periods of &lt;strong>political instability and armed conflict&lt;/strong> for research, humanitarian, and policy applications.&lt;/p>
-&lt;h2 id="methods--work">Methods &amp;amp; Work&lt;/h2>
-&lt;ul>
-&lt;li>Collected and preprocessed Tigrinya social media data&lt;/li>
-&lt;li>Developed ML-based &lt;strong>text classification models&lt;/strong> to detect hate speech&lt;/li>
-&lt;li>Applied &lt;strong>temporal analysis&lt;/strong> to study frequency and severity trends&lt;/li>
-&lt;li>Examined &lt;strong>content length characteristics&lt;/strong> and moderation actions&lt;/li>
-&lt;li>Mapped &lt;strong>geographic propagation&lt;/strong> of hate-related content&lt;/li>
-&lt;li>Evaluated correlations between &lt;strong>conflict events&lt;/strong> and spikes in hate speech&lt;/li>
-&lt;/ul>
-&lt;h2 id="results--insights">Results &amp;amp; Insights&lt;/h2>
-&lt;ul>
-&lt;li>Identified &lt;strong>hotspots&lt;/strong> where hate speech was most actively disseminated&lt;/li>
-&lt;li>Found strong &lt;strong>temporal correlations&lt;/strong> with conflict escalation&lt;/li>
-&lt;li>Provided evidence for the need of &lt;strong>tailored ML solutions&lt;/strong> for low-resource languages&lt;/li>
-&lt;li>Developed actionable insights for &lt;strong>conflict-sensitive content moderation&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;h2 id="applications">Applications&lt;/h2>
-&lt;ul>
-&lt;li>Automated hate speech detection in low-resource languages&lt;/li>
-&lt;li>Monitoring of social media during conflicts&lt;/li>
-&lt;li>Supporting NGOs, governments, and researchers with targeted interventions&lt;/li>
-&lt;/ul></description></item><item><title>Transporting, handling and storing behaviour of iron ore fines</title><link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link><pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
-&lt;hr>
-&lt;p>This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p>
-&lt;p>Fines are produced during transportation, handling and storing of iron pellets.
-The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br>
-Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p>
-&lt;p>The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p>
-&lt;p>DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p>
-&lt;h1 id="image-gallery">Image Gallery&lt;/h1>
-&lt;hr>
-&lt;div class="gallery">
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png" data-caption="Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only">
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png" loading="lazy" alt="Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only" width="245" height="150">
-&lt;/a>
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png" data-caption="Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only">
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png" loading="lazy" alt="Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only" width="237" height="150">
-&lt;/a>
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png" >
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png" loading="lazy" alt="temporally_scaled_uniaxial.png" width="214" height="150">
-&lt;/a>
-&lt;/div>
-&lt;h1 id="video-gallery">Video Gallery&lt;/h1>
-&lt;hr>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/E9fa6P68QDs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/SvEnSW8LemE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;hr></description></item><item><title/><link>https://abrhaleyarefaine1997.github.io/project/phd/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/phd/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/project/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 01 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Projects</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/</link>
+    </image>
+    
+    <item>
+      <title>Advanced Machine Learning Techniques and Explainable AI for Financial Fraud Detection</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</link>
+      <pubDate>Mon, 01 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/thesis_msc/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This MSc thesis project focuses on &lt;strong&gt;detecting financial fraud&lt;/strong&gt; using &lt;strong&gt;advanced machine learning techniques&lt;/strong&gt; combined with &lt;strong&gt;Explainable AI (XAI)&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Financial transactions are highly &lt;strong&gt;complex, noisy, and imbalanced&lt;/strong&gt;, making fraud detection challenging. The project emphasizes &lt;strong&gt;robust, interpretable, and reproducible ML pipelines&lt;/strong&gt; suitable for real-world deployment and regulatory compliance.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Fraudulent financial activities pose significant operational and regulatory risks. Traditional detection methods are often limited in &lt;strong&gt;accuracy and interpretability&lt;/strong&gt;. This work addresses these gaps by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Developing &lt;strong&gt;robust ML models&lt;/strong&gt; that handle highly imbalanced datasets.&lt;/li&gt;
+&lt;li&gt;Ensuring &lt;strong&gt;explainable predictions&lt;/strong&gt; for auditability and decision support.&lt;/li&gt;
+&lt;li&gt;Delivering &lt;strong&gt;actionable insights&lt;/strong&gt; to financial institutions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Built &lt;strong&gt;end-to-end ML pipelines&lt;/strong&gt; including preprocessing, feature engineering, model selection, hyperparameter tuning, and evaluation.&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;ensemble models, neural networks, and anomaly detection techniques&lt;/strong&gt; to maximize predictive performance.&lt;/li&gt;
+&lt;li&gt;Leveraged &lt;strong&gt;SHAP and other XAI tools&lt;/strong&gt; for feature-level and instance-level interpretability.&lt;/li&gt;
+&lt;li&gt;Implemented &lt;strong&gt;robust cross-validation&lt;/strong&gt; and uncertainty-aware evaluation to ensure generalization under realistic distribution shifts.&lt;/li&gt;
+&lt;li&gt;Emphasized &lt;strong&gt;reproducibility&lt;/strong&gt;, logging, and version control to ensure consistent results.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--contributions&#34;&gt;Results &amp;amp; Contributions&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved &lt;strong&gt;high predictive accuracy&lt;/strong&gt; in detecting fraudulent transactions in imbalanced datasets.&lt;/li&gt;
+&lt;li&gt;Provided &lt;strong&gt;interpretable explanations&lt;/strong&gt; for model decisions, improving trust and accountability.&lt;/li&gt;
+&lt;li&gt;Established a &lt;strong&gt;reusable and scalable ML framework&lt;/strong&gt; for financial fraud detection.&lt;/li&gt;
+&lt;li&gt;Developed insights that can &lt;strong&gt;inform policy, auditing, and operational decision-making&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Work is currently &lt;strong&gt;under preparation for publication&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated fraud detection for banks and financial services.&lt;/li&gt;
+&lt;li&gt;Decision support for compliance and audit teams.&lt;/li&gt;
+&lt;li&gt;Scalable and interpretable pipelines for other predictive modeling challenges in finance and beyond.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;key-highlights&#34;&gt;Key Highlights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MSc thesis &lt;strong&gt;graded Excellent (highest rank)&lt;/strong&gt; at Warsaw University of Technology.&lt;/li&gt;
+&lt;li&gt;Emphasis on &lt;strong&gt;robustness, reproducibility, and actionable insights&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Integration of &lt;strong&gt;advanced ML, explainability, and real-world financial context&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Low-Resource Tigrinya Language Modeling with LoRA-Fine-Tuned GPT-2</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project focuses on &lt;strong&gt;low-resource language modeling&lt;/strong&gt; for &lt;strong&gt;Tigrinya&lt;/strong&gt;, using parameter-efficient fine-tuning techniques applied to &lt;strong&gt;GPT-2&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The goal was to build a &lt;strong&gt;reproducible, stable, and efficient&lt;/strong&gt; text generation system suitable for scarce-data settings.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tuned &lt;strong&gt;GPT-2 (124M parameters)&lt;/strong&gt; using &lt;strong&gt;Low-Rank Adaptation (LoRA)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed data preprocessing pipelines for sequential text modeling&lt;/li&gt;
+&lt;li&gt;Controlled training stability and reproducibility through fixed seeds and logging&lt;/li&gt;
+&lt;li&gt;Optimized memory usage and training efficiency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;challenges-addressed&#34;&gt;Challenges Addressed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Extremely limited labeled data&lt;/li&gt;
+&lt;li&gt;High risk of overfitting in low-resource settings&lt;/li&gt;
+&lt;li&gt;Evaluation of generative quality beyond loss metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Generated coherent and grammatically consistent Tigrinya text&lt;/li&gt;
+&lt;li&gt;Demonstrated effectiveness of LoRA for low-resource LLM adaptation&lt;/li&gt;
+&lt;li&gt;Established a reusable pipeline for future low-resource language experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Language preservation and accessibility&lt;/li&gt;
+&lt;li&gt;Educational and linguistic research tools&lt;/li&gt;
+&lt;li&gt;Foundation for downstream NLP tasks in Tigrinya&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>XAI Graph Neural Networks for Molecular Property Prediction</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This research project focuses on predicting molecular properties using &lt;strong&gt;Graph Neural Networks (GNNs)&lt;/strong&gt;, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p&gt;
+&lt;p&gt;The goal is to develop &lt;strong&gt;accurate, interpretable, and robust models&lt;/strong&gt; suitable for scientific and industrial applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Implemented GNN architectures using &lt;strong&gt;PyTorch Geometric&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed node- and edge-level representations for molecular graphs&lt;/li&gt;
+&lt;li&gt;Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li&gt;
+&lt;li&gt;Built &lt;strong&gt;reproducible evaluation pipelines&lt;/strong&gt; with cross-validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;explainability&#34;&gt;Explainability&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied &lt;strong&gt;GNNExplainer&lt;/strong&gt; to interpret predictions at:
+&lt;ul&gt;
+&lt;li&gt;node-level (important atoms)&lt;/li&gt;
+&lt;li&gt;edge-level (critical bonds)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conducted feature- and structure-level analyses for explainable predictions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved strong predictive performance across molecular property benchmarks&lt;/li&gt;
+&lt;li&gt;Improved interpretability without sacrificing accuracy&lt;/li&gt;
+&lt;li&gt;Enabled model inspection suitable for research and decision support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;📄 Ongoing research project — publication in preparation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Hate Speech Trend Analysis in Low-Resource Tigrinya Social Media (2018–2022)</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</link>
+      <pubDate>Sat, 31 Dec 2022 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/tigrinya-hate/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project analyzes &lt;strong&gt;hate speech trends&lt;/strong&gt; in Tigrinya social media posts collected between &lt;strong&gt;2018 and 2022&lt;/strong&gt;, during the &lt;strong&gt;Northern Ethiopia Tigray conflict&lt;/strong&gt;. It combines &lt;strong&gt;machine learning, exploratory data analysis, and data-driven approaches&lt;/strong&gt; to identify temporal and spatial patterns of harmful speech.&lt;/p&gt;
+&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;
+&lt;p&gt;Tigrinya is a &lt;strong&gt;low-resource language&lt;/strong&gt;, presenting unique challenges for automated content moderation and linguistic analysis. Understanding hate speech trends is crucial during periods of &lt;strong&gt;political instability and armed conflict&lt;/strong&gt; for research, humanitarian, and policy applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods--work&#34;&gt;Methods &amp;amp; Work&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Collected and preprocessed Tigrinya social media data&lt;/li&gt;
+&lt;li&gt;Developed ML-based &lt;strong&gt;text classification models&lt;/strong&gt; to detect hate speech&lt;/li&gt;
+&lt;li&gt;Applied &lt;strong&gt;temporal analysis&lt;/strong&gt; to study frequency and severity trends&lt;/li&gt;
+&lt;li&gt;Examined &lt;strong&gt;content length characteristics&lt;/strong&gt; and moderation actions&lt;/li&gt;
+&lt;li&gt;Mapped &lt;strong&gt;geographic propagation&lt;/strong&gt; of hate-related content&lt;/li&gt;
+&lt;li&gt;Evaluated correlations between &lt;strong&gt;conflict events&lt;/strong&gt; and spikes in hate speech&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results--insights&#34;&gt;Results &amp;amp; Insights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Identified &lt;strong&gt;hotspots&lt;/strong&gt; where hate speech was most actively disseminated&lt;/li&gt;
+&lt;li&gt;Found strong &lt;strong&gt;temporal correlations&lt;/strong&gt; with conflict escalation&lt;/li&gt;
+&lt;li&gt;Provided evidence for the need of &lt;strong&gt;tailored ML solutions&lt;/strong&gt; for low-resource languages&lt;/li&gt;
+&lt;li&gt;Developed actionable insights for &lt;strong&gt;conflict-sensitive content moderation&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Automated hate speech detection in low-resource languages&lt;/li&gt;
+&lt;li&gt;Monitoring of social media during conflicts&lt;/li&gt;
+&lt;li&gt;Supporting NGOs, governments, and researchers with targeted interventions&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transporting, handling and storing behaviour of iron ore fines</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p&gt;
+&lt;p&gt;Fines are produced during transportation, handling and storing of iron pellets.
+The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br&gt;
+Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p&gt;
+&lt;p&gt;The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p&gt;
+&lt;p&gt;DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p&gt;
+&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png&#34; data-caption=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;245&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png&#34; data-caption=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;237&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;temporally_scaled_uniaxial.png&#34; width=&#34;214&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;h1 id=&#34;video-gallery&#34;&gt;Video Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/E9fa6P68QDs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/SvEnSW8LemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://abrhaleyarefaine1997.github.io/project/phd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/phd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

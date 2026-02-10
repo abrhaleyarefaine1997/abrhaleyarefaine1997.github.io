@@ -1,28 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Large Language Models | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/large-language-models/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/large-language-models/index.xml" rel="self" type="application/rss+xml"/><description>Large Language Models</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Large Language Models</title><link>https://abrhaleyarefaine1997.github.io/tag/large-language-models/</link></image><item><title>Low-Resource Tigrinya Language Modeling with LoRA-Fine-Tuned GPT-2</title><link>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This project focuses on &lt;strong>low-resource language modeling&lt;/strong> for &lt;strong>Tigrinya&lt;/strong>, using parameter-efficient fine-tuning techniques applied to &lt;strong>GPT-2&lt;/strong>.&lt;/p>
-&lt;p>The goal was to build a &lt;strong>reproducible, stable, and efficient&lt;/strong> text generation system suitable for scarce-data settings.&lt;/p>
-&lt;h2 id="methods">Methods&lt;/h2>
-&lt;ul>
-&lt;li>Fine-tuned &lt;strong>GPT-2 (124M parameters)&lt;/strong> using &lt;strong>Low-Rank Adaptation (LoRA)&lt;/strong>&lt;/li>
-&lt;li>Designed data preprocessing pipelines for sequential text modeling&lt;/li>
-&lt;li>Controlled training stability and reproducibility through fixed seeds and logging&lt;/li>
-&lt;li>Optimized memory usage and training efficiency&lt;/li>
-&lt;/ul>
-&lt;h2 id="challenges-addressed">Challenges Addressed&lt;/h2>
-&lt;ul>
-&lt;li>Extremely limited labeled data&lt;/li>
-&lt;li>High risk of overfitting in low-resource settings&lt;/li>
-&lt;li>Evaluation of generative quality beyond loss metrics&lt;/li>
-&lt;/ul>
-&lt;h2 id="results">Results&lt;/h2>
-&lt;ul>
-&lt;li>Generated coherent and grammatically consistent Tigrinya text&lt;/li>
-&lt;li>Demonstrated effectiveness of LoRA for low-resource LLM adaptation&lt;/li>
-&lt;li>Established a reusable pipeline for future low-resource language experiments&lt;/li>
-&lt;/ul>
-&lt;h2 id="applications">Applications&lt;/h2>
-&lt;ul>
-&lt;li>Language preservation and accessibility&lt;/li>
-&lt;li>Educational and linguistic research tools&lt;/li>
-&lt;li>Foundation for downstream NLP tasks in Tigrinya&lt;/li>
-&lt;/ul></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Large Language Models | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/large-language-models/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/large-language-models/index.xml" rel="self" type="application/rss+xml" />
+    <description>Large Language Models</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Wed, 01 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Large Language Models</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/large-language-models/</link>
+    </image>
+    
+    <item>
+      <title>Low-Resource Tigrinya Language Modeling with LoRA-Fine-Tuned GPT-2</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</link>
+      <pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gpt2-tigrinya/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project focuses on &lt;strong&gt;low-resource language modeling&lt;/strong&gt; for &lt;strong&gt;Tigrinya&lt;/strong&gt;, using parameter-efficient fine-tuning techniques applied to &lt;strong&gt;GPT-2&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The goal was to build a &lt;strong&gt;reproducible, stable, and efficient&lt;/strong&gt; text generation system suitable for scarce-data settings.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Fine-tuned &lt;strong&gt;GPT-2 (124M parameters)&lt;/strong&gt; using &lt;strong&gt;Low-Rank Adaptation (LoRA)&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed data preprocessing pipelines for sequential text modeling&lt;/li&gt;
+&lt;li&gt;Controlled training stability and reproducibility through fixed seeds and logging&lt;/li&gt;
+&lt;li&gt;Optimized memory usage and training efficiency&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;challenges-addressed&#34;&gt;Challenges Addressed&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Extremely limited labeled data&lt;/li&gt;
+&lt;li&gt;High risk of overfitting in low-resource settings&lt;/li&gt;
+&lt;li&gt;Evaluation of generative quality beyond loss metrics&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Generated coherent and grammatically consistent Tigrinya text&lt;/li&gt;
+&lt;li&gt;Demonstrated effectiveness of LoRA for low-resource LLM adaptation&lt;/li&gt;
+&lt;li&gt;Established a reusable pipeline for future low-resource language experiments&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;applications&#34;&gt;Applications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Language preservation and accessibility&lt;/li&gt;
+&lt;li&gt;Educational and linguistic research tools&lt;/li&gt;
+&lt;li&gt;Foundation for downstream NLP tasks in Tigrinya&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

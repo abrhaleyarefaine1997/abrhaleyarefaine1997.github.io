@@ -1,28 +1,52 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Graph Neural Networks | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/graph-neural-networks/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/graph-neural-networks/index.xml" rel="self" type="application/rss+xml"/><description>Graph Neural Networks</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Graph Neural Networks</title><link>https://abrhaleyarefaine1997.github.io/tag/graph-neural-networks/</link></image><item><title>XAI Graph Neural Networks for Molecular Property Prediction</title><link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This research project focuses on predicting molecular properties using &lt;strong>Graph Neural Networks (GNNs)&lt;/strong>, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p>
-&lt;p>The goal is to develop &lt;strong>accurate, interpretable, and robust models&lt;/strong> suitable for scientific and industrial applications.&lt;/p>
-&lt;h2 id="methods">Methods&lt;/h2>
-&lt;ul>
-&lt;li>Implemented GNN architectures using &lt;strong>PyTorch Geometric&lt;/strong>&lt;/li>
-&lt;li>Designed node- and edge-level representations for molecular graphs&lt;/li>
-&lt;li>Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li>
-&lt;li>Built &lt;strong>reproducible evaluation pipelines&lt;/strong> with cross-validation&lt;/li>
-&lt;/ul>
-&lt;h2 id="explainability">Explainability&lt;/h2>
-&lt;ul>
-&lt;li>Applied &lt;strong>GNNExplainer&lt;/strong> to interpret predictions at:
-&lt;ul>
-&lt;li>node-level (important atoms)&lt;/li>
-&lt;li>edge-level (critical bonds)&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Conducted feature- and structure-level analyses for explainable predictions&lt;/li>
-&lt;/ul>
-&lt;h2 id="results">Results&lt;/h2>
-&lt;ul>
-&lt;li>Achieved strong predictive performance across molecular property benchmarks&lt;/li>
-&lt;li>Improved interpretability without sacrificing accuracy&lt;/li>
-&lt;li>Enabled model inspection suitable for research and decision support&lt;/li>
-&lt;/ul>
-&lt;h2 id="status">Status&lt;/h2>
-&lt;p>📄 Ongoing research project — publication in preparation.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Graph Neural Networks | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/graph-neural-networks/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/graph-neural-networks/index.xml" rel="self" type="application/rss+xml" />
+    <description>Graph Neural Networks</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Graph Neural Networks</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/graph-neural-networks/</link>
+    </image>
+    
+    <item>
+      <title>XAI Graph Neural Networks for Molecular Property Prediction</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This research project focuses on predicting molecular properties using &lt;strong&gt;Graph Neural Networks (GNNs)&lt;/strong&gt;, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p&gt;
+&lt;p&gt;The goal is to develop &lt;strong&gt;accurate, interpretable, and robust models&lt;/strong&gt; suitable for scientific and industrial applications.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Implemented GNN architectures using &lt;strong&gt;PyTorch Geometric&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Designed node- and edge-level representations for molecular graphs&lt;/li&gt;
+&lt;li&gt;Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li&gt;
+&lt;li&gt;Built &lt;strong&gt;reproducible evaluation pipelines&lt;/strong&gt; with cross-validation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;explainability&#34;&gt;Explainability&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Applied &lt;strong&gt;GNNExplainer&lt;/strong&gt; to interpret predictions at:
+&lt;ul&gt;
+&lt;li&gt;node-level (important atoms)&lt;/li&gt;
+&lt;li&gt;edge-level (critical bonds)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conducted feature- and structure-level analyses for explainable predictions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Achieved strong predictive performance across molecular property benchmarks&lt;/li&gt;
+&lt;li&gt;Improved interpretability without sacrificing accuracy&lt;/li&gt;
+&lt;li&gt;Enabled model inspection suitable for research and decision support&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;📄 Ongoing research project — publication in preparation.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

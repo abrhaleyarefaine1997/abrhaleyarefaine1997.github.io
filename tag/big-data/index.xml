@@ -1,1 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Big Data | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/big-data/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/big-data/index.xml" rel="self" type="application/rss+xml"/><description>Big Data</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Big Data</title><link>https://abrhaleyarefaine1997.github.io/tag/big-data/</link></image><item><title>Data &amp; AI Warsaw Tech Summit 2026</title><link>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</link><pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Big Data | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/big-data/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <description>Big Data</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Big Data</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/big-data/</link>
+    </image>
+    
+    <item>
+      <title>Data &amp; AI Warsaw Tech Summit 2026</title>
+      <link>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

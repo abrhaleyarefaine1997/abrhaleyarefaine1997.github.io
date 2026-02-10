@@ -1,629 +1,846 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data Analytics | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/data-analytics/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/data-analytics/index.xml" rel="self" type="application/rss+xml"/><description>Data Analytics</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 13 Feb 2022 08:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Data Analytics</title><link>https://abrhaleyarefaine1997.github.io/tag/data-analytics/</link></image><item><title>Have you met Julia Yet?</title><link>https://abrhaleyarefaine1997.github.io/post/have-you-met-julia-yet/</link><pubDate>Sun, 13 Feb 2022 08:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/have-you-met-julia-yet/</guid><description>&lt;details class="toc-inpage d-print-none " open>
-&lt;summary class="font-weight-bold">Table of Contents&lt;/summary>
-&lt;nav id="TableOfContents">
-&lt;ul>
-&lt;li>&lt;a href="#introduction">Introduction&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#meet-julia">Meet Julia&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#use-case-vector-normalisation">Use Case: Vector Normalisation&lt;/a>
-&lt;ul>
-&lt;li>&lt;a href="#test-environment">Test Environment&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#matlab-implementation">MATLAB Implementation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#python-implementation">Python Implementation&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#julia-implementation">Julia Implementation&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>&lt;a href="#are-loops-really-that-bad">Are loops really that bad?&lt;/a>&lt;/li>
-&lt;li>&lt;a href="#summary">Summary&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;/nav>
-&lt;/details>
-&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;hr>
-&lt;p>There are many different higher level programming languages out there such as &lt;code>C&lt;/code>/&lt;code>C++&lt;/code>, &lt;code>Go&lt;/code> and &lt;code>Java&lt;/code> which are probably considered more general computing languages or system languages.
-There are more modern languages such as &lt;code>swift&lt;/code> and &lt;code>kotlin&lt;/code> which are very popular in app development.
-Then there are higher level languages such as &lt;code>python&lt;/code>, where the focus is simplicity and ease of use to allow the user to easily convert an idea or algorithm into program code.
-There are also languages that have developed communities in specific fields such as &lt;code>R&lt;/code> for data science.
-For many years scientific computing was dominated by &lt;code>Fortran&lt;/code> and &lt;code>MATLAB&lt;/code>.
-New languages are frequently added to the list and some slowly die off.&lt;/p>
-&lt;p>There are many more examples but what the long list of languages shows is that there is rarely a language that does everything well for the needs of a particular community.
-For example, &lt;code>python&lt;/code> is easy to learn and can do almost anything, but the trade off here is that it is an interpreted language and this makes it slow in comparison to &lt;code>Java&lt;/code> and &lt;code>C&lt;/code> which are compiled.
-However, it&amp;rsquo;s ease of use has made it a star in recent years and the recent explosion in &lt;strong>data science&lt;/strong> and &lt;strong>AI&lt;/strong> has seen &lt;code>python&lt;/code>&amp;rsquo;s popularity soar.&lt;/p>
-&lt;p>If you have come from a scientific or academic background, then you will probably have spent many years using &lt;code>MATLAB&lt;/code> as it was (and still is) a staple of many science and engineering undergraduate courses.
-And once you learn something you tend to keep using it because of familiarity: &lt;em>the devil you know is better than the one you don&amp;rsquo;t!&lt;/em>&lt;/p>
-&lt;p>I fall into this last category, I learned of MATLAB as an undergraduate but couldn&amp;rsquo;t understand why we were being though something like this - who would ever need it?!
-Roll on a few years into my Ph.D. and the first thing I did most days after switching on my computer was to open &lt;code>MATLAB&lt;/code> in preparation for the days work.
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Analytics | Abrhaley Arefaine Hailenchael</title>
+    <link>https://abrhaleyarefaine1997.github.io/tag/data-analytics/</link>
+      <atom:link href="https://abrhaleyarefaine1997.github.io/tag/data-analytics/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Analytics</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Sun, 13 Feb 2022 08:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
+      <title>Data Analytics</title>
+      <link>https://abrhaleyarefaine1997.github.io/tag/data-analytics/</link>
+    </image>
+    
+    <item>
+      <title>Have you met Julia Yet?</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/have-you-met-julia-yet/</link>
+      <pubDate>Sun, 13 Feb 2022 08:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/have-you-met-julia-yet/</guid>
+      <description>&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#meet-julia&#34;&gt;Meet Julia&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#use-case-vector-normalisation&#34;&gt;Use Case: Vector Normalisation&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#test-environment&#34;&gt;Test Environment&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#matlab-implementation&#34;&gt;MATLAB Implementation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#python-implementation&#34;&gt;Python Implementation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#julia-implementation&#34;&gt;Julia Implementation&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#are-loops-really-that-bad&#34;&gt;Are loops really that bad?&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#summary&#34;&gt;Summary&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
+
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;There are many different higher level programming languages out there such as &lt;code&gt;C&lt;/code&gt;/&lt;code&gt;C++&lt;/code&gt;, &lt;code&gt;Go&lt;/code&gt; and &lt;code&gt;Java&lt;/code&gt; which are probably considered more general computing languages or system languages.
+There are more modern languages such as &lt;code&gt;swift&lt;/code&gt; and &lt;code&gt;kotlin&lt;/code&gt; which are very popular in app development.
+Then there are higher level languages such as &lt;code&gt;python&lt;/code&gt;, where the focus is simplicity and ease of use to allow the user to easily convert an idea or algorithm into program code.
+There are also languages that have developed communities in specific fields such as &lt;code&gt;R&lt;/code&gt; for data science.
+For many years scientific computing was dominated by &lt;code&gt;Fortran&lt;/code&gt; and &lt;code&gt;MATLAB&lt;/code&gt;.
+New languages are frequently added to the list and some slowly die off.&lt;/p&gt;
+&lt;p&gt;There are many more examples but what the long list of languages shows is that there is rarely a language that does everything well for the needs of a particular community.
+For example, &lt;code&gt;python&lt;/code&gt; is easy to learn and can do almost anything, but the trade off here is that it is an interpreted language and this makes it slow in comparison to &lt;code&gt;Java&lt;/code&gt; and &lt;code&gt;C&lt;/code&gt; which are compiled.
+However, it&amp;rsquo;s ease of use has made it a star in recent years and the recent explosion in &lt;strong&gt;data science&lt;/strong&gt; and &lt;strong&gt;AI&lt;/strong&gt; has seen &lt;code&gt;python&lt;/code&gt;&amp;rsquo;s popularity soar.&lt;/p&gt;
+&lt;p&gt;If you have come from a scientific or academic background, then you will probably have spent many years using &lt;code&gt;MATLAB&lt;/code&gt; as it was (and still is) a staple of many science and engineering undergraduate courses.
+And once you learn something you tend to keep using it because of familiarity: &lt;em&gt;the devil you know is better than the one you don&amp;rsquo;t!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I fall into this last category, I learned of MATLAB as an undergraduate but couldn&amp;rsquo;t understand why we were being though something like this - who would ever need it?!
+Roll on a few years into my Ph.D. and the first thing I did most days after switching on my computer was to open &lt;code&gt;MATLAB&lt;/code&gt; in preparation for the days work.
 I enjoyed using MATLAB as it made my life easier for reading big data files and doing all my calculations.
 I couldn&amp;rsquo;t have managed without it really, but I always had a desire to find something that didn&amp;rsquo;t have a big price tag attached.
-Something similar and familiar feeling but free so that I could use at home or in a future career.&lt;/p>
-&lt;p>I&amp;rsquo;d heard of this language called &lt;code>python&lt;/code> that was like a cross between &lt;code>MATLAB&lt;/code> and &lt;code>Perl&lt;/code> and thought &lt;em>&amp;ldquo;This sounds good&amp;rdquo;&lt;/em>, but I was nearing the end of my Ph.D. and the looming deadline meant I didn&amp;rsquo;t have time to explore.
-Around the same time I also came across an &lt;a href="https://julialang.org/blog/2012/02/why-we-created-julia/" target="_blank" rel="noopener">announcement&lt;/a> of a new language that sounded like my ideal language.
-Like MATLAB to use but as fast as &lt;code>C&lt;/code>. Perfect.
+Something similar and familiar feeling but free so that I could use at home or in a future career.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;d heard of this language called &lt;code&gt;python&lt;/code&gt; that was like a cross between &lt;code&gt;MATLAB&lt;/code&gt; and &lt;code&gt;Perl&lt;/code&gt; and thought &lt;em&gt;&amp;ldquo;This sounds good&amp;rdquo;&lt;/em&gt;, but I was nearing the end of my Ph.D. and the looming deadline meant I didn&amp;rsquo;t have time to explore.
+Around the same time I also came across an &lt;a href=&#34;https://julialang.org/blog/2012/02/why-we-created-julia/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;announcement&lt;/a&gt; of a new language that sounded like my ideal language.
+Like MATLAB to use but as fast as &lt;code&gt;C&lt;/code&gt;. Perfect.
 But it was new, and still under development. And my deadlines meant I soon forgot about it.
-Eventually I moved on to python and have been well served by it for many years now.&lt;/p>
-&lt;p>But I still long for more speed at times. Particularly as my data sets grow with passing time (much like my waistline really).&lt;/p>
-&lt;h2 id="meet-julia">Meet Julia&lt;/h2>
-&lt;p>This is where I want to introduce &lt;code>Julia&lt;/code>, which is still young.
-Actually, looking at the date on the post, it&amp;rsquo;s 10 years exactly tomorrow! And that is a lot younger than &lt;code>python&lt;/code>, which is approaching it&amp;rsquo;s 31&lt;sup>st&lt;/sup> birthday very soon.&lt;/p>
-&lt;p>That early announcement sounded so intriguing to me, but I wasn&amp;rsquo;t prepared to spend a lot of time learning about a language that had yet to mature and show that it would be around long-term.
-However, I must admit that I forgot about it for many years as &lt;code>python&lt;/code> did such a good job of filling all the holes in my daily workflow.&lt;/p>
-&lt;p>Recently I picked up an old computer and logged in looking for some old files and saw the icon on the desktop for &lt;code>Julia&lt;/code>.
-It was time to look it up and see how it was doing. Had they fulfilled their initial greedy ambitions? Was it even still active?&lt;/p>
-&lt;p>As it turns out, &lt;code>Julia&lt;/code> is alive and well, possibly even thriving as more and more people become aware of it.
+Eventually I moved on to python and have been well served by it for many years now.&lt;/p&gt;
+&lt;p&gt;But I still long for more speed at times. Particularly as my data sets grow with passing time (much like my waistline really).&lt;/p&gt;
+&lt;h2 id=&#34;meet-julia&#34;&gt;Meet Julia&lt;/h2&gt;
+&lt;p&gt;This is where I want to introduce &lt;code&gt;Julia&lt;/code&gt;, which is still young.
+Actually, looking at the date on the post, it&amp;rsquo;s 10 years exactly tomorrow! And that is a lot younger than &lt;code&gt;python&lt;/code&gt;, which is approaching it&amp;rsquo;s 31&lt;sup&gt;st&lt;/sup&gt; birthday very soon.&lt;/p&gt;
+&lt;p&gt;That early announcement sounded so intriguing to me, but I wasn&amp;rsquo;t prepared to spend a lot of time learning about a language that had yet to mature and show that it would be around long-term.
+However, I must admit that I forgot about it for many years as &lt;code&gt;python&lt;/code&gt; did such a good job of filling all the holes in my daily workflow.&lt;/p&gt;
+&lt;p&gt;Recently I picked up an old computer and logged in looking for some old files and saw the icon on the desktop for &lt;code&gt;Julia&lt;/code&gt;.
+It was time to look it up and see how it was doing. Had they fulfilled their initial greedy ambitions? Was it even still active?&lt;/p&gt;
+&lt;p&gt;As it turns out, &lt;code&gt;Julia&lt;/code&gt; is alive and well, possibly even thriving as more and more people become aware of it.
 I don&amp;rsquo;t want to write a tutorial on the use of Julia as there are already plenty of those, and many of which are quite detailed.
-What I would like to do is just show a simple use case that highlights the power of &lt;code>Julia&lt;/code> and why it&amp;rsquo;s worth your consideration.&lt;/p>
-&lt;h2 id="use-case-vector-normalisation">Use Case: Vector Normalisation&lt;/h2>
-&lt;p>Vector normalisation is possibly something that you would be doing frequently in scientific computing or some data processing.
-The most commonly encountered &lt;strong>vector norm&lt;/strong> (often simply called &lt;em>&amp;ldquo;the norm&amp;rdquo;&lt;/em> of a vector, or sometimes the magnitude of a vector)&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup> is the &lt;strong>L2-norm&lt;/strong>, given by&lt;/p>
-&lt;p>$$ \left| x \right| _{2} = \left| x \right| = \sqrt{{x_{1}}^{2} + {x_{2}}^{2} + &amp;hellip; + {x_{n}}^{2}} $$&lt;/p>
-&lt;p>This is a relatively simple calculation but can have a significant impact on performance if this is being calculated for a large number of vectors, partly because of the repeated use of a square root.&lt;/p>
-&lt;h3 id="test-environment">Test Environment&lt;/h3>
-&lt;p>These are the details of the system on which I will do some test.&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>System Specification&lt;/th>
-&lt;th>&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Operating System&lt;/td>
-&lt;td>Windows 11&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Processor&lt;/td>
-&lt;td>Intel i9-9880H&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Memory&lt;/td>
-&lt;td>64GB&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>MATLAB Version&lt;/td>
-&lt;td>R2020a Update 5&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Python Version&lt;/td>
-&lt;td>Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Julia Version&lt;/td>
-&lt;td>Version 1.7.2 (2022-02-06)&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h3 id="matlab-implementation">MATLAB Implementation&lt;/h3>
-&lt;p>I&amp;rsquo;ll start with the implementation in &lt;code>MATLAB&lt;/code>, although there is already a &lt;code>norm&lt;/code> and &lt;code>vecnorm&lt;/code> function available in &lt;code>MATLAB&lt;/code>.
-However, It&amp;rsquo;s quite trivial to implement such a function in &lt;code>MATLAB&lt;/code> (or any other language) using a simple for-loop to assign the result to some pre-allocated memory.
-A second function using a vectorised approach is also implemented and can be compared with the inbuilt &lt;code>vecnorm&lt;/code> function.
-Performance is measured with the inbuilt &lt;code>timeit&lt;/code> function&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.&lt;/p>
-&lt;pre>&lt;code class="language-matlab">% define simple L2norm function
-function norms = calc_norm_loop(vec_array)
-[m,n] = size(vec_array);
-norms = zeros(m);
-for i=1:m
-norms(i) = sqrt(sum(vec_array(i,:).^2));
+What I would like to do is just show a simple use case that highlights the power of &lt;code&gt;Julia&lt;/code&gt; and why it&amp;rsquo;s worth your consideration.&lt;/p&gt;
+&lt;h2 id=&#34;use-case-vector-normalisation&#34;&gt;Use Case: Vector Normalisation&lt;/h2&gt;
+&lt;p&gt;Vector normalisation is possibly something that you would be doing frequently in scientific computing or some data processing.
+The most commonly encountered &lt;strong&gt;vector norm&lt;/strong&gt; (often simply called &lt;em&gt;&amp;ldquo;the norm&amp;rdquo;&lt;/em&gt; of a vector, or sometimes the magnitude of a vector)&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; is the &lt;strong&gt;L2-norm&lt;/strong&gt;, given by&lt;/p&gt;
+&lt;p&gt;$$ \left| x \right| _{2} = \left| x \right| = \sqrt{{x_{1}}^{2} + {x_{2}}^{2} + &amp;hellip; + {x_{n}}^{2}} $$&lt;/p&gt;
+&lt;p&gt;This is a relatively simple calculation but can have a significant impact on performance if this is being calculated for a large number of vectors, partly because of the repeated use of a square root.&lt;/p&gt;
+&lt;h3 id=&#34;test-environment&#34;&gt;Test Environment&lt;/h3&gt;
+&lt;p&gt;These are the details of the system on which I will do some test.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;System  Specification&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Operating System&lt;/td&gt;
+&lt;td&gt;Windows 11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Processor&lt;/td&gt;
+&lt;td&gt;Intel i9-9880H&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Memory&lt;/td&gt;
+&lt;td&gt;64GB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;MATLAB Version&lt;/td&gt;
+&lt;td&gt;R2020a Update 5&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Python Version&lt;/td&gt;
+&lt;td&gt;Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Julia Version&lt;/td&gt;
+&lt;td&gt;Version 1.7.2 (2022-02-06)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;matlab-implementation&#34;&gt;MATLAB Implementation&lt;/h3&gt;
+&lt;p&gt;I&amp;rsquo;ll start with the implementation in &lt;code&gt;MATLAB&lt;/code&gt;, although there is already a &lt;code&gt;norm&lt;/code&gt; and &lt;code&gt;vecnorm&lt;/code&gt; function available in &lt;code&gt;MATLAB&lt;/code&gt;.
+However, It&amp;rsquo;s quite trivial to implement such a function in &lt;code&gt;MATLAB&lt;/code&gt; (or any other language) using a simple for-loop to assign the result to some pre-allocated memory.
+A second function using a vectorised approach is also implemented and can be compared with the inbuilt &lt;code&gt;vecnorm&lt;/code&gt; function.
+Performance is measured with the inbuilt &lt;code&gt;timeit&lt;/code&gt; function&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% define simple L2norm function
+function norms = calc_norm_loop(vec_array)   
+    [m,n] = size(vec_array);
+    norms = zeros(m);
+
+    for i=1:m
+        norms(i) = sqrt(sum(vec_array(i,:).^2));
+    end
+
 end
-end
+
 % vectorised
-function norms = calc_norm(vec_array)
-norms = sqrt((sum(vec_array.^2, 2)));
+function norms = calc_norm(vec_array)   
+    norms = sqrt((sum(vec_array.^2, 2)));
+
 end
-&lt;/code>&lt;/pre>
-&lt;p>A typical vector size of 50,000 3-component vectors is used for testing.&lt;/p>
-&lt;pre>&lt;code class="language-matlab">% create test set of vectors
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A typical vector size of 50,000 3-component vectors is used for testing.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-matlab&#34;&gt;% create test set of vectors
 vec_1 = rand(50000,3);
+
 f = @() calc_norm_loop(vec_1); % handle to function
 timeit(f)
+
 f2 = @() calc_norm(vec_1); % handle to function
 timeit(f2)
+
 f3 = @() vecnorm(vec_1, 2, 2);
 timeit(f3)
+
 % check results
 a = calc_norm_loop(vec_1);
 b = calc_norm(vec_1);
 c = vecnorm(vec_1, 2, 2);
+
 % output in s
-ans = 0.0153 % 15.3 ms
-ans = 6.2837e-04 % 0.6283 ms
-ans = 0.0021 % 2.1 ms
-&lt;/code>&lt;/pre>
-&lt;p>It&amp;rsquo;s not really a huge surprise to see that the for-loop implementation is the slowest by a large margin, but what is more interesting is that the vectorised function is actually many times quicker than the inbuilt function (I&amp;rsquo;ve repeated this test many times and the result is repeatable).
+ans = 0.0153        % 15.3 ms
+ans = 6.2837e-04    % 0.6283 ms
+ans = 0.0021        % 2.1 ms
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&amp;rsquo;s not really a huge surprise to see that the for-loop implementation is the slowest by a large margin, but what is more interesting is that the vectorised function is actually many times quicker than the inbuilt function (I&amp;rsquo;ve repeated this test many times and the result is repeatable).
 I&amp;rsquo;m not quite sure why this is the case and it&amp;rsquo;s a little surprising to see an inbuilt function not fully optimised.
-It is possible it&amp;rsquo;s original purpose is for calculating the norm of vectors much longer than 3 elements and, as such, may not be optimised for my typical 3-component use case.&lt;/p>
-&lt;h3 id="python-implementation">Python Implementation&lt;/h3>
-&lt;p>Much like for &lt;code>MATLAB&lt;/code> it&amp;rsquo;s quite trivial to implement such a function in native &lt;code>python&lt;/code> with a for-loop but the numerical computing library &lt;code>NumPy&lt;/code> provides a ready made solution for this&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> in the &lt;em>Linear Algebra&lt;/em> submodule and also provides the flexibility to calculate various other vector norms.&lt;/p>
-&lt;p>But if doing things in &lt;code>python&lt;/code> quickly is something you want to do, you may also be interested in the &lt;code>Numba&lt;/code> package.
-The &lt;code>Numba&lt;/code> package allows the user to significantly increase the performance of their code by pre-compiling the functions using a &lt;code>Just-In-Time&lt;/code> (&lt;em>jit&lt;/em>) compiler that runs the first time a function is called.
-Once compiled, this function is then re-used, possibly offering significant performance gains for functions that are slow and called many times.&lt;/p>
-&lt;p>Here&amp;rsquo;s the implementation of both the native and &lt;code>Numba&lt;/code> functions for calculating the L2-norm.
-The interesting thing here is probably how little needs to be done to &lt;em>jit&lt;/em> a function with &lt;code>Numba&lt;/code>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup> and unlock huge performance gains.
-In this case, just one change is required - the addition of &lt;code>@njit()&lt;/code> before the function. Super easy!!&lt;/p>
-&lt;pre>&lt;code class="language-python">import numpy as np
+It is possible it&amp;rsquo;s original purpose is for calculating the norm of vectors much longer than 3 elements and, as such, may not be optimised for my typical 3-component use case.&lt;/p&gt;
+&lt;h3 id=&#34;python-implementation&#34;&gt;Python Implementation&lt;/h3&gt;
+&lt;p&gt;Much like for &lt;code&gt;MATLAB&lt;/code&gt; it&amp;rsquo;s quite trivial to implement such a function in native &lt;code&gt;python&lt;/code&gt; with a for-loop but the numerical computing library &lt;code&gt;NumPy&lt;/code&gt; provides a ready made solution for this&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt; in the &lt;em&gt;Linear Algebra&lt;/em&gt; submodule and also provides the flexibility to calculate various other vector norms.&lt;/p&gt;
+&lt;p&gt;But if doing things in &lt;code&gt;python&lt;/code&gt; quickly is something you want to do, you may also be interested in the &lt;code&gt;Numba&lt;/code&gt; package.
+The &lt;code&gt;Numba&lt;/code&gt; package allows the user to significantly increase the performance of their code by pre-compiling the functions using a &lt;code&gt;Just-In-Time&lt;/code&gt; (&lt;em&gt;jit&lt;/em&gt;) compiler that runs the first time a function is called.
+Once compiled, this function is then re-used, possibly offering significant performance gains for functions that are slow and called many times.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the implementation of both the native and &lt;code&gt;Numba&lt;/code&gt; functions for calculating the L2-norm.
+The interesting thing here is probably how little needs to be done to &lt;em&gt;jit&lt;/em&gt; a function with &lt;code&gt;Numba&lt;/code&gt;&lt;sup id=&#34;fnref:4&#34;&gt;&lt;a href=&#34;#fn:4&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;4&lt;/a&gt;&lt;/sup&gt; and unlock huge performance gains.
+In this case, just one change is required - the addition of &lt;code&gt;@njit()&lt;/code&gt; before the function. Super easy!!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 import math
+
 from numba import njit
+
 #%% Test functions - L2 Norm
-# Native Python Implementation
+# Native Python Implementation  
+
 def native_norm(vects):
-norms = []
-for vec in vects:
-norms.append(math.sqrt(vec[0]**2 + vec[1]**2 + vec[2]**2))
-return norms
+    norms = []
+    for vec in vects:
+        norms.append(math.sqrt(vec[0]**2 + vec[1]**2 + vec[2]**2))
+        
+    return norms
+
 # Numba Implementation
 @njit()
 def numba_norm(vects):
-norms = []
-for vec in vects:
-norms.append(math.sqrt(vec[0]**2 + vec[1]**2 + vec[2]**2))
-return norms
-&lt;/code>&lt;/pre>
-&lt;p>As many operations are size dependent, I&amp;rsquo;m going to use the &lt;code>perfplot&lt;/code> package to helpfully run a benchmark suite of arrays of different sizes, from a single vector to a very large array of 3-component vectors.&lt;/p>
-&lt;pre>&lt;code class="language-python">out = perfplot.bench(
-setup=lambda n: np.random.random([n,3]), # setup random nx3 array
-kernels=[
-lambda a: native_norm(a),
-lambda a: np.linalg.norm(a, axis=1),
-lambda a: numba_norm(a),
-],
-labels=[&amp;quot;Native&amp;quot;, &amp;quot;NumPy&amp;quot;, &amp;quot;Numba&amp;quot;],
-n_range=[2**k for k in range(25)],
-xlabel=&amp;quot;Number of vectors [Nr.]&amp;quot;,
-title=&amp;quot;L2-norm Performance&amp;quot;
+    norms = []
+    for vec in vects:
+        norms.append(math.sqrt(vec[0]**2 + vec[1]**2 + vec[2]**2))
+        
+    return norms
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As many operations are size dependent, I&amp;rsquo;m going to use the &lt;code&gt;perfplot&lt;/code&gt; package to helpfully run a benchmark suite of arrays of different sizes, from a single vector to a very large array of 3-component vectors.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;out = perfplot.bench(
+    setup=lambda n: np.random.random([n,3]),  # setup random nx3 array
+    kernels=[
+        lambda a: native_norm(a),
+        lambda a: np.linalg.norm(a, axis=1),
+        lambda a: numba_norm(a),
+    ],
+    labels=[&amp;quot;Native&amp;quot;, &amp;quot;NumPy&amp;quot;, &amp;quot;Numba&amp;quot;],
+    n_range=[2**k for k in range(25)],
+    xlabel=&amp;quot;Number of vectors [Nr.]&amp;quot;,
+    title=&amp;quot;L2-norm Performance&amp;quot;
+
 )
+
 out.show(
-time_unit=&amp;quot;us&amp;quot;, # set to one of (&amp;quot;auto&amp;quot;, &amp;quot;s&amp;quot;, &amp;quot;ms&amp;quot;, &amp;quot;us&amp;quot;, or &amp;quot;ns&amp;quot;) to force plot units
+    time_unit=&amp;quot;us&amp;quot;,  # set to one of (&amp;quot;auto&amp;quot;, &amp;quot;s&amp;quot;, &amp;quot;ms&amp;quot;, &amp;quot;us&amp;quot;, or &amp;quot;ns&amp;quot;) to force plot units
 )
-&lt;/code>&lt;/pre>
-&lt;p>This automates the whole process and creates a nice plot of the relative performance of the supplied function(s) which you can see in the figure below.&lt;/p>
-&lt;figure id="figure-performance-of-various-computation-methods-for-l2-norm-calculation">
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img alt="**Performance of various computation methods for L2-norm calculation**" srcset="
-/post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_e1aa41b289549f546dce82544273cc43.png 400w,
-/post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_9bfa7728641ada83f7ab0c779b0b223e.png 760w,
-/post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_1200x1200_fit_lanczos_3.png 1200w"
-src="https://abrhaleyarefaine1997.github.io/post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_e1aa41b289549f546dce82544273cc43.png"
-width="760"
-height="553"
-loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;figcaption>
-&lt;strong>Performance of various computation methods for L2-norm calculation&lt;/strong>
-&lt;/figcaption>&lt;/figure>
-&lt;div class="alert alert-warning">
-&lt;div>
-Note: The &lt;code>Numba&lt;/code> function needs to be compiled before running the suite of benchmark tests or else the compilation time of the function is included. The function is compiled on first usage.
-&lt;/div>
-&lt;/div>
-&lt;p>Some interesting takeaways from the results are:&lt;/p>
-&lt;ol>
-&lt;li>The native python implementation is the slowest (Not Surprising!)&lt;/li>
-&lt;li>Numba is a powerful just-in-time compiler than can make your functions many times quicker. The &lt;em>jitted&lt;/em> function is somewhere between 1 and 2 orders of magnitude quicker than the native &lt;code>python&lt;/code> code. &lt;strong>50-100x faster&lt;/strong> for one line of code more!&lt;/li>
-&lt;li>As the array size increase, the &lt;code>Numba&lt;/code> and &lt;code>NumPy&lt;/code> solutions converge to the same results suggesting the code is being compiled to the same machine code. &lt;code>NumPy&lt;/code> is slower for the smaller array sizes due to the overhead related to the &lt;code>NumPy&lt;/code> function such as various implementation options and error checking. This overhead is large for the small array sizes but disappears for arrays above about several thousand rows in this. This is worth bearing in mind if you will only be working on small datasets.&lt;/li>
-&lt;/ol>
-&lt;p>Although, I&amp;rsquo;m using a specific package for my benchmarking, it&amp;rsquo;s really just automating the process of using &lt;code>timeit&lt;/code>.
-You will get very similar results running the following code for each size of array but this is a little tedious.&lt;/p>
-&lt;pre>&lt;code class="language-python">vects = np.random.random([100,3])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This automates the whole process and creates a nice plot of the relative performance of the supplied function(s) which you can see in the figure below.&lt;/p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-performance-of-various-computation-methods-for-l2-norm-calculation&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;**Performance of various computation methods for L2-norm calculation**&#34; srcset=&#34;
+               /post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_e1aa41b289549f546dce82544273cc43.png 400w,
+               /post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_9bfa7728641ada83f7ab0c779b0b223e.png 760w,
+               /post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/post/have-you-met-julia-yet/perf_huea4428fb89232aacada35ef6eb66b63c_64255_e1aa41b289549f546dce82544273cc43.png&#34;
+               width=&#34;760&#34;
+               height=&#34;553&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;strong&gt;Performance of various computation methods for L2-norm calculation&lt;/strong&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    Note: The &lt;code&gt;Numba&lt;/code&gt; function needs to be compiled before running the suite of benchmark tests or else the compilation time of the function is included. The function is compiled on first usage.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;Some interesting takeaways from the results are:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The native python implementation is the slowest (Not Surprising!)&lt;/li&gt;
+&lt;li&gt;Numba is a powerful just-in-time compiler than can make your functions many times quicker. The &lt;em&gt;jitted&lt;/em&gt; function is somewhere between 1 and 2 orders of magnitude quicker than the native &lt;code&gt;python&lt;/code&gt; code. &lt;strong&gt;50-100x faster&lt;/strong&gt; for one line of code more!&lt;/li&gt;
+&lt;li&gt;As the array size increase, the &lt;code&gt;Numba&lt;/code&gt; and &lt;code&gt;NumPy&lt;/code&gt; solutions converge to the same results suggesting the code is being compiled to the same machine code. &lt;code&gt;NumPy&lt;/code&gt; is slower for the smaller array sizes due to the overhead related to the &lt;code&gt;NumPy&lt;/code&gt; function such as various implementation options and error checking. This overhead is large for the small array sizes but disappears for arrays above about several thousand rows in this. This is worth bearing in mind if you will only be working on small datasets.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Although, I&amp;rsquo;m using a specific package for my benchmarking, it&amp;rsquo;s really just automating the process of using &lt;code&gt;timeit&lt;/code&gt;.
+You will get very similar results running the following code for each size of array but this is a little tedious.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;vects = np.random.random([100,3])
+
 %timeit native_norms = native_norm(vects)
 119 µs ± 1.61 µs per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+
 %timeit numpy_norms = np.linalg.norm(vects, axis=1)
 6.72 µs ± 305 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+
 %timeit numba_norms = numba_norm(vects)
 1.96 µs ± 31.3 ns per loop (mean ± std. dev. of 7 runs, 1000000 loops each)
-&lt;/code>&lt;/pre>
-&lt;p>A more representative size for my typical use case would be much larger and, as shown in the figure, the gap between the &lt;code>NumPy&lt;/code> and &lt;code>Numba&lt;/code> implementations has disappeared at this size.&lt;/p>
-&lt;pre>&lt;code class="language-python">vects = np.random.random([50000,3])
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A more representative size for my typical use case would be much larger and, as shown in the figure, the gap between the &lt;code&gt;NumPy&lt;/code&gt; and &lt;code&gt;Numba&lt;/code&gt; implementations has disappeared at this size.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;vects = np.random.random([50000,3])
+
 %timeit native_norms = native_norm(vects)
 59.5 ms ± 1.53 ms per loop (mean ± std. dev. of 7 runs, 10 loops each)
+
 %timeit numpy_norms = np.linalg.norm(vects, axis=1)
 920 µs ± 13.2 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
+
 %timeit numba_norms = numba_norm(vects)
 841 µs ± 102 µs per loop (mean ± std. dev. of 7 runs, 1000 loops each)
-&lt;/code>&lt;/pre>
-&lt;p>Some interesting comparisons to the MATLAB results can be made with this set of figures for the larger test array size of 50,000 vectors. &lt;code>MATLAB&lt;/code>&amp;rsquo;s for-loop is several times quicker than the native &lt;code>python&lt;/code> loop, but both the &lt;code>NumPy&lt;/code> and &lt;code>Numba&lt;/code> implementations are quicker than &lt;code>vecnorm&lt;/code> but slightly slower than the home-rolled vectorised function.&lt;/p>
-&lt;p>It&amp;rsquo;s worth pointing out that &lt;code>timeit&lt;/code> returns the mean for &lt;code>python&lt;/code> and the &lt;code>median&lt;/code> for &lt;code>MATLAB&lt;/code>.
-I&amp;rsquo;ve also noticed that the &lt;code>MATLAB&lt;/code> timing results are much less consistent as it only runs a small number of tests (just 11 in this case I think), so I&amp;rsquo;ve seen results range from 550 µs to 1.2 ms, putting it back in the same performance bracket as &lt;code>python&lt;/code> when averaging these results.&lt;/p>
-&lt;h3 id="julia-implementation">Julia Implementation&lt;/h3>
-&lt;p>Using &lt;code>Julia&lt;/code> is a bit like writing code for &lt;code>python&lt;/code> or &lt;code>MATLAB&lt;/code> and it can be executed from the Julia REPL or using scripts.
-&lt;code>Julia&lt;/code> is in some sense acting a bit like &lt;code>Numba&lt;/code> in that is is compiling all the code before execution to benefit from the performance gained from compiled code.&lt;/p>
-&lt;p>While I&amp;rsquo;m not yet aware of any &lt;code>perfplot&lt;/code> equivalent for &lt;code>Julia&lt;/code> just yet, it is relatively easy to measure the performance of any functions using the &lt;code>BenchmarkTools&lt;/code> package.
-I&amp;rsquo;m also going to use the &lt;code>LinearAlgebra&lt;/code> and &lt;code>LoopVectorization&lt;/code> packages to explore other options.&lt;/p>
-&lt;p>I&amp;rsquo;ve written the equivalent Julia function to my &lt;code>MATLAB&lt;/code> and native &lt;code>python&lt;/code> functions from earlier but in a vectorised manner as this is how I would write a similar function using &lt;code>Numpy&lt;/code>.
-Years of MATLAB/python exposure has &lt;em>&amp;ldquo;loops are bad&amp;rdquo;&lt;/em> seared in my brain, but the results in the previous sections have demonstrated that is invariably the case in those languages.&lt;/p>
-&lt;pre>&lt;code class="language-Julia">using BenchmarkTools
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Some interesting comparisons to the MATLAB results can be made with this set of figures for the larger test array size of 50,000 vectors. &lt;code&gt;MATLAB&lt;/code&gt;&amp;rsquo;s for-loop is several times quicker than the native &lt;code&gt;python&lt;/code&gt; loop, but both the &lt;code&gt;NumPy&lt;/code&gt; and &lt;code&gt;Numba&lt;/code&gt; implementations are quicker than &lt;code&gt;vecnorm&lt;/code&gt; but slightly slower than the home-rolled vectorised function.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s worth pointing out that &lt;code&gt;timeit&lt;/code&gt; returns the mean for &lt;code&gt;python&lt;/code&gt; and the &lt;code&gt;median&lt;/code&gt; for &lt;code&gt;MATLAB&lt;/code&gt;.
+I&amp;rsquo;ve also noticed that the &lt;code&gt;MATLAB&lt;/code&gt; timing results are much less consistent as it only runs a small number of tests (just 11 in this case I think), so I&amp;rsquo;ve seen results range from 550 µs to 1.2 ms, putting it back in the same performance bracket as &lt;code&gt;python&lt;/code&gt; when averaging these results.&lt;/p&gt;
+&lt;h3 id=&#34;julia-implementation&#34;&gt;Julia Implementation&lt;/h3&gt;
+&lt;p&gt;Using &lt;code&gt;Julia&lt;/code&gt; is a bit like writing code for &lt;code&gt;python&lt;/code&gt; or &lt;code&gt;MATLAB&lt;/code&gt; and it can be executed from the Julia REPL or using scripts.
+&lt;code&gt;Julia&lt;/code&gt; is in some sense acting a bit like &lt;code&gt;Numba&lt;/code&gt; in that is is compiling all the code before execution to benefit from the performance gained from compiled code.&lt;/p&gt;
+&lt;p&gt;While I&amp;rsquo;m not yet aware of any &lt;code&gt;perfplot&lt;/code&gt; equivalent for &lt;code&gt;Julia&lt;/code&gt; just yet, it is relatively easy to measure the performance of any functions using the &lt;code&gt;BenchmarkTools&lt;/code&gt; package.
+I&amp;rsquo;m also going to use the &lt;code&gt;LinearAlgebra&lt;/code&gt; and &lt;code&gt;LoopVectorization&lt;/code&gt; packages to explore other options.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve written the equivalent Julia function to my &lt;code&gt;MATLAB&lt;/code&gt; and native &lt;code&gt;python&lt;/code&gt; functions from earlier but in a vectorised manner as this is how I would write a similar function using &lt;code&gt;Numpy&lt;/code&gt;.
+Years of MATLAB/python exposure has &lt;em&gt;&amp;ldquo;loops are bad&amp;rdquo;&lt;/em&gt; seared in my brain, but the results in the previous sections have demonstrated that is invariably the case in those languages.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Julia&#34;&gt;using BenchmarkTools
 using LinearAlgebra
 using LoopVectorization
+
 vec_1 = rand(50000,3)
+
 function normalize_by_row(arr)
-sqrt.(sum(arr.^2, dims=2))
+   sqrt.(sum(arr.^2, dims=2))
 end
-&lt;/code>&lt;/pre>
-&lt;p>&lt;code>@btime&lt;/code> provides a similar output to &lt;code>timeit&lt;/code>, but it also includes the amount of memory used and number of memory allocations in the function.
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;@btime&lt;/code&gt; provides a similar output to &lt;code&gt;timeit&lt;/code&gt;, but it also includes the amount of memory used and number of memory allocations in the function.
 Useful information for improving any function, however, it is returning the minimum execution time instead of the mean or median.
-A more &amp;lsquo;&lt;em>full-fat&lt;/em>&amp;rsquo; option of &lt;code>@benchmark&lt;/code> can also be used to get these metrics and other additional information.&lt;/p>
-&lt;pre>&lt;code class="language-julia">julia&amp;gt; @btime nrm = normalize_by_row($vec_1);
-393.300 μs (10 allocations: 1.91 MiB)
+A more &amp;lsquo;&lt;em&gt;full-fat&lt;/em&gt;&amp;rsquo; option of &lt;code&gt;@benchmark&lt;/code&gt; can also be used to get these metrics and other additional information.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;julia&amp;gt; @btime nrm = normalize_by_row($vec_1);
+  393.300 μs (10 allocations: 1.91 MiB)
+
 julia&amp;gt; @benchmark nrm = normalize_by_row($vec_1)
 BenchmarkTools.Trial: 7864 samples with 1 evaluation.
-Range (min … max): 378.100 μs … 7.246 ms ┊ GC (min … max): 0.00% … 61.97%
-Time (median): 454.300 μs ┊ GC (median): 0.00%
-Time (mean ± σ): 632.479 μs ± 628.993 μs ┊ GC (mean ± σ): 19.93% ± 17.28%
-▇█▆▅▄▃▂▂▁▁▁ ▂
-██████████████▇▇▇▆▆▄▄▄▃▁▄▃▁▃▁▃▁▁▁▃▁▁▁▁▁▄▄▄▅▅▅▅▇▇▇▇▇█▇▇▆▇▇▆▆▆▅ █
-378 μs Histogram: log(frequency) by time 3.76 ms &amp;lt;
-Memory estimate: 1.91 MiB, allocs estimate: 10.
-&lt;/code>&lt;/pre>
-&lt;p>From this output we can see that our &lt;code>Julia&lt;/code> function completes this operation on 50,000 3-component vectors over 7800 times with a median time of 454 μs and a mean time of 632 μs.
-We can also see that our function is using about 2MB of memory to carry out this process.&lt;/p>
-&lt;p>So how did our &lt;code>MATLAB&lt;/code> and &lt;code>python&lt;/code> code perform for the same size array? Well if you remember, both were woefully slow in the for-loop but using the vectorised approach both were in the region of 800-900 μs.
-Straight out of the box &lt;code>Julia&lt;/code> outperforms both by a noticeable margin (20% or more) with little thought and zero optimisation required.
-I&amp;rsquo;m already beginning to see a case for switching to using &lt;code>Julia&lt;/code>&amp;hellip;&lt;/p>
-&lt;p>But what about my initial &lt;code>Julia&lt;/code> code? Can it be optimised like we did for &lt;code>MATLAB&lt;/code> and &lt;code>python&lt;/code>? What about all those memory allocations - do they make any difference to speed?
-Let&amp;rsquo;s have a look at a few more possible options and see if there is a bit more performance to be gained.&lt;/p>
-&lt;p>Here&amp;rsquo;s the first attempt.&lt;/p>
-&lt;pre>&lt;code class="language-julia"> function normalize_by_row_v2(arr)
-norms = Vector{Float64}(undef, size(arr)[1])
-temp = arr.^2
-for i in axes(arr,1)
-@views norms[i] = sqrt(sum(temp[i,:]))
-end
-return norms
-end
+ Range (min … max):  378.100 μs …   7.246 ms  ┊ GC (min … max):  0.00% … 61.97%
+ Time  (median):     454.300 μs               ┊ GC (median):     0.00%
+ Time  (mean ± σ):   632.479 μs ± 628.993 μs  ┊ GC (mean ± σ):  19.93% ± 17.28%
+
+  ▇█▆▅▄▃▂▂▁▁▁                                                   ▂
+  ██████████████▇▇▇▆▆▄▄▄▃▁▄▃▁▃▁▃▁▁▁▃▁▁▁▁▁▄▄▄▅▅▅▅▇▇▇▇▇█▇▇▆▇▇▆▆▆▅ █
+  378 μs        Histogram: log(frequency) by time       3.76 ms &amp;lt;
+
+ Memory estimate: 1.91 MiB, allocs estimate: 10.
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From this output we can see that our &lt;code&gt;Julia&lt;/code&gt; function completes this operation on 50,000 3-component vectors over 7800 times with a median time of 454 μs and a mean time of 632 μs.
+We can also see that our function is using about 2MB of memory to carry out this process.&lt;/p&gt;
+&lt;p&gt;So how did our &lt;code&gt;MATLAB&lt;/code&gt; and &lt;code&gt;python&lt;/code&gt; code perform for the same size array? Well if you remember, both were woefully slow in the for-loop but using the vectorised approach both were in the region of 800-900 μs.
+Straight out of the box &lt;code&gt;Julia&lt;/code&gt; outperforms both by a noticeable margin (20% or more) with little thought and zero optimisation required.
+I&amp;rsquo;m already beginning to see a case for switching to using &lt;code&gt;Julia&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;But what about my initial &lt;code&gt;Julia&lt;/code&gt; code? Can it be optimised like we did for &lt;code&gt;MATLAB&lt;/code&gt; and &lt;code&gt;python&lt;/code&gt;? What about all those memory allocations - do they make any difference to speed?
+Let&amp;rsquo;s have a look at a few more possible options and see if there is a bit more performance to be gained.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the first attempt.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt; function normalize_by_row_v2(arr)
+    norms = Vector{Float64}(undef, size(arr)[1])
+    temp = arr.^2
+    for i in axes(arr,1)
+       @views norms[i] = sqrt(sum(temp[i,:]))
+    end
+    
+    return norms
+ end
+
 julia&amp;gt; @btime nrm = normalize_by_row_v2($vec_1);
-391.300 μs (4 allocations: 1.53 MiB)
-&lt;/code>&lt;/pre>
-&lt;p>This implementation looks quite different from the first attempt which was a simple broadcasted one-line solution.
-&lt;strong>This one has a loop&lt;/strong>!
+  391.300 μs (4 allocations: 1.53 MiB)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This implementation looks quite different from the first attempt which was a simple broadcasted one-line solution.
+&lt;strong&gt;This one has a loop&lt;/strong&gt;!
 It&amp;rsquo;s also using a temporary array for storage and the views function to reduce copying to memory.
-Now here is the really interesting thing about &lt;code>Julia&lt;/code> - even though I&amp;rsquo;ve reverted to a for-loop like tested earlier, performance has not been impacted at all.
+Now here is the really interesting thing about &lt;code&gt;Julia&lt;/code&gt; - even though I&amp;rsquo;ve reverted to a for-loop like tested earlier, performance has not been impacted at all.
 In fact, this implementation has reduced memory usage and the number of memory allocations, making the code more memory efficient without slowing things down.
-This is the really nice thing about using &lt;code>Julia&lt;/code>: your code is &lt;strong>automatically optimised!&lt;/strong>&lt;/p>
-&lt;p>Here&amp;rsquo;s another attempt at the one-liner with a subtle change from earlier that does improve the performance and it&amp;rsquo;s quite a significant jump.
-&lt;code>Julia&lt;/code> is now approximately &lt;strong>3-5 times quicker&lt;/strong> than &lt;code>MATLAB&lt;/code> and &lt;code>python&lt;/code>.&lt;/p>
-&lt;pre>&lt;code class="language-julia">function normalize_by_row_v3(arr)
-sqrt.(sum(x-&amp;gt;x^2,arr, dims=2))
+This is the really nice thing about using &lt;code&gt;Julia&lt;/code&gt;: your code is &lt;strong&gt;automatically optimised!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s another attempt at the one-liner with a subtle change from earlier that does improve the performance and it&amp;rsquo;s quite a significant jump.
+&lt;code&gt;Julia&lt;/code&gt; is now approximately &lt;strong&gt;3-5 times quicker&lt;/strong&gt; than &lt;code&gt;MATLAB&lt;/code&gt; and &lt;code&gt;python&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;function normalize_by_row_v3(arr)
+    sqrt.(sum(x-&amp;gt;x^2,arr, dims=2))
 end
+
 julia&amp;gt; @btime nrm = normalize_by_row_v3($vec_1);
-138.300 μs (8 allocations: 781.42 KiB)
-&lt;/code>&lt;/pre>
-&lt;p>So now you must be thinking &lt;em>&amp;ldquo;we have not done much yet, maybe we can optimise this function more?&amp;rdquo;&lt;/em>.
-To try and &lt;em>&amp;lsquo;scratch that itch&amp;rsquo;&lt;/em> I&amp;rsquo;ve gone thorough the docs, watched a few youtube videos and scoured some of the popular user forums and come up with a few possible options.
-If it is possible to squeeze more performance, how much better can we do?&lt;/p>
-&lt;h2 id="are-loops-really-that-bad">Are loops really that bad?&lt;/h2>
-&lt;p>So I briefly mentioned this idea that loops are bad and you may be familiar with this concept if you are coming from &lt;code>python&lt;/code> and &lt;code>MATLAB&lt;/code>, where the for-loop option is often many times slower than the vectorised approach.
-But in my few examples, I&amp;rsquo;ve just demonstrated that this isn&amp;rsquo;t the case in &lt;code>Julia&lt;/code> where a loop can achieve the same performance as the vectorised approach.&lt;/p>
-&lt;p>This is because all code is statically typed and then compiled, much like &lt;code>Fortran&lt;/code>, &lt;code>C&lt;/code> or &lt;code>Java&lt;/code> and not interpreted like &lt;code>MATLAB&lt;/code> or &lt;code>python&lt;/code>.
+  138.300 μs (8 allocations: 781.42 KiB)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;So now you must be thinking &lt;em&gt;&amp;ldquo;we have not done much yet, maybe we can optimise this function more?&amp;rdquo;&lt;/em&gt;.
+To try and &lt;em&gt;&amp;lsquo;scratch that itch&amp;rsquo;&lt;/em&gt; I&amp;rsquo;ve gone thorough the docs, watched a few youtube videos and scoured some of the popular user forums and come up with a few possible options.
+If it is possible to squeeze more performance, how much better can we do?&lt;/p&gt;
+&lt;h2 id=&#34;are-loops-really-that-bad&#34;&gt;Are loops really that bad?&lt;/h2&gt;
+&lt;p&gt;So I briefly mentioned this idea that loops are bad and you may be familiar with this concept if you are coming from &lt;code&gt;python&lt;/code&gt; and &lt;code&gt;MATLAB&lt;/code&gt;, where the for-loop option is often many times slower than the vectorised approach.
+But in my few examples, I&amp;rsquo;ve just demonstrated that this isn&amp;rsquo;t the case in &lt;code&gt;Julia&lt;/code&gt; where a loop can achieve the same performance as the vectorised approach.&lt;/p&gt;
+&lt;p&gt;This is because all code is statically typed and then compiled, much like &lt;code&gt;Fortran&lt;/code&gt;, &lt;code&gt;C&lt;/code&gt; or &lt;code&gt;Java&lt;/code&gt; and not interpreted like &lt;code&gt;MATLAB&lt;/code&gt; or &lt;code&gt;python&lt;/code&gt;.
 This static typing and compilation allows much more performance to be extracted as all the information is known beforehand and the compiler can then optimise the code into fast machine code whereas in interpreted languages there is a constant need to check everything as type information is often missing and then it needs to be translated into machine code at runtime.
-Packages like &lt;code>NumPy&lt;/code> provide highly optimised functions that are actually compiled to &lt;code>C&lt;/code> beforehand, hence their performance.&lt;/p>
-&lt;p>I think that&amp;rsquo;s partly where this &lt;em>&amp;ldquo;loops are bad&amp;rdquo;&lt;/em> mentality comes from: in an interpreted language there are quick vectorised libraries that you can use and they are quicker than something that will be compiled into &lt;code>bytecode&lt;/code> by the &lt;code>python&lt;/code> compiler for example.&lt;/p>
-&lt;p>So let&amp;rsquo;s see how we can optimise our &lt;code>Julia&lt;/code> code by passing some additional instructions to the compiler to help it.&lt;/p>
-&lt;pre>&lt;code class="language-julia"> function normalize_by_row_v4(arr)
-norms = Vector{Float64}(undef, size(arr)[1])
-@inbounds for i in axes(arr, 1)
-anorm2 = zero(eltype(arr))
-for j in axes(arr, 2)
-anorm2 += arr[i, j]^2
+Packages like &lt;code&gt;NumPy&lt;/code&gt; provide highly optimised functions that are actually compiled to &lt;code&gt;C&lt;/code&gt; beforehand, hence their performance.&lt;/p&gt;
+&lt;p&gt;I think that&amp;rsquo;s partly where this &lt;em&gt;&amp;ldquo;loops are bad&amp;rdquo;&lt;/em&gt; mentality comes from: in an interpreted language there are quick vectorised libraries that you can use and they are quicker than something that will be compiled into &lt;code&gt;bytecode&lt;/code&gt; by the &lt;code&gt;python&lt;/code&gt; compiler for example.&lt;/p&gt;
+&lt;p&gt;So let&amp;rsquo;s see how we can optimise our &lt;code&gt;Julia&lt;/code&gt; code by passing some additional instructions to the compiler to help it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt; function normalize_by_row_v4(arr)
+    norms = Vector{Float64}(undef, size(arr)[1])
+    @inbounds for i in axes(arr, 1)
+        anorm2 = zero(eltype(arr))
+        for j in axes(arr, 2)
+            anorm2 += arr[i, j]^2
+        end
+        norms[i] = sqrt(anorm2)
+
+    end
+    return norms
 end
-norms[i] = sqrt(anorm2)
-end
-return norms
-end
-julia&amp;gt; @btime nrm = normalize_by_row_v4($vec_1);
-91.700 μs (2 allocations: 390.67 KiB)
-&lt;/code>&lt;/pre>
-&lt;p>&lt;strong>Wow!&lt;/strong> So we have found another 30% reduction in from our best performing method so far but actually about 4x quicker than our previous looped example.&lt;/p>
-&lt;p>It&amp;rsquo;s also possible to use the &lt;code>LoopVectorization&lt;/code> package to enable some extra optimisations during the compilation process.
+
+julia&amp;gt;  @btime nrm = normalize_by_row_v4($vec_1);
+  91.700 μs (2 allocations: 390.67 KiB)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Wow!&lt;/strong&gt; So we have found another 30% reduction in from our best performing method so far but actually about 4x quicker than our previous looped example.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s also possible to use the &lt;code&gt;LoopVectorization&lt;/code&gt; package to enable some extra optimisations during the compilation process.
 Always verify that these optimisations don&amp;rsquo;t affect the results from your calculations as they may be doing something like changing the order of calculations.
-You have been warned!&lt;/p>
-&lt;pre>&lt;code class="language-julia">using LoopVectorization
+You have been warned!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-julia&#34;&gt;using LoopVectorization
+
 function normalize_by_row_v4_turbo(arr)
-norms = Vector{Float64}(undef, size(arr)[1])
-@turbo for i in axes(arr, 1)
-anorm2 = zero(eltype(arr))
-for j in axes(arr, 2)
-anorm2 += arr[i, j]^2
+    norms = Vector{Float64}(undef, size(arr)[1])
+    @turbo for i in axes(arr, 1)
+        anorm2 = zero(eltype(arr))
+        for j in axes(arr, 2)
+            anorm2 += arr[i, j]^2
+        end
+        norms[i] = sqrt(anorm2)
+
+    end
+    return norms
 end
-norms[i] = sqrt(anorm2)
-end
-return norms
-end
-julia&amp;gt; @btime nrm7 = normalize_by_row_v4_turbo($vec_1);
-40.300 μs (2 allocations: 390.67 KiB)
-&lt;/code>&lt;/pre>
-&lt;p>&lt;strong>Another wow!&lt;/strong> By using the &lt;code>LoopVectorization&lt;/code> package we can give the &lt;code>@turbo&lt;/code> instruction to the compiler which really does add some turbo!!
-So there you have it, proof that loops are not bad! Our optimised &lt;code>Julia&lt;/code> function has blown &lt;code>python&lt;/code> and &lt;code>MATLAB&lt;/code> out of the water and is now about &lt;strong>10-15x faster&lt;/strong>.&lt;/p>
-&lt;p>This was a relatively simple use case but highlights even for something simple there are possibly significant gains to be made.
-As I mentioned earlier &lt;code>Julia&lt;/code> is still young but it appears to be reaching a point where it&amp;rsquo;s difficult to ignore it any more.
-There is no doubting it&amp;rsquo;s fast, it&amp;rsquo;s on the same level as &lt;code>C&lt;/code>, &lt;code>C++&lt;/code> and &lt;code>Fortran&lt;/code> and is a member of the &lt;strong>Petaflop Club&lt;/strong> having achieved 1.54 petaflops with 1.3 million threads on the Cray XC40 supercomputer&lt;sup id="fnref:5">&lt;a href="#fn:5" class="footnote-ref" role="doc-noteref">5&lt;/a>&lt;/sup>.&lt;/p>
-&lt;h2 id="summary">Summary&lt;/h2>
-&lt;p>One line summary - If you want to make your &lt;code>python&lt;/code> code &lt;em>&lt;strong>10x times quicker&lt;/strong>&lt;/em> use &lt;code>Julia&lt;/code>!!&lt;/p>
-&lt;p>Well that&amp;rsquo;s not really been the point of this post, but it is eye catching. 10x speedup is a lot.&lt;/p>
-&lt;p>But there&amp;rsquo;s more to &lt;code>Julia&lt;/code> than just speed. It has an interactive REPL just like &lt;code>python&lt;/code>, it is supported by &lt;code>Jupyter&lt;/code> notebooks and has it&amp;rsquo;s own interactive notebooks called &lt;code>Pluto&lt;/code> which I think are actually far superior. Want multi-threading? Done!
-&lt;code>Julia&lt;/code> was created by &lt;code>MATLAB&lt;/code> and &lt;code>python&lt;/code> users so there will be a somewhat familiar feel to those making the transition.&lt;/p>
-&lt;p>There is also a growing eco-system that allows users start on tasks like solving lots of differential equations or machine learning without much development required by the user.&lt;/p>
-&lt;p>I&amp;rsquo;m very impressed by where &lt;code>Julia&lt;/code> has ended up after 10 years and it&amp;rsquo;s something I seriously consider now every time I am starting a new project as there is still some inertia in shifting completely from one language to a new one.
-I don&amp;rsquo;t know if I will ever completely switch, but I do know I&amp;rsquo;m going to be using &lt;code>Julia&lt;/code> a lot more in the future to reduce some of my computing bottlenecks in some tasks.&lt;/p>
-&lt;p>Have you seen enough to tempt you into getting to know &lt;code>Julia&lt;/code> a bit better?&lt;/p>
-&lt;h1 id="references">References&lt;/h1>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>Weisstein, Eric W. &amp;ldquo;Vector Norm.&amp;rdquo; From MathWorld&amp;ndash;A Wolfram Web Resource. &lt;a href="https://mathworld.wolfram.com/VectorNorm.html" target="_blank" rel="noopener">https://mathworld.wolfram.com/VectorNorm.html&lt;/a>. Accessed on 13/2/2022&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>Eddins, Steve. &amp;ldquo;timeit makes it into MATLAB&amp;rdquo;. &lt;a href="https://blogs.mathworks.com/steve/2013/09/30/timeit-makes-it-into-matlab/?doing_wp_cron=1645382790.6918818950653076171875" target="_blank" rel="noopener">https://blogs.mathworks.com/steve/2013/09/30/timeit-makes-it-into-matlab/?doing_wp_cron=1645382790.6918818950653076171875&lt;/a>. Accessed on 13/2/2022&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3">
-&lt;p>NumPy API Reference. &lt;a href="https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html#rac1c834adb66-1" target="_blank" rel="noopener">https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html#rac1c834adb66-1&lt;/a>. Accessed on 13/2/2022&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4">
-&lt;p>Numba Quickstart Guide. &lt;a href="https://numba.pydata.org/numba-doc/latest/user/5minguide.html" target="_blank" rel="noopener">https://numba.pydata.org/numba-doc/latest/user/5minguide.html&lt;/a>. Accessed on 13/2/2022&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:5">
-&lt;p>&amp;ldquo;Julia Joins Petaflop Club&amp;rdquo;. &lt;a href="https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/" target="_blank" rel="noopener">https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/&lt;/a>. Accessed on 13/2/2022&amp;#160;&lt;a href="#fnref:5" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description></item><item><title>Are you using Data Classes?</title><link>https://abrhaleyarefaine1997.github.io/post/dataclasses/</link><pubDate>Sun, 16 May 2021 18:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/dataclasses/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;hr>
-&lt;p>I don&amp;rsquo;t know about you but I have a tendency to store results in a dictionary and pass that around to functions when I need to.
+
+julia&amp;gt;  @btime nrm7 = normalize_by_row_v4_turbo($vec_1);
+  40.300 μs (2 allocations: 390.67 KiB)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Another wow!&lt;/strong&gt; By using the &lt;code&gt;LoopVectorization&lt;/code&gt; package we can give the &lt;code&gt;@turbo&lt;/code&gt; instruction to the compiler which really does add some turbo!!
+So there you have it, proof that loops are not bad! Our optimised &lt;code&gt;Julia&lt;/code&gt; function has blown &lt;code&gt;python&lt;/code&gt; and &lt;code&gt;MATLAB&lt;/code&gt; out of the water and is now about &lt;strong&gt;10-15x faster&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This was a relatively simple use case but highlights even for something simple there are possibly significant gains to be made.
+As I mentioned earlier &lt;code&gt;Julia&lt;/code&gt; is still young but it appears to be reaching a point where it&amp;rsquo;s difficult to ignore it any more.
+There is no doubting it&amp;rsquo;s fast, it&amp;rsquo;s on the same level as &lt;code&gt;C&lt;/code&gt;, &lt;code&gt;C++&lt;/code&gt; and &lt;code&gt;Fortran&lt;/code&gt; and is a member of the &lt;strong&gt;Petaflop Club&lt;/strong&gt; having achieved 1.54 petaflops with 1.3 million threads on the Cray XC40 supercomputer&lt;sup id=&#34;fnref:5&#34;&gt;&lt;a href=&#34;#fn:5&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;5&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;One line summary - If you want to make your &lt;code&gt;python&lt;/code&gt; code &lt;em&gt;&lt;strong&gt;10x times quicker&lt;/strong&gt;&lt;/em&gt; use &lt;code&gt;Julia&lt;/code&gt;!!&lt;/p&gt;
+&lt;p&gt;Well that&amp;rsquo;s not really been the point of this post, but it is eye catching. 10x speedup is a lot.&lt;/p&gt;
+&lt;p&gt;But there&amp;rsquo;s more to &lt;code&gt;Julia&lt;/code&gt; than just speed. It has an interactive REPL just like &lt;code&gt;python&lt;/code&gt;, it is supported by &lt;code&gt;Jupyter&lt;/code&gt; notebooks and has it&amp;rsquo;s own interactive notebooks called &lt;code&gt;Pluto&lt;/code&gt; which I think are actually far superior. Want multi-threading? Done!
+&lt;code&gt;Julia&lt;/code&gt; was created by &lt;code&gt;MATLAB&lt;/code&gt; and &lt;code&gt;python&lt;/code&gt; users so there will be a somewhat familiar feel to those making the transition.&lt;/p&gt;
+&lt;p&gt;There is also a growing eco-system that allows users start on tasks like solving lots of differential equations or machine learning without much development required by the user.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m very impressed by where &lt;code&gt;Julia&lt;/code&gt; has ended up after 10 years and it&amp;rsquo;s something I seriously consider now every time I am starting a new project as there is still some inertia in shifting completely from one language to a new one.
+I don&amp;rsquo;t know if I will ever completely switch, but I do know I&amp;rsquo;m going to be using &lt;code&gt;Julia&lt;/code&gt; a lot more in the future to reduce some of my computing bottlenecks in some tasks.&lt;/p&gt;
+&lt;p&gt;Have you seen enough to tempt you into getting to know &lt;code&gt;Julia&lt;/code&gt; a bit better?&lt;/p&gt;
+&lt;h1 id=&#34;references&#34;&gt;References&lt;/h1&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;Weisstein, Eric W. &amp;ldquo;Vector Norm.&amp;rdquo; From MathWorld&amp;ndash;A Wolfram Web Resource. &lt;a href=&#34;https://mathworld.wolfram.com/VectorNorm.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mathworld.wolfram.com/VectorNorm.html&lt;/a&gt;. Accessed on 13/2/2022&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34;&gt;
+&lt;p&gt;Eddins, Steve. &amp;ldquo;timeit makes it into MATLAB&amp;rdquo;. &lt;a href=&#34;https://blogs.mathworks.com/steve/2013/09/30/timeit-makes-it-into-matlab/?doing_wp_cron=1645382790.6918818950653076171875&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://blogs.mathworks.com/steve/2013/09/30/timeit-makes-it-into-matlab/?doing_wp_cron=1645382790.6918818950653076171875&lt;/a&gt;. Accessed on 13/2/2022&amp;#160;&lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34;&gt;
+&lt;p&gt;NumPy API Reference. &lt;a href=&#34;https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html#rac1c834adb66-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://numpy.org/doc/stable/reference/generated/numpy.linalg.norm.html#rac1c834adb66-1&lt;/a&gt;. Accessed on 13/2/2022&amp;#160;&lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:4&#34;&gt;
+&lt;p&gt;Numba Quickstart Guide. &lt;a href=&#34;https://numba.pydata.org/numba-doc/latest/user/5minguide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://numba.pydata.org/numba-doc/latest/user/5minguide.html&lt;/a&gt;. Accessed on 13/2/2022&amp;#160;&lt;a href=&#34;#fnref:4&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:5&#34;&gt;
+&lt;p&gt;&amp;ldquo;Julia Joins Petaflop Club&amp;rdquo;. &lt;a href=&#34;https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.hpcwire.com/off-the-wire/julia-joins-petaflop-club/&lt;/a&gt;. Accessed on 13/2/2022&amp;#160;&lt;a href=&#34;#fnref:5&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Are you using Data Classes?</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/dataclasses/</link>
+      <pubDate>Sun, 16 May 2021 18:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/dataclasses/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;I don&amp;rsquo;t know about you but I have a tendency to store results in a dictionary and pass that around to functions when I need to.
 I have typically avoided creating classes for storing data as it always seemed a bit of overkill for the job at hand.
-Lots of repetitive code with little actual reward.&lt;/p>
-&lt;p>Here&amp;rsquo;s a rather simple example of what I mean, where I&amp;rsquo;m gathering all the results of interest into a single return item for a function.
-I find this easier than having multiple returns from multiple functions.&lt;/p>
-&lt;pre>&lt;code class="language-python">
+Lots of repetitive code with little actual reward.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a rather simple example of what I mean, where I&amp;rsquo;m gathering all the results of interest into a single return item for a function.
+I find this easier than having multiple returns from multiple functions.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;
 import numpy as np
 from dataclasses import dataclass
+
 def some_complex_function(forces, scale):
-mult = np.pi**scale
-complex_calculated_forces = forces * mult
-result = dict()
-result[&amp;quot;val_x&amp;quot;] = complex_calculated_forces[:, 0]
-result[&amp;quot;val_y&amp;quot;] = complex_calculated_forces[:, 1]
-result[&amp;quot;val_z&amp;quot;] = complex_calculated_forces[:, 2]
-result[&amp;quot;mult&amp;quot;] = mult
-return result
+
+    mult = np.pi**scale
+    complex_calculated_forces = forces * mult
+    
+    result = dict()
+    result[&amp;quot;val_x&amp;quot;] = complex_calculated_forces[:, 0]
+    result[&amp;quot;val_y&amp;quot;] = complex_calculated_forces[:, 1]
+    result[&amp;quot;val_z&amp;quot;] = complex_calculated_forces[:, 2]
+    result[&amp;quot;mult&amp;quot;] = mult
+    
+    return result
+
+
 forces = np.random.random([1000,3])
+
 calculated_forces = some_complex_function(forces, 4)
+
 calculated_forces.keys()
-&lt;/code>&lt;/pre>
-&lt;p>This isn&amp;rsquo;t beautiful code, but it returns a single &lt;code>dict&lt;/code> with all the related properties together, keeping the variable workspace a bit clearer in the process.
-Much handier if you need to pass this into several other functions later on in your workflow.&lt;/p>
-&lt;p>However, it&amp;rsquo;s not particularly re-usable and not great for modifying in future. Maybe a class would be a better option? But there&amp;rsquo;s so much effort involved in created a class I hear you say.
-All those &lt;code>__init__&lt;/code> and &lt;code>__repr__&lt;/code> methods that need to be defined, you may end up with a many lines of code for defining a very basic class.&lt;/p>
-&lt;h2 id="data-classes">Data Classes&lt;/h2>
-&lt;hr>
-&lt;p>And that&amp;rsquo;s why data classes were introduced in &lt;strong>python 3.7&lt;/strong>, to remove all that unnecessary boilerplate code required and just let you use the classes quickly.&lt;/p>
-&lt;p>So here&amp;rsquo;s my rather silly contrived example again, but this time using a fancy new data class.&lt;/p>
-&lt;pre>&lt;code class="language-python">import numpy as np
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This isn&amp;rsquo;t beautiful code, but it returns a single &lt;code&gt;dict&lt;/code&gt; with all the related properties together, keeping the variable workspace a bit clearer in the process.
+Much handier if you need to pass this into several other functions later on in your workflow.&lt;/p&gt;
+&lt;p&gt;However, it&amp;rsquo;s not particularly re-usable and not great for modifying in future. Maybe a class would be a better option? But there&amp;rsquo;s so much effort involved in created a class I hear you say.
+All those &lt;code&gt;__init__&lt;/code&gt; and &lt;code&gt;__repr__&lt;/code&gt; methods that need to be defined, you may end up with a many lines of code for defining a very basic class.&lt;/p&gt;
+&lt;h2 id=&#34;data-classes&#34;&gt;Data Classes&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;And that&amp;rsquo;s why data classes were introduced in &lt;strong&gt;python 3.7&lt;/strong&gt;, to remove all that unnecessary boilerplate code required and just let you use the classes quickly.&lt;/p&gt;
+&lt;p&gt;So here&amp;rsquo;s my rather silly contrived example again, but this time using a fancy new data class.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 from dataclasses import dataclass
+
 @dataclass
 class resultant_force:
-x: np.ndarray
-y: np.ndarray
-z: np.ndarray
-multiplier: np.float64
+    x: np.ndarray
+    y: np.ndarray
+    z: np.ndarray
+    multiplier: np.float64
+    
+    
 def some_complex_function_using_dataclass(forces, scale):
-mult = np.pi**scale
-complex_calculated_forces = forces * mult
-return resultant_force(*complex_calculated_forces.T, mult)
+    mult = np.pi**scale
+    complex_calculated_forces = forces * mult
+    
+    return resultant_force(*complex_calculated_forces.T, mult)
+    
 forces = np.random.random([1000,3])
+
 force_dataclass = some_complex_function_using_dataclass(forces, 4)
-&lt;/code>&lt;/pre>
-&lt;p>I can now run &lt;code>dir(force_dataclass)&lt;/code> on my result and see that it&amp;rsquo;s a fully fledged class :&lt;/p>
-&lt;pre>&lt;code class="language-python">['__annotations__',
-'__class__',
-'__dataclass_fields__',
-'__dataclass_params__',
-'__delattr__',
-'__dict__',
-'__dir__',
-'__doc__',
-'__eq__',
-'__format__',
-'__ge__',
-'__getattribute__',
-'__gt__',
-'__hash__',
-'__init__',
-'__init_subclass__',
-'__le__',
-'__lt__',
-'__module__',
-'__ne__',
-'__new__',
-'__reduce__',
-'__reduce_ex__',
-'__repr__',
-'__setattr__',
-'__sizeof__',
-'__slotnames__',
-'__str__',
-'__subclasshook__',
-'__weakref__',
-'multiplier',
-'x',
-'y',
-'z']
-&lt;/code>&lt;/pre>
-&lt;p>There&amp;rsquo;s even a &lt;code>repe&lt;/code> created for free! So I can quite easily query &lt;code>force_dataclass.multiplier&lt;/code> and get &lt;code>Out[4]: 97.40909103400242&lt;/code>. What&amp;rsquo;s nice about this is now tht it&amp;rsquo;s a data class instead of a dictionary most IDE&amp;rsquo;s will autocomplete the &lt;code>dataclass&lt;/code> fields for you, which is another bonus.&lt;/p>
-&lt;p>The other major benefit is now I have a nice reusable data container which I could make a little more generic and use in many places.
-I can do this because dataclasses also accept default values for fields. So I can change my previous class to something like this:&lt;/p>
-&lt;pre>&lt;code class="language-python">@dataclass
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I can now run &lt;code&gt;dir(force_dataclass)&lt;/code&gt; on my result and see that it&amp;rsquo;s a fully fledged class :&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;[&#39;__annotations__&#39;,
+ &#39;__class__&#39;,
+ &#39;__dataclass_fields__&#39;,
+ &#39;__dataclass_params__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__slotnames__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__weakref__&#39;,
+ &#39;multiplier&#39;,
+ &#39;x&#39;,
+ &#39;y&#39;,
+ &#39;z&#39;]
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;There&amp;rsquo;s even a &lt;code&gt;repe&lt;/code&gt; created for free! So I can quite easily query &lt;code&gt;force_dataclass.multiplier&lt;/code&gt; and get &lt;code&gt;Out[4]: 97.40909103400242&lt;/code&gt;. What&amp;rsquo;s nice about this is now tht it&amp;rsquo;s a data class instead of a dictionary most IDE&amp;rsquo;s will autocomplete the &lt;code&gt;dataclass&lt;/code&gt; fields for you, which is another bonus.&lt;/p&gt;
+&lt;p&gt;The other major benefit is now I have a nice reusable data container which I could make a little more generic and use in many places.
+I can do this because dataclasses also accept default values for fields. So I can change my previous class to something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@dataclass
 class resultant_force:
-x: np.ndarray
-y: np.ndarray
-z: np.ndarray
-multiplier: np.float64 = None
+    x: np.ndarray
+    y: np.ndarray
+    z: np.ndarray
+    multiplier: np.float64 = None
+    
+    
 def some_complex_function_using_dataclass(forces, scale):
-mult = np.pi**scale
-complex_calculated_forces = forces * mult
-return resultant_force(*complex_calculated_forces.T, mult)
+    mult = np.pi**scale
+    complex_calculated_forces = forces * mult
+    
+    return resultant_force(*complex_calculated_forces.T, mult)
+
 def some_complex_function_using_generic_dataclass(forces):
-complex_calculated_forces = forces * 2
-return resultant_force(*complex_calculated_forces.T,)
+    complex_calculated_forces = forces * 2
+    
+    return resultant_force(*complex_calculated_forces.T,)    
+
 force_dataclass = some_complex_function_using_dataclass(forces, 4)
+
 generic_force_dataclass = some_complex_function_using_generic_dataclass(forces)
-&lt;/code>&lt;/pre>
-&lt;p>And now from one simple change I have a generic data structure that can be used in multiple places, passing in the additional variables when needed, otherwise they are set to &lt;code>None&lt;/code>.&lt;/p>
-&lt;p>And data classes have one more nice trick where you can &lt;em>&amp;ldquo;embed&amp;rdquo;&lt;/em> some calculation into the &lt;code>class&lt;/code>.&lt;/p>
-&lt;pre>&lt;code class="language-python">@dataclass
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And now from one simple change I have a generic data structure that can be used in multiple places, passing in the additional variables when needed, otherwise they are set to &lt;code&gt;None&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;And data classes have one more nice trick where you can &lt;em&gt;&amp;ldquo;embed&amp;rdquo;&lt;/em&gt; some calculation into the &lt;code&gt;class&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;@dataclass
 class resultant_force:
-x: np.ndarray
-y: np.ndarray
-z: np.ndarray
-multiplier: np.float64 = None
-def __post_init__(self):
-self.custom_var = np.sum(self.x) / 3
+    x: np.ndarray
+    y: np.ndarray
+    z: np.ndarray
+    multiplier: np.float64 = None
+    
+    def __post_init__(self):
+        self.custom_var = np.sum(self.x) / 3
+
 def some_complex_function_using_generic_dataclass(forces):
-complex_calculated_forces = forces * 2
-return resultant_force(*complex_calculated_forces.T,)
+    complex_calculated_forces = forces * 2
+    
+    return resultant_force(*complex_calculated_forces.T,)    
+
 force_dataclass = some_complex_function_using_dataclass(forces)
-&lt;/code>&lt;/pre>
-&lt;p>This now calculates whatever is in the &lt;code>__post_init__&lt;/code> method when the object is created. This is very handy if you always do some calculation with the data in the &lt;code>class&lt;/code>, just simply embed the calculation within the class and the result will be there for you when you need it!&lt;/p>
-&lt;h2 id="conclusion">Conclusion&lt;/h2>
-&lt;hr>
-&lt;p>These are just some very simple examples of how useful data classes can be for organising and improving your code.
-I love how the boilerplate of class creation is gone, and how they can make code more readable and easier to maintain.&lt;/p>
-&lt;p>There are many other features you would expect of a class and these are also included such as automatic &lt;code>__repr__&lt;/code> and object comparison. There&amp;rsquo;s also easy conversion to lists and dictionaries.&lt;/p>
-&lt;p>I suggest reading this &lt;a href="https://realpython.com/python-data-classes/" target="_blank" rel="noopener">post&lt;/a> for a more detailed introduction to dataclasses and to see how they may help you.&lt;/p></description></item><item><title>Favourite Tool/Package of 2020</title><link>https://abrhaleyarefaine1997.github.io/post/pyvista/</link><pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/pyvista/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;hr>
-&lt;p>Working with &lt;strong>Discrete Element Method (DEM)&lt;/strong> usually means that you need to visualise your results somehow after the simulation is complete. This is usually the case with some of the open source codes. If you use a commercial code like &lt;a href="https://www.altair.com/edem/" target="_blank" rel="noopener">EDEM&lt;/a> or &lt;a href="https://rocky.esss.co/" target="_blank" rel="noopener">Rocky&lt;/a>, the visualisation aspect is usually taken care for you by the software, but occasionally you may wish to do something that isn&amp;rsquo;t supported. That&amp;rsquo;s life in research&amp;hellip;&lt;/p>
-&lt;p>Anyway, that&amp;rsquo;s where &lt;a href="https://www.paraview.org/" target="_blank" rel="noopener">ParaView&lt;/a> usually comes in. It&amp;rsquo;s a hugely powerful open-source data analysis and visualization application. However, it&amp;rsquo;s built on top of the &lt;strong>VTK&lt;/strong> library and usually requires writing all your data out in a &lt;em>ascii&lt;/em> VTK format, which is not always practical.&lt;/p>
-&lt;p>And that&amp;rsquo;s where my new favourite Python Library comes in &amp;hellip; Hello &lt;strong>PyVista&lt;/strong>.&lt;/p>
-&lt;h2 id="pyvista">PyVista&lt;/h2>
-&lt;hr>
-&lt;p>&lt;a href="https://docs.pyvista.org/" target="_blank" rel="noopener">PyVista&lt;/a> is a powerful and flexible library for plotting 3D figures using python. It&amp;rsquo;s also based on &lt;strong>VTK&lt;/strong>, but implements a higher level API that interfaces through &lt;a href="https://numpy.org/" target="_blank" rel="noopener">NumPy&lt;/a>. PyVista is:&lt;/p>
-&lt;blockquote>
-&lt;p>3D plotting made simple and built for large/complex data geometries&lt;/p>
-&lt;/blockquote>
-&lt;p>I don&amp;rsquo;t want to write a huge tutorial here because there are lots of great examples on the &lt;a href="https://docs.pyvista.org/examples/index.html" target="_blank" rel="noopener">PyVista website&lt;/a> which should help you get started. I&amp;rsquo;m just going to include my favourite examples here and then let you go explore as you wish.&lt;/p>
-&lt;h3 id="examples">Examples&lt;/h3>
-&lt;p>This is an interactive example of slicing a 3D dataset (a brain!) using a plane widget, but this is super cool and super easy to use.&lt;/p>
-&lt;pre>&lt;code class="language-python"># sphinx_gallery_thumbnail_number = 2
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This now calculates whatever is in the &lt;code&gt;__post_init__&lt;/code&gt; method when the object is created. This is very handy if you always do some calculation with the data in the &lt;code&gt;class&lt;/code&gt;, just simply embed the calculation within the class and the result will be there for you when you need it!&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;These are just some very simple examples of how useful data classes can be for organising and improving your code.
+I love how the boilerplate of class creation is gone, and how they can make code more readable and easier to maintain.&lt;/p&gt;
+&lt;p&gt;There are many other features you would expect of a class and these are also included such as automatic &lt;code&gt;__repr__&lt;/code&gt; and object comparison. There&amp;rsquo;s also easy conversion to lists and dictionaries.&lt;/p&gt;
+&lt;p&gt;I suggest reading this &lt;a href=&#34;https://realpython.com/python-data-classes/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post&lt;/a&gt; for a more detailed introduction to dataclasses and to see how they may help you.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Favourite Tool/Package of 2020</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/pyvista/</link>
+      <pubDate>Sat, 19 Dec 2020 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/pyvista/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;Working with &lt;strong&gt;Discrete Element Method (DEM)&lt;/strong&gt; usually means that you need to visualise your results somehow after the simulation is complete. This is usually the case with some of the open source codes. If you use a commercial code like &lt;a href=&#34;https://www.altair.com/edem/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;EDEM&lt;/a&gt; or &lt;a href=&#34;https://rocky.esss.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Rocky&lt;/a&gt;, the visualisation aspect is usually taken care for you by the software, but occasionally you may wish to do something that isn&amp;rsquo;t supported. That&amp;rsquo;s life in research&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Anyway, that&amp;rsquo;s where &lt;a href=&#34;https://www.paraview.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ParaView&lt;/a&gt; usually comes in. It&amp;rsquo;s a hugely powerful open-source data analysis and visualization application. However, it&amp;rsquo;s built on top of the &lt;strong&gt;VTK&lt;/strong&gt; library and usually requires writing all your data out in a &lt;em&gt;ascii&lt;/em&gt; VTK format, which is not always practical.&lt;/p&gt;
+&lt;p&gt;And that&amp;rsquo;s where my new favourite Python Library comes in &amp;hellip; Hello &lt;strong&gt;PyVista&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;pyvista&#34;&gt;PyVista&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.pyvista.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyVista&lt;/a&gt; is a powerful and flexible library for plotting 3D figures using python. It&amp;rsquo;s also based on &lt;strong&gt;VTK&lt;/strong&gt;, but implements a higher level API that interfaces through &lt;a href=&#34;https://numpy.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NumPy&lt;/a&gt;. PyVista is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;3D plotting made simple and built for large/complex data geometries&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I don&amp;rsquo;t want to write a huge tutorial here because there are lots of great examples on the &lt;a href=&#34;https://docs.pyvista.org/examples/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PyVista website&lt;/a&gt; which should help you get started. I&amp;rsquo;m just going to include my favourite examples here and then let you go explore as you wish.&lt;/p&gt;
+&lt;h3 id=&#34;examples&#34;&gt;Examples&lt;/h3&gt;
+&lt;p&gt;This is an interactive example of slicing a 3D dataset (a brain!) using a plane widget, but this is super cool and super easy to use.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# sphinx_gallery_thumbnail_number = 2
 import pyvista as pv
 from pyvista import examples
+
 vol = examples.download_brain()
+
 p = pv.Plotter()
 p.add_mesh_clip_plane(vol)
 p.show()
-&lt;/code>&lt;/pre>
-&lt;p>As a DEM user you might be interested in plotting some spheres (particles) and this is also very easy, see this example for 1M spheres which renders in about 10s on my laptop.&lt;/p>
-&lt;pre>&lt;code class="language-python">import numpy as np
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As a DEM user you might be interested in plotting some spheres (particles) and this is also very easy, see this example for 1M spheres which renders in about 10s on my laptop.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 import pyvista as pv
-pv.set_plot_theme('dark')
+pv.set_plot_theme(&#39;dark&#39;)
+
 n = 1_000_000
 mesh = pv.PolyData(np.random.random((n, 3))*1000)
 mesh[&amp;quot;radius&amp;quot;] = np.random.rand(n) * 2
+
 # Low resolution geometry
 geom = pv.Sphere(theta_resolution=8, phi_resolution=8)
+
 # Progress bar is a new feature on master branch
 glyphed = mesh.glyph(scale=&amp;quot;radius&amp;quot;, geom=geom, progress_bar=True)
+
+
 p = pv.Plotter(notebook=False)
-p.add_mesh(glyphed, smooth_shading=True) # if you want everything mono coloured then add the following argument: color='yellow'
-# if you want it to look really nice, add the smooth shading option smooth_shading=True.
+p.add_mesh(glyphed, smooth_shading=True) # if you want everything mono coloured then add the following argument: color=&#39;yellow&#39;
+# if you want it to look really nice, add the smooth shading option smooth_shading=True. 
 # This will be slower rendering!
+
 p.show()
-&lt;/code>&lt;/pre>
-&lt;div class="alert alert-note">
-&lt;div>
-&lt;p>Rendering 1M spheres is quite a task, you may wish to test with a smaller value of &lt;em>n&lt;/em> initially.&lt;/p>
-&lt;p>Performance will depend on your machine specification.&lt;/p>
-&lt;/div>
-&lt;/div></description></item><item><title>Favourite Tool/Package of 2019</title><link>https://abrhaleyarefaine1997.github.io/post/bottleneck/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/post/bottleneck/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;hr>
-&lt;p>When you are dealing with relatively large datasets on a regular basis, the computation time required to process your data becomes an issue. We always want more speed. If you can cut run time from 30 minutes to 10 minutes, then that is a huge gain.&lt;/p>
-&lt;p>In python there&amp;rsquo;s the usual performance gain coming from removing native loops and vectorising with &lt;code>NumPy&lt;/code>, using &lt;code>pandas&lt;/code> and then there&amp;rsquo;s even the new kid on the block, &lt;code>Numba&lt;/code> (not actually that new now, but still newer!) which requires a bit more effort rewriting some code into functions that can be Just-In-Time (JIT) compiled. However, not everything can be compiled.&lt;/p>
-&lt;p>But there are also some other very simple performance tweaks that can be made and that can have a significant effect on runtime. That&amp;rsquo;s where &lt;strong>Bottleneck&lt;/strong> comes in.&lt;/p>
-&lt;h2 id="bottleneck">Bottleneck&lt;/h2>
-&lt;hr>
-&lt;p>&lt;a href="https://bottleneck.readthedocs.io/en/latest/index.html" target="_blank" rel="noopener">Bottleneck&lt;/a> is a:&lt;/p>
-&lt;blockquote>
-&lt;p>collection of fast, NaN-aware NumPy array functions written in C.&lt;/p>
-&lt;/blockquote>
-&lt;p>Bottleneck is basically a drop-in replacement for some popular NumPy functions such as sum, mean, min, max, etc. Please refer to the &lt;a href="https://bottleneck.readthedocs.io/en/latest/reference.html" target="_blank" rel="noopener">documentation&lt;/a> for the full list.&lt;/p>
-&lt;p>Here&amp;rsquo;s a very simple example of bottleneck at work:&lt;/p>
-&lt;pre>&lt;code class="language-python">import numpy as np
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;p&gt;Rendering 1M spheres is quite a task, you may wish to test with a smaller value of &lt;em&gt;n&lt;/em&gt; initially.&lt;/p&gt;
+&lt;p&gt;Performance will depend on your machine specification.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Favourite Tool/Package of 2019</title>
+      <link>https://abrhaleyarefaine1997.github.io/post/bottleneck/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/post/bottleneck/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;When you are dealing with relatively large datasets on a regular basis, the computation time required to process your data becomes an issue. We always want more speed. If you can cut run time from 30 minutes to 10 minutes, then that is a huge gain.&lt;/p&gt;
+&lt;p&gt;In python there&amp;rsquo;s the usual performance gain coming from removing native loops and vectorising with &lt;code&gt;NumPy&lt;/code&gt;, using &lt;code&gt;pandas&lt;/code&gt; and then there&amp;rsquo;s even the new kid on the block, &lt;code&gt;Numba&lt;/code&gt; (not actually that new now, but still newer!) which requires a bit more effort rewriting some code into functions that can be Just-In-Time (JIT) compiled. However, not everything can be compiled.&lt;/p&gt;
+&lt;p&gt;But there are also some other very simple performance tweaks that can be made and that can have a significant effect on runtime. That&amp;rsquo;s where &lt;strong&gt;Bottleneck&lt;/strong&gt; comes in.&lt;/p&gt;
+&lt;h2 id=&#34;bottleneck&#34;&gt;Bottleneck&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;a href=&#34;https://bottleneck.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Bottleneck&lt;/a&gt; is a:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;collection of fast, NaN-aware NumPy array functions written in C.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bottleneck is basically a drop-in replacement for some popular NumPy functions such as sum, mean, min, max, etc. Please refer to the &lt;a href=&#34;https://bottleneck.readthedocs.io/en/latest/reference.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for the full list.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s a very simple example of bottleneck at work:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import numpy as np
 import bottleneck as bn
+
 a = np.array([1, 2, np.nan, 4, 5])
+
 np.nanmean(a)
 bn.nanmean(a)
-&lt;/code>&lt;/pre>
-&lt;p>Bottleneck also provides some really useful rolling window functions that work along a single axis. Super easy and useful for calculating moving averages. The output will be the same shape as the input, but with the first few values smaller than the windo size returned as &lt;code>nan&lt;/code>.&lt;/p>
-&lt;pre>&lt;code class="language-python">b = np.random.random(100)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Bottleneck also provides some really useful rolling window functions that work along a single axis. Super easy and useful for calculating moving averages. The output will be the same shape as the input, but with the first few values smaller than the windo size returned as &lt;code&gt;nan&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b = np.random.random(100)
+
 rolling_avg_3 = bn.move_mean(b, window=3)
 rolling_avg_10 = bn.move_mean(b, window=10)
-&lt;/code>&lt;/pre>
-&lt;h3 id="performance">Performance&lt;/h3>
-&lt;p>Bottleneck comes with a built in benchmarking suite that you can run on your machine to see what your performance will be like. Simply run &lt;code>bn.bench()&lt;/code>&lt;/p>
-&lt;p>Here&amp;rsquo;s the results output from my machine:&lt;/p>
-&lt;pre>&lt;code class="language-python">Bottleneck performance benchmark
-Bottleneck 1.3.2; Numpy 1.20.3
-Speed is NumPy time divided by Bottleneck time
-NaN means approx one-fifth NaNs; float64 used
-no NaN no NaN NaN no NaN NaN
-(100,) (1000,1000)(1000,1000)(1000,1000)(1000,1000)
-axis=0 axis=0 axis=0 axis=1 axis=1
-nansum 37.4 1.8 2.3 3.3 3.4
-nanmean 99.5 2.2 3.0 4.3 4.2
-nanstd 167.6 2.3 3.4 5.1 3.4
-nanvar 165.2 2.2 2.5 4.1 2.9
-nanmin 25.5 0.6 1.8 1.0 3.3
-nanmax 24.2 0.8 1.9 0.8 3.1
-median 113.3 1.3 3.8 1.1 3.8
-nanmedian 113.3 6.5 7.1 5.5 5.9
-ss 13.0 1.9 2.2 3.6 3.5
-nanargmin 58.4 3.4 4.6 2.5 5.6
-nanargmax 59.8 3.4 5.3 2.4 5.7
-anynan 7.8 0.5 37.5 0.3 26.0
-allnan 10.2 158.2 118.7 82.9 89.2
-rankdata 23.5 1.3 1.3 2.6 2.6
-nanrankdata 23.6 1.5 1.4 2.8 2.8
-partition 4.6 1.0 1.3 0.9 1.3
-argpartition 9.1 1.2 1.4 1.1 1.5
-replace 7.6 0.9 1.0 0.9 0.9
-push 1091.2 4.5 5.5 9.4 8.9
-move_sum 2973.9 52.0 104.7 201.4 253.1
-move_mean 7566.5 60.3 112.3 286.9 286.2
-move_std 8564.2 73.8 146.0 190.7 302.7
-move_var 11758.3 81.3 172.4 253.6 392.3
-move_min 1361.0 15.6 31.8 22.8 53.8
-move_max 1463.0 15.7 33.1 26.9 52.0
-move_argmin 3319.4 67.4 102.3 77.0 128.4
-move_argmax 3476.7 61.9 75.8 71.2 119.1
-move_median 1704.8 137.2 160.7 171.2 185.9
-move_rank 911.9 1.5 1.9 1.9 2.4
-&lt;/code>&lt;/pre>
-&lt;p>In the vast majority of cases bottleneck provides close to a 2x increase in performance of some of the most frequently used &lt;code>NumPy&lt;/code> functions which can really help reduce that runtime and increase productivity. It&amp;rsquo;s definitely noticeable for me in my work.&lt;/p>
-&lt;div class="alert alert-note">
-&lt;div>
-Only arrays with data type (&lt;code>dtype&lt;/code>) &lt;code>int32&lt;/code>, &lt;code>int64&lt;/code>, &lt;code>float32&lt;/code>, and &lt;code>float64&lt;/code> are accelerated. All other &lt;code>dtypes&lt;/code> result in calls to slower, unaccelerated functions.
-&lt;/div>
-&lt;/div></description></item><item><title>Transporting, handling and storing behaviour of iron ore fines</title><link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link><pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid><description>&lt;h1 id="introduction">Introduction&lt;/h1>
-&lt;hr>
-&lt;p>This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p>
-&lt;p>Fines are produced during transportation, handling and storing of iron pellets.
-The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br>
-Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p>
-&lt;p>The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p>
-&lt;p>DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p>
-&lt;h1 id="image-gallery">Image Gallery&lt;/h1>
-&lt;hr>
-&lt;div class="gallery">
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png" data-caption="Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only">
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png" loading="lazy" alt="Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only" width="245" height="150">
-&lt;/a>
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png" data-caption="Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only">
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png" loading="lazy" alt="Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only" width="237" height="150">
-&lt;/a>
-&lt;a data-fancybox="gallery-post_doc" href="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png" >
-&lt;img src="https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png" loading="lazy" alt="temporally_scaled_uniaxial.png" width="214" height="150">
-&lt;/a>
-&lt;/div>
-&lt;h1 id="video-gallery">Video Gallery&lt;/h1>
-&lt;hr>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/E9fa6P68QDs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/SvEnSW8LemE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div>
-&lt;hr></description></item></channel></rss>
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;performance&#34;&gt;Performance&lt;/h3&gt;
+&lt;p&gt;Bottleneck comes with a built in benchmarking suite that you can run on your machine to see what your performance will be like. Simply run &lt;code&gt;bn.bench()&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the results output from my machine:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;Bottleneck performance benchmark
+    Bottleneck 1.3.2; Numpy 1.20.3
+    Speed is NumPy time divided by Bottleneck time
+    NaN means approx one-fifth NaNs; float64 used
+
+              no NaN     no NaN      NaN       no NaN      NaN    
+               (100,)  (1000,1000)(1000,1000)(1000,1000)(1000,1000)
+               axis=0     axis=0     axis=0     axis=1     axis=1  
+nansum         37.4        1.8        2.3        3.3        3.4
+nanmean        99.5        2.2        3.0        4.3        4.2
+nanstd        167.6        2.3        3.4        5.1        3.4
+nanvar        165.2        2.2        2.5        4.1        2.9
+nanmin         25.5        0.6        1.8        1.0        3.3
+nanmax         24.2        0.8        1.9        0.8        3.1
+median        113.3        1.3        3.8        1.1        3.8
+nanmedian     113.3        6.5        7.1        5.5        5.9
+ss             13.0        1.9        2.2        3.6        3.5
+nanargmin      58.4        3.4        4.6        2.5        5.6
+nanargmax      59.8        3.4        5.3        2.4        5.7
+anynan          7.8        0.5       37.5        0.3       26.0
+allnan         10.2      158.2      118.7       82.9       89.2
+rankdata       23.5        1.3        1.3        2.6        2.6
+nanrankdata    23.6        1.5        1.4        2.8        2.8
+partition       4.6        1.0        1.3        0.9        1.3
+argpartition    9.1        1.2        1.4        1.1        1.5
+replace         7.6        0.9        1.0        0.9        0.9
+push         1091.2        4.5        5.5        9.4        8.9
+move_sum     2973.9       52.0      104.7      201.4      253.1
+move_mean    7566.5       60.3      112.3      286.9      286.2
+move_std     8564.2       73.8      146.0      190.7      302.7
+move_var    11758.3       81.3      172.4      253.6      392.3
+move_min     1361.0       15.6       31.8       22.8       53.8
+move_max     1463.0       15.7       33.1       26.9       52.0
+move_argmin  3319.4       67.4      102.3       77.0      128.4
+move_argmax  3476.7       61.9       75.8       71.2      119.1
+move_median  1704.8      137.2      160.7      171.2      185.9
+move_rank     911.9        1.5        1.9        1.9        2.4
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the vast majority of cases bottleneck provides close to a 2x increase in performance of some of the most frequently used &lt;code&gt;NumPy&lt;/code&gt; functions which can really help reduce that runtime and increase productivity. It&amp;rsquo;s definitely noticeable for me in my work.&lt;/p&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    Only arrays with data type (&lt;code&gt;dtype&lt;/code&gt;) &lt;code&gt;int32&lt;/code&gt;, &lt;code&gt;int64&lt;/code&gt;, &lt;code&gt;float32&lt;/code&gt;, and &lt;code&gt;float64&lt;/code&gt; are accelerated. All other &lt;code&gt;dtypes&lt;/code&gt; result in calls to slower, unaccelerated functions.
+  &lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Transporting, handling and storing behaviour of iron ore fines</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link>
+      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p&gt;
+&lt;p&gt;Fines are produced during transportation, handling and storing of iron pellets.
+The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br&gt;
+Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p&gt;
+&lt;p&gt;The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p&gt;
+&lt;p&gt;DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p&gt;
+&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+
+
+
+
+
+
+
+
+
+
+&lt;div class=&#34;gallery&#34;&gt;
+
+  
+  
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png&#34; data-caption=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;245&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+        
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png&#34; data-caption=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;237&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+    
+    
+    
+    
+    
+      
+    
+    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png&#34; &gt;
+      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;temporally_scaled_uniaxial.png&#34; width=&#34;214&#34; height=&#34;150&#34;&gt;
+    &lt;/a&gt;
+  
+
+&lt;/div&gt;
+&lt;h1 id=&#34;video-gallery&#34;&gt;Video Gallery&lt;/h1&gt;
+&lt;hr&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/E9fa6P68QDs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/SvEnSW8LemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;hr&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
