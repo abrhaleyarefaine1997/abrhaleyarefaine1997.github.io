@@ -50,3 +50,9 @@ A total of 18 international participants and 20+ Mekelle University students and
 This program emphasizes **hands-on learning, innovation, and international collaboration**. Click the *Follow* button above to see related updates.
 {{% /callout %}}
 ---
+## Bootcamp Moments
+
+{{< gallery >}}
+![Bootcamp Group Photo](image1.png)
+![Workshop Session](image2.png)
+{{< /gallery >}}
