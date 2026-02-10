@@ -34,6 +34,17 @@ education:
   - course: BSc in Computer Science and Engineering
     institution: Mekelle University, Ethiopia
     year: 2020
+  - course: Moonshot Ethiopia Bootcamp — Short-term international program
+    institution: Thomas More University of Applied Sciences, Belgium and Mekelle University, Ethiopia
+    year: 2019
+    description: >
+      International short-term program focused on innovation and academic collaboration.
+  - course: High School Diploma
+    institution: Kallamino Special High School, Ethiopia
+    year: 2015
+
+  
+  
 
 # Social/Academic Networking
 social:

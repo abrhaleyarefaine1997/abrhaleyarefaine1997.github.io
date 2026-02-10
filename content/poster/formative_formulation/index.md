@@ -1,49 +1,52 @@
 ---
-title: "Multiscale Modelling of a Twin Screw Granulator"
-summary: "Poster at *Royal Society of Chemistry Formative Formulation Workshop, Maxwell Centre, University of Cambridge*"
-tags: ["Workshop", "Adhesion", "Cohesive solid", "Contact model", "Discrete element method", "DEM", "Granular material"]
+title: "Moonshot Ethiopia Bootcamp"
+summary: "Short-term international program focused on innovation and academic collaboration, jointly organized by Thomas More University of Applied Sciences, Belgium and Mekelle University, Ethiopia."
+tags: ["Innovation", "Academic Collaboration", "International Program", "Moonshot Ethiopia", "Short-term Program"]
 
-date: "2019-03-18T00:00:00Z"
-doi: "10.13140/RG.2.2.35252.58240"
+date: "2019-06-01T00:00:00Z"
 
-event: Royal Society of Chemistry Formative Formulation Workshop
-location: Maxwell Centre, University of Cambridge, Cambridge, UK
+event: "Moonshot Ethiopia Bootcamp"
+location: "Mekelle University, Ethiopia"
 
 project:
- - mmpp
+  - moonshot-ethiopia
 
- 
-# Optional external URL for project (replaces project detail page).
 external_link: ""
 
 image:
-  caption: ''
+  caption: "Participants of the Moonshot Ethiopia Bootcamp at Mekelle University"
   focal_point: Smart
 
 links:
-- icon: twitter
+- icon: globe
+  icon_pack: fas
+  name: Thomas More University of Applied Sciences
+  url: "https://www.thomasmore.be/en"
+- icon: globe
+  icon_pack: fas
+  name: Mekelle University
+  url: "https://www.mu.edu.et/"
+- icon: facebook
   icon_pack: fab
-  name: Follow
-  url: https://twitter.com/jp_morr
+  name: Mekelle University Post
+  url: "https://www.facebook.com/MekelleUniversity/posts/..."  # Replace with actual post link
+
 url_code: ""
-url_pdf: https://bit.ly/Multiscale_TSG
+url_pdf: ""
 url_slides: ""
 url_video: ""
 
-# Slides (optional).
-#   Associate this project with Markdown slides.
-#   Simply enter your slide deck's filename without extension.
-#   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
-#   Otherwise, set `slides = ""`.
-slides: ''
+slides: "moonshot-ethiopia-bootcamp"
+
 ---
 
 {{< poster_metadata >}}
 
-Wet granulation is a process used to create larger stable agglomerates (granules) from fine powders. However, despite wide adoption, it is often inefficiently operated, with high recycle ratios in continuous processes and high rejection rates in batch processes. This numerical study simulates a GEA ConsiGma™ 1 Twin Screw Granulator (TSG), following a standard framework for model-driven design.
+The **Moonshot Ethiopia Bootcamp** was a short-term international program that brought together students and staff from **Thomas More University of Applied Sciences, Belgium** and **Mekelle University, Ethiopia**. Participants collaborated on innovation-driven academic and development projects, exchanging ideas and working on solutions addressing societal challenges.  
 
+A total of 18 international participants and 20+ Mekelle University students and staff joined this program, fostering cross-cultural learning and academic collaboration in higher education and research.
 
 {{% callout note %}}
-Click the *Cite* button above to get publication metadata for your reference management software in *.bib* format.
+This program emphasizes **hands-on learning, innovation, and international collaboration**. Click the *Follow* button above to see related updates.
 {{% /callout %}}
-
+---

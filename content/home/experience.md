@@ -19,7 +19,7 @@ date_format: Jan 2020
 # Experiences.
 #   Add/remove as many `experience` items below as you like.
 experience:
-  - title: Google Agent AI Developer
+  - title: Agentic AI Developer
     company: FOREO
     company_url: 'https://www.foreo.com/'
     company_logo: foreo_logo

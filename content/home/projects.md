@@ -27,16 +27,22 @@ content:
   filter_button:
   - name: All
     tag: '*'
-  - name: DEM
-    tag: DEM
-  - name: Coupled Models
-    tag: Coupled Models
-  - name: Calibration
-    tag: Calibration
-  - name: Characterisation
-    tag: Characterisation
-  - name: Analytics
-    tag: Data Analytics
+  - name: Machine Learning
+    tag: Machine Learning
+  - name: Explainable AI (XAI)
+    tag: Explainable AI (XAI)
+  - name: Graph Neural Networks
+    tag: Graph Neural Networks
+  - name: NLP
+    tag: NLP
+  - name: Low-Resource Language
+    tag: Low-Resource Language
+  - name: Fraud Detection
+    tag: Financial Fraud Detection
+  - name: Hate Speech
+    tag: Hate Speech Detection
+  - name: Large Language Models
+    tag: Large Language Models
   - name: Other
     tag: Other
 
@@ -55,3 +61,5 @@ design:
   # For Showcase view, flip alternate rows?
   flip_alt_rows: true
 ---
+
+
