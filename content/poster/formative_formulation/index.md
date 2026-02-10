@@ -53,6 +53,3 @@ This program emphasizes **hands-on learning, innovation, and international colla
 ## Bootcamp Moments
 
 {{< gallery >}}
-![Bootcamp Group Photo](image1.png)
-![Workshop Session](image2.png)
-{{< /gallery >}}
