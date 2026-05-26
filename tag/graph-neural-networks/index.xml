@@ -111,31 +111,4 @@ The model assigns higher importance to electronegative atoms and lower importanc
 &lt;/ul>
 &lt;hr>
 &lt;h2 id="status">Status&lt;/h2>
-&lt;p>📊 Research-grade project — completed with full explainability and visualization pipeline.&lt;/p></description></item><item><title>XAI Graph Neural Networks for Molecular Property Prediction</title><link>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</link><pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
-&lt;p>This research project focuses on predicting molecular properties using &lt;strong>Graph Neural Networks (GNNs)&lt;/strong>, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p>
-&lt;p>The goal is to develop &lt;strong>accurate, interpretable, and robust models&lt;/strong> suitable for scientific and industrial applications.&lt;/p>
-&lt;h2 id="methods">Methods&lt;/h2>
-&lt;ul>
-&lt;li>Implemented GNN architectures using &lt;strong>PyTorch Geometric&lt;/strong>&lt;/li>
-&lt;li>Designed node- and edge-level representations for molecular graphs&lt;/li>
-&lt;li>Addressed noisy and imbalanced datasets through careful preprocessing&lt;/li>
-&lt;li>Built &lt;strong>reproducible evaluation pipelines&lt;/strong> with cross-validation&lt;/li>
-&lt;/ul>
-&lt;h2 id="explainability">Explainability&lt;/h2>
-&lt;ul>
-&lt;li>Applied &lt;strong>GNNExplainer&lt;/strong> to interpret predictions at:
-&lt;ul>
-&lt;li>node-level (important atoms)&lt;/li>
-&lt;li>edge-level (critical bonds)&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>Conducted feature- and structure-level analyses for explainable predictions&lt;/li>
-&lt;/ul>
-&lt;h2 id="results">Results&lt;/h2>
-&lt;ul>
-&lt;li>Achieved strong predictive performance across molecular property benchmarks&lt;/li>
-&lt;li>Improved interpretability without sacrificing accuracy&lt;/li>
-&lt;li>Enabled model inspection suitable for research and decision support&lt;/li>
-&lt;/ul>
-&lt;h2 id="status">Status&lt;/h2>
-&lt;p>📄 Ongoing research project — publication in preparation.&lt;/p></description></item></channel></rss>
+&lt;p>📊 Research-grade project — completed with full explainability and visualization pipeline.&lt;/p></description></item></channel></rss>

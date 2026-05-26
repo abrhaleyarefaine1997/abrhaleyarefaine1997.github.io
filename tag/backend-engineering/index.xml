@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backend Engineering | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/backend-engineering/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/backend-engineering/index.xml" rel="self" type="application/rss+xml"/><description>Backend Engineering</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Backend Engineering</title><link>https://abrhaleyarefaine1997.github.io/tag/backend-engineering/</link></image><item><title>QueryFlow Engine: Hybrid SQL + Metadata Query Processing System</title><link>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</link><pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This project implements a &lt;strong>modular database engine simulation&lt;/strong> that replicates internal DBMS query processing. It integrates a SQL execution engine, metadata reasoning system, and cost-based optimizer exposed via a FastAPI backend.&lt;/p>
+&lt;p>The system follows the classical database pipeline:&lt;/p>
+&lt;p>&lt;strong>Parse → Plan → Optimize → Execute&lt;/strong>&lt;/p>
+&lt;hr>
+&lt;h2 id="system-architecture">System Architecture&lt;/h2>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="QueryFlow Architecture" srcset="
+/project/queryflow-engine/featured_hud15e5eb7177c13bacbe6b08a166e5bab_1380745_8b702ce0a0cdf851b9ede02a5acf401a.png 400w,
+/project/queryflow-engine/featured_hud15e5eb7177c13bacbe6b08a166e5bab_1380745_ef2dfcf57171012b6024ed5938443b00.png 760w,
+/project/queryflow-engine/featured_hud15e5eb7177c13bacbe6b08a166e5bab_1380745_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/queryflow-engine/featured_hud15e5eb7177c13bacbe6b08a166e5bab_1380745_8b702ce0a0cdf851b9ede02a5acf401a.png"
+width="760"
+height="507"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>The architecture models two independent execution paths:&lt;/p>
+&lt;ul>
+&lt;li>SQL execution pipeline&lt;/li>
+&lt;li>Metadata reasoning pipeline&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="sql-execution-engine">SQL Execution Engine&lt;/h2>
+&lt;ul>
+&lt;li>SQL parsing into structured representations&lt;/li>
+&lt;li>In-memory query execution&lt;/li>
+&lt;li>Supports SELECT, WHERE, PROJECTION, JOIN&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="metadata-reasoning-engine">Metadata Reasoning Engine&lt;/h2>
+&lt;ul>
+&lt;li>Functional Dependency (FD) validation&lt;/li>
+&lt;li>Uniqueness constraint checking&lt;/li>
+&lt;li>Duplicate detection&lt;/li>
+&lt;li>Inclusion Dependency (IND)&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="query-optimizer">Query Optimizer&lt;/h2>
+&lt;ul>
+&lt;li>Cost-based optimization strategy selection:
+&lt;ul>
+&lt;li>FULL SCAN&lt;/li>
+&lt;li>FILTER SCAN&lt;/li>
+&lt;li>INDEX SCAN&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>JOIN strategies:
+&lt;ul>
+&lt;li>HASH JOIN&lt;/li>
+&lt;li>NESTED LOOP JOIN&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Metadata-aware pruning&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="api-layer-fastapi">API Layer (FastAPI)&lt;/h2>
+&lt;ul>
+&lt;li>&lt;code>/query&lt;/code> unified SQL + metadata endpoint&lt;/li>
+&lt;li>&lt;code>/docs&lt;/code> interactive Swagger UI&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="results">Results&lt;/h2>
+&lt;ul>
+&lt;li>End-to-end DBMS pipeline simulation&lt;/li>
+&lt;li>Clear separation of execution and metadata reasoning&lt;/li>
+&lt;li>Optimized query planning and execution flow&lt;/li>
+&lt;li>Demonstrates systems-level backend engineering&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="status">Status&lt;/h2>
+&lt;p>⚙️ Active systems engineering project&lt;/p></description></item></channel></rss>
