@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Deep Learning | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/deep-learning/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/deep-learning/index.xml" rel="self" type="application/rss+xml"/><description>Deep Learning</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Deep Learning</title><link>https://abrhaleyarefaine1997.github.io/tag/deep-learning/</link></image><item><title>GenomicSeqAI: Deep Learning for Genomic Sequence Prediction and Generation</title><link>https://abrhaleyarefaine1997.github.io/project/genomicseqai/</link><pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/genomicseqai/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>GenomicSeqAI is a deep learning framework for &lt;strong>genomic sequence prediction and generation&lt;/strong> using Transformer and diffusion-based architectures.&lt;br>
+The system evaluates biological realism using structured metrics including GC content, k-mer diversity, Shannon entropy, and homopolymer statistics.&lt;/p>
+&lt;p>The goal is to bridge &lt;strong>generative modeling&lt;/strong> with &lt;strong>biological validity constraints&lt;/strong> in synthetic DNA generation.&lt;/p>
+&lt;hr>
+&lt;h2 id="results--evaluation">Results &amp;amp; Evaluation&lt;/h2>
+&lt;p>The generative models were evaluated across multiple biological and statistical metrics to assess how well they capture genomic structure compared to real sequences.&lt;/p>
+&lt;hr>
+&lt;h3 id="-gc-content-distribution">🧬 GC Content Distribution&lt;/h3>
+&lt;p>The model successfully captures &lt;strong>global nucleotide composition&lt;/strong>, maintaining biologically realistic GC content distributions aligned with real genomic data.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="gc_content.png" alt="GC Content Distribution" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+The generated sequences closely match the real GC distribution, indicating strong learning of macro-level genomic constraints.&lt;/p>
+&lt;hr>
+&lt;h3 id="-k-mer-diversity-3-mer-analysis">🔀 K-mer Diversity (3-mer Analysis)&lt;/h3>
+&lt;p>K-mer diversity reveals how well the model captures &lt;strong>local sequence structure and motif variability&lt;/strong>.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="K-mer Diversity Comparison" srcset="
+/project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_da3572a3dc2effe971c34e46a0ee0afb.png 400w,
+/project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_a00132589e696577e54bdff3ca198a86.png 760w,
+/project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_da3572a3dc2effe971c34e46a0ee0afb.png"
+width="760"
+height="380"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+Generated sequences show reduced diversity compared to real DNA, indicating partial &lt;strong>mode collapse&lt;/strong> and overuse of recurring motifs.&lt;/p>
+&lt;hr>
+&lt;h3 id="-shannon-entropy-diffusion-model">🌡️ Shannon Entropy (Diffusion Model)&lt;/h3>
+&lt;p>Entropy measures sequence complexity and randomness.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Diffusion Entropy" srcset="
+/project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_f0edc22dd694acd98108399d61da189a.png 400w,
+/project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_6b4d6efcf6d0c684901c31f88685ae0c.png 760w,
+/project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_f0edc22dd694acd98108399d61da189a.png"
+width="760"
+height="380"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+The diffusion model exhibits a sharp entropy concentration near &lt;strong>maximal uniformity&lt;/strong>, suggesting loss of natural biological irregularities.&lt;/p>
+&lt;hr>
+&lt;h3 id="-homopolymer-run-analysis">🧬 Homopolymer Run Analysis&lt;/h3>
+&lt;p>Homopolymers (repeated nucleotides) indicate structural stability or degeneration in generated sequences.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Transformer Homopolymer" srcset="
+/project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_0e941953f9f58bea67aa330cd9aced24.png 400w,
+/project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_87495ee3e4bac9d9283c6aff1697a4b7.png 760w,
+/project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_0e941953f9f58bea67aa330cd9aced24.png"
+width="760"
+height="380"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+Transformer models tend to produce &lt;strong>longer homopolymer runs&lt;/strong> than real sequences, indicating limitations in sequential precision and token-level control.&lt;/p>
+&lt;hr>
+&lt;h2 id="engineering-insights--limitations">Engineering Insights &amp;amp; Limitations&lt;/h2>
+&lt;p>This evaluation highlights key structural gaps in generative genomic modeling:&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Mode Collapse:&lt;/strong> Reduced k-mer diversity indicates over-reliance on limited motifs&lt;/li>
+&lt;li>&lt;strong>Over-Uniformity:&lt;/strong> Diffusion models produce overly uniform entropy distributions&lt;/li>
+&lt;li>&lt;strong>Repetition Drift:&lt;/strong> Transformer architectures generate excessive homopolymer runs&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="future-improvements">Future Improvements&lt;/h2>
+&lt;p>To improve biological realism:&lt;/p>
+&lt;ul>
+&lt;li>Introduce &lt;strong>k-mer regularization loss&lt;/strong> to improve local diversity&lt;/li>
+&lt;li>Apply &lt;strong>length-aware positional encoding&lt;/strong> to reduce homopolymers&lt;/li>
+&lt;li>Add &lt;strong>structure-aware constraints&lt;/strong> during decoding&lt;/li>
+&lt;li>Explore hybrid Transformer–Diffusion architectures&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="status">Status&lt;/h2>
+&lt;p>📊 Active research project — continuously improving generative fidelity and biological alignment.&lt;/p></description></item></channel></rss>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computational Chemistry | Abrhaley Arefaine Hailenchael</title><link>https://abrhaleyarefaine1997.github.io/tag/computational-chemistry/</link><atom:link href="https://abrhaleyarefaine1997.github.io/tag/computational-chemistry/index.xml" rel="self" type="application/rss+xml"/><description>Computational Chemistry</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate><image><url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Computational Chemistry</title><link>https://abrhaleyarefaine1997.github.io/tag/computational-chemistry/</link></image><item><title>Interpretable Graph Neural Networks for Molecular Property Prediction</title><link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link><pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate><guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>This project implements a &lt;strong>Geometric Deep Learning framework&lt;/strong> for predicting molecular dipole moments ($\mu$) using the QM9 dataset.&lt;/p>
+&lt;p>A Message Passing Graph Neural Network is used to learn molecular representations directly from atomic structure and bond interactions.&lt;/p>
+&lt;p>The main goal is to combine &lt;strong>strong predictive performance with interpretability grounded in chemical principles&lt;/strong>.&lt;/p>
+&lt;hr>
+&lt;h2 id="molecular-representation">Molecular Representation&lt;/h2>
+&lt;p>Molecules are represented as graphs:&lt;/p>
+&lt;ul>
+&lt;li>Nodes → atoms&lt;/li>
+&lt;li>Edges → chemical bonds&lt;/li>
+&lt;li>Features → atomic number, molecular connectivity, and 3D spatial coordinates&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Molecular Graph Representation" srcset="
+/project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_579f9da8fe9b4e3f83c78d6644193efa.png 400w,
+/project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_958ae1ac454ecd942376e65420f7c903.png 760w,
+/project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_579f9da8fe9b4e3f83c78d6644193efa.png"
+width="760"
+height="657"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>This representation allows the model to learn directly from molecular structure without handcrafted descriptors.&lt;/p>
+&lt;hr>
+&lt;h2 id="model-architecture">Model Architecture&lt;/h2>
+&lt;ul>
+&lt;li>Message Passing Graph Neural Network (MPGNN)&lt;/li>
+&lt;li>Graph convolution layers for neighborhood aggregation&lt;/li>
+&lt;li>Global additive pooling for molecule-level embedding&lt;/li>
+&lt;li>Regression head for dipole moment prediction&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="explainability-gnnexplainer">Explainability (GNNExplainer)&lt;/h2>
+&lt;p>To interpret predictions, GNNExplainer is used to generate node and edge importance masks.&lt;/p>
+&lt;hr>
+&lt;h3 id="global-feature-sensitivity">Global Feature Sensitivity&lt;/h3>
+&lt;p>The model prioritizes:&lt;/p>
+&lt;ul>
+&lt;li>atomic number&lt;/li>
+&lt;li>electronegative atoms (O, N)&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Global Feature Sensitivity" srcset="
+/project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_30f93753053858838ee7ff19f9553530.png 400w,
+/project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_b6fda845f70bb61dd4c9693f97c42a0c.png 760w,
+/project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_30f93753053858838ee7ff19f9553530.png"
+width="760"
+height="521"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+The model learns representations that align with chemically relevant features influencing molecular polarity.&lt;/p>
+&lt;hr>
+&lt;h3 id="structural-attribution-map">Structural Attribution Map&lt;/h3>
+&lt;p>Node and edge importance scores highlight functional groups contributing to molecular dipole behavior.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Attribution Map" srcset="
+/project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_6fdb7449f4a8abdaa0351e8ad82e62ab.png 400w,
+/project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_2d4af6a13aed52a906af1c04f78dd14c.png 760w,
+/project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_6fdb7449f4a8abdaa0351e8ad82e62ab.png"
+width="760"
+height="746"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+Attribution is concentrated around polar bonds and functional groups (e.g., C–O, C–N), indicating meaningful structural learning.&lt;/p>
+&lt;hr>
+&lt;h3 id="saliency-map-rdkit-visualization">Saliency Map (RDKit Visualization)&lt;/h3>
+&lt;p>Chemical visualization using RDKit highlights atomic-level contributions.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Saliency Map" srcset="
+/project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_129817da8291649f00e47047a4af1ded.png 400w,
+/project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_b2786b89f411638928425d4edf3a7f55.png 760w,
+/project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_1200x1200_fit_lanczos_3.png 1200w"
+src="https://abrhaleyarefaine1997.github.io/project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_129817da8291649f00e47047a4af1ded.png"
+width="600"
+height="600"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>&lt;strong>Insight:&lt;/strong>&lt;br>
+The model assigns higher importance to electronegative atoms and lower importance to hydrogen atoms, consistent with chemical intuition.&lt;/p>
+&lt;hr>
+&lt;h2 id="results">Results&lt;/h2>
+&lt;ul>
+&lt;li>Accurate prediction of molecular dipole moments on QM9 dataset&lt;/li>
+&lt;li>Strong alignment between learned representations and chemical structure&lt;/li>
+&lt;li>Identification of functional groups driving molecular polarity&lt;/li>
+&lt;li>Effective interpretability using post-hoc explainability methods&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="engineering-insights">Engineering Insights&lt;/h2>
+&lt;ul>
+&lt;li>Graph structure is essential for molecular learning&lt;/li>
+&lt;li>Message passing captures electronegativity-driven interactions&lt;/li>
+&lt;li>Explainability validates chemically meaningful representations&lt;/li>
+&lt;li>GNNs function as both predictive and analytical tools&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h2 id="status">Status&lt;/h2>
+&lt;p>📊 Research-grade project — completed with full explainability and visualization pipeline.&lt;/p></description></item></channel></rss>
