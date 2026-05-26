@@ -5,7 +5,7 @@
     <link>https://abrhaleyarefaine1997.github.io/</link>
       <atom:link href="https://abrhaleyarefaine1997.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Abrhaley Arefaine Hailenchael</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-gb</language><copyright>© 2026 Abrhaley Arefaine Hailenchael</copyright><lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://abrhaleyarefaine1997.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url>
       <title>Abrhaley Arefaine Hailenchael</title>
@@ -13,11 +13,353 @@
     </image>
     
     <item>
+      <title>GenomicSeqAI: Deep Learning for Genomic Sequence Prediction and Generation</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/genomicseqai/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/genomicseqai/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;GenomicSeqAI is a deep learning framework for &lt;strong&gt;genomic sequence prediction and generation&lt;/strong&gt; using Transformer and diffusion-based architectures.&lt;br&gt;
+The system evaluates biological realism using structured metrics including GC content, k-mer diversity, Shannon entropy, and homopolymer statistics.&lt;/p&gt;
+&lt;p&gt;The goal is to bridge &lt;strong&gt;generative modeling&lt;/strong&gt; with &lt;strong&gt;biological validity constraints&lt;/strong&gt; in synthetic DNA generation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results--evaluation&#34;&gt;Results &amp;amp; Evaluation&lt;/h2&gt;
+&lt;p&gt;The generative models were evaluated across multiple biological and statistical metrics to assess how well they capture genomic structure compared to real sequences.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-gc-content-distribution&#34;&gt;🧬 GC Content Distribution&lt;/h3&gt;
+&lt;p&gt;The model successfully captures &lt;strong&gt;global nucleotide composition&lt;/strong&gt;, maintaining biologically realistic GC content distributions aligned with real genomic data.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;gc_content.png&#34; alt=&#34;GC Content Distribution&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+The generated sequences closely match the real GC distribution, indicating strong learning of macro-level genomic constraints.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-k-mer-diversity-3-mer-analysis&#34;&gt;🔀 K-mer Diversity (3-mer Analysis)&lt;/h3&gt;
+&lt;p&gt;K-mer diversity reveals how well the model captures &lt;strong&gt;local sequence structure and motif variability&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;K-mer Diversity Comparison&#34; srcset=&#34;
+               /project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_da3572a3dc2effe971c34e46a0ee0afb.png 400w,
+               /project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_a00132589e696577e54bdff3ca198a86.png 760w,
+               /project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/genomicseqai/kmer_diversity_comparison_hu2a1f940af81f9746c8f5b39cddc162da_26341_da3572a3dc2effe971c34e46a0ee0afb.png&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+Generated sequences show reduced diversity compared to real DNA, indicating partial &lt;strong&gt;mode collapse&lt;/strong&gt; and overuse of recurring motifs.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-shannon-entropy-diffusion-model&#34;&gt;🌡️ Shannon Entropy (Diffusion Model)&lt;/h3&gt;
+&lt;p&gt;Entropy measures sequence complexity and randomness.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Diffusion Entropy&#34; srcset=&#34;
+               /project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_f0edc22dd694acd98108399d61da189a.png 400w,
+               /project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_6b4d6efcf6d0c684901c31f88685ae0c.png 760w,
+               /project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/genomicseqai/diffusion_entropy_hufc6bd685d45393ce2932dc3b30208380_20221_f0edc22dd694acd98108399d61da189a.png&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+The diffusion model exhibits a sharp entropy concentration near &lt;strong&gt;maximal uniformity&lt;/strong&gt;, suggesting loss of natural biological irregularities.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-homopolymer-run-analysis&#34;&gt;🧬 Homopolymer Run Analysis&lt;/h3&gt;
+&lt;p&gt;Homopolymers (repeated nucleotides) indicate structural stability or degeneration in generated sequences.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Transformer Homopolymer&#34; srcset=&#34;
+               /project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_0e941953f9f58bea67aa330cd9aced24.png 400w,
+               /project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_87495ee3e4bac9d9283c6aff1697a4b7.png 760w,
+               /project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/genomicseqai/transformer_homopolymer_hu2c5be0056e928e17c0d0bb3c02fae387_27166_0e941953f9f58bea67aa330cd9aced24.png&#34;
+               width=&#34;760&#34;
+               height=&#34;380&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+Transformer models tend to produce &lt;strong&gt;longer homopolymer runs&lt;/strong&gt; than real sequences, indicating limitations in sequential precision and token-level control.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;engineering-insights--limitations&#34;&gt;Engineering Insights &amp;amp; Limitations&lt;/h2&gt;
+&lt;p&gt;This evaluation highlights key structural gaps in generative genomic modeling:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Mode Collapse:&lt;/strong&gt; Reduced k-mer diversity indicates over-reliance on limited motifs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Over-Uniformity:&lt;/strong&gt; Diffusion models produce overly uniform entropy distributions&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repetition Drift:&lt;/strong&gt; Transformer architectures generate excessive homopolymer runs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;future-improvements&#34;&gt;Future Improvements&lt;/h2&gt;
+&lt;p&gt;To improve biological realism:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Introduce &lt;strong&gt;k-mer regularization loss&lt;/strong&gt; to improve local diversity&lt;/li&gt;
+&lt;li&gt;Apply &lt;strong&gt;length-aware positional encoding&lt;/strong&gt; to reduce homopolymers&lt;/li&gt;
+&lt;li&gt;Add &lt;strong&gt;structure-aware constraints&lt;/strong&gt; during decoding&lt;/li&gt;
+&lt;li&gt;Explore hybrid Transformer–Diffusion architectures&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;📊 Active research project — continuously improving generative fidelity and biological alignment.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Data &amp; AI Warsaw Tech Summit 2026</title>
       <link>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://abrhaleyarefaine1997.github.io/talk/data-ai-warsaw-tech-summit-2026/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>Interpretable Graph Neural Networks for Molecular Property Prediction</title>
+      <link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link>
+      <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;This project implements a &lt;strong&gt;Geometric Deep Learning framework&lt;/strong&gt; for predicting molecular dipole moments ($\mu$) using the QM9 dataset.&lt;/p&gt;
+&lt;p&gt;A Message Passing Graph Neural Network is used to learn molecular representations directly from atomic structure and bond interactions.&lt;/p&gt;
+&lt;p&gt;The main goal is to combine &lt;strong&gt;strong predictive performance with interpretability grounded in chemical principles&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;molecular-representation&#34;&gt;Molecular Representation&lt;/h2&gt;
+&lt;p&gt;Molecules are represented as graphs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Nodes → atoms&lt;/li&gt;
+&lt;li&gt;Edges → chemical bonds&lt;/li&gt;
+&lt;li&gt;Features → atomic number, molecular connectivity, and 3D spatial coordinates&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Molecular Graph Representation&#34; srcset=&#34;
+               /project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_579f9da8fe9b4e3f83c78d6644193efa.png 400w,
+               /project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_958ae1ac454ecd942376e65420f7c903.png 760w,
+               /project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/gnn_xai/Atomic_and_Structural_Representation_hu75c0dce2d7caf1b39ea3aa7852694530_215381_579f9da8fe9b4e3f83c78d6644193efa.png&#34;
+               width=&#34;760&#34;
+               height=&#34;657&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;This representation allows the model to learn directly from molecular structure without handcrafted descriptors.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;model-architecture&#34;&gt;Model Architecture&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Message Passing Graph Neural Network (MPGNN)&lt;/li&gt;
+&lt;li&gt;Graph convolution layers for neighborhood aggregation&lt;/li&gt;
+&lt;li&gt;Global additive pooling for molecule-level embedding&lt;/li&gt;
+&lt;li&gt;Regression head for dipole moment prediction&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;explainability-gnnexplainer&#34;&gt;Explainability (GNNExplainer)&lt;/h2&gt;
+&lt;p&gt;To interpret predictions, GNNExplainer is used to generate node and edge importance masks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;global-feature-sensitivity&#34;&gt;Global Feature Sensitivity&lt;/h3&gt;
+&lt;p&gt;The model prioritizes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;atomic number&lt;/li&gt;
+&lt;li&gt;electronegative atoms (O, N)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Global Feature Sensitivity&#34; srcset=&#34;
+               /project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_30f93753053858838ee7ff19f9553530.png 400w,
+               /project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_b6fda845f70bb61dd4c9693f97c42a0c.png 760w,
+               /project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/gnn_xai/Global_Feature_Sensitivity_hu8b8c164ea6694092cff48325bb10e92f_249546_30f93753053858838ee7ff19f9553530.png&#34;
+               width=&#34;760&#34;
+               height=&#34;521&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+The model learns representations that align with chemically relevant features influencing molecular polarity.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;structural-attribution-map&#34;&gt;Structural Attribution Map&lt;/h3&gt;
+&lt;p&gt;Node and edge importance scores highlight functional groups contributing to molecular dipole behavior.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Attribution Map&#34; srcset=&#34;
+               /project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_6fdb7449f4a8abdaa0351e8ad82e62ab.png 400w,
+               /project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_2d4af6a13aed52a906af1c04f78dd14c.png 760w,
+               /project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/gnn_xai/final_mol_results_hu177ec6476937353e0b1cc7d6423a34a2_225469_6fdb7449f4a8abdaa0351e8ad82e62ab.png&#34;
+               width=&#34;760&#34;
+               height=&#34;746&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+Attribution is concentrated around polar bonds and functional groups (e.g., C–O, C–N), indicating meaningful structural learning.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;saliency-map-rdkit-visualization&#34;&gt;Saliency Map (RDKit Visualization)&lt;/h3&gt;
+&lt;p&gt;Chemical visualization using RDKit highlights atomic-level contributions.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Saliency Map&#34; srcset=&#34;
+               /project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_129817da8291649f00e47047a4af1ded.png 400w,
+               /project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_b2786b89f411638928425d4edf3a7f55.png 760w,
+               /project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/project/gnn_xai/Saliency_Mapping_hu451881033bbceea32b5296b0cf72ab8e_54806_129817da8291649f00e47047a4af1ded.png&#34;
+               width=&#34;600&#34;
+               height=&#34;600&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Insight:&lt;/strong&gt;&lt;br&gt;
+The model assigns higher importance to electronegative atoms and lower importance to hydrogen atoms, consistent with chemical intuition.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Accurate prediction of molecular dipole moments on QM9 dataset&lt;/li&gt;
+&lt;li&gt;Strong alignment between learned representations and chemical structure&lt;/li&gt;
+&lt;li&gt;Identification of functional groups driving molecular polarity&lt;/li&gt;
+&lt;li&gt;Effective interpretability using post-hoc explainability methods&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;engineering-insights&#34;&gt;Engineering Insights&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Graph structure is essential for molecular learning&lt;/li&gt;
+&lt;li&gt;Message passing captures electronegativity-driven interactions&lt;/li&gt;
+&lt;li&gt;Explainability validates chemically meaningful representations&lt;/li&gt;
+&lt;li&gt;GNNs function as both predictive and analytical tools&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;status&#34;&gt;Status&lt;/h2&gt;
+&lt;p&gt;📊 Research-grade project — completed with full explainability and visualization pipeline.&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -159,9 +501,9 @@ at the &lt;strong&gt;Warsaw University of Technology, Poland&lt;/strong&gt;.&lt;
     
     <item>
       <title>XAI Graph Neural Networks for Molecular Property Prediction</title>
-      <link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link>
+      <link>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid>
+      <guid>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This research project focuses on predicting molecular properties using &lt;strong&gt;Graph Neural Networks (GNNs)&lt;/strong&gt;, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p&gt;
 &lt;p&gt;The goal is to develop &lt;strong&gt;accurate, interpretable, and robust models&lt;/strong&gt; suitable for scientific and industrial applications.&lt;/p&gt;
@@ -344,7 +686,14 @@ at the &lt;strong&gt;Warsaw University of Technology, Poland&lt;/strong&gt;.&lt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;photo4.png&#34; alt=&#34;Celebration Moments2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Celebration Moments2&#34; srcset=&#34;
+               /post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_574e6b613d8b04a82414d615fc51ca2a.png 400w,
+               /post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_fc4e0bbcbf2d7345f704b63b8bf1f729.png 760w,
+               /post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_574e6b613d8b04a82414d615fc51ca2a.png&#34;
+               width=&#34;760&#34;
+               height=&#34;342&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 </description>
@@ -467,387 +816,6 @@ at the &lt;strong&gt;Warsaw University of Technology, Poland&lt;/strong&gt;.&lt;
     </item>
     
     <item>
-      <title>Slides</title>
-      <link>https://abrhaleyarefaine1997.github.io/slides/edem_academic/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/slides/edem_academic/</guid>
-      <description>&lt;h2 id=&#34;beyond-basic-advanced-simulations-in-edem-using-the-application-programming-and-coupling-interfaces&#34;&gt;Beyond Basic: Advanced simulations in EDEM using the Application Programming and Coupling Interfaces&lt;/h2&gt;
-&lt;h3 id=&#34;may-4th-2016&#34;&gt;May 4th, 2016&lt;/h3&gt;
-&lt;h3 id=&#34;edem-academic-advanced-workshop&#34;&gt;EDEM Academic Advanced Workshop&lt;/h3&gt;
-&lt;h4 id=&#34;jp-morrissey&#34;&gt;&lt;strong&gt;J.P. Morrissey&lt;/strong&gt;&lt;/h4&gt;
-&lt;p&gt;&lt;em&gt;Institute for Infrastructure &amp;amp; Environment, School of Engineering&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;presentation-overview&#34;&gt;Presentation Overview&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Application Programming &amp;amp; Coupling Interfaces Introduction&lt;/li&gt;
-&lt;li&gt;API Examples&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Edinburgh Cohesion Model&lt;/li&gt;
-&lt;li&gt;Edinburgh Bonded Model&lt;/li&gt;
-&lt;li&gt;Other applications&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Multi-Body Dynamics Coupling Examples&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Jenike Shear Test&lt;/li&gt;
-&lt;li&gt;High Speed Rail&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Combined API &amp;amp; MBD Usage&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Caking &amp;amp; Time Consolidation&lt;/li&gt;
-&lt;li&gt;Triaxial testing&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;Concluding Remarks&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;section-1&#34;&gt;Section 1&lt;/h1&gt;
-&lt;h2 id=&#34;edem-application-programming-and-coupling-interfaces&#34;&gt;EDEM: Application Programming and Coupling Interfaces&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;edem-application-programming-interface&#34;&gt;EDEM Application Programming Interface&lt;/h2&gt;
-&lt;p&gt;EDEM simulations can be customized and extended using the EDEM Application Programming Interface (API)​.&lt;/p&gt;
-&lt;p&gt;With the EDEM API users can write:​&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Custom contact models to model new particle–particle and particle–geometry interactions​&lt;/li&gt;
-&lt;li&gt;Custom particle body force models to apply new forces and effects to the particles in the simulation​&lt;/li&gt;
-&lt;li&gt;Custom particle factory models to create new methods of particle generation – to define non-standard positions, distributions or flow-rates​&lt;/li&gt;
-&lt;li&gt;Define and work with EDEM Custom Properties, creating custom particle and geometry properties, increasing the scope of user’s custom models​&lt;/li&gt;
-&lt;li&gt;Import 3rd party vector or scalar field data which can be referenced by custom physics models&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
-&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code block:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
-if porridge == &amp;quot;blueberry&amp;quot;:
-    print(&amp;quot;Eating...&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
-&lt;p&gt;Block math:&lt;/p&gt;
-&lt;p&gt;$$
-f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
-&lt;p&gt;Make content appear incrementally&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-   One 
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-   **Two** 
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-   Three 
-&lt;/span&gt;
-&lt;hr&gt;
-&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
-&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{% /speaker_note %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
-&lt;aside class=&#34;notes&#34;&gt;
-  &lt;ul&gt;
-&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/aside&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
-&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
-&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
-&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
-&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
-&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-
-&lt;section data-noprocess data-shortcode-slide
-  
-      
-      data-background-image=&#34;/media/boards.jpg&#34;
-  &gt;
-
-&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
-&lt;p&gt;Customize the slide style and background&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/media/boards.jpg&amp;quot; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
-{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
-&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Slides</title>
-      <link>https://abrhaleyarefaine1997.github.io/slides/example/</link>
-      <pubDate>Tue, 05 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/slides/example/</guid>
-      <description>&lt;h1 id=&#34;create-slides-in-markdown-with-wowchemy&#34;&gt;Create slides in Markdown with Wowchemy&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wowchemy&lt;/a&gt; | &lt;a href=&#34;https://owchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Efficiently write slides in Markdown&lt;/li&gt;
-&lt;li&gt;3-in-1: Create, Present, and Publish your slides&lt;/li&gt;
-&lt;li&gt;Supports speaker notes&lt;/li&gt;
-&lt;li&gt;Mobile friendly slides&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;controls&#34;&gt;Controls&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Next: &lt;code&gt;Right Arrow&lt;/code&gt; or &lt;code&gt;Space&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Previous: &lt;code&gt;Left Arrow&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Start: &lt;code&gt;Home&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Finish: &lt;code&gt;End&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Overview: &lt;code&gt;Esc&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Speaker notes: &lt;code&gt;S&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Fullscreen: &lt;code&gt;F&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;Zoom: &lt;code&gt;Alt + Click&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/hakimel/reveal.js#pdf-export&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF Export&lt;/a&gt;: &lt;code&gt;E&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;code-highlighting&#34;&gt;Code Highlighting&lt;/h2&gt;
-&lt;p&gt;Inline code: &lt;code&gt;variable&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;Code block:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;porridge = &amp;quot;blueberry&amp;quot;
-if porridge == &amp;quot;blueberry&amp;quot;:
-    print(&amp;quot;Eating...&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;math&#34;&gt;Math&lt;/h2&gt;
-&lt;p&gt;In-line math: $x + y = z$&lt;/p&gt;
-&lt;p&gt;Block math:&lt;/p&gt;
-&lt;p&gt;$$
-f\left( x \right) = ;\frac{{2\left( {x + 4} \right)\left( {x - 4} \right)}}{{\left( {x + 4} \right)\left( {x + 1} \right)}}
-$$&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;fragments&#34;&gt;Fragments&lt;/h2&gt;
-&lt;p&gt;Make content appear incrementally&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;{{% fragment %}} One {{% /fragment %}}
-{{% fragment %}} **Two** {{% /fragment %}}
-{{% fragment %}} Three {{% /fragment %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press &lt;code&gt;Space&lt;/code&gt; to play!&lt;/p&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-   One 
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-   **Two** 
-&lt;/span&gt;
-&lt;span class=&#34;fragment &#34; &gt;
-   Three 
-&lt;/span&gt;
-&lt;hr&gt;
-&lt;p&gt;A fragment can accept two optional parameters:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;class&lt;/code&gt;: use a custom style (requires definition in custom CSS)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;weight&lt;/code&gt;: sets the order in which a fragment appears&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;speaker-notes&#34;&gt;Speaker Notes&lt;/h2&gt;
-&lt;p&gt;Add speaker notes to your presentation&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{% speaker_note %}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{% /speaker_note %}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Press the &lt;code&gt;S&lt;/code&gt; key to view the speaker notes!&lt;/p&gt;
-&lt;aside class=&#34;notes&#34;&gt;
-  &lt;ul&gt;
-&lt;li&gt;Only the speaker can read these notes&lt;/li&gt;
-&lt;li&gt;Press &lt;code&gt;S&lt;/code&gt; key to view&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/aside&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;black: Black background, white text, blue links (default)&lt;/li&gt;
-&lt;li&gt;white: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;league: Gray background, white text, blue links&lt;/li&gt;
-&lt;li&gt;beige: Beige background, dark text, brown links&lt;/li&gt;
-&lt;li&gt;sky: Blue background, thin dark text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;night: Black background, thick white text, orange links&lt;/li&gt;
-&lt;li&gt;serif: Cappuccino background, gray text, brown links&lt;/li&gt;
-&lt;li&gt;simple: White background, black text, blue links&lt;/li&gt;
-&lt;li&gt;solarized: Cream-colored background, dark green text, blue links&lt;/li&gt;
-&lt;/ul&gt;
-&lt;hr&gt;
-
-&lt;section data-noprocess data-shortcode-slide
-  
-      
-      data-background-image=&#34;/media/boards.jpg&#34;
-  &gt;
-
-&lt;h2 id=&#34;custom-slide&#34;&gt;Custom Slide&lt;/h2&gt;
-&lt;p&gt;Customize the slide style and background&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-markdown&#34;&gt;{{&amp;lt; slide background-image=&amp;quot;/media/boards.jpg&amp;quot; &amp;gt;}}
-{{&amp;lt; slide background-color=&amp;quot;#0000FF&amp;quot; &amp;gt;}}
-{{&amp;lt; slide class=&amp;quot;my-style&amp;quot; &amp;gt;}}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;custom-css-example&#34;&gt;Custom CSS Example&lt;/h2&gt;
-&lt;p&gt;Let&amp;rsquo;s make headers navy colored.&lt;/p&gt;
-&lt;p&gt;Create &lt;code&gt;assets/css/reveal_custom.css&lt;/code&gt; with:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-css&#34;&gt;.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;hr&gt;
-&lt;h1 id=&#34;questions&#34;&gt;Questions?&lt;/h1&gt;
-&lt;p&gt;&lt;a href=&#34;https://github.com/wowchemy/wowchemy-hugo-modules/discussions&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ask&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://wowchemy.com/docs/managing-content/#create-slides&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Transporting, handling and storing behaviour of iron ore fines</title>
-      <link>https://abrhaleyarefaine1997.github.io/project/post_doc/</link>
-      <pubDate>Sat, 27 Jul 2013 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/project/post_doc/</guid>
-      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
-&lt;hr&gt;
-&lt;p&gt;This project attempts to deal with the challenges associated with handling and storage of cohesive solids in the mining industry. An adhesive-frictional model has been recently developed for DEM simulation of cohesive particles at the University of Edinburgh. This project will exploit the new method for modelling cohesive particulates for specific problems, such as effect of fines in silo discharge and the effect of time consolidation.&lt;/p&gt;
-&lt;p&gt;Fines are produced during transportation, handling and storing of iron pellets.
-The presence of fines can significantly affect the behaviour of iron ore pellets during these processes. In addition, increased volumes of sinter fines are being produced and handled and their behaviour can also be significantly affected.&lt;br&gt;
-Silos and other equipment handling the fines can experience such phenomena as caking, arching and alteration of flow pattern, leading to operational difficulties.&lt;/p&gt;
-&lt;p&gt;The behaviour of fines is extremely complex, affected by numerous factors such as particle size, size distribution, stress level (e.g. the maximum vertical stress in a silo), stress state (i.e. the stresses in different directions), stress history, temperature, moisture content, time and chemical bond/fusion. Different combinations of these factors can lead to different behaviours, such as caking with different strength and size, which in turn result in different effects on the solids flow in silos and other handling scenarios in the mining industry.&lt;/p&gt;
-&lt;p&gt;DEM simulations can also be affected by the prescribed boundary conditions and as such the effect of oversimplification of the degrees of freedom for a Jenike cell are explored in detail, through the use of fully coupled multi-body dynamics for all geometry movements.&lt;/p&gt;
-&lt;h1 id=&#34;image-gallery&#34;&gt;Image Gallery&lt;/h1&gt;
-&lt;hr&gt;
-
-
-
-
-
-
-
-
-
-
-
-&lt;div class=&#34;gallery&#34;&gt;
-
-  
-  
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell.png&#34; data-caption=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
-      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_cell_hufe9a7341f7d124588a58440f24340653_6895090_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in simulations (force network, geometry positions and particle velocities) of fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;245&#34; height=&#34;150&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-        
-      
-    
-    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses.png&#34; data-caption=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34;&gt;
-      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/jenike_stresses_hu3bd881e5c930d51b7b03e74277ecf4e4_1020279_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;Comparison in stress fields for fully coupled (with rotation) MBD simulation of Jenike cell against simplified vertical stress application only&#34; width=&#34;237&#34; height=&#34;150&#34;&gt;
-    &lt;/a&gt;
-  
-    
-    
-    
-    
-    
-      
-    
-    &lt;a data-fancybox=&#34;gallery-post_doc&#34; href=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial.png&#34; &gt;
-      &lt;img src=&#34;https://abrhaleyarefaine1997.github.io/media/albums/post_doc/temporally_scaled_uniaxial_hu26cd8913e742a694014c6cbf9dad50f1_58623_0x150_resize_lanczos_3.png&#34; loading=&#34;lazy&#34; alt=&#34;temporally_scaled_uniaxial.png&#34; width=&#34;214&#34; height=&#34;150&#34;&gt;
-    &lt;/a&gt;
-  
-
-&lt;/div&gt;
-&lt;h1 id=&#34;video-gallery&#34;&gt;Video Gallery&lt;/h1&gt;
-&lt;hr&gt;
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/E9fa6P68QDs&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;https://www.youtube.com/embed/SvEnSW8LemE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;hr&gt;
-</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>https://abrhaleyarefaine1997.github.io/admin/config.yml</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -860,14 +828,6 @@ Silos and other equipment handling the fines can experience such phenomena as ca
       <link>https://abrhaleyarefaine1997.github.io/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://abrhaleyarefaine1997.github.io/contact/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://abrhaleyarefaine1997.github.io/project/phd/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/project/phd/</guid>
       <description></description>
     </item>
     

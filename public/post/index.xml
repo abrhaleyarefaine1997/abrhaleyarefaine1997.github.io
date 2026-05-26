@@ -168,7 +168,14 @@ at the &lt;strong&gt;Warsaw University of Technology, Poland&lt;/strong&gt;.&lt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;photo4.png&#34; alt=&#34;Celebration Moments2&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Celebration Moments2&#34; srcset=&#34;
+               /post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_574e6b613d8b04a82414d615fc51ca2a.png 400w,
+               /post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_fc4e0bbcbf2d7345f704b63b8bf1f729.png 760w,
+               /post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_1200x1200_fit_lanczos_3.png 1200w&#34;
+               src=&#34;https://abrhaleyarefaine1997.github.io/post/bsc-graduation_2020/photo4_hu10682c473b1aa66890b75c13ef62fd5d_1649755_574e6b613d8b04a82414d615fc51ca2a.png&#34;
+               width=&#34;760&#34;
+               height=&#34;342&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 </description>

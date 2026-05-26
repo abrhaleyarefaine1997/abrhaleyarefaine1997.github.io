@@ -14,9 +14,9 @@
     
     <item>
       <title>XAI Graph Neural Networks for Molecular Property Prediction</title>
-      <link>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</link>
+      <link>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</link>
       <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>https://abrhaleyarefaine1997.github.io/project/gnn_xai/</guid>
+      <guid>https://abrhaleyarefaine1997.github.io/project/queryflow-engine/</guid>
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
 &lt;p&gt;This research project focuses on predicting molecular properties using &lt;strong&gt;Graph Neural Networks (GNNs)&lt;/strong&gt;, where molecules are modeled as graphs with atoms as nodes and bonds as edges.&lt;/p&gt;
 &lt;p&gt;The goal is to develop &lt;strong&gt;accurate, interpretable, and robust models&lt;/strong&gt; suitable for scientific and industrial applications.&lt;/p&gt;

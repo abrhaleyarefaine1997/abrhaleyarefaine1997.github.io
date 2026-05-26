@@ -1,6 +1,6 @@
 ---
 title: "GenomicSeqAI: Deep Learning for Genomic Sequence Prediction and Generation"
-summary: "Transformer and diffusion-based generative framework for genomic sequences with multi-level biological evaluation (GC content, k-mer diversity, entropy, and homopolymers)."
+summary: "Transformer and diffusion-based generative framework for genomic sequences with biological evaluation metrics including GC content, k-mer diversity, entropy, and homopolymers."
 
 tags:
 - Genomics
@@ -25,79 +25,74 @@ url_project: ""
 ---
 
 ## Overview
-GenomicSeqAI is a deep learning framework for **genomic sequence prediction and generation** using Transformer and diffusion-based architectures.  
-The system evaluates biological realism using structured metrics including GC content, k-mer diversity, Shannon entropy, and homopolymer statistics.
+GenomicSeqAI is a deep learning framework for **genomic sequence prediction and generation** using Transformer and diffusion-based architectures.
 
-The goal is to bridge **generative modeling** with **biological validity constraints** in synthetic DNA generation.
+The system evaluates biological realism using multiple metrics including GC content, k-mer diversity, Shannon entropy, and homopolymer statistics.
+
+The goal is to bridge **generative modeling and biological validity constraints** in synthetic DNA generation.
 
 ---
 
 ## Results & Evaluation
 
-The generative models were evaluated across multiple biological and statistical metrics to assess how well they capture genomic structure compared to real sequences.
+The models were evaluated using multiple biological and statistical metrics to assess how closely generated sequences match real genomic structure.
 
 ---
 
 ### 🧬 GC Content Distribution
-The model successfully captures **global nucleotide composition**, maintaining biologically realistic GC content distributions aligned with real genomic data.
+The model successfully captures **global nucleotide composition**, producing GC distributions closely aligned with real genomic data.
 
-![GC Content Distribution](gc_content.png)
+![GC Content Distribution](featured.png)
 
-**Insight:**  
-The generated sequences closely match the real GC distribution, indicating strong learning of macro-level genomic constraints.
+**Insight:** Generated sequences preserve realistic base composition, indicating strong learning of global genomic constraints.
 
 ---
 
 ### 🔀 K-mer Diversity (3-mer Analysis)
-K-mer diversity reveals how well the model captures **local sequence structure and motif variability**.
+K-mer diversity evaluates how well the model captures local sequence structure and motif variation.
 
 ![K-mer Diversity Comparison](kmer_diversity_comparison.png)
 
-**Insight:**  
-Generated sequences show reduced diversity compared to real DNA, indicating partial **mode collapse** and overuse of recurring motifs.
+**Insight:** Generated sequences show reduced diversity, indicating partial mode collapse and overuse of repeated motifs.
 
 ---
 
 ### 🌡️ Shannon Entropy (Diffusion Model)
-Entropy measures sequence complexity and randomness.
+Entropy measures sequence randomness and complexity.
 
 ![Diffusion Entropy](diffusion_entropy.png)
 
-**Insight:**  
-The diffusion model exhibits a sharp entropy concentration near **maximal uniformity**, suggesting loss of natural biological irregularities.
+**Insight:** The diffusion model shows overly uniform entropy distribution, suggesting loss of natural biological variability.
 
 ---
 
-### 🧬 Homopolymer Run Analysis
-Homopolymers (repeated nucleotides) indicate structural stability or degeneration in generated sequences.
+### 🧬 Homopolymer Analysis
+Homopolymers measure repetitive nucleotide runs in generated sequences.
 
 ![Transformer Homopolymer](transformer_homopolymer.png)
 
-**Insight:**  
-Transformer models tend to produce **longer homopolymer runs** than real sequences, indicating limitations in sequential precision and token-level control.
+**Insight:** Transformer models generate longer repetitive runs compared to real sequences, indicating limitations in sequential control.
 
 ---
 
-## Engineering Insights & Limitations
+## Engineering Insights
 
-This evaluation highlights key structural gaps in generative genomic modeling:
+Key limitations identified:
 
-- **Mode Collapse:** Reduced k-mer diversity indicates over-reliance on limited motifs  
-- **Over-Uniformity:** Diffusion models produce overly uniform entropy distributions  
-- **Repetition Drift:** Transformer architectures generate excessive homopolymer runs  
+- Mode collapse in local motif generation  
+- Over-uniform distributions in diffusion outputs  
+- Repetition drift in Transformer-based decoding  
 
 ---
 
 ## Future Improvements
 
-To improve biological realism:
-
-- Introduce **k-mer regularization loss** to improve local diversity  
-- Apply **length-aware positional encoding** to reduce homopolymers  
-- Add **structure-aware constraints** during decoding  
+- Add k-mer regularization to improve diversity  
+- Introduce length-aware positional encoding  
+- Apply structure-aware decoding constraints  
 - Explore hybrid Transformer–Diffusion architectures  
 
 ---
 
 ## Status
-📊 Active research project — continuously improving generative fidelity and biological alignment.
+📊 Active research project — continuously improving generative biological fidelity.

@@ -1,49 +1,95 @@
 ---
-title: "XAI Graph Neural Networks for Molecular Property Prediction"
-summary: "Research project using Graph Neural Networks to predict molecular properties with interpretable, robust evaluation pipelines."
+title: "QueryFlow Engine: Hybrid SQL + Metadata Query Processing System"
+summary: "Modular database engine simulating DBMS internals: parsing, planning, optimization, and execution with FastAPI-based metadata reasoning."
 
 tags:
-- Graph Neural Networks
-- Explainable AI
-- Molecular Modeling
-- PyTorch Geometric
-- Research
+- Databases
+- Query Optimization
+- System Design
+- SQL Engine
+- FastAPI
+- Backend Engineering
 
-date: 2024-01-01
+date: 2026-05-26
 
 image:
+  filename: featured.png
   focal_point: Smart
 
 links:
 - icon: github
   icon_pack: fab
   name: Code
-  url: https://github.com/abrhaleyarefaine1997/Graph-Neural-Networks-for-Molecular-Property-Prediction-and-Explainability
+  url: https://github.com/abrhaleyarefaine1997/queryflow-engine
 
 url_project: ""
 ---
 
 ## Overview
-This research project focuses on predicting molecular properties using **Graph Neural Networks (GNNs)**, where molecules are modeled as graphs with atoms as nodes and bonds as edges.
+This project implements a **modular database engine simulation** that replicates internal DBMS query processing. It integrates a SQL execution engine, metadata reasoning system, and cost-based optimizer exposed via a FastAPI backend.
 
-The goal is to develop **accurate, interpretable, and robust models** suitable for scientific and industrial applications.
+The system follows the classical database pipeline:
 
-## Methods
-- Implemented GNN architectures using **PyTorch Geometric**
-- Designed node- and edge-level representations for molecular graphs
-- Addressed noisy and imbalanced datasets through careful preprocessing
-- Built **reproducible evaluation pipelines** with cross-validation
+**Parse → Plan → Optimize → Execute**
 
-## Explainability
-- Applied **GNNExplainer** to interpret predictions at:
-  - node-level (important atoms)
-  - edge-level (critical bonds)
-- Conducted feature- and structure-level analyses for explainable predictions
+---
+
+## System Architecture
+
+![QueryFlow Architecture](featured.png)
+
+The architecture models two independent execution paths:
+
+- SQL execution pipeline
+- Metadata reasoning pipeline
+
+---
+
+## SQL Execution Engine
+
+- SQL parsing into structured representations
+- In-memory query execution
+- Supports SELECT, WHERE, PROJECTION, JOIN
+
+---
+
+## Metadata Reasoning Engine
+
+- Functional Dependency (FD) validation
+- Uniqueness constraint checking
+- Duplicate detection
+- Inclusion Dependency (IND)
+
+---
+
+## Query Optimizer
+
+- Cost-based optimization strategy selection:
+  - FULL SCAN
+  - FILTER SCAN
+  - INDEX SCAN
+- JOIN strategies:
+  - HASH JOIN
+  - NESTED LOOP JOIN
+- Metadata-aware pruning
+
+---
+
+## API Layer (FastAPI)
+
+- `/query` unified SQL + metadata endpoint
+- `/docs` interactive Swagger UI
+
+---
 
 ## Results
-- Achieved strong predictive performance across molecular property benchmarks
-- Improved interpretability without sacrificing accuracy
-- Enabled model inspection suitable for research and decision support
+
+- End-to-end DBMS pipeline simulation
+- Clear separation of execution and metadata reasoning
+- Optimized query planning and execution flow
+- Demonstrates systems-level backend engineering
+
+---
 
 ## Status
-📄 Ongoing research project — publication in preparation.
+⚙️ Active systems engineering project
